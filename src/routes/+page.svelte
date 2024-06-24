@@ -1,12 +1,17 @@
 <script>
     import mllogo from "../logo.png";
     import heroImage from "../hero-image.jpeg";
+    import grid from "../grid.svg";
 </script>
 
+<svelte:head>
+	<title>Muneshwers Limited</title>
+	<meta name="description" content="Muneshwers Limited" />
+</svelte:head>
 <div class="landing-top relative">
     <div class="hero-image h-screen relative">
         <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
-        <div class="hero-text uppercase text-white text-[96px] fixed bottom-16 left-16 w-9/12 leading-[120px]">
+        <div class="hero-text uppercase text-white text-[86px] absolute bottom-16 left-16 w-9/12 leading-[120px]">
             Solutions streamlined to fit your business and personal needs
         </div>
     </div>
@@ -20,7 +25,7 @@
             </div>
         </div>
         <div class="menu-items flex flex-row text-white gap-5 text-[20px] mr-5">
-            <div class="item">
+            <div class="item-active">
                 Home
             </div>
             <div class="item">
@@ -40,5 +45,15 @@
             </div>
         </div>
     </div>
+</div>
+<div class="introduction-section flex justify-center">
+    <div class="intro-header mt-7 justify-center">
+        <img src={grid} alt="mesh grid" class="h-auto w-full">
+        <div class="icon"></div>
+        <div class="intro-text">
+            Discover which service is right for you!
+        </div>
+    </div>
+    
 </div>
 
