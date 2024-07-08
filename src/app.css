@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,6 +37,13 @@
     font-style: normal;
     font-variation-settings:
         "slnt" 0;
+}
+
+.raleway-light {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .items {
@@ -94,4 +102,81 @@
 .hero-text {
     font-family: 'SF Pro Display Medium';
     font-weight: 500;
+    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.hero-text {
+    font-family: 'SF Pro Display Medium';
+    font-weight: 500;
+    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.wharf-image {
+    /* -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both; */
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation-timeline: view();
+}
+
+@-webkit-keyframes slide-up {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.intro-icon-box {
+    width: 125px;
+    height: 125px;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm, 4px);
+    background: var(--surface-surface-brand-secondary, #EDEBE5);
+    box-shadow: 0px 4px 4px 0px rgba(115, 115, 115, 0.25);
+}
+
+.intro-icon {
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+    background: url("./world.png") rgba(255, 255, 255, 0) 0% / cover no-repeat;
+}
+
+.intro-text {
+    font-family: 'SF Pro Display Medium';
+    font-weight: 500;
+}
+
+.services-text {
+    letter-spacing: 3.2px;
+}
+
+.scroll-watcher {
+    height: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: lime;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+    to { scale: 1 1; }
 }
