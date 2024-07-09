@@ -6,6 +6,11 @@
     import trucking from "../trucking.png";
     import shipping from "../new_shipping.png";
     import wharf from "../wharf.png";
+    import paragonTrasport from "../paragon-transport.png";
+    import gysbi from "../gysbi.png";
+    import cranes from "../cranes.png";
+    import barges from "../barges.png";
+    import harbourtugs from "../harbourtugs.png";
 </script>
 
 <svelte:head>
@@ -16,6 +21,7 @@
     <div class="scroll-watcher"></div>
     <div class="hero-image h-screen relative">
         <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
+        <div class="image-cover h-full w-full bg-[#3A3A3A] opacity-30 absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[86px] absolute bottom-16 left-16 w-9/12 leading-[120px]">
             <span>Solutions streamlined to fit</span>
             <span>your business and personal</span>
@@ -91,7 +97,81 @@
         </div>
     </div>
 </div>
-<div class="parallax-container">
-    <img src={wharf} alt="" class="w-screen wharf-image">
+<div class="parallax-container relative">
+    <img src={wharf} alt="" class=" object-cover w-screen wharf-image">
+    <div class="hero-text uppercase text-white text-[28px] absolute bottom-16 left-16 ">
+        Tropic Express Vessel - May 20, 2024 - Water Street, Georgetown, Guyana
+    </div>
+</div>
+<div class="joint-ventures-section h-1/2 mb-24 flex flex-col items-center">
+    <div class="heading flex flex-row items-start my-24 w-10/12 justify-center">
+        <div class="left flex flex-row items-center gap-4 w-2/5 px-8">
+            <div class="w-9 h-9 bg-[#CDC6B2] rounded-lg"></div>
+            <div class="left-text uppercase poppins-medium tracking-wide text-[#4876B6]">Joint Ventures</div>
+        </div>
+        <div class="right flex flex-row justify-end w-4/6">
+            <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px]">
+                Explore our joint ventures with these amazing companies
+            </div>
+        </div>
+    </div>
+    <div class="bento-container">
+        <div class="bento-box flex flex-col items-center">
+            <div class="row flex flex-row justify-center w-10/12 gap-5">
+                <div class="paragon-container w-[932px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
+                    <img src={paragonTrasport} alt="Paragon Transport Logo" class="h-2/2 w-4/5">
+                </div>
+                <div class="gysbi-container w-[571px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
+                    <img src={gysbi} alt="Guyana Shore Base Inc Logo" class="h-2/2 w-4/5">
+                </div>
+            </div>
+            <div class="row flex flex-row justify-center w-10/12 gap-5 mt-5">
+                <div class="cranes-container w-[581px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
+                    <img src={cranes} alt="Cranes Logo" class="h-2/2 w-4/5">
+                </div>
+                <div class="bsgi-container w-[600px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
+                    <img src={barges} alt="Barge Solutions Guyana Inc Logo" class="h-2/2 w-4/5">
+                </div>
+                <div class="harbourtugs-container w-[288px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
+                    <img src={harbourtugs} alt="Barge Solutions Guyana Inc Logo" class="h-2/2 w-4/5">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="introduction-section flex flex-col justify-center">
+    <div class="intro-header mt-7 justify-center relative">
+        <img src={grid} alt="mesh grid" class="h-auto w-full">
+        <div class="intro-details flex items-center absolute top-16 bottom-16 left-16 w-11/12 justify-between">
+            <div class="intro-details w-3/4">
+                <div class="intro-text text-left uppercase flex text-[76px] text-[#4876B6]">
+                    Interested in a career with us?
+                </div>
+                <div class="intro-subtext text-left text-[#3D3938] text-[28px] raleway-light">
+                    Check out our list of job openings and see which is the right path for you.
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="services flex flex-row h-[683px] justify-between items-center mb-28">
+        <div class="images-card relative w-1/2 h-5/6 ml-5">
+            <div class="image-above top-0 left-20 absolute w-[357px] h-[363px] z-50">
+                <img src={trucking} alt="Paragon Transportation" class="rounded-sm object-cover w-full h-full">
+            </div>
+            <div class="image-below top-52 right-28 absolute w-[508px] h-[320px]">
+                <img src={shipping} alt="Muneshwers Shipping" class="rounded-sm object-cover w-full h-full">
+            </div>
+        </div>
+        <div class="services-link w-1/2 relative">
+            <div class="services-text flex flex-row items-center text-4xl gap-8 uppercase ml-32" >
+                Explore Careers
+                <span>
+                    <img src={arrowright} alt="Arrow Right">
+                </span>
+            </div>
+            <div class="w-96 h-px left-[3px] top-[71px] absolute bg-slate-500 ml-32"></div>
+        </div>
+    </div>
 </div>
 
