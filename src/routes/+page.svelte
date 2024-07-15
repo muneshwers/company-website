@@ -11,6 +11,11 @@
     import cranes from "../cranes.png";
     import barges from "../barges.png";
     import harbourtugs from "../harbourtugs.png";
+    import brandLogo from "../brand-logo.png";
+    import textLogo from "../text-logo.png";
+    import facebookIcon from "../icons8-facebook.svg";
+    import instagramIcon from "../icons8-instagram.svg";
+    import linkedinIcon from "../icons8-linkedin.svg";
 </script>
 
 <svelte:head>
@@ -77,7 +82,7 @@
             
         </div>
     </div>
-    <div class="services flex flex-row h-[683px] justify-between items-center mb-28">
+    <div class="services flex flex-row h-[600px] justify-between items-center mb-7">
         <div class="images-card relative w-1/2 h-5/6 ml-5">
             <div class="image-above top-0 left-20 absolute w-[357px] h-[363px] z-50">
                 <img src={trucking} alt="Paragon Transportation" class="rounded-sm object-cover w-full h-full">
@@ -87,13 +92,13 @@
             </div>
         </div>
         <div class="services-link w-1/2 relative">
-            <div class="services-text flex flex-row items-center text-4xl gap-8 uppercase ml-32" >
+            <div class="services-text flex flex-row items-center text-4xl gap-8 uppercase ml-32 cursor-pointer hover:text-[#4876B6]" >
                 Explore Services
                 <span>
-                    <img src={arrowright} alt="Arrow Right">
+                    <img src={arrowright} alt="Arrow Right" class="h-8 w-8">
                 </span>
             </div>
-            <div class="w-96 h-px left-[3px] top-[71px] absolute bg-slate-500 ml-32"></div>
+            <div class="w-[420px] h-px left-[3px] top-[71px] absolute bg-slate-500 ml-32"></div>
         </div>
     </div>
 </div>
@@ -163,15 +168,38 @@
                 <img src={shipping} alt="Muneshwers Shipping" class="rounded-sm object-cover w-full h-full">
             </div>
         </div>
-        <div class="services-link w-1/2 relative">
+        <div class="services-link w-1/2 relative cursor-pointer hover:text-[#4876B6]">
             <div class="services-text flex flex-row items-center text-4xl gap-8 uppercase ml-32" >
                 Explore Careers
                 <span>
-                    <img src={arrowright} alt="Arrow Right">
+                    <img src={arrowright} alt="Arrow Right" class="h-8 w-8 ">
                 </span>
             </div>
-            <div class="w-96 h-px left-[3px] top-[71px] absolute bg-slate-500 ml-32"></div>
+            <div class="w-[420px] h-px left-[3px] top-[71px] absolute bg-slate-500 ml-32"></div>
         </div>
     </div>
+</div>
+<div class="footer h-[400px] bg-[#EDEBE5]">
+    <div class="footer-top flex flex-row gap-4 p-10">
+        <div class="site-info w-1/5">
+            <div class="site-name flex flex-row w-full">
+                <img src={brandLogo} alt="Muneshwers Shipping" class="object-cover w-[150px] h-[100px]">
+                <img src={textLogo} alt="Muneshwers Shipping" class="object-cover w-[200px] h-[100px]">
+            </div>
+            <div class="site-tagline playfair-display-regular text-[18px]">
+                Offering solutions, not excuses...
+            </div>
+            <div class="social-media h-2/3 w-full flex flex-col gap-4 mt-4" >
+                <img src={facebookIcon} alt="Muneshwers Shipping" class="object-cover w-[50px] h-[50px]">
+                <img src={instagramIcon} alt="Muneshwers Shipping" class="object-cover w-[50px] h-[50px]">
+                <img src={linkedinIcon} alt="Muneshwers Shipping" class="object-cover w-[50px] h-[50px]">
+            </div>
+        </div>
+        <div class="company-info">
+
+        </div>
+        
+    </div>
+    <div class="footer-bottom"></div>
 </div>
 
