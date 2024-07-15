@@ -190,9 +190,18 @@
                 Offering solutions, not excuses...
             </div>
             <div class="social-media h-2/3 w-full flex flex-col gap-4 mt-4" >
-                <img src={facebookIcon} alt="Muneshwers Shipping" class="object-cover w-[50px] h-[50px]">
-                <img src={instagramIcon} alt="Muneshwers Shipping" class="object-cover w-[50px] h-[50px]">
-                <img src={linkedinIcon} alt="Muneshwers Shipping" class="object-cover w-[50px] h-[50px]">
+                <div class="social-link flex flex-row items-center gap-4 poppins-regular">
+                    <img src={facebookIcon} alt="Muneshwers Shipping" class="object-cover w-[50px] h-[50px]">
+                    <div class="social-name">Muneshwers Shipping</div>
+                </div>
+                <div class="social-link flex flex-row items-center gap-4 poppins-regular">
+                    <img src={instagramIcon} alt="Muneshwers Shipping" class="object-cover w-[50px] h-[50px]">
+                    <div class="social-name">@muneshwersshipping</div>
+                </div>
+                <div class="social-link flex flex-row items-center gap-4 poppins-regular">
+                    <img src={linkedinIcon} alt="Muneshwers Shipping" class="object-cover w-[50px] h-[50px]">
+                    <div class="social-name">Muneshwers Limited</div>
+                </div>
             </div>
         </div>
         <div class="company-info">
