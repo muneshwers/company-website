@@ -217,24 +217,142 @@
     background: #4876b6a7;
 }
 
-.hero-text {
+.intro-text {
     font-family: 'SF Pro Display Medium';
     font-weight: 500;
-    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
-    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
 }
 
 .hero-text {
     font-family: 'SF Pro Display Medium';
     font-weight: 500;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+
+.intro-text > div {
+    overflow: hidden;
+}
+
+.hero-text > div {
+    overflow: hidden;
+}
+
+.intro-text > div > p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
+    margin: 0;
+    line-height: 117%;
+}
+
+.hero-text > div > p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
+    margin: 0;
+    line-height: 117%;
+}
+
+div.intro-text > div {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.hero-text > div {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.intro-text > div:nth-child(2)>p {
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+}
+
+div.hero-text > div:nth-child(2) > p {
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+}
+
+div.hero-text > div {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.hero-text > div:nth-child(3) > p {
+    -webkit-animation-delay: 0.095s;
+    animation-delay: 0.09s;
+}
+
+.intro-text-indiv {
+    view-timeline-name: --appear-text;
+    view-timeline-axis: inline;
+    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation-timeline: --appear-text;
+    animation-range: cover cover 200px;
+}
+
+.individual-hero-text {
     -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
     animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
 }
+
+
 
 .wharf-image {
-    /* -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both; */
-    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
-    animation-timeline: view();
+    view-timeline-name: --revealing-image;
+    view-timeline-axis: block;
+    animation: linear reveal both;
+    animation-timeline: --revealing-image;
+    animation-range: entry 15% cover 40%;
+}
+
+.wharf-text {
+    font-family: 'SF Pro Display Medium';
+    font-weight: 500;
+    view-timeline-name: --slide-text;
+    view-timeline-axis: block;
+    animation: linear slide-up both;
+    animation-timeline: --slide-text;
+    animation-range: entry 15% cover 60%;
+}
+
+.service-container {
+    view-timeline-name: --slide-text;
+    view-timeline-axis: block;
+    animation: linear slide-down both;
+    animation-timeline: --slide-text;
+    animation-range: entry 30% cover 100%;
+}
+
+.image-above {
+    view-timeline-name: --slide-text;
+    view-timeline-axis: block;
+    animation: linear slide-down both;
+    animation-timeline: --slide-text;
+    animation-range: entry 30% cover 100%;
+}
+
+.image-below {
+    view-timeline-name: --slide-text;
+    view-timeline-axis: block;
+    animation: linear slide-up both;
+    animation-timeline: --slide-text;
+    animation-range: entry 15% cover 60%;
+}
+
+.service-container-low {
+    view-timeline-name: --slide-text;
+    view-timeline-axis: block;
+    animation: linear slide-up both;
+    animation-timeline: --slide-text;
+    animation-range: entry 15% cover 60%;
 }
 
 @-webkit-keyframes slide-up {
@@ -257,6 +375,58 @@
     }
 }
 
+@-webkit-keyframes slide-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+@-webkit-keyframes big-slide-up {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes big-slide-up {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        clip-path: inset(45% 20% 45% 20%);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+
 .intro-icon-box {
     width: 125px;
     height: 125px;
@@ -273,10 +443,7 @@
     background: url("./world.png") rgba(255, 255, 255, 0) 0% / cover no-repeat;
 }
 
-.intro-text {
-    font-family: 'SF Pro Display Medium';
-    font-weight: 500;
-}
+
 
 .services-text {
     letter-spacing: 3.2px;
@@ -287,14 +454,25 @@
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: lime;
+    /* background-color: lime; */
     width: 100%;
-    scale: 0 1;
+    /* scale: 0 1; */
     transform-origin: left;
-    animation: scroll-watcher linear;
+    /* animation: scroll-watcher ease-in; */
+    /* animation-timeline: scroll(); */
+}
+
+.navigationBar {
+    animation: scroll-watcher ease-in;
     animation-timeline: scroll();
 }
 
 @keyframes scroll-watcher {
-    to { scale: 1 1; }
+    0% { background-color: rgba(0, 10, 145, 0); }
+    2% { background-color: rgba(61, 57, 56, 0.98); }
+    100% { background-color: rgba(61, 57, 56, 0.98); }
 }
+
+/* .jv-container {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><rect x="0" y="0" width="30" height="30" fill="red" /></svg>'), auto;
+} */
