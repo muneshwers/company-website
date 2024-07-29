@@ -1,34 +1,27 @@
 <script>
-    import mllogo from "../logo.png";
-    import heroImage from "../hero-image.jpeg";
-    import grid from "../grid.svg";
-    import arrowright from "../arrowright.svg";
-    import trucking from "../trucking.png";
-    import shipping from "../new_shipping.png";
-    import wharf from "../wharf.png";
-    import paragonTrasport from "../paragon-transport.png";
-    import gysbi from "../gysbi.png";
-    import cranes from "../cranes.png";
-    import barges from "../barges.png";
-    import harbourtugs from "../harbourtugs.png";
-    import brandLogo from "../brand-logo.png";
-    import textLogo from "../text-logo.png";
-    import facebookIcon from "../icons8-facebook.svg";
-    import instagramIcon from "../icons8-instagram.svg";
-    import linkedinIcon from "../icons8-linkedin.svg";
-    import tiktokIcon from "../icons8-tiktok.svg";
-    import parallaxShipping from "../parallaxshipping.jpg";
-    import staffOne from "../worker1.jpg";
-    import staffTwo from "../worker2.jpg";
-    import shippingService from "../GYS05795.jpg"
-    import travelService from "../travel.jpg";
-    import store1Service from "../store1.jpg";
-    import store2Service from "../events1.jpg";
-    import { spring } from 'svelte/motion';
+    import mllogo from "../../logo.png";
+    import heroImage from "../../GYS05817.jpg";
+    import grid from "../../grid.svg";
+    import paragonTrasport from "../../paragon-transport.png";
+    import gysbi from "../../gysbi.png";
+    import cranes from "../../cranes.png";
+    import barges from "../../barges.png";
+    import harbourtugs from "../../harbourtugs.png";
+    import brandLogo from "../../brand-logo.png";
+    import textLogo from "../../text-logo.png";
+    import facebookIcon from "../../icons8-facebook.svg";
+    import instagramIcon from "../../icons8-instagram.svg";
+    import linkedinIcon from "../../icons8-linkedin.svg";
+    import tiktokIcon from "../../icons8-tiktok.svg";
+    import parallaxShipping from "../../parallaxshipping.jpg";
+    import staffOne from "../../worker1.jpg";
+    import staffTwo from "../../worker2.jpg";
+    import shippingService from "../../GYS05795.jpg"
+    import travelService from "../../travel.jpg";
+    import store1Service from "../../store1.jpg";
+    import store2Service from "../../events1.jpg";
 
     $: jvToggle = false;
-
-
 </script>
 
 <svelte:head>
@@ -42,13 +35,13 @@
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
             <div>
-                <p class="individual-hero-text">Solutions streamlined to fit</p>
+                <p class="individual-hero-text">Paragon Transport</p>
             </div>
             <div>
-                <p class="individual-hero-text">your business and personal</p>
+                <p class="individual-hero-text">and Lifting Services</p>
             </div>
             <div>
-                <p class="individual-hero-text">needs</p>
+                <p class="individual-hero-text">Inc.</p>
             </div>
         </div>
     </div>
@@ -62,9 +55,11 @@
             </div>
         </div>
         <div class="menu-items flex flex-row text-white gap-6 text-[20px] mr-5">
-            <div class="item-active">
-                Home
-            </div>
+            <a href="/">
+                <div class="item">
+                    Home
+                </div>
+            </a>
             <a href="/stores">
                 <div class="item">
                     Stores
@@ -73,7 +68,7 @@
             <!-- svelte-ignore a11y-no-static-element-interactions -->
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
-                <div class="item">
+                <div class="item-active">
                     Joint Ventures 
                 </div>
                 {#if jvToggle}
@@ -128,7 +123,6 @@
             </div>
         </div>
     </div>
-    
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="intro-header mt-7 justify-center relative">

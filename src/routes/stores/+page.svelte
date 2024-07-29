@@ -20,7 +20,8 @@
     import travelService from "../../travel.jpg";
     import store1Service from "../../store1.jpg";
     import store2Service from "../../store2.jpg";
-    
+ 
+    $: jvToggle = false;
 </script>
 
 <svelte:head>
@@ -60,15 +61,53 @@
                     Home
                 </div>
             </a>
-                
-            
             <a href="/">
                 <div class="item-active">
                     Stores
                 </div>
             </a>
-            <div class="item">
-                Joint Ventures 
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
+                <div class="item">
+                    Joint Ventures 
+                </div>
+                {#if jvToggle}
+                    <div class="js-list p-5 bg-slate-50 opacity-75 top-19 right-[360px] w-[200px] fixed rounded-lg text-black text-sm poppins-regular">
+                    <a href="/transport">
+                        <div class="item-option p-1 cursor-pointer mt-1">
+                            Paragon Transport
+                        </div>
+                    </a>
+                    <a href="https://www.gysbi.gy/">
+                        <div class="item-option p-1 cursor-pointer mt-3 ">
+                            Guyana Shore Base Inc
+                        </div>
+                    </a>
+                    <a href="/barges">
+                        <div class="item-option p-1 cursor-pointer mt-3 ">
+                            Barge Solutions Guyana Inc
+                        </div>
+                    </a>
+                    <a href="/harbourtugs">
+                        <div class="item-option p-1 cursor-pointer mt-3 ">
+                            Harbour Tugs Guyana Inc
+                        </div>
+                    </a>
+                    <a href="/cranes">
+                        <div class="item-option p-1 cursor-pointer mt-3 ">
+                            Cranes Guyana Inc
+                        </div>
+                    </a>
+                    <a href="/construction">
+                        <div class="item-option p-1 cursor-pointer mt-3 ">
+                            Paragon Construction
+                        </div>
+                    </a>
+                    
+                </div>
+                {/if}
+                
             </div>
             <div class="item">
                 Careers
@@ -83,6 +122,7 @@
                 Contact
             </div>
         </div>
+        
     </div>
 </div>
 <div class="introduction-section flex flex-col justify-center">

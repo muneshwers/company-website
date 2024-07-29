@@ -212,8 +212,33 @@
     transform-origin: bottom left;
 }
 
+.item-option {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.item-option::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.item-option:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .hero-text::selection {
-    color: white;
+    color: rgb(0, 0, 0);
     background: #4876b6a7;
 }
 
