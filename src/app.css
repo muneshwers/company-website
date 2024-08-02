@@ -56,6 +56,12 @@
     font-style: normal;
 }
 
+.raleway-medium {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
@@ -258,21 +264,8 @@
     width: max-content;
 }
 
-.intro-text > div {
-    overflow: hidden;
-}
-
 .hero-text > div {
     overflow: hidden;
-}
-
-.intro-text > div > p {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    white-space: nowrap;
-    margin: 0;
-    line-height: 117%;
 }
 
 .hero-text > div > p {
@@ -284,20 +277,12 @@
     line-height: 117%;
 }
 
-div.intro-text > div {
-    -webkit-animation-delay: 0;
-    animation-delay: 0;
-}
 
 div.hero-text > div {
     -webkit-animation-delay: 0;
     animation-delay: 0;
 }
 
-div.intro-text > div:nth-child(2)>p {
-    -webkit-animation-delay: 0.05s;
-    animation-delay: 0.05s;
-}
 
 div.hero-text > div:nth-child(2) > p {
     -webkit-animation-delay: 0.05s;
@@ -314,14 +299,7 @@ div.hero-text > div:nth-child(3) > p {
     animation-delay: 0.09s;
 }
 
-.intro-text-indiv {
-    view-timeline-name: --appear-text;
-    view-timeline-axis: inline;
-    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
-    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
-    animation-timeline: --appear-text;
-    animation-range: cover cover 200px;
-}
+
 
 .individual-hero-text {
     -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
@@ -468,6 +446,21 @@ div.hero-text > div:nth-child(3) > p {
     background: url("./world.png") rgba(255, 255, 255, 0) 0% / cover no-repeat;
 }
 
+.construction-icon-box {
+    width: 125px;
+    height: 125px;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm, 4px);
+    background: var(--surface-surface-brand-secondary, #EDEBE5);
+    box-shadow: 0px 4px 4px 0px rgba(115, 115, 115, 0.25);
+}
+
+.construction-icon {
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+    background: url("./construction.png") rgba(255, 255, 255, 0) 0% / cover no-repeat;
+}
 
 
 .services-text {

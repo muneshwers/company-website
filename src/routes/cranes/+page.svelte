@@ -7,7 +7,7 @@
     import cranes from "../../cranes.png";
     import barges from "../../barges.png";
     import harbourtugs from "../../harbourtugs.png";
-    import brandLogo from "../../brand-logo.png";
+    import brandLogo from "../../cranes-logo.png";
     import textLogo from "../../text-logo.png";
     import facebookIcon from "../../icons8-facebook.svg";
     import instagramIcon from "../../icons8-instagram.svg";
@@ -34,6 +34,9 @@
         <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
+            <div class="individual-hero-text logo w-80 h-26">
+                <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
+            </div>
             <div>
                 <p class="individual-hero-text">Cranes</p>
             </div>
@@ -109,9 +112,11 @@
                 
             </div>
             
-            <div class="item">
-                Careers
-            </div>
+            <a href="/careers">
+                <div class="item">
+                    Careers
+                </div>
+            </a>
             <div class="item">
                 Services
             </div>

@@ -1,25 +1,13 @@
 <script>
     import mllogo from "../../logo.png";
-    import heroImage from "../../hero-image.jpeg";
+    import heroImage from "../../DJI_0374.jpg";
     import grid from "../../grid.svg";
-    import paragonTrasport from "../../paragon-transport.png";
-    import gysbi from "../../gysbi.png";
-    import cranes from "../../cranes.png";
-    import barges from "../../barges.png";
-    import harbourtugs from "../../harbourtugs.png";
     import brandLogo from "../../brand-logo.png";
     import textLogo from "../../text-logo.png";
     import facebookIcon from "../../icons8-facebook.svg";
     import instagramIcon from "../../icons8-instagram.svg";
     import linkedinIcon from "../../icons8-linkedin.svg";
     import tiktokIcon from "../../icons8-tiktok.svg";
-    import parallaxShipping from "../../parallaxshipping.jpg";
-    import staffOne from "../../worker1.jpg";
-    import staffTwo from "../../worker2.jpg";
-    import shippingService from "../../GYS05795.jpg"
-    import travelService from "../../travel.jpg";
-    import store1Service from "../../store1.jpg";
-    import store2Service from "../../store2.jpg";
  
     $: jvToggle = false;
 </script>
@@ -61,7 +49,7 @@
                     Home
                 </div>
             </a>
-            <a href="/">
+            <a href="/stores">
                 <div class="item-active">
                     Stores
                 </div>
@@ -109,9 +97,11 @@
                 {/if}
                 
             </div>
-            <div class="item">
-                Careers
-            </div>
+            <a href="/careers">
+                <div class="item">
+                    Careers
+                </div>
+            </a>
             <div class="item">
                 Services
             </div>
@@ -129,8 +119,8 @@
     <div class="intro-header mt-7 justify-center relative">
         <img src={grid} alt="mesh grid" class="h-auto w-full">
         <div class="intro-details flex items-center absolute top-16 bottom-16 left-16 w-11/12 justify-between">
-            <div class="intro-icon-box flex justify-center items-center">
-                <div class="intro-icon"></div>
+            <div class="construction-icon-box flex justify-center items-center">
+                <div class="construction-icon"></div>
             </div>
             <div class="intro-details w-3/4">
                 <div class="intro-text text-right uppercase flex flex-col text-[76px] text-[#4876B6]">

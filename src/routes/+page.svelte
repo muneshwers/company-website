@@ -2,10 +2,6 @@
     import mllogo from "../logo.png";
     import heroImage from "../hero-image.jpeg";
     import grid from "../grid.svg";
-    import arrowright from "../arrowright.svg";
-    import trucking from "../trucking.png";
-    import shipping from "../new_shipping.png";
-    import wharf from "../wharf.png";
     import paragonTrasport from "../paragon-transport.png";
     import gysbi from "../gysbi.png";
     import cranes from "../cranes.png";
@@ -41,6 +37,9 @@
         <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
+            <div class="individual-hero-text logo w-36 h-36">
+                <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
+            </div>
             <div>
                 <p class="individual-hero-text">Solutions streamlined to fit</p>
             </div>
@@ -108,15 +107,15 @@
                             Paragon Construction
                         </div>
                     </a>
-                    
                 </div>
                 {/if}
                 
             </div>
-            
-            <div class="item">
-                Careers
-            </div>
+            <a href="/careers">
+                <div class="item">
+                    Careers
+                </div>
+            </a>
             <div class="item">
                 Services
             </div>
@@ -173,6 +172,11 @@
                 <img alt="" class="w-full h-full rounded-2xl left-5/5 " src="https://via.placeholder.com/250x700" />
             </div> -->
         </div>
+    </div>
+</div>
+<div class="next-info-section mt-32 w-full flex items-center justify-center">
+    <div class="title-text raleway-medium text-[35px]">
+        100% Guyanese owned business with years of experience in the shipping industry.
     </div>
 </div>
 <div class="parallax-container relative">
@@ -242,7 +246,8 @@
             </div>
         </div>
         <div class="services-link w-1/2 relative cursor-pointer hover:text-[#4876B6]">
-            <div class="services-text flex flex-row items-center text-4xl gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
+            <a href="/careers">
+                <div class="services-text flex flex-row items-center text-4xl gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
                 Explore Careers
                 <span>
                     <svg class="h-8 w-8" width="53" height="38" viewBox="0 0 53 38" xmlns="http://www.w3.org/2000/svg">
@@ -251,6 +256,8 @@
                     <!-- <img src={arrowright} alt="Arrow Right" class="h-8 w-8 "> -->
                 </span>
             </div>
+            </a>
+            
             <div class="w-[420px] h-px left-[3px] top-[71px] absolute bg-slate-500 ml-32"></div>
         </div>
     </div>
