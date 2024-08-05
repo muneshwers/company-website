@@ -56,12 +56,6 @@
                     Home
                 </div>
             </a>
-            
-            <a href="/stores">
-                <div class="{activityCheck.stores ? "item-active": "item"}">
-                    Stores
-                </div>
-            </a>
             <!-- svelte-ignore a11y-no-static-element-interactions -->
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
