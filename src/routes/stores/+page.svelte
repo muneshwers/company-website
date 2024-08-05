@@ -9,6 +9,7 @@
     import linkedinIcon from "../../icons8-linkedin.svg";
     import tiktokIcon from "../../icons8-tiktok.svg";
 	import Joint from "../Joint.svelte";
+	import Navigation from "../Navigation.svelte";
  
     $: jvToggle = false;
 </script>
@@ -34,55 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="navigationBar z-50 w-full p-5 fixed top-0 left-0 right-0 flex flex-row items-center justify-between">
-        <div class="company-info flex flex-row items-center gap-2">
-            <div class="logo w-16 h-16">
-                <img src={mllogo} alt="Muneshwers Limited Logo" class="h-full w-full">
-            </div>
-            <div class="company-name the-seasons-light text-white text-[24px]">
-                Mun<span class="the-seasons-italic">e</span>shw<span class="the-seasons-italic">e</span>rs Limit<span class="the-seasons-italic">e</span>d
-            </div>
-        </div>
-        <div class="menu-items flex flex-row text-white gap-6 text-[20px] mr-5">
-            
-            <a href="/">
-                <div class="item">
-                    Home
-                </div>
-            </a>
-            <a href="/stores">
-                <div class="item-active">
-                    Stores
-                </div>
-            </a>
-            <!-- svelte-ignore a11y-no-static-element-interactions -->
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
-                <div class="item">
-                    Joint Ventures 
-                </div>
-                {#if jvToggle}
-                    <Joint />
-                {/if}
-                
-            </div>
-            <a href="/careers">
-                <div class="item">
-                    Careers
-                </div>
-            </a>
-            <div class="item">
-                Services
-            </div>
-            <div class="item">
-                About
-            </div>
-            <div class="item">
-                Contact
-            </div>
-        </div>
-        
-    </div>
+    <Navigation activePage="stores"/>
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="intro-header mt-7 justify-center relative">

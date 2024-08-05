@@ -1,13 +1,13 @@
 <script>
     import mllogo from "../../logo.png";
-    import heroImage from "../../GYS06897.jpg";
+    import heroImage from "../../careers.jpg";
     import grid from "../../grid.svg";
     import paragonTrasport from "../../paragon-transport.png";
     import gysbi from "../../gysbi.png";
     import cranes from "../../cranes.png";
     import barges from "../../barges.png";
     import harbourtugs from "../../harbourtugs.png";
-    import brandLogo from "../../cranes-logo.png";
+    import brandLogo from "../../brand-logo.png";
     import textLogo from "../../text-logo.png";
     import facebookIcon from "../../icons8-facebook.svg";
     import instagramIcon from "../../icons8-instagram.svg";
@@ -24,6 +24,7 @@
 	import Navigation from "../Navigation.svelte";
 
     $: jvToggle = false;
+
 </script>
 
 <svelte:head>
@@ -32,22 +33,20 @@
 </svelte:head>
 <div class="landing-top relative">
     <!-- <div class="scroll-watcher"></div> -->
-    <div class="hero-image h-screen relative">
+    <div class="hero-image h-[50vh] relative">
         <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
-            <div class="individual-hero-text logo w-80 h-26">
-                <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
-            </div>
-            <div>
-                <p class="individual-hero-text">Cranes Guyana</p>
-            </div>
-            <div>
-                <p class="individual-hero-text">Inc.</p>
+            
+            <div class="flex flex-row items-center gap-6">
+                <div class="individual-hero-text logo w-36 h-36">
+                    <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
+                </div>
+                <p class="individual-hero-text">Careers</p>
             </div>
         </div>
     </div>
-    <Navigation activePage="jvs"/>
+    <Navigation activePage="services"/>
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="intro-header mt-7 justify-center relative">
@@ -57,18 +56,13 @@
                 <div class="intro-icon"></div>
             </div>
             <div class="intro-details w-3/4">
-                <div class="intro-text text-right uppercase flex flex-col text-[76px] text-[#4876B6]">
-                    <div>
-                        <p class="intro-text-indiv text-right">Discover which service is</p>
+                <div class="intro-text text-right w-[1000px] uppercase flex flex-col text-[76px] text-[#4876B6]">
+                    <div class="text-right flex flex-row-reverse w-full">
+                        Choose the career that's right for you!
                     </div>
-                    <div class="text-right flex flex-row-reverse">
-                        <p class="intro-text-indiv">right for you!</p>
-                    </div>
-                    
-                    
                 </div>
                 <div class="intro-subtext text-right text-[#3D3938] text-[28px] raleway-light">
-                    Choose from our shipping, transportation, travel service or explore our stores for your needs.
+                    Choose from our list of available job opportunities below.
                 </div>
             </div>
             
