@@ -56,6 +56,13 @@
     font-style: normal;
 }
 
+.raleway-regular {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .raleway-medium {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -251,9 +258,6 @@
 .intro-text {
     font-family: 'SF Pro Display Medium';
     font-weight: 500;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
 }
 
 .hero-text {
@@ -327,10 +331,10 @@ div.hero-text > div:nth-child(3) > p {
 }
 
 .service-container {
-    view-timeline-name: --slide-text;
+    view-timeline-name: --slide-image;
     view-timeline-axis: block;
     animation: linear slide-down both;
-    animation-timeline: --slide-text;
+    animation-timeline: --slide-image;
     animation-range: entry 30% cover 100%;
 }
 
@@ -351,10 +355,10 @@ div.hero-text > div:nth-child(3) > p {
 }
 
 .service-container-low {
-    view-timeline-name: --slide-text;
+    view-timeline-name: --slide-image;
     view-timeline-axis: block;
     animation: linear slide-up both;
-    animation-timeline: --slide-text;
+    animation-timeline: --slide-image;
     animation-range: entry 15% cover 60%;
 }
 
@@ -489,6 +493,10 @@ div.hero-text > div:nth-child(3) > p {
     0% { background-color: rgba(0, 10, 145, 0); }
     2% { background-color: rgba(61, 57, 56, 0.98); }
     100% { background-color: rgba(61, 57, 56, 0.98); }
+}
+
+.shipping-cursor {
+    cursor: url("./Shipping.png"), auto;
 }
 
 /* .jv-container {

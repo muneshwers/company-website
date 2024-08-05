@@ -20,6 +20,7 @@
     import travelService from "../../travel.jpg";
     import store1Service from "../../store1.jpg";
     import store2Service from "../../events1.jpg";
+	import Joint from "../Joint.svelte";
 
     $: jvToggle = false;
 
@@ -71,39 +72,7 @@
                     Joint Ventures 
                 </div>
                 {#if jvToggle}
-                    <div class="js-list p-5 bg-slate-50 opacity-75 top-19 right-[360px] w-[200px] fixed rounded-lg text-black text-sm poppins-regular">
-                    <a href="/transport">
-                        <div class="item-option p-1 cursor-pointer mt-1">
-                            Paragon Transport
-                        </div>
-                    </a>
-                    <a href="https://www.gysbi.gy/">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Guyana Shore Base Inc
-                        </div>
-                    </a>
-                    <a href="/barges">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Barge Solutions Guyana Inc
-                        </div>
-                    </a>
-                    <a href="/harbourtugs">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Harbour Tugs Guyana Inc
-                        </div>
-                    </a>
-                    <a href="/cranes">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Cranes Guyana Inc
-                        </div>
-                    </a>
-                    <a href="/construction">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Paragon Construction
-                        </div>
-                    </a>
-                    
-                </div>
+                    <Joint />
                 {/if}
                 
             </div>
@@ -135,10 +104,7 @@
             <div class="intro-details w-3/4">
                 <div class="intro-text text-right w-[1000px] uppercase flex flex-col text-[76px] text-[#4876B6]">
                     <div class="text-right flex flex-row-reverse w-full">
-                        Choose the career that's
-                    </div>
-                    <div class="text-right flex flex-row-reverse w-full">
-                        right for you!
+                        Choose the career that's right for you!
                     </div>
                 </div>
                 <div class="intro-subtext text-right text-[#3D3938] text-[28px] raleway-light">

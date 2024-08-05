@@ -1,6 +1,6 @@
 <script>
     import mllogo from "../../logo.png";
-    import heroImage from "../../GYS05817.jpg";
+    import heroImage from "../../GYS06906.png";
     import grid from "../../grid.svg";
     import paragonTrasport from "../../paragon-transport.png";
     import gysbi from "../../gysbi.png";
@@ -20,6 +20,7 @@
     import travelService from "../../travel.jpg";
     import store1Service from "../../store1.jpg";
     import store2Service from "../../events1.jpg";
+	import Joint from "../Joint.svelte";
 
     $: jvToggle = false;
 </script>
@@ -75,39 +76,7 @@
                     Joint Ventures 
                 </div>
                 {#if jvToggle}
-                    <div class="js-list p-5 bg-slate-50 opacity-75 top-19 right-[360px] w-[200px] fixed rounded-lg text-black text-sm poppins-regular">
-                    <a href="/transport">
-                        <div class="item-option p-1 cursor-pointer mt-1">
-                            Paragon Transport
-                        </div>
-                    </a>
-                    <a href="https://www.gysbi.gy/">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Guyana Shore Base Inc
-                        </div>
-                    </a>
-                    <a href="/barges">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Barge Solutions Guyana Inc
-                        </div>
-                    </a>
-                    <a href="/harbourtugs">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Harbour Tugs Guyana Inc
-                        </div>
-                    </a>
-                    <a href="/cranes">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Cranes Guyana Inc
-                        </div>
-                    </a>
-                    <a href="/construction">
-                        <div class="item-option p-1 cursor-pointer mt-3 ">
-                            Paragon Construction
-                        </div>
-                    </a>
-                    
-                </div>
+                    <Joint />
                 {/if}
                 
             </div>
