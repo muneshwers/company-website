@@ -5,11 +5,12 @@
     import mllogo from "../logo.png";
     import heroImage from "../hero-image.jpeg";
     import grid from "../grid.svg";
-    import paragonTrasport from "../paragon-transport.png";
+    import paragonTrasport from "../paragon-transport-logo-text.png";
     import gysbi from "../gysbi.png";
     import cranes from "../cranes.png";
     import barges from "../barges.png";
     import harbourtugs from "../harbourtugs.png";
+    import constructionLogo from "../construction-logo-black.png"
     import brandLogo from "../brand-logo.png";
     import textLogo from "../text-logo.png";
     import facebookIcon from "../icons8-facebook.svg";
@@ -21,10 +22,12 @@
     import staffTwo from "../worker2.jpg";
     import shippingService from "../GYS05795.jpg"
     import travelService from "../travel.jpg";
-    import store1Service from "../store1.jpg";
-    import store2Service from "../events1.jpg";
+    import store1Service from "../home_goods.jpg";
+    import store2Service from "../event_decoration.jpg";
+    import truckingService from "../GYS05822.jpg"
 	import Navigation from "./Navigation.svelte";
     import { onMount } from "svelte";
+	import Footer from "./Footer.svelte";
 
     $: jvToggle = false;
     $: serviceToggle = false;
@@ -63,7 +66,8 @@
                 <p class="individual-hero-text">needs</p>
             </div>
         </div>
-        <div class="scroll-down flex flex-col absolute bottom-10 right-14">
+        <a href="#introduction">
+            <div class="scroll-down flex flex-col absolute bottom-10 right-14">
                 <div class="w-[58px] h-[58px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
@@ -80,12 +84,14 @@
                     </svg>
                 </div>
             </div>
+        </a>
+        
     </div>
     <Navigation activePage="home"/>
     
 </div>
-<div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header my-12 justify-center relative flex">
+<div class="introduction-section flex flex-col justify-center" id="introduction">
+    <div class="intro-header my-12 justify-center relative flex h-[143px]">
         {#if y > 200}
             <div class="intro-details">
                 <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#4876B6]">
@@ -99,46 +105,53 @@
     </div>
     
     
-    <div class="services flex justify-center items-center mb-7 mt-10 w-full">
-        <div class="flex flex-row gap-8 relative h-[120vh] w-[97%]">
+    <div class="services flex justify-center items-center mt-10 w-full">
+        <div class="flex flex-row gap-8 relative h-[110vh] w-[97%]">
             <div class=" service-container w-[275px] h-[700px] absolute cursor-pointer rounded-2xl">
-                <img alt="" class="w-full h-full rounded-2xl object-cover" src={shippingService} />
-                <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                    Shipping
-                </div>
+                <a href="/shipping">
+                    <img alt="" class="w-full h-full rounded-2xl object-cover" src={shippingService} />
+                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                        Shipping
+                    </div>
+                </a>
             </div>
             <div class="service-container-low w-[275px] h-[700px] absolute left-[20.5%] cursor-pointer">
-                <img alt="" class="w-full h-full rounded-2xl object-cover cursor-pointer" src={travelService} />
-                <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                    Travel
-                </div>
+                <a href="/travel">
+                    <img alt="" class="w-full h-full rounded-2xl object-cover cursor-pointer" src={travelService} />
+                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                        Travel
+                    </div>
+                </a>
             </div>
             <div class="service-container w-[275px] h-[700px] absolute right-[40.7%] cursor-pointer">
-                <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={store1Service} />
-                <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                    Home Goods
-                </div>
+                <a href="/stores">
+                    <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={store1Service} />
+                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                        Home Goods
+                    </div>
+                </a>
             </div>
             <div class="service-container-low w-[275px] h-[700px] absolute right-[20.5%] cursor-pointer">
-                <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={store1Service} />
-                <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                    Hardware
-                </div>
+                <a href="/transport">
+                    <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={truckingService} />
+                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                        Trucking
+                    </div>
+                </a>
             </div>
             <div class="service-container w-[275px] h-[700px] absolute right-0 cursor-pointer">
-                <img alt="" class="w-full h-full rounded-2xl left-full  object-cover cursor-pointer" src={store2Service} />
-                <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                    Events
-                </div>
+                <a href="/stores">
+                    <img alt="" class="w-full h-full rounded-2xl left-full  object-cover cursor-pointer" src={store2Service} />
+                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                        Events
+                    </div>
+                </a>
             </div>
-            <!-- <div class="service-container w-[250px] h-[700px]">
-                <img alt="" class="w-full h-full rounded-2xl left-5/5 " src="https://via.placeholder.com/250x700" />
-            </div> -->
         </div>
     </div>
 </div>
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
-    <div class="title-text raleway-regular text-[35px] text-[#4876B6]">
+    <div class="title-text raleway-regular text-[37px] text-[#4876B6]">
         100% Guyanese owned business with years of experience in the shipping industry.
     </div>
 </div>
@@ -151,54 +164,70 @@
 <div class="joint-ventures-section h-1/2 mb-24 flex flex-col items-center">
     <div class="jv-heading flex flex-row items-left my-24 w-10/12">
         <div class="jv-right flex flex-row">
-            {#if y > 2300}
+            {#if y > 2100}
                 <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px]">
                     <p>Explore our joint ventures</p>
                 </div>
             {/if}
-            
+
         </div>
     </div>
-    <div class="bento-container">
-        <div class="bento-box flex flex-col items-center">
-            <div class="row flex flex-row justify-center w-10/12 gap-5">
-                <div class="jv-container paragon-container w-[932px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={paragonTrasport} alt="Paragon Transport Logo" class="h-2/2 w-4/5">
+    <div class="jv-container w-full">
+        <div class="w-full h-[334px] bg-white border border-[#4876b6] flex justify-center">
+            <a href="/transport" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div >
+                    <img class="w-[150px] h-[150px]" src={paragonTrasport} alt="jv logos" />
                 </div>
-                <div class="gysbi-container w-[571px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={gysbi} alt="Guyana Shore Base Inc Logo" class="h-2/2 w-4/5">
+            </a>
+            <a href="/cranes" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[40px]" src={cranes} alt="jv logos" />
                 </div>
-            </div>
-            <div class="row flex flex-row justify-center w-10/12 gap-5 mt-5">
-                <div class="cranes-container w-[581px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={cranes} alt="Cranes Logo" class="h-2/2 w-4/5">
+            </a>
+            <a href="/barges" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={barges} alt="jv logos" />
                 </div>
-                <div class="bsgi-container w-[600px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={barges} alt="Barge Solutions Guyana Inc Logo" class="h-2/2 w-4/5">
+            </a>
+            <a href="/" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={brandLogo} alt="jv logos" />
                 </div>
-                <div class="harbourtugs-container w-[288px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={harbourtugs} alt="Barge Solutions Guyana Inc Logo" class="h-2/2 w-4/5">
+            </a>
+            <a href="https://www.gysbi.gy/" target="_blank" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={gysbi} alt="jv logos" />
                 </div>
-            </div>
+            </a>
+            <a href="/harbourtugs" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={harbourtugs} alt="jv logos" />
+                </div>
+            </a>
+            <a href="/construction" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={constructionLogo} alt="jv logos" />
+                </div>
+            </a>
+            
         </div>
+        
     </div>
 </div>
 <div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header mt-7 justify-center relative">
-        <img src={grid} alt="mesh grid" class="h-auto w-full">
-        <div class="intro-details flex items-center absolute top-16 bottom-16 left-16 w-11/12 justify-between">
-            <div class="intro-details w-3/4">
-                <div class="intro-text text-left uppercase flex text-[76px] text-[#4876B6]">
-                    Interested in a career with us?
+    <div class="intro-header my-12 justify-center relative flex h-[143px]">
+        {#if y > 2800}
+            <div class="intro-details">
+                <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#4876B6]">
+                    <p>Interested in a career with us?</p>
                 </div>
-                <div class="intro-subtext text-left text-[#3D3938] text-[28px] raleway-light">
-                    Check out our list of job openings and see which is the right path for you.
+                <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
+                    <p>Check out our list of job openings and see which is the right path for you.</p>
                 </div>
             </div>
-            
-        </div>
+        {/if}
     </div>
-    <div class="services flex flex-row h-[683px] justify-between items-center mb-28">
+    <div class="services flex flex-row h-[683px] justify-between items-center mb-10">
         <div class="images-card relative w-1/2 h-5/6 ml-5">
             <div class="image-above top-0 left-20 absolute w-[357px] h-[363px] z-30">
                 <img src={staffTwo} alt="Paragon Transportation" class="rounded-sm object-cover w-full h-full">
@@ -224,61 +253,6 @@
         </div>
     </div>
 </div>
-<div class="footer h-[450px] bg-[#EDEBE5]">
-    <div class="footer-top flex flex-row gap-4 p-10">
-        <div class="site-info w-1/5">
-            <div class="site-name flex flex-row w-full">
-                <img src={brandLogo} alt="Muneshwers Shipping" class="object-cover w-[150px] h-[100px]">
-                <img src={textLogo} alt="Muneshwers Shipping" class="object-cover w-[200px] h-[100px]">
-            </div>
-            <div class="site-tagline playfair-display-regular text-[18px] ml-4 mt-2">
-                Offering solutions, not excuses...
-            </div>
-            <div class="social-media h-2/3 w-full flex flex-col gap-4 mt-7 raleway-light" >
-                <a href="https://www.facebook.com/profile.php?id=100087564355386" target="_blank" class="social-link flex flex-row items-center gap-2">
-                    <img src={facebookIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
-                    <div class="social-name">Muneshwers Shipping</div>
-                </a>
-                <a href="https://www.instagram.com/muneshwersshipping/" target="_blank" class="social-link flex flex-row items-center gap-2">
-                    <img src={instagramIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
-                    <div class="social-name">@muneshwersshipping</div>
-                </a>
-                <a href="https://www.tiktok.com/@muneshwersshipping/" target="_blank" class="social-link flex flex-row items-center gap-2 ">
-                    <img src={tiktokIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
-                    <div class="social-name">@muneshwersshipping</div>
-                </a>
-                <a href="https://www.linkedin.com/company/muneshwers-limited/" target="_blank" class="social-link flex flex-row items-center gap-2">
-                    <img src={linkedinIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
-                    <div class="social-name">Muneshwers Limited</div>
-                </a>
-            </div>
-        </div>
-        <div class="company-info">
-            <div class="footer-section w-2/3">
-                <div class="footer-section-title poppins-medium text-2xl">
-                    Address
-                </div>
-                <div class="footer-section-info poppins-light mt-4">
-                    45-47 Water Street, Georgetown, Guyana
-                </div>
-            </div>
-            <div class="footer-section mt-12 w-2/3">
-                <div class="footer-section-title poppins-medium text-2xl">
-                    Contact Info
-                </div>
-                <div class="footer-section-info poppins-light mt-4 flex flex-col gap-4">
-                    <div class="info-number">
-                        +592-227-7417/18
-                    </div>
-                    <div class="info-email">
-                        info@muneshwers.com
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    <div class="footer-bottom"></div>
-</div>
+<Footer />
 
 <svelte:window bind:scrollY={y} />

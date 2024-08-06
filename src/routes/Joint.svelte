@@ -24,7 +24,7 @@
             Paragon Construction
         </div>
     </a>
-    <a href="https://www.gysbi.gy/">
+    <a href="https://www.gysbi.gy/" target="_blank">
         <div class="item-option p-1 cursor-pointer mt-3 ">
             Guyana Shore Base Inc
         </div>
