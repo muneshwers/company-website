@@ -21,8 +21,9 @@
     import staffTwo from "../worker2.jpg";
     import shippingService from "../GYS05795.jpg"
     import travelService from "../travel.jpg";
-    import store1Service from "../store1.jpg";
-    import store2Service from "../events1.jpg";
+    import store1Service from "../home_goods.jpg";
+    import store2Service from "../event_decoration.jpg";
+    import truckingService from "../GYS05822.jpg"
 	import Navigation from "./Navigation.svelte";
     import { onMount } from "svelte";
 
@@ -120,9 +121,9 @@
                 </div>
             </div>
             <div class="service-container-low w-[275px] h-[700px] absolute right-[20.5%] cursor-pointer">
-                <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={store1Service} />
+                <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={truckingService} />
                 <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                    Hardware
+                    Trucking
                 </div>
             </div>
             <div class="service-container w-[275px] h-[700px] absolute right-0 cursor-pointer">
