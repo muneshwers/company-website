@@ -1,4 +1,4 @@
-<div class="js-list p-5 bg-slate-50 opacity-75 top-19 right-[358px] w-[200px] fixed rounded-lg text-black text-sm poppins-regular">
+<div class="js-list p-5 bg-slate-50 opacity-75 top-19 right-[175px] w-[200px] fixed rounded-lg text-black text-sm poppins-regular">
     <a href="/transport">
         <div class="item-option p-1 cursor-pointer mt-1">
             Paragon Transport

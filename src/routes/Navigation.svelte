@@ -58,12 +58,12 @@
             </a>
             <!-- svelte-ignore a11y-no-static-element-interactions -->
             <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
-                <div class="{activityCheck.jointVentures ? "item-active": "item"}">
-                    Joint Ventures 
+            <div class="dropdown relative" on:mouseenter={() => {serviceToggle = true}} on:mouseleave={() => {serviceToggle = false}} on:click={() => serviceToggle=true}>
+                <div class="{activityCheck.services ? "item-active": "item"}">
+                    Services
                 </div>
-                {#if jvToggle}
-                    <Joint />
+                {#if serviceToggle}
+                    <Services />
                 {/if}
                 
             </div>
@@ -74,12 +74,12 @@
             </a>
             <!-- svelte-ignore a11y-no-static-element-interactions -->
             <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <div class="dropdown relative" on:mouseenter={() => {serviceToggle = true}} on:mouseleave={() => {serviceToggle = false}} on:click={() => serviceToggle=true}>
-                <div class="{activityCheck.services ? "item-active": "item"}">
-                    Services
+            <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
+                <div class="{activityCheck.jointVentures ? "item-active": "item"}">
+                    Joint Ventures 
                 </div>
-                {#if serviceToggle}
-                    <Services />
+                {#if jvToggle}
+                    <Joint />
                 {/if}
                 
             </div>

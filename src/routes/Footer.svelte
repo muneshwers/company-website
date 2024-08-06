@@ -7,7 +7,7 @@
     import tiktokIcon from "../icons8-tiktok.svg";
 </script>
 
-<div class="footer h-[480px] bg-[#EDEBE5]">
+<div class="footer h-[490px] bg-[#EDEBE5]">
     <div class="footer-top flex flex-row gap-4 p-10">
         <div class="site-info w-1/5">
             <div class="site-name flex flex-row w-full">
