@@ -9,12 +9,12 @@
             Travel
         </div>
     </a>
-    <a href="/store">
+    <a href="/stores">
         <div class="item-option p-1 cursor-pointer mt-3 ">
             Events Store
         </div>
     </a>
-    <a href="/store">
+    <a href="/stores">
         <div class="item-option p-1 cursor-pointer mt-3 ">
             Home Goods Store
         </div>
