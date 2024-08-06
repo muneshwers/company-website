@@ -1,4 +1,7 @@
 <script>
+// @ts-nocheck
+
+    // @ts-ignore
     import mllogo from "../logo.png";
     import heroImage from "../hero-image.jpeg";
     import grid from "../grid.svg";
@@ -20,14 +23,20 @@
     import travelService from "../travel.jpg";
     import store1Service from "../store1.jpg";
     import store2Service from "../events1.jpg";
-    import { spring } from 'svelte/motion';
-	import Joint from "./Joint.svelte";
-	import Services from "./Services.svelte";
 	import Navigation from "./Navigation.svelte";
+    import { onMount } from "svelte";
 
     $: jvToggle = false;
     $: serviceToggle = false;
+    
+    let y;
 
+    if(y > 200) {
+        console.log("Appeared")
+    } 
+    if(y < 200) {
+        console.log("Disappeared")
+    }
 
 </script>
 
@@ -76,18 +85,22 @@
     
 </div>
 <div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header my-12 justify-center relative">
-        <div class="intro-details">
-            <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#4876B6]">
-                Discover which service is right for you!
+    <div class="intro-header my-12 justify-center relative flex">
+        {#if y > 200}
+            <div class="intro-details">
+                <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#4876B6]">
+                    <p>Discover which service is right for you!</p>
+                </div>
+                <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
+                    <p>Choose from our shipping, transportation, travel service or explore our stores for your needs.</p>
+                </div>
             </div>
-            <div class="intro-subtext mr-8 text-center text-[#3D3938] text-[28px] raleway-light">
-                Choose from our shipping, transportation, travel service or explore our stores for your needs.
-            </div>
-        </div>
+        {/if}
     </div>
-    <div class="services flex justify-center items-center mb-7 mt-10 w-[full]">
-        <div class="flex flex-row gap-8 relative h-[120vh] w-full">
+    
+    
+    <div class="services flex justify-center items-center mb-7 mt-10 w-full">
+        <div class="flex flex-row gap-8 relative h-[120vh] w-[97%]">
             <div class=" service-container w-[275px] h-[700px] absolute cursor-pointer rounded-2xl">
                 <img alt="" class="w-full h-full rounded-2xl object-cover" src={shippingService} />
                 <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
@@ -136,14 +149,14 @@
     </div>
 </div>
 <div class="joint-ventures-section h-1/2 mb-24 flex flex-col items-center">
-    <div class="heading flex flex-row items-center my-24 w-10/12 justify-center">
-        <div class="left flex flex-row items-center gap-4 w-2/5 px-8">
-            <div class="left-text uppercase poppins-medium tracking-wide text-[#4876B6]">Joint Ventures</div>
-        </div>
-        <div class="right flex flex-row justify-end w-4/6">
-            <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px]">
-                Explore our joint ventures
-            </div>
+    <div class="jv-heading flex flex-row items-left my-24 w-10/12">
+        <div class="jv-right flex flex-row">
+            {#if y > 2300}
+                <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px]">
+                    <p>Explore our joint ventures</p>
+                </div>
+            {/if}
+            
         </div>
     </div>
     <div class="bento-container">
@@ -268,3 +281,4 @@
     <div class="footer-bottom"></div>
 </div>
 
+<svelte:window bind:scrollY={y} />

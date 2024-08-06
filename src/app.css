@@ -6,6 +6,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    scroll-behavior: smooth;
+}
 
 @font-face {
     font-family: 'The Seasons';
@@ -268,8 +271,48 @@
     width: max-content;
 }
 
+.intro-details {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    overflow: hidden;
+}
+
+.jv-right {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    overflow: hidden;
+}
+
 .hero-text > div {
     overflow: hidden;
+}
+
+.intro-details > div {
+    overflow: hidden;
+}
+
+.jv-right > div {
+    overflow: hidden;
+}
+
+.intro-details > div > p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
+    margin: 0;
+    line-height: 117%;
+}
+
+.jv-right > div > p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
+    margin: 0;
+    line-height: 117%;
 }
 
 .hero-text > div > p {
@@ -281,6 +324,45 @@
     line-height: 117%;
 }
 
+div.intro-details > div {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.intro-details > div:nth-child(2) {
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+}
+
+div.jv-right > div {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.jv-right > div:nth-child(2) {
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+}
+
+div.intro-details > div {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.intro-details > div:nth-child(3) {
+    -webkit-animation-delay: 0.095s;
+    animation-delay: 0.09s;
+}
+
+div.jv-right > div {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.jv-right > div:nth-child(3) {
+    -webkit-animation-delay: 0.095s;
+    animation-delay: 0.09s;
+} 
 
 div.hero-text > div {
     -webkit-animation-delay: 0;
@@ -306,6 +388,21 @@ div.hero-text > div:nth-child(3) > p {
 
 
 .individual-hero-text {
+    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.intro-text {
+    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.intro-subtext {
+    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.right-text {
     -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
     animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
 }
