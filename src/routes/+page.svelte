@@ -70,7 +70,7 @@
                 <p class="individual-hero-text">needs</p>
             </div>
         </div>
-        <a href="#introduction">
+        <a href="#introduction" id="scroll-down">
             <div class="scroll-down flex flex-col absolute bottom-10 right-14">
                 <div class="w-[58px] h-[58px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
@@ -111,7 +111,7 @@
     
     <div class="services flex justify-center items-center mt-10 w-full">
         <div class="flex flex-row gap-8 relative h-[110vh] w-full">
-            <div class=" service-container w-[275px] h-[700px] absolute cursor-pointer rounded-2xl">
+            <div class=" service-container w-[275px] md:w-[240px] h-[700px] absolute cursor-pointer rounded-2xl">
                 <a href="/shipping">
                     <img alt="" class="w-full h-full rounded-2xl object-cover" src={shippingService} />
                     <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
@@ -119,7 +119,7 @@
                     </div>
                 </a>
             </div>
-            <div class="service-container-low w-[275px] h-[700px] absolute left-[20.5%] cursor-pointer">
+            <div class="service-container-low w-[275px] md:w-[240px] h-[700px] absolute left-[20.5%] cursor-pointer">
                 <a href="/travel">
                     <img alt="" class="w-full h-full rounded-2xl object-cover cursor-pointer" src={travelService} />
                     <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
@@ -127,7 +127,7 @@
                     </div>
                 </a>
             </div>
-            <div class="service-container w-[275px] h-[700px] absolute right-[40.7%] cursor-pointer">
+            <div class="service-container w-[275px] md:w-[240px] h-[700px] absolute right-[40.7%] cursor-pointer">
                 <a href="/stores">
                     <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={store1Service} />
                     <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
@@ -135,7 +135,7 @@
                     </div>
                 </a>
             </div>
-            <div class="service-container-low w-[275px] h-[700px] absolute right-[20.5%] cursor-pointer">
+            <div class="service-container-low w-[275px] md:w-[240px] h-[700px] absolute right-[20.5%] cursor-pointer">
                 <a href="/transport">
                     <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={truckingService} />
                     <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
@@ -143,7 +143,7 @@
                     </div>
                 </a>
             </div>
-            <div class="service-container w-[275px] h-[700px] absolute right-0 cursor-pointer">
+            <div class="service-container w-[275px] md:w-[240px] h-[700px] absolute right-0 cursor-pointer">
                 <a href="/stores">
                     <img alt="" class="w-full h-full rounded-2xl left-full  object-cover cursor-pointer" src={store2Service} />
                     <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
@@ -205,7 +205,7 @@
     </div>
     <div class="parallax-container relative">
         <img src={parallaxCareer} alt="" class="object-cover w-screen wharf-image">
-        <div class="services  flex flex-row h-[600px] justify-between items-center mb-10 absolute bottom-52 right-28">
+        <div class="services  flex flex-row h-[600px] justify-between items-center mb-10 absolute bottom-36 right-28">
             <div class="services-link relative cursor-pointer text-white hover:text-[#97bff7]">
                 <a href="/careers">
                     <div class="services-text flex flex-row items-center text-5xl gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
