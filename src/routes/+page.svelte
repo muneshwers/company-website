@@ -5,11 +5,12 @@
     import mllogo from "../logo.png";
     import heroImage from "../hero-image.jpeg";
     import grid from "../grid.svg";
-    import paragonTrasport from "../paragon-transport.png";
+    import paragonTrasport from "../paragon-transport-logo-text.png";
     import gysbi from "../gysbi.png";
     import cranes from "../cranes.png";
     import barges from "../barges.png";
     import harbourtugs from "../harbourtugs.png";
+    import constructionLogo from "../construction-logo-black.png"
     import brandLogo from "../brand-logo.png";
     import textLogo from "../text-logo.png";
     import facebookIcon from "../icons8-facebook.svg";
@@ -100,8 +101,8 @@
     </div>
     
     
-    <div class="services flex justify-center items-center mb-7 mt-10 w-full">
-        <div class="flex flex-row gap-8 relative h-[120vh] w-[97%]">
+    <div class="services flex justify-center items-center mt-10 w-full">
+        <div class="flex flex-row gap-8 relative h-[110vh] w-[97%]">
             <div class=" service-container w-[275px] h-[700px] absolute cursor-pointer rounded-2xl">
                 <img alt="" class="w-full h-full rounded-2xl object-cover" src={shippingService} />
                 <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
@@ -160,28 +161,45 @@
             
         </div>
     </div>
-    <div class="bento-container">
-        <div class="bento-box flex flex-col items-center">
-            <div class="row flex flex-row justify-center w-10/12 gap-5">
-                <div class="jv-container paragon-container w-[932px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={paragonTrasport} alt="Paragon Transport Logo" class="h-2/2 w-4/5">
+    <div class="jv-container w-full">
+        <div class="w-full h-[334px] bg-white border border-[#4876b6] flex justify-center">
+            <a href="/transport" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div >
+                    <img class="w-[150px] h-[150px]" src={paragonTrasport} alt="jv logos" />
                 </div>
-                <div class="gysbi-container w-[571px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={gysbi} alt="Guyana Shore Base Inc Logo" class="h-2/2 w-4/5">
+            </a>
+            <a href="/cranes" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[40px]" src={cranes} alt="jv logos" />
                 </div>
-            </div>
-            <div class="row flex flex-row justify-center w-10/12 gap-5 mt-5">
-                <div class="cranes-container w-[581px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={cranes} alt="Cranes Logo" class="h-2/2 w-4/5">
+            </a>
+            <a href="/barges" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={barges} alt="jv logos" />
                 </div>
-                <div class="bsgi-container w-[600px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={barges} alt="Barge Solutions Guyana Inc Logo" class="h-2/2 w-4/5">
+            </a>
+            <a href="https://www.gysbi.gy/" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={gysbi} alt="jv logos" />
                 </div>
-                <div class="harbourtugs-container w-[288px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={harbourtugs} alt="Barge Solutions Guyana Inc Logo" class="h-2/2 w-4/5">
+            </a>
+            <a href="/harbourtugs" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={harbourtugs} alt="jv logos" />
                 </div>
-            </div>
+            </a>
+            <a href="/construction" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={constructionLogo} alt="jv logos" />
+                </div>
+            </a>
+            <a href="/" class="jv-card w-[14.2%] h-[332px] bg-white border border-[#4876b6] flex justify-center items-center">
+                <div>
+                    <img class="w-[150px] h-[150px]" src={brandLogo} alt="jv logos" />
+                </div>
+            </a>
         </div>
+        
     </div>
 </div>
 <div class="introduction-section flex flex-col justify-center">
