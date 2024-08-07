@@ -53,9 +53,9 @@
     <Navigation activePage="careers"/>
 </div>
 <div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header my-12 justify-center relative flex h-[143px]">
+    <div class="intro-header my-10 justify-center relative flex h-[150px]">
             <div class="intro-details">
-                <div class="intro-text mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
+                <div class="intro-text mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6] items-center">
                     <p>Choose the career that's right for you!</p>
                 </div>
                 <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
@@ -63,8 +63,12 @@
                 </div>
             </div>
     </div>
-    <div class="benefits">
-        
+    <div class="benefits text-center text-[18px] raleway-light flex flex-col items-center mt-5 ">
+        <p class="w-1/2">
+            We are looking for vibrant, skilled, and passionate individuals to add value to
+            our brand. In addition to competitive pay, we provide many other benefits
+            and possibilities for advancement, including:
+        </p>
     </div>
 </div>
 <div class="parallax-container relative">

@@ -38,6 +38,8 @@
     
     let y;
 
+    let slideCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
     if(y > 200) {
         console.log("Appeared")
     } 
@@ -186,7 +188,9 @@
             arrows={false}
             swiping={false}
         >
-            <Jvslide />
+        {#each slideCount as slide}
+            <Jvslide slideId={slide} />
+        {/each}
         </Carousel>
     </div>
 </div>
@@ -205,7 +209,7 @@
     </div>
     <div class="parallax-container relative">
         <img src={parallaxCareer} alt="" class="object-cover w-screen wharf-image">
-        <div class="services  flex flex-row h-[600px] justify-between items-center mb-10 absolute bottom-36 right-28">
+        <div class="services  flex flex-row h-[600px] justify-between items-center mb-10 absolute bottom-24 right-28">
             <div class="services-link relative cursor-pointer text-white hover:text-[#97bff7]">
                 <a href="/careers">
                     <div class="services-text flex flex-row items-center text-5xl gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >

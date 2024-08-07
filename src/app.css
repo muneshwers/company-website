@@ -304,6 +304,10 @@
     overflow: hidden;
 }
 
+.intro-paragraph > p {
+    white-space: normal !important;
+}
+
 .jv-right > div {
     overflow: hidden;
 }
@@ -409,6 +413,11 @@ div.hero-text > div:nth-child(3) > p {
 }
 
 .intro-subtext {
+    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.intro-paragraph {
     -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
     animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
 }
