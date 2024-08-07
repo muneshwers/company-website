@@ -182,6 +182,18 @@
     font-style: italic;
 }
 
+.full-time-badge {
+    color: #4876B6;
+    font-weight: bold;
+    background-color: #c7ddfa;
+}
+
+.part-time-badge {
+    color: #e99921;
+    font-weight: bold;
+    background-color: #fbe9d2;
+}
+
 .jv-card {
     filter: saturate(0%);
     cursor: pointer;

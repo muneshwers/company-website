@@ -38,7 +38,7 @@
     
     let y;
 
-    let slideCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let slideCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     if(y > 200) {
         console.log("Appeared")
@@ -222,8 +222,7 @@
                     </span>
                 </div>
                 </a>
-                
-                <div class="w-[500px] h-px left-[3px] top-[71px] absolute bg-slate-500 ml-32"></div>
+                <div class="w-[500px] h-px left-[3px] top-[71px] absolute bg-white ml-32"></div>
             </div>
         </div>
     </div>
