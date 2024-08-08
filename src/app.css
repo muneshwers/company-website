@@ -444,6 +444,55 @@ div.hero-text > div:nth-child(3) > p {
     animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
 }
 
+div.service {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.service:nth-child(2) {
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+}
+
+div.service {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.service:nth-child(3) {
+    -webkit-animation-delay: 0.095s;
+    animation-delay: 0.095s;
+}
+
+div.service {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.service:nth-child(4) {
+    -webkit-animation-delay: 0.105s;
+    animation-delay: 0.095s;
+}
+
+div.service {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.service:nth-child(5) {
+    -webkit-animation-delay: 0.195s;
+    animation-delay: 0.095s;
+}
+
+.service {
+    -webkit-animation: slide-up-images 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up-images 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+
+
+
+
 
 
 .wharf-image {
@@ -509,6 +558,26 @@ div.hero-text > div:nth-child(3) > p {
 @keyframes slide-up {
     0% {
         transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slide-up-images {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up-images {
+    0% {
+        transform: translateY(200px);
     }
 
     100% {
