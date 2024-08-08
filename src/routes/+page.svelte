@@ -155,51 +155,6 @@
         
     </div>
 </div>
-    <!-- <div class="services flex justify-center items-center mt-10 w-full">
-        <div class="flex flex-row gap-8 relative h-[110vh] w-full">
-            <div class=" service-container w-[275px] md:w-[240px] h-[700px] absolute cursor-pointer rounded-2xl">
-                <a href="/shipping">
-                    <img alt="" class="w-full h-full rounded-2xl object-cover" src={shippingService} />
-                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Shipping
-                    </div>
-                </a>
-            </div>
-            <div class="service-container-low w-[275px] md:w-[240px] h-[700px] absolute left-[20.5%] cursor-pointer">
-                <a href="/travel">
-                    <img alt="" class="w-full h-full rounded-2xl object-cover cursor-pointer" src={travelService} />
-                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Travel
-                    </div>
-                </a>
-            </div>
-            <div class="service-container w-[275px] md:w-[240px] h-[700px] absolute right-[40.7%] cursor-pointer">
-                <a href="/stores">
-                    <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={store1Service} />
-                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Home Goods
-                    </div>
-                </a>
-            </div>
-            <div class="service-container-low w-[275px] md:w-[240px] h-[700px] absolute right-[20.5%] cursor-pointer">
-                <a href="/transport">
-                    <img alt="" class="w-full h-full rounded-2xl  object-cover cursor-pointer" src={truckingService} />
-                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Trucking
-                    </div>
-                </a>
-            </div>
-            <div class="service-container w-[275px] md:w-[240px] h-[700px] absolute right-0 cursor-pointer">
-                <a href="/stores">
-                    <img alt="" class="w-full h-full rounded-2xl left-full  object-cover cursor-pointer" src={store2Service} />
-                    <div class="absolute top-0 left-0 w-full h-full bg-[#00000086] opacity-0 rounded-2xl hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Events
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div> -->
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
     <div class="title-text raleway-regular text-[37px] text-[#4876B6]">
         Events and Home Goods stores that has everything you need.
