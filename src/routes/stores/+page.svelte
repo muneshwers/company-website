@@ -28,10 +28,7 @@
                 <p class="individual-hero-text">Muneshwers</p>
             </div>
             <div>
-                <p class="individual-hero-text">Home Goods</p>
-            </div>
-            <div>
-                <p class="individual-hero-text">Events</p>
+                <p class="individual-hero-text">Stores</p>
             </div>
         </div>
     </div>

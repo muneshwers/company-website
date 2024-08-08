@@ -3,13 +3,7 @@
 
     // @ts-ignore
     import mllogo from "../logo.png";
-    import heroImage from "../hero-image.jpeg";
-    import grid from "../grid.svg";
-    import paragonTrasport from "../paragon-transport-logo-text.png";
-    import gysbi from "../gysbi.png";
-    import cranes from "../cranes.png";
-    import barges from "../barges.png";
-    import harbourtugs from "../harbourtugs.png";
+    import heroImage from "$lib/assets/hero-image.webp";
     import constructionLogo from "../construction-logo-black.png";
     import brandLogo from "../brand-logo.png";
     import textLogo from "../text-logo.png";
@@ -17,15 +11,16 @@
     import instagramIcon from "../icons8-instagram.svg";
     import linkedinIcon from "../icons8-linkedin.svg";
     import tiktokIcon from "../icons8-tiktok.svg";
-    import parallaxShipping from "../parallaxshipping.jpg";
-    import parallaxCareer from "../GYS05909.png"
-    import staffOne from "../worker1.jpg";
-    import staffTwo from "../worker2.jpg";
-    import shippingService from "../shippingimage.jpg"
-    import travelService from "../travelimage.jpg";
-    import store1Service from "../home_goods.jpg";
-    import store2Service from "../event_decoration.jpg";
-    import truckingService from "../GYS05822.jpg"
+    import parallaxShipping from "$lib/assets/parallaxshipping.webp";
+    import parallaxStore from "$lib/assets/DJI_0374.webp";
+    import parallaxCareer from "$lib/assets/GYS05909.webp";
+    import staffOne from "$lib/assets/worker1.webp";
+    import staffTwo from "$lib/assets/worker2.webp";
+    import shippingService from "$lib/assets/shippingimage.webp"
+    import travelService from "$lib/assets/travelimage.webp";
+    import store1Service from "$lib/assets/home_goods.webp";
+    import store2Service from "$lib/assets/event_decoration.webp";
+    import truckingService from "$lib/assets/GYS05822.webp";
 	import Navigation from "./Navigation.svelte";
     import { onMount } from "svelte";
 	import Footer from "./Footer.svelte";
@@ -101,7 +96,7 @@
         {#if y > 200}
             <div class="intro-details">
                 <div class="intro-text mt-8 text-center uppercase flex flex-col text-[60px] text-[#4876B6]">
-                    <p>Discover which service is right for you!</p>
+                    <p>Discover which service is right for you</p>
                 </div>
                 <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
                     <p>Choose from our shipping, transportation, travel service or explore our stores for your needs.</p>
@@ -110,8 +105,55 @@
         {/if}
     </div>
     
-    
     <div class="services flex justify-center items-center mt-10 w-full">
+        <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+            <a href="/shipping">
+                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/shippingimage.webp" />
+                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                    Shipping
+                </div>
+            </a>
+            
+        </div>
+        <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+            <a href="/travel">
+                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
+                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                    Travel
+                </div>
+            </a>
+            
+        </div>
+        <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+            <a href="/stores">
+                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/home_goods.webp" />
+                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                    Home Goods
+                </div>
+            </a>
+            
+        </div>
+        <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+            <a href="/transport">
+                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/GYS05822.webp" />
+                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                    Trucking
+                </div>
+            </a>
+            
+        </div>
+        <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+            <a href="/stores">
+                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/event_decoration.webp" />
+                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                    Events
+                </div>
+            </a>
+            
+        </div>
+    </div>
+</div>
+    <!-- <div class="services flex justify-center items-center mt-10 w-full">
         <div class="flex flex-row gap-8 relative h-[110vh] w-full">
             <div class=" service-container w-[275px] md:w-[240px] h-[700px] absolute cursor-pointer rounded-2xl">
                 <a href="/shipping">
@@ -155,6 +197,17 @@
             </div>
         </div>
     </div>
+</div> -->
+<div class="next-info-section mt-16 w-full flex items-center justify-center">
+    <div class="title-text raleway-regular text-[37px] text-[#4876B6]">
+        Events and Home Goods stores that has everything you need.
+    </div>
+</div>
+<div class="parallax-container relative">
+    <img src={parallaxStore} alt="" class="object-cover w-screen wharf-image">
+    <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 ">
+        Guyana #1 Events Store - July 26, 2024 - Water Street, Georgetown, Guyana
+    </div>
 </div>
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
     <div class="title-text raleway-regular text-[37px] text-[#4876B6]">
@@ -180,7 +233,7 @@
     <div class="jv-container w-full">
         <Carousel
             autoplayDuration={0}
-            duration={8000}
+            duration={13000}
             autoplay
             infinite={true}
             timingFunction="linear"
@@ -210,7 +263,7 @@
     <div class="parallax-container relative">
         <img src={parallaxCareer} alt="" class="object-cover w-screen wharf-image">
         <div class="services  flex flex-row h-[600px] justify-between items-center mb-10 absolute bottom-24 right-28">
-            <div class="services-link relative cursor-pointer text-white hover:text-[#97bff7]">
+            <div class="services-link relative cursor-pointer text-white">
                 <a href="/careers">
                     <div class="services-text flex flex-row items-center text-5xl gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
                     Explore Careers
