@@ -194,6 +194,23 @@
     background-color: #fbe9d2;
 }
 
+.service {
+    overflow: hidden;
+}
+
+.service {
+    transition: transform .2s;
+}
+
+.service > a > div {
+    transition: transform .2s;
+}
+.service > a > div:hover {
+    /* filter: brightness(50%); */
+    transition-duration: 300ms;
+    transform: scale(1.1);
+}
+
 .jv-card {
     filter: saturate(0%);
     cursor: pointer;
@@ -485,8 +502,8 @@ div.service:nth-child(5) {
 }
 
 .service {
-    -webkit-animation: slide-up-images 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
-    animation: slide-up-images 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    -webkit-animation: slide-up-images 0.85s cubic-bezier(0.65, .01, 0.35, 1) both;
+    animation: slide-up-images 0.85s cubic-bezier(0.65, .01, 0.35, 1) both;
 }
 
 
@@ -567,7 +584,7 @@ div.service:nth-child(5) {
 
 @-webkit-keyframes slide-up-images {
     0% {
-        transform: translateY(200px);
+        transform: translateY(500px);
     }
 
     100% {
@@ -577,7 +594,7 @@ div.service:nth-child(5) {
 
 @keyframes slide-up-images {
     0% {
-        transform: translateY(200px);
+        transform: translateY(500px);
     }
 
     100% {

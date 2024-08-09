@@ -68,7 +68,7 @@
             </div>
         </div>
         <a href="#introduction" id="scroll-down">
-            <div class="scroll-down flex flex-col absolute bottom-10 right-14">
+            <div class="scroll-down flex flex-col absolute bottom-10 right-14 animate-bounce">
                 <div class="w-[58px] h-[58px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
@@ -105,49 +105,64 @@
         {/if}
     </div>
     
-    <div class="services flex justify-center items-center mt-10 w-full">
-        {#if y > 201}
-            <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+    <div class="services flex justify-center items-center mt-10 w-full h-[110vh]">
+        {#if y > 500}
+            <div class="service w-[20%] h-[110vh] relative cursor-pointer hover:scale-125">
                 <a href="/shipping">
-                    <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/shippingimage.webp" />
-                    <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Shipping
+                    <div class="w-full h-full">
+                        <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shippingimage.webp" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            Shipping
+                        </div>
                     </div>
+                    
                 </a>
             </div>
             <div class="service w-[20%] h-[110vh] relative cursor-pointer">
                 <a href="/travel">
-                    <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
-                    <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Travel
+                    <div class="w-full h-full">
+                        <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            Travel
+                        </div>
                     </div>
+                    
                 </a>
                 
             </div>
             <div class="service w-[20%] h-[110vh] relative cursor-pointer">
                 <a href="/stores">
-                    <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/home_goods.webp" />
-                    <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Home Goods
+                    <div class="w-full h-full">
+                        <enhanced:img alt="" class=" w-full h-full object-cover" src="$lib/assets/home_goods.webp" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            Home Goods
+                        </div>
                     </div>
+                    
                 </a>
                 
             </div>
             <div class="service w-[20%] h-[110vh] relative cursor-pointer">
                 <a href="/transport">
-                    <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/GYS05822.webp" />
-                    <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Trucking
+                    <div class="w-full h-full">
+                        <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/GYS05822.webp" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            Trucking
+                        </div>
                     </div>
+                    
                 </a>
                 
             </div>
             <div class="service w-[20%] h-[110vh] relative cursor-pointer">
                 <a href="/stores">
-                    <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/event_decoration.webp" />
-                    <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                        Events
+                    <div class="w-full h-full">
+                        <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/event_decoration.webp" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            Events
+                        </div>
                     </div>
+                    
                 </a>
                 
             </div>
