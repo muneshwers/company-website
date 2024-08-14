@@ -12,6 +12,7 @@
     import linkedinIcon from "../icons8-linkedin.svg";
     import tiktokIcon from "../icons8-tiktok.svg";
     import parallaxShipping from "$lib/assets/parallaxshipping.webp";
+    import newParallax from "$lib/assets/GYS05767.webp";
     import parallaxStore from "$lib/assets/DJI_0374.webp";
     import parallaxCareer from "$lib/assets/GYS05909.webp";
     import staffOne from "$lib/assets/worker1.webp";
@@ -50,8 +51,8 @@
 </svelte:head>
 <div class="landing-top relative">
     <!-- <div class="scroll-watcher"></div> -->
-    <div class="hero-image h-screen relative">
-        <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
+    <div class="hero-home-image h-screen relative">
+        <img src={parallaxShipping} alt="Hero landing page" class="object-cover h-full w-full">
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
             <div class="individual-hero-text logo w-36 h-36">
@@ -171,8 +172,8 @@
     </div>
 </div>
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
-    <div class="title-text raleway-regular text-[37px] text-[#4876B6]">
-        Events and Home Goods stores that has everything you need.
+    <div class="title-text raleway-regular text-[37px] text-[#4876B6] uppercase">
+        Our Events and Home Goods stores that has everything you need.
     </div>
 </div>
 <div class="parallax-container relative">
@@ -182,12 +183,12 @@
     </div>
 </div>
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
-    <div class="title-text raleway-regular text-[37px] text-[#4876B6]">
+    <div class="title-text raleway-regular text-[30px] text-[#4876B6] uppercase">
         100% Guyanese owned business with years of experience in the shipping industry.
     </div>
 </div>
 <div class="parallax-container relative">
-    <img src={parallaxShipping} alt="" class="object-cover w-screen wharf-image">
+    <img src={newParallax} alt="" class="object-cover w-screen wharf-image">
     <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 ">
         BBC Echo Vessel - July 10, 2024 - Water Street, Georgetown, Guyana
     </div>
@@ -233,7 +234,7 @@
         {/if}
     </div>
     <div class="parallax-container relative">
-        <img src={parallaxCareer} alt="" class="object-cover w-screen wharf-image">
+        <img src={parallaxCareer} alt="" class="object-cover w-screen career-image">
         <div class="services  flex flex-row h-[600px] justify-between items-center mb-10 absolute bottom-24 right-28">
             <div class="services-link relative cursor-pointer text-white">
                 <a href="/careers">

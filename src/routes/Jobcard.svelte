@@ -41,7 +41,7 @@
         detailsToggle = false;
     }
 </script>
-<div class="job-card flex flex-col p-10 w-10/12 gap-4 rounded-lg border-0 mb-5 shadow-md hover:shadow-lg duration-200">
+<div class="job-card flex flex-col p-10 w-10/12 gap-4 rounded-lg border-2 mb-5 shadow-md hover:shadow-lg duration-200 hover:border-[#96b9ea]">
     <div class="job-header flex flex-row justify-between items-start">
         <div class="flex flex-row items-center gap-8">
             <div class="job-icon">

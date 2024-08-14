@@ -502,14 +502,20 @@ div.service:nth-child(5) {
 }
 
 .service {
-    -webkit-animation: slide-up-images 0.85s cubic-bezier(0.65, .01, 0.35, 1) both;
-    animation: slide-up-images 0.85s cubic-bezier(0.65, .01, 0.35, 1) both;
+    -webkit-animation: slide-up-images 1s cubic-bezier(0.65, .01, 0.35, 1) both;
+    animation: slide-up-images 1s cubic-bezier(0.65, .01, 0.35, 1) both;
 }
 
 
 
 
-
+.hero-home-image {
+    view-timeline-name: --disappearing-image;
+    view-timeline-axis: block;
+    animation: linear disappear both;
+    animation-timeline: --disappearing-image;
+    animation-range: entry 100% cover 99%;
+}
 
 
 .wharf-image {
@@ -651,6 +657,24 @@ div.service:nth-child(5) {
     to {
         opacity: 1;
         clip-path: inset(0% 0% 0% 0%);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 

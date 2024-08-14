@@ -1,6 +1,6 @@
 <script>
     import mllogo from "../../logo.png";
-    import heroImage from "../../careers.jpg";
+    import heroImage from "$lib/assets/image9.webp";
     import grid from "../../grid.svg";
     import paragonTrasport from "../../paragon-transport.png";
     import gysbi from "../../gysbi.png";
@@ -36,35 +36,26 @@
     <div class="hero-image h-[50vh] relative">
         <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
-        <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
+        <div class="hero-text text-white text-[60px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
             <div class="flex flex-row items-center gap-6">
                 <div class="individual-hero-text logo w-36 h-36">
                     <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
                 </div>
-                <p class="individual-hero-text">Shipping</p>
+                <p class="individual-hero-text the-seasons-light">Muneshwers Shipping</p>
             </div>
         </div>
     </div>
     <Navigation activePage="services"/>
 </div>
 <div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header mt-7 justify-center relative">
-        <img src={grid} alt="mesh grid" class="h-auto w-full">
-        <div class="intro-details flex items-center absolute top-16 bottom-16 left-16 w-11/12 justify-between">
-            <div class="intro-icon-box flex justify-center items-center">
-                <div class="intro-icon"></div>
+    <div class="intro-header my-12 justify-center relative flex h-[143px]">
+        <div class="intro-details">
+            <div class="intro-text mt-8 text-center uppercase flex flex-col text-[60px] text-[#4876B6]">
+                <p>Discover which service is right for you</p>
             </div>
-            <div class="intro-details w-3/4">
-                <div class="intro-text text-right w-[1000px] uppercase flex flex-col text-[76px] text-[#4876B6]">
-                    <div class="text-right flex flex-row-reverse w-full">
-                        Choose the career that's right for you!
-                    </div>
-                </div>
-                <div class="intro-subtext text-right text-[#3D3938] text-[28px] raleway-light">
-                    Choose from our list of available job opportunities below.
-                </div>
+            <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
+                <p>Choose from our shipping, transportation, travel service or explore our stores for your needs.</p>
             </div>
-            
         </div>
     </div>
     <div class="services flex justify-center items-center mb-7 mt-10 w-full">
