@@ -320,7 +320,7 @@
     <Navigation activePage="careers"/>
 </div>
 <div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header my-10 justify-center relative flex h-[150px]">
+    <div class="career-header my-10 justify-center relative flex h-[150px]">
             <div class="intro-details">
                 <div class="intro-text mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6] items-center">
                     <p>Choose the career that's right for you!</p>

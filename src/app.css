@@ -533,7 +533,17 @@ div.service:nth-child(5) {
     view-timeline-axis: block;
     animation: linear slide-up both;
     animation-timeline: --slide-text;
-    animation-range: entry 15% cover 60%;
+    animation-range: entry 15% cover 80%;
+}
+
+.intro-header {
+    font-family: 'SF Pro Display Medium';
+    font-weight: 500;
+    view-timeline-name: --slide-text;
+    view-timeline-axis: block;
+    animation: linear slide-up both;
+    animation-timeline: --slide-text;
+    animation-range: entry 5% cover 60%;
 }
 
 .service-container {

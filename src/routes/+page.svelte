@@ -93,25 +93,25 @@
     
 </div>
 <div class="introduction-section flex flex-col justify-center" id="introduction">
-    <div class="intro-header my-12 justify-center relative flex h-[143px]">
+    <div class="intro-header mt-5 justify-center relative flex h-[143px]">
         {#if y > 200}
             <div class="intro-details">
                 <div class="intro-text mt-8 text-center uppercase flex flex-col text-[60px] text-[#4876B6]">
                     <p>Discover which service is right for you</p>
                 </div>
-                <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
+                <!-- <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
                     <p>Choose from our shipping, transportation, travel service or explore our stores for your needs.</p>
-                </div>
+                </div> -->
             </div>
         {/if}
     </div>
     
-    <div class="services flex justify-center items-center mt-10 w-full h-[110vh]">
+    <div class="services flex justify-center items-center mt-5 w-full h-[70vh]">
         {#if y > 500}
-            <div class="service w-[20%] h-[110vh] relative cursor-pointer hover:scale-125">
+            <div class="service w-[20%] h-[70vh] relative cursor-pointer hover:scale-125">
                 <a href="/shipping">
                     <div class="w-full h-full">
-                        <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shippingimage.webp" />
+                        <enhanced:img alt="" class="w-full h-[110vh] object-cover service-image" src="$lib/assets/shippingimage.webp" />
                         <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                             Shipping
                         </div>
@@ -119,10 +119,10 @@
                     
                 </a>
             </div>
-            <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+            <div class="service w-[20%] h-[70vh] relative cursor-pointer">
                 <a href="/travel">
                     <div class="w-full h-full">
-                        <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
+                        <enhanced:img alt="" class="w-full h-[110vh] object-cover" src="$lib/assets/travelimage.webp" />
                         <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                             Travel
                         </div>
@@ -131,10 +131,10 @@
                 </a>
                 
             </div>
-            <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+            <div class="service w-[20%] h-[70vh] relative cursor-pointer">
                 <a href="/stores">
                     <div class="w-full h-full">
-                        <enhanced:img alt="" class=" w-full h-full object-cover" src="$lib/assets/home_goods.webp" />
+                        <enhanced:img alt="" class=" w-full h-[110vh] object-cover" src="$lib/assets/home_goods.webp" />
                         <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                             Home Goods
                         </div>
@@ -143,10 +143,10 @@
                 </a>
                 
             </div>
-            <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+            <div class="service w-[20%] h-[70vh] relative cursor-pointer">
                 <a href="/transport">
                     <div class="w-full h-full">
-                        <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/GYS05822.webp" />
+                        <enhanced:img alt="" class="w-full h-[110vh] object-cover" src="$lib/assets/GYS05822.webp" />
                         <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                             Trucking
                         </div>
@@ -155,10 +155,10 @@
                 </a>
                 
             </div>
-            <div class="service w-[20%] h-[110vh] relative cursor-pointer">
+            <div class="service w-[20%] h-[70vh] relative cursor-pointer">
                 <a href="/stores">
                     <div class="w-full h-full">
-                        <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/event_decoration.webp" />
+                        <enhanced:img alt="" class="w-full h-[110vh] object-cover" src="$lib/assets/event_decoration.webp" />
                         <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                             Events
                         </div>
@@ -178,7 +178,7 @@
 </div>
 <div class="parallax-container relative">
     <img src={parallaxStore} alt="" class="object-cover w-screen wharf-image">
-    <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 ">
+    <div class="wharf-text uppercase text-white text-[28px] absolute bottom-96 left-16 ">
         Guyana #1 Events Store - July 26, 2024 - Water Street, Georgetown, Guyana
     </div>
 </div>
@@ -221,7 +221,7 @@
     </div>
 </div>
 <div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header my-12 justify-center relative flex h-[143px]">
+    <div class="careers-header my-12 justify-center relative flex h-[143px]">
         {#if y > 2800}
             <div class="intro-details">
                 <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#4876B6]">
