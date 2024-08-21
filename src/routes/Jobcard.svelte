@@ -72,17 +72,17 @@
     </div>
     {#if detailsToggle}
         <div class="more-job">
-            <div class="more-section">
-                <div class="more-title text-xl mt-2 mb-1 raleway-medium">Responsibilities:</div>
-                <ul class="list-disc text-base raleway-regular">
+            <div class="more-section flex flex-col items-center">
+                <div class="more-title text-xl mt-2 mb-1 raleway-medium w-full">Responsibilities:</div>
+                <ul class="list-disc text-base raleway-regular w-[95%]">
                     {#each jobDetails.responsibilities as responsibility}
                         <li>{responsibility}</li>
                     {/each}
                 </ul>
             </div>
-            <div class="more-section">
-                <div class="more-title text-xl mt-2 mb-1 raleway-medium">Requirements:</div>
-                <ul class="list-disc text-base raleway-regular">
+            <div class="more-section flex flex-col items-center">
+                <div class="more-title text-xl mt-2 mb-1 raleway-medium w-full">Requirements:</div>
+                <ul class="list-disc text-base raleway-regular w-[95%]">
                     {#each jobDetails.requirements as requirement}
                         <li>{requirement}</li>
                     {/each}
@@ -91,7 +91,7 @@
         </div>
     {/if}
     <div class="job-footer flex justify-between">
-        <button class="see-more p-2 rounded-md" on:click={() => toggleMore()}>
+        <button class="see-more p-2 rounded-md hover:text-[#659bff] duration-150" on:click={() => toggleMore()}>
             {buttonName}
         </button>
         <div class="absolute"></div>
