@@ -108,7 +108,7 @@
 
     <div class="services mt-5 w-full h-[70vh] flex flex-col items-center">
         {#if y > 400}
-        <div class="bento-container h-[75vh] w-[80vw] flex flex-col gap-4">
+        <div class="bento-container h-[75vh] w-[90vw] flex flex-col gap-4">
             <div class="bento-row flex gap-4">
                 <div class="service bento-large w-[60%] h-[35vh] bg-slate-400 rounded-md hover:scale-125">
                     <a href="/shipping">
