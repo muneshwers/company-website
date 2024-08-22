@@ -105,8 +105,61 @@
             </div>
         {/if}
     </div>
+
+    <div class="services mt-5 w-full h-[70vh] flex flex-col items-center">
+        {#if y > 400}
+        <div class="bento-container h-[75vh] w-[80vw] flex flex-col gap-4">
+            <div class="bento-row flex gap-4">
+                <div class="service bento-large w-[60%] h-[35vh] bg-slate-400 rounded-md hover:scale-125">
+                    <a href="/shipping">
+                    <div class="w-full h-full">
+                        <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shippingimage.webp" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            Shipping
+                        </div>
+                    </div>
+                    
+                </a>
+                </div>
+                <div class="service bento-small w-[40%] h-[35vh] bg-slate-400 rounded-md hover:scale-125">
+                    <a href="/travel">
+                        <div class="w-full h-full">
+                            <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                                Travel
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="bento-row flex gap-4">
+                <div class="service bento-large w-[40%] h-[35vh] bg-slate-400 rounded-md hover:scale-125">
+                    <a href="/stores">
+                        <div class="w-full h-full">
+                            <enhanced:img alt="" class=" w-full h-full object-cover" src="$lib/assets/home_goods.webp" />
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                                Home Goods
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="service bento-small w-[60%] h-[35vh] bg-slate-400 rounded-md hover:scale-125">
+                    <a href="/stores">
+                        <div class="w-full h-full">
+                            <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/event_decoration.webp" />
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                                Events
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {/if}
+        
+    </div>
     
-    <div class="services flex justify-center items-center mt-5 w-full h-[70vh]">
+    <!-- <div class="services flex justify-center items-center mt-5 w-full h-[70vh]">
         {#if y > 500}
             <div class="service w-[20%] h-[70vh] relative cursor-pointer hover:scale-125">
                 <a href="/shipping">
@@ -169,7 +222,7 @@
             </div>
         {/if}
         
-    </div>
+    </div> -->
 </div>
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
     <div class="title-text raleway-regular text-[37px] text-[#4876B6] uppercase">
