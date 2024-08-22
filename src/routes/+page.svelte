@@ -177,7 +177,7 @@
     </div>
 </div>
 <div class="parallax-container relative">
-    <img src={parallaxStore} alt="" class="object-cover w-screen wharf-image">
+    <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen wharf-image">
     <div class="wharf-text uppercase text-white text-[28px] absolute bottom-96 left-16 ">
         Guyana #1 Events Store - July 26, 2024 - Water Street, Georgetown, Guyana
     </div>
@@ -188,7 +188,7 @@
     </div>
 </div>
 <div class="parallax-container relative">
-    <img src={newParallax} alt="" class="object-cover w-screen wharf-image">
+    <enhanced:img src="$lib/assets/GYS05767.webp" alt="" class="object-cover w-screen wharf-image">
     <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 ">
         BBC Echo Vessel - July 10, 2024 - Water Street, Georgetown, Guyana
     </div>
