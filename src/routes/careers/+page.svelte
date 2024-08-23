@@ -303,7 +303,6 @@
 	<meta name="description" content="Muneshwers Limited" />
 </svelte:head>
 <div class="landing-top relative">
-    <!-- <div class="scroll-watcher"></div> -->
     <div class="hero-image h-[50vh] relative">
         <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>

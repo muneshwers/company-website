@@ -26,7 +26,8 @@
     import { onMount } from "svelte";
 	import Footer from "./Footer.svelte";
 	import Jvslide from "./Jvslide.svelte";
-    import Carousel from 'svelte-carousel'
+    import Carousel from 'svelte-carousel';
+    import upright from "$lib/assets/square-arrow-up-right-solid.svg";
 
 
     $: jvToggle = false;
@@ -68,8 +69,8 @@
                 <p class="individual-hero-text">needs</p>
             </div>
         </div>
-        <a href="#introduction" id="scroll-down">
-            <div class="scroll-down flex flex-col absolute bottom-10 right-14 animate-bounce">
+        <a href="#scroll-down">
+            <div class="scroll-down flex flex-col absolute bottom-10 right-14 animate-bounce" id="scroll-down">
                 <div class="w-[58px] h-[58px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
@@ -114,8 +115,9 @@
                     <a href="/shipping">
                     <div class="w-fit h-full">
                         <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" />
-                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                            Shipping
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                            <div>Shipping</div>
+                            <img src={upright} alt="" width="25px" height="25px">
                         </div>
                     </div>
                 </a>
@@ -124,8 +126,9 @@
                     <a href="/travel">
                         <div class="w-fit h-full">
                             <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
-                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                                Travel
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                                <div>Travel</div>
+                                <img src={upright} alt="" width="25px" height="25px">
                             </div>
                         </div>
                     </a>
@@ -136,8 +139,9 @@
                     <a href="/stores">
                         <div class="w-full h-full">
                             <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/events2.webp" />
-                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                                Events
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                                <div>Events</div>
+                                <img src={upright} alt="" width="25px" height="25px">
                             </div>
                         </div>
                     </a>
@@ -146,8 +150,9 @@
                     <a href="/stores">
                         <div class="w-fit h-full">
                             <enhanced:img alt="" class="w-full h-full object-contain" src="$lib/assets/homegoods2.webp" />
-                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                                Home Goods
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                                <div>Home Goods</div>
+                                <img src={upright} alt="" width="25px" height="25px">
                             </div>
                         </div>
                     </a>
