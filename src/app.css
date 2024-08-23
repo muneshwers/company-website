@@ -506,6 +506,10 @@ div.service:nth-child(5) {
     animation: slide-up-images 1s cubic-bezier(0.65, .01, 0.35, 1) both;
 }
 
+.title-text {
+    -webkit-animation: slide-up-text 1s cubic-bezier(0.65, .01, 0.35, 1) both;
+    animation: slide-up-text 1s cubic-bezier(0.65, .01, 0.35, 1) both;
+}
 
 
 
@@ -578,6 +582,10 @@ div.service:nth-child(5) {
     animation-range: entry 15% cover 60%;
 }
 
+.bento-large-home {
+    transform: translate(120px, 50%);
+}
+
 @-webkit-keyframes slide-up {
     0% {
         transform: translateY(100px);
@@ -595,6 +603,31 @@ div.service:nth-child(5) {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slide-up-text {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up-text {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
