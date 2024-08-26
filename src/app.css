@@ -507,8 +507,8 @@ div.service:nth-child(5) {
 }
 
 .title-text {
-    -webkit-animation: slide-up-text 0.85s cubic-bezier(0.65, .01, 0.35, 1) both;
-    animation: slide-up-text 0.85s cubic-bezier(0.65, .01, 0.35, 1) both;
+    -webkit-animation: slide-up-text 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
+    animation: slide-up-text 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
 }
 
 

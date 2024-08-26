@@ -53,7 +53,7 @@
 <div class="landing-top relative">
     <!-- <div class="scroll-watcher"></div> -->
     <div class="hero-home-image h-screen relative">
-        <img src={parallaxShipping} alt="Hero landing page" class="object-cover h-full w-full">
+        <enhanced:img src="$lib/assets/parallaxshipping.webp" alt="Hero landing page" class="object-cover h-full w-full" />
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
             <div class="individual-hero-text logo w-36 h-36">
@@ -107,7 +107,7 @@
         {/if}
     </div>
 
-    <div class="services mt-5 w-full h-[150vh] flex flex-col items-center">
+    <div class="services mt-5 w-full h-[140vh] flex flex-col items-center">
         {#if y > 400}
         <div class="bento-container h-full w-[90vw] flex flex-col gap-6">
             <div class="bento-row flex gap-6 justify-center">
@@ -174,13 +174,13 @@
     
 </div>
 <div class="parallax-container relative">
-    <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen wharf-image">
+    <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen wharf-image" />
     <div class="wharf-text uppercase text-white text-[28px] absolute bottom-96 left-16 ">
         Guyana #1 Events Store - July 26, 2024 - Water Street, Georgetown, Guyana
     </div>
 </div>
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
-    {#if y > 2500}
+    {#if y > 2600}
         <div class="title-text raleway-regular text-[30px] text-[#4876B6] uppercase">
             100% Guyanese owned business with years of experience in the shipping industry.
         </div>
@@ -188,7 +188,7 @@
     
 </div>
 <div class="parallax-container relative">
-    <enhanced:img src="$lib/assets/GYS05767.webp" alt="" class="object-cover w-screen wharf-image">
+    <enhanced:img src="$lib/assets/GYS05767.webp" alt="" class="object-cover w-screen wharf-image" />
     <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 ">
         BBC Echo Vessel - July 10, 2024 - Water Street, Georgetown, Guyana
     </div>
@@ -196,7 +196,7 @@
 <div class="joint-ventures-section h-1/2 flex flex-col items-center">
     <div class="jv-heading flex flex-row items-left my-24 w-10/12">
         <div class="jv-right flex flex-row">
-            {#if y > 3800}
+            {#if y > 3750}
                 <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px]">
                     <p>Explore our joint ventures</p>
                 </div>
@@ -222,7 +222,7 @@
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="careers-header my-12 justify-center relative flex h-[143px]">
-        {#if y > 4400}
+        {#if y > 4300}
             <div class="intro-details">
                 <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#4876B6]">
                     <p>Interested in a career with us?</p>

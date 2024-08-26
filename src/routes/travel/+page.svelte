@@ -34,7 +34,7 @@
 <div class="landing-top relative">
     <!-- <div class="scroll-watcher"></div> -->
     <div class="hero-image h-[50vh] relative">
-        <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
+        <enhanced:img src="$lib/assets/travelimage.webp" alt="Hero landing page" class="object-cover h-full w-full" />
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
             
@@ -42,7 +42,7 @@
                 <div class="individual-hero-text logo w-36 h-36">
                     <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
                 </div>
-                <p class="individual-hero-text">Careers</p>
+                <p class="individual-hero-text">Travel Service</p>
             </div>
         </div>
     </div>
