@@ -2,15 +2,11 @@
 // @ts-nocheck
 
     // @ts-ignore
-    import mllogo from "../logo.png";
+    import mllogo from "$lib/assets/logo.png";
     import heroImage from "$lib/assets/hero-image.webp";
-    import constructionLogo from "../construction-logo-black.png";
-    import brandLogo from "../brand-logo.png";
-    import textLogo from "../text-logo.png";
-    import facebookIcon from "../icons8-facebook.svg";
-    import instagramIcon from "../icons8-instagram.svg";
-    import linkedinIcon from "../icons8-linkedin.svg";
-    import tiktokIcon from "../icons8-tiktok.svg";
+    import constructionLogo from "$lib/assets/construction-logo-black.png";
+    import brandLogo from "$lib/assets/brand-logo.png";
+    import textLogo from "$lib/assets/text-logo.png";
     import parallaxShipping from "$lib/assets/parallaxshipping.webp";
     import newParallax from "$lib/assets/GYS05767.webp";
     import parallaxStore from "$lib/assets/DJI_0374.webp";
