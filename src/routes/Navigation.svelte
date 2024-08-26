@@ -89,8 +89,10 @@
         <div class="{activityCheck.about ? "item-active": "item"}">
             About
         </div>
-        <div class="{activityCheck.contact ? "item-active": "item"}">
-            Contact
-        </div>
+        <a href="/contact">
+            <div class="{activityCheck.contact ? "item-active": "item"}">
+                Contact
+            </div>
+        </a>
     </div>
 </div>

@@ -42,7 +42,7 @@
                 <div class="individual-hero-text logo w-36 h-36">
                     <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
                 </div>
-                <p class="individual-hero-text">Careers</p>
+                <p class="individual-hero-text">Contact Us</p>
             </div>
         </div>
     </div>

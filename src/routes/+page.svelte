@@ -19,14 +19,15 @@
     import staffTwo from "$lib/assets/worker2.webp";
     import shippingService from "$lib/assets/shippingimage.webp"
     import travelService from "$lib/assets/travelimage.webp";
-    import store1Service from "$lib/assets/home_goods.webp";
+    import store1Service from "$lib/assets/homegoods2.webp";
     import store2Service from "$lib/assets/event_decoration.webp";
     import truckingService from "$lib/assets/GYS05822.webp";
 	import Navigation from "./Navigation.svelte";
     import { onMount } from "svelte";
 	import Footer from "./Footer.svelte";
 	import Jvslide from "./Jvslide.svelte";
-    import Carousel from 'svelte-carousel'
+    import Carousel from 'svelte-carousel';
+    import upright from "$lib/assets/square-arrow-up-right-solid.svg";
 
 
     $: jvToggle = false;
@@ -52,7 +53,7 @@
 <div class="landing-top relative">
     <!-- <div class="scroll-watcher"></div> -->
     <div class="hero-home-image h-screen relative">
-        <img src={parallaxShipping} alt="Hero landing page" class="object-cover h-full w-full">
+        <enhanced:img src="$lib/assets/parallaxshipping.webp" alt="Hero landing page" class="object-cover h-full w-full" />
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
             <div class="individual-hero-text logo w-36 h-36">
@@ -68,8 +69,8 @@
                 <p class="individual-hero-text">needs</p>
             </div>
         </div>
-        <a href="#introduction" id="scroll-down">
-            <div class="scroll-down flex flex-col absolute bottom-10 right-14 animate-bounce">
+        <a href="#scroll-down">
+            <div class="scroll-down flex flex-col absolute bottom-10 right-14 animate-bounce" id="scroll-down">
                 <div class="w-[58px] h-[58px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
@@ -105,90 +106,89 @@
             </div>
         {/if}
     </div>
-    
-    <div class="services flex justify-center items-center mt-5 w-full h-[70vh]">
-        {#if y > 500}
-            <div class="service w-[20%] h-[70vh] relative cursor-pointer hover:scale-125">
-                <a href="/shipping">
-                    <div class="w-full h-full">
-                        <enhanced:img alt="" class="w-full h-[110vh] object-cover service-image" src="$lib/assets/shippingimage.webp" />
-                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                            Shipping
+
+    <div class="services mt-5 w-full h-[140vh] flex flex-col items-center">
+        {#if y > 400}
+        <div class="bento-container h-full w-[90vw] flex flex-col gap-6">
+            <div class="bento-row flex gap-6 justify-center">
+                <div class="service bento-large h-[65vh] bg-slate-400 rounded-md hover:scale-125">
+                    <a href="/shipping">
+                    <div class="w-fit h-full">
+                        <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                            <div>Shipping</div>
+                            <img src={upright} alt="" width="25px" height="25px">
                         </div>
                     </div>
-                    
                 </a>
+                </div>
+                <div class="service bento-small w-fit h-[65vh] bg-slate-400 rounded-md hover:scale-125">
+                    <a href="/travel">
+                        <div class="w-fit h-full">
+                            <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                                <div>Travel</div>
+                                <img src={upright} alt="" width="25px" height="25px">
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="service w-[20%] h-[70vh] relative cursor-pointer">
-                <a href="/travel">
-                    <div class="w-full h-full">
-                        <enhanced:img alt="" class="w-full h-[110vh] object-cover" src="$lib/assets/travelimage.webp" />
-                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                            Travel
+            <div class="bento-row flex gap-6 justify-center">
+                <div class="service bento-small w-[68%] h-[70vh] bg-slate-400 rounded-md hover:scale-125">
+                    <a href="/stores">
+                        <div class="w-full h-full">
+                            <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/events2.webp" />
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                                <div>Events</div>
+                                <img src={upright} alt="" width="25px" height="25px">
+                            </div>
                         </div>
-                    </div>
-                    
-                </a>
+                    </a>
+                </div>
+                <div class="service bento-large-home w-fit h-[70vh] bg-slate-400 rounded-md hover:scale-125">
+                    <a href="/stores">
+                        <div class="w-fit h-full">
+                            <enhanced:img alt="" class="w-full h-full object-contain" src="$lib/assets/homegoods2.webp" />
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                                <div>Home Goods</div>
+                                <img src={upright} alt="" width="25px" height="25px">
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 
             </div>
-            <div class="service w-[20%] h-[70vh] relative cursor-pointer">
-                <a href="/stores">
-                    <div class="w-full h-full">
-                        <enhanced:img alt="" class=" w-full h-[110vh] object-cover" src="$lib/assets/home_goods.webp" />
-                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                            Home Goods
-                        </div>
-                    </div>
-                    
-                </a>
-                
-            </div>
-            <div class="service w-[20%] h-[70vh] relative cursor-pointer">
-                <a href="/transport">
-                    <div class="w-full h-full">
-                        <enhanced:img alt="" class="w-full h-[110vh] object-cover" src="$lib/assets/GYS05822.webp" />
-                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                            Trucking
-                        </div>
-                    </div>
-                    
-                </a>
-                
-            </div>
-            <div class="service w-[20%] h-[70vh] relative cursor-pointer">
-                <a href="/stores">
-                    <div class="w-full h-full">
-                        <enhanced:img alt="" class="w-full h-[110vh] object-cover" src="$lib/assets/event_decoration.webp" />
-                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                            Events
-                        </div>
-                    </div>
-                    
-                </a>
-                
-            </div>
+        </div>
         {/if}
         
     </div>
+    
 </div>
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
-    <div class="title-text raleway-regular text-[37px] text-[#4876B6] uppercase">
-        Our Events and Home Goods stores that has everything you need.
-    </div>
+    {#if y > 1400}
+        <div class="title-text raleway-regular text-[37px] text-[#4876B6] uppercase">
+            Our Events and Home Goods stores has everything you need.
+        </div>
+    {/if}
+    
 </div>
 <div class="parallax-container relative">
-    <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen wharf-image">
+    <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen wharf-image" />
     <div class="wharf-text uppercase text-white text-[28px] absolute bottom-96 left-16 ">
         Guyana #1 Events Store - July 26, 2024 - Water Street, Georgetown, Guyana
     </div>
 </div>
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
-    <div class="title-text raleway-regular text-[30px] text-[#4876B6] uppercase">
-        100% Guyanese owned business with years of experience in the shipping industry.
-    </div>
+    {#if y > 2600}
+        <div class="title-text raleway-regular text-[30px] text-[#4876B6] uppercase">
+            100% Guyanese owned business with years of experience in the shipping industry.
+        </div>
+    {/if}
+    
 </div>
 <div class="parallax-container relative">
-    <enhanced:img src="$lib/assets/GYS05767.webp" alt="" class="object-cover w-screen wharf-image">
+    <enhanced:img src="$lib/assets/GYS05767.webp" alt="" class="object-cover w-screen wharf-image" />
     <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 ">
         BBC Echo Vessel - July 10, 2024 - Water Street, Georgetown, Guyana
     </div>
@@ -196,7 +196,7 @@
 <div class="joint-ventures-section h-1/2 flex flex-col items-center">
     <div class="jv-heading flex flex-row items-left my-24 w-10/12">
         <div class="jv-right flex flex-row">
-            {#if y > 2100}
+            {#if y > 3750}
                 <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px]">
                     <p>Explore our joint ventures</p>
                 </div>
@@ -222,7 +222,7 @@
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="careers-header my-12 justify-center relative flex h-[143px]">
-        {#if y > 2800}
+        {#if y > 4300}
             <div class="intro-details">
                 <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#4876B6]">
                     <p>Interested in a career with us?</p>
