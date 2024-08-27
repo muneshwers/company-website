@@ -1,10 +1,10 @@
 <script>
-    import brandLogo from "../brand-logo.png";
-    import textLogo from "../text-logo.png";
-    import facebookIcon from "../icons8-facebook.svg";
-    import instagramIcon from "../icons8-instagram.svg";
-    import linkedinIcon from "../icons8-linkedin.svg";
-    import tiktokIcon from "../icons8-tiktok.svg";
+    import brandLogo from "$lib/assets/brand-logo.png";
+    import textLogo from "$lib/assets/text-logo.png";
+    import facebookIcon from "$lib/assets/icons8-facebook.svg";
+    import instagramIcon from "$lib/assets/icons8-instagram.svg";
+    import linkedinIcon from "$lib/assets/icons8-linkedin.svg";
+    import tiktokIcon from "$lib/assets/icons8-tiktok.svg";
 </script>
 
 <div class="footer h-[510px] bg-[#EDEBE5]">

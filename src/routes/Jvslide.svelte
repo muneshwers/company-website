@@ -1,11 +1,11 @@
 <script>
-    import paragonTrasport from "../paragon-transport-logo-text.png";
-    import gysbi from "../gysbi.png";
-    import cranes from "../cranes.png";
-    import barges from "../barges.png";
-    import harbourtugs from "../harbourtugs.png";
-    import constructionLogo from "../construction-logo-black.png";
-    import brandLogo from "../brand-logo.png";
+    import paragonTrasport from "$lib/assets/paragon-transport-logo-text.webp";
+    import gysbi from "$lib/assets/gysbi.webp";
+    import cranes from "$lib/assets/cranes.webp";
+    import barges from "$lib/assets/barges.webp";
+    import harbourtugs from "$lib/assets/harbourtugs.webp";
+    import constructionLogo from "$lib/assets/construction-logo-black.webp";
+    import brandLogo from "$lib/assets/brand-logo.webp";
 
     export let slideId;
 

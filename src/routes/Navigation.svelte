@@ -1,7 +1,7 @@
 <script>
 	import Joint from "./Joint.svelte";
     import Services from "./Services.svelte";
-    import mllogo from "../logo.png";
+    import mllogo from "$lib/assets/logo.png";
 
     export let activePage;
 

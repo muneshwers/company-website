@@ -1,6 +1,5 @@
 <script>
-    import heroImage from "$lib/assets/image9.webp";
-    import brandLogo from "../../brand-logo.png";
+    import brandLogo from "$lib/assets/brand-logo.webp";
 	import Navigation from "../Navigation.svelte";
 	import Footer from "../Footer.svelte";
 
@@ -30,7 +29,7 @@
     <div class="intro-header my-12 justify-center relative flex h-[143px]">
         <div class="intro-details">
             <div class="intro-text mt-8 text-center uppercase flex flex-col text-[60px] text-[#4876B6]">
-                <p>Discover which service is right for you</p>
+                <p>Fastest growing port in Guyana</p>
             </div>
             <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
                 <p>Choose from our shipping, transportation, travel service or explore our stores for your needs.</p>

@@ -162,7 +162,7 @@
     
 </div>
 <div class="next-info-section mt-16 w-full flex items-center justify-center">
-    {#if y > 1400}
+    {#if y > 1300}
         <div class="title-text raleway-regular text-[37px] text-[#4876B6] uppercase">
             Our Events and Home Goods stores has everything you need.
         </div>

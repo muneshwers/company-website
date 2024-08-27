@@ -1,5 +1,5 @@
 <script>
-    import briefcase from "../briefcase-solid.svg";
+    import briefcase from "$lib/assets/briefcase-solid.svg";
     import location from "$lib/assets/location-dot-solid.svg";
 
     export let jobDetails;
