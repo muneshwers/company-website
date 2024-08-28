@@ -461,6 +461,13 @@ div.hero-text > div:nth-child(3) > p {
     animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
 }
 
+.buttons {
+    font-family: 'SF Pro Display Medium';
+    font-weight: 500;
+    -webkit-animation: slide-up-text 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
+    animation: slide-up-text 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
+}
+
 div.service {
     -webkit-animation-delay: 0;
     animation-delay: 0;
@@ -708,6 +715,21 @@ div.service:nth-child(5) {
     to {
         opacity: 1;
         clip-path: inset(0% 0% 0% 0%);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: translateY(0);
+        clip-path: inset(0 12% 0 15%);
+        border-radius: 12px;
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(400px);
+        clip-path: inset(0% 0% 0% 0%);
+        opacity: 1;
     }
 }
 
