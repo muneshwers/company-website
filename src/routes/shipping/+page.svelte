@@ -26,14 +26,14 @@
     <Navigation activePage="services"/>
 </div>
 <div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header my-12 justify-center relative flex h-[143px]">
+    <div class="intro-header mt-5 justify-center relative flex h-[143px]">
         <div class="intro-details">
             <div class="intro-text mt-8 text-center uppercase flex flex-col text-[60px] text-[#4876B6]">
                 <p>Fastest growing port in Guyana</p>
             </div>
-            <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
+            <!-- <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
                 <p>Choose from our shipping, transportation, travel service or explore our stores for your needs.</p>
-            </div>
+            </div> -->
         </div>
     </div>
 
