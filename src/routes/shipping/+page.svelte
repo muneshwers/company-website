@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import brandLogo from "$lib/assets/brand-logo.webp";
 	import Navigation from "../Navigation.svelte";
 	import Footer from "../Footer.svelte";
@@ -12,6 +14,7 @@
     import box from "$lib/assets/box-solid.svg";
     import boxOpen from "$lib/assets/box-open-solid.svg";
 
+    let y;
 </script>
 
 <svelte:head>
@@ -41,13 +44,17 @@
 <div class="introduction-section flex flex-col justify-center items-center">
     <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
         <div class="intro-details">
+            {#if y > 200}
             <div class="intro-text mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
                 <p>Ship with the Fastest growing port in Guyana</p>
             </div>
+            {/if}
+            
         </div>
     </div>
     <div class="services shipping-image w-[100%] ">
-        <div class="list-row mt-5 flex flex-row justify-center gap-5">
+         {#if y > 300}
+         <div class="list-row mt-5 flex flex-row justify-center gap-5">
             <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={ship} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
@@ -107,9 +114,13 @@
                 <div class="service-name text-xl">Destuffing of Cargo</div>
             </div>
         </div>
+        {/if}
+        
+        
     </div>
  
 </div>
 <div class="entrance h-[70vh]"></div>
 <Footer />
 
+<svelte:window bind:scrollY={y} />
