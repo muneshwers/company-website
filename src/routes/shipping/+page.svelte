@@ -55,72 +55,196 @@
     <div class="services shipping-image w-[100%] ">
          {#if y > 300}
          <div class="list-row mt-5 flex flex-row justify-center gap-5">
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
+            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={ship} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
                 </div>
-                <div class="service-name text-xl">Shipping Agency</div>
+                <div class="service-name text-xl sf_pro_bold">Shipping Agency</div>
             </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
+            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={anchor} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
                 </div>
-                <div class="service-name text-xl">Vessel Handling</div>
+                <div class="service-name text-xl sf_pro_bold">Vessel Handling</div>
             </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
+            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={truck} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
                 </div>
-                <div class="service-name text-xl">Inland Haulage</div>
+                <div class="service-name text-xl sf_pro_bold">Inland Haulage</div>
             </div>
         </div>
         <div class="list-row mt-5 flex flex-row justify-center gap-5">
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
+            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={truckRamp} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
                 </div>
-                <div class="service-name text-xl">Dangerous Cargo Handling</div>
+                <div class="service-name text-xl sf_pro_bold">Dangerous Cargo Handling</div>
             </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
+            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={warehouse} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
                 </div>
-                <div class="service-name text-xl">Warehousing for LCL Cargo</div>
+                <div class="service-name text-xl sf_pro_bold">Warehousing for LCL Cargo</div>
             </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
+            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={dolly} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
                 </div>
-                <div class="service-name text-xl">Husbandry</div>
+                <div class="service-name text-xl sf_pro_bold">Husbandry</div>
             </div>
         </div>
         <div class="list-row mt-5 flex flex-row justify-center gap-5">
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
+            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={oil} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
                 </div>
-                <div class="service-name text-xl w-[60%]">Oil & Gas Support Services</div>
+                <div class="service-name text-xl w-[60%] sf_pro_bold">Oil & Gas Support Services</div>
             </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
+            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={box} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
                 </div>
-                <div class="service-name text-xl">Customs Brokerage</div>
+                <div class="service-name text-xl sf_pro_bold">Customs Brokerage</div>
             </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-5">
+            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
                 <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
                     <img src={boxOpen} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
                 </div>
-                <div class="service-name text-xl">Destuffing of Cargo</div>
+                <div class="service-name text-xl sf_pro_bold">Destuffing of Cargo</div>
             </div>
         </div>
         {/if}
-        
-        
     </div>
  
 </div>
-<div class="entrance h-[70vh]"></div>
+<div class="entrance h-[70vh] my-36 flex justify-center items-center gap-10">
+    {#if y > 800}
+    <div class="col article w-[30%]">
+        <div class="article-title text-4xl sf_pro_bold uppercase">
+            Connecting Guyana to the world through Shipping
+        </div>
+        <div class="article-details mt-5 raleway-regular text-lg">
+            <p>
+                Muneshwers Limited is one of the largest ports in Guyana with over 40% market share in container traffic. First concrete pier in Guyana.
+            </p>
+            <p class="mt-3">
+                We are the shipping agent and terminal operator for Maersk, Tropical Shipping and Mediterranean Shipping Company. Maersk and Mediterranean Shipping Company (MSC) are two of the largest shipping lines in the world and market leaders in Guyana.
+            </p>
+        </div>
+    </div>
+    <div class="col article-image w-[45%]">
+        <enhanced:img src="$lib/assets/DJI_0398.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
+    </div>
+    {/if}
+</div>
+<div class="customers mt-3 flex flex-col justify-center items-center w-[100%]">
+        <div class="intro-details  relative ">
+            {#if y > 1000}
+            <div class="intro-text my-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
+                <p>Our Clients</p>
+            </div>
+            {/if}
+        </div>
+        <div class="customer-list grid grid-cols-5 gap-4 items-center justify-center mb-5">
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/ramps.webp" />
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/gafoors.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/banks.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/pascargo.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/massy.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/unicomer.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/suri.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/ansa.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/laparkan.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/torginol.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/toucan.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/dsl.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/tropical.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/nhl.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/desinco.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/dsingh.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/saipem.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/maersk.webp" alt="client-logo"/>
+                </div>
+            </div>
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/msc.webp" alt="client-logo"/>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 <Footer />
 
 <svelte:window bind:scrollY={y} />
