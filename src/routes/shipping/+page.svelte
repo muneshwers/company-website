@@ -26,17 +26,20 @@
     <div class="hero-image h-[100vh] relative">
         <enhanced:img src="$lib/assets/shipping2.webp" alt="Hero landing page" class="object-cover h-full w-full" />
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
-        <div class="hero-text uppercase text-white absolute bottom-40  left-16 w-9/12 leading-[120px] flex flex-col">
+        <div class="hero-text uppercase text-white absolute bottom-48  left-16 w-9/12 leading-[120px] flex flex-col">
             <div class="individual-hero-text logo w-36 h-36">
                 <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
             </div>
             <div>
-                <p class="individual-hero-text text-[60px]">Muneshwers Shipping Service</p>
+                <p class="individual-hero-text text-[60px]">Muneshwers</p>
+            </div>
+            <div>
+                <p class="individual-hero-text text-[60px]">Shipping Service</p>
             </div>
         </div>
-        <div class="buttons flex flex-row gap-4 h-[8vh] absolute bottom-16 left-16 text-white w-[50%]">
-            <button class="bg-slate-700 w-[25%] rounded-lg p-5 text-center h-full flex items-center justify-center hover:bg-slate-500 hover:duration-150">Request a Quote</button>
-            <button class="bg-slate-700 w-[25%] rounded-lg p-5 text-center h-full flex items-center justify-center hover:bg-slate-500 hover:duration-150">Contact Sales</button>
+        <div class="buttons flex flex-row gap-4 h-[8vh] absolute bottom-20 left-16 text-white w-[50%]">
+            <button class="bg-[#4876B6] w-[180px] h-[50px] rounded-lg p-2 text-center  flex items-center justify-center hover:bg-[#425a7c] hover:duration-150">Request a Quote</button>
+            <button class="bg-[#4876B6] w-[180px] h-[50px] rounded-lg p-2 text-center flex items-center justify-center hover:bg-[#425a7c] hover:duration-150">Contact Sales</button>
         </div>
     </div>
     <Navigation activePage="services"/>
@@ -149,7 +152,7 @@
         <div class="customer-list grid grid-cols-5 gap-4 items-center justify-center mb-5">
             <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
                 <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
-                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/ramps.webp" />
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/ramps.webp" alt="client-logo"/>
                 </div>
             </div>
             <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
