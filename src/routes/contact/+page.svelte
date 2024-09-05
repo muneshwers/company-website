@@ -79,17 +79,17 @@
         <div class="row flex flex-row justify-center gap-5 w-[100%]">
             <div class="input-group flex flex-row gap-10 items-center w-full">
                 <label for="contact-name">Name:</label>
-                <input type="text" name="contact-name" id="contact-name"  class="border-[3px] rounded-md w-[70%]"/>
+                <input type="text" name="contact-name" id="contact-name"  class="border-[3px] rounded-md w-[70%] p-2 text-sm"/>
             </div>
             <div class="input-group flex flex-row gap-5 items-center w-full">
                 <label for="contact-email">Email Address:</label>
-                <input type="text" name="contact-email" id="contact-email"  class="border-[3px] rounded-md  w-[70%]"/>
+                <input type="text" name="contact-email" id="contact-email"  class="border-[3px] rounded-md  w-[70%] p-2 text-sm"/>
             </div>
         </div>
         <div class="row  w-[100%]">
             <div class="input-group flex flex-row justify-start gap-5 items-center">
                 <label for="contact-message">Message:</label>
-                <textarea name="contact-message" id="contact-message" class="border-[3px] rounded-md w-[34%]"></textarea>
+                <textarea name="contact-message" id="contact-message" class="border-[3px] rounded-md w-[34%] p-2 text-sm"></textarea>
             </div>
         </div>
         <div class="row  w-[100%]">
