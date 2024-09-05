@@ -41,7 +41,7 @@
     }
 
 </script>
-<div class="navigationBar z-50 w-full p-5 fixed top-0 left-0 right-0 flex flex-row items-center justify-between">
+<div class="navigationBar z-[999] w-full p-5 fixed top-0 left-0 right-0 flex flex-row items-center justify-between">
     <a href="/">
         <div class="company-info flex flex-row items-center gap-2">
             <div class="logo w-16 h-16">
