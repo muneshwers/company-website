@@ -38,8 +38,12 @@
             </div>
         </div>
         <div class="buttons flex flex-row gap-4 h-[8vh] absolute bottom-20 left-16 text-white w-[50%]">
-            <button class="bg-[#4876B6] w-[180px] h-[50px] rounded-lg p-2 text-center  flex items-center justify-center hover:bg-[#425a7c] hover:duration-150">Request a Quote</button>
-            <button class="bg-[#4876B6] w-[180px] h-[50px] rounded-lg p-2 text-center flex items-center justify-center hover:bg-[#425a7c] hover:duration-150">Contact Sales</button>
+            <a href="/contact">
+                <button class="bg-[#ffffff] border-2 border-[#4876B6] text-[#4876B6] w-[170px] h-[50px] rounded-md py-2 text-center  flex items-center justify-center hover:bg-[#4876B6] hover:border-[#4876B6] hover:text-white  hover:duration-150">Request a Quote</button>
+            </a>
+            <a href="/contact">
+                <button class="bg-[#ffffff] border-2 border-[#4876B6] text-[#4876B6] w-[170px] h-[50px] rounded-md py-2 text-center flex items-center justify-center hover:bg-[#4876B6] hover:border-[#4876B6] hover:text-white hover:duration-150">Contact Sales</button>
+            </a>
         </div>
     </div>
     <Navigation activePage="services"/>
