@@ -92,8 +92,25 @@
         </div>
     {/if}
 
-        
+    
+</div>
+<div class="entrance h-[70vh] my-36 flex justify-center items-center gap-10">
+    {#if y > 800}
+    <div class="col article w-[30%]">
+        <div class="article-title text-4xl sf_pro_bold uppercase">
+            About the Travel Service
+        </div>
+        <div class="article-details mt-5 raleway-regular text-lg">
+            <p>
+                Muneshwers Travel Service was inherited from the Government of Guyana and was called GNG travel before changing its name ot Muneshwers travel service. It quickly attracted travel agents to work for us because we were paying a commission of 50%. We are the number 1 (#1) travel agency in Guyana for almost 3 decades. Muneshwers Limited still has a very visible presence in this challenging industry because we are known for quality work.
+            </p>
+        </div>
     </div>
+    <div class="col article-image w-[45%] h-[100%]">
+        <enhanced:img src="$lib/assets/DJI_0364.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
+    </div>
+    {/if}
+</div>
 <Footer />
 
 <svelte:window bind:scrollY={y} />
