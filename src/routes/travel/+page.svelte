@@ -94,7 +94,7 @@
 
     
 </div>
-<div class="entrance h-[70vh] my-36 flex justify-center items-center gap-10">
+<div class="entrance h-[70vh] mt-36 flex justify-center items-center gap-10">
     {#if y > 800}
     <div class="col article w-[30%]">
         <div class="article-title text-4xl sf_pro_bold uppercase">
@@ -110,6 +110,21 @@
         <enhanced:img src="$lib/assets/DJI_0364.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
     </div>
     {/if}
+</div>
+<div class="contact-section flex flex-col justify-center items-center h-[30vh]">
+    {#if y > 1250}
+        <div class="contact-header my-7 p-10 bg-gray-200 w-[80%] rounded-md">
+            <div class="row flex flex-row gap-2 text-normal p-2">
+                <div class="contact-title font-medium">Telephone:</div>
+                <div class="contact-details text-gray-500">+592-226-1487 / +592-227-440 / +592-227-8570</div>
+            </div>
+            <div class="row flex flex-row gap-2 text-normal p-2">
+                <div class="contact-title font-medium">Email:</div>
+                <div class="contact-details text-gray-500">travel@muneshwers.com</div>
+            </div>
+        </div>
+    {/if}
+    
 </div>
 <Footer />
 
