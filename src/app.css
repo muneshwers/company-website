@@ -611,6 +611,16 @@ div.service:nth-child(5) {
     animation: slide-left 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
 }
 
+.slide-left {
+    -webkit-animation: slide-left 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
+    animation: slide-left 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
+}
+
+.slide-right {
+    -webkit-animation: slide-right 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
+    animation: slide-right 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
+}
+
 /* .landing-top {
     -webkit-animation: fade-in 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
     animation: fade-in 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;

@@ -86,9 +86,12 @@
             {/if}
             
         </div>
-        <div class="{activityCheck.about ? "item-active": "item"}">
-            About
-        </div>
+        <a href="/about">
+            <div class="{activityCheck.about ? "item-active": "item"}">
+                About
+            </div>
+        </a>
+        
         <a href="/contact">
             <div class="{activityCheck.contact ? "item-active": "item"}">
                 Contact
