@@ -39,10 +39,10 @@
         </div>
         <div class="buttons flex flex-row gap-4 h-[8vh] absolute bottom-20 left-16 text-white w-[50%]">
             <a href="/contact">
-                <button class="bg-[#ffffff] border-2 border-[#4876B6] text-[#4876B6] w-[170px] h-[50px] rounded-md py-2 text-center  flex items-center justify-center hover:bg-[#4876B6] hover:border-[#4876B6] hover:text-white  hover:duration-150">Request a Quote</button>
+                <button class="bg-[#4876B6] border-2 border-[#4876B6] text-white w-[170px] h-[50px] uppercase hover:scale-105 py-2 text-center text-md flex items-center justify-center hover:scale hover:border-[#4876B6]  hover:duration-150 font-bold">Request a Quote</button>
             </a>
             <a href="/contact">
-                <button class="bg-[#ffffff] border-2 border-[#4876B6] text-[#4876B6] w-[170px] h-[50px] rounded-md py-2 text-center flex items-center justify-center hover:bg-[#4876B6] hover:border-[#4876B6] hover:text-white hover:duration-150">Contact Sales</button>
+                <button class="bg-[#4876B6] border-2 border-[#4876B6] text-white w-[170px] h-[50px] uppercase hover:scale-105 py-2 text-center text-md flex items-center justify-center hover:scale hover:border-[#4876B6]  hover:duration-150 font-bold">Contact Sales</button>
             </a>
         </div>
     </div>
