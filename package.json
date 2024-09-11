@@ -21,6 +21,8 @@
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
+		"firebase": "^10.13.1",
+		"firebase-admin": "^12.4.0",
 		"globals": "^15.0.0",
 		"postcss": "^8.4.38",
 		"prettier": "^3.1.1",
@@ -38,6 +40,8 @@
 		"@fortawesome/free-regular-svg-icons": "^6.6.0",
 		"@fortawesome/free-solid-svg-icons": "^6.6.0",
 		"@vercel/postgres": "^0.9.0",
-		"svelte-carousel": "github:vadimkorr/svelte-carousel#pull/142/head"
+		"nodemailer": "^6.9.15",
+		"svelte-carousel": "github:vadimkorr/svelte-carousel#pull/142/head",
+		"svelte-email": "^0.0.4"
 	}
 }
