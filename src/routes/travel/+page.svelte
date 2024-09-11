@@ -2,6 +2,7 @@
 // @ts-nocheck
 
     import brandLogo from "$lib/assets/brand-logo.webp";
+    import travelService from "$lib/assets/travelservice2.jpg";
 
     import ship from "$lib/assets/ship-solid.svg";
     import anchor from "$lib/assets/anchor-solid.svg";
