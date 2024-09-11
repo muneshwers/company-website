@@ -44,7 +44,7 @@
     <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
         <div class="intro-details">
             {#if y > 200}
-            <div class="intro-text mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
+            <div class="history-text playfair-display-regular mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
                 <p>Our Origin</p>
             </div>
             {/if}
@@ -58,7 +58,9 @@
         <div class="col article-section w-[30%]">
             <div class="article-details mt-5 raleway-regular text-lg">
                 <p>
-                    Almost a hundred years ago, a young cane cutter working the fields in the countryside of Guyana injured his back and had to seek another trade to support his wife and children, He became a tailor and later, started to trade in dry goods. From that, he branched off into hardware items and in 1950, moved his family to the capital city of Georgetown. From here, the origin of Muneshwers Limited (ML) begins.
+                    In the 1920s, a young cane cutter working the fields in the countryside of Guyana injured his back and had to seek another trade to support his wife and children. 
+                    He became a tailor and later, started to trade in dry goods. From that, he branched off into hardware items and in 1950, moved his family from Port Mourant, Berbice, to the capital city of Georgetown. 
+                    From here, the origin of Muneshwers Limited (ML) begins.
                 </p>
             </div>
         </div>
@@ -73,7 +75,18 @@
         </div>
     </div>
 {/if}
-{#if y > 700}
+<div class="introduction-section flex flex-col justify-center items-center">
+    <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
+        <div class="intro-details">
+            {#if y > 800}
+            <div class="history-text playfair-display-regular mt-8 text-center flex flex-col text-[40px] text-[#000000]">
+                <p>60's to 90's</p>
+            </div>
+            {/if}
+        </div>
+    </div>
+</div>
+{#if y > 950}
     <div class="slide slide-right h-[50vh] my-36 flex justify-center items-center gap-36">
         <div class="col article-image-section w-[20%]  h-[100%] flex flex-col items-center relative justify-center">
             <div class="article-image-header ">
@@ -90,22 +103,20 @@
         <div class="col article-section w-[30%]">
             <div class="article-details mt-5 raleway-regular text-lg">
                 <p>
-                    In the 1950s and 60s, ML established itself as one of the leading importers, wholesalers and retailers of builders’ hardware in the country. But during the 70s, the country took a downward turn and the company suspended trading activities in 1978; only returning to Guyana when the economy opened up once more in the 1990s.
+                    In the 1950s and 60s, ML established itself as one of the leading importers, wholesalers and retailers of builders’ hardware in the country. 
+                    But during the 70s, the country took a downward turn and the company suspended trading activities in 1978; only returning to Guyana when the economy opened up once more in the 1990s.
                 </p>
             </div>
         </div>
         
     </div>
 {/if}
-{#if y > 1150}
+{#if y > 1450}
     <div class="slide slide-left h-[50vh] mb-36 flex justify-center items-center gap-36">
         <div class="col article-section w-[30%]">
             <div class="article-details mt-5 raleway-regular text-lg">
                 <p>
                     The new head of the company, Amarnath, son of the founder, successfully bid for a government owned property that comprised of a hardware store and a port facility and Muneshwers Limited was reborn.
-                </p>
-                <p class="mt-5">
-                    The shipping department, managed by Robin, grandson of the founder, and representing the third generation of the company experienced rapid growth in its first four years but then suffered some severe setbacks as shipping lines left for other facilities. In 2003, the company was razed to the ground by a fire and had to restart again. Another store was activated to keep the business afloat and that became later known as store 2, now Guyana’s #1 Events Store.
                 </p>
             </div>
         </div>
@@ -120,33 +131,78 @@
         </div>
     </div>
 {/if}
-{#if y > 1600}
-    <div class="slide h-[30vh] mb-36 flex justify-center items-center gap-36">
-        <div class="col slide-right article-image-section w-[20%] h-[100%] justify-center">
-            <div class="article-image-header">
-                <enhanced:img src="$lib/assets/FOTO-INCENDIO.webp" alt="Hero landing page" class="object-contain h-full w-full rounded-lg" />
+<div class="introduction-section flex flex-col justify-center items-center">
+    <div class="shipping-header mb-5 justify-center relative flex h-[143px]">
+        <div class="intro-details">
+            {#if y > 2100}
+            <div class="history-text playfair-display-regular mt-8 text-center uppercase flex flex-col text-[40px] text-[#000000]">
+                <p>Modern Muneshwers</p>
             </div>
-            <div class="article-image-caption flex flex-col items-center mt-2">
-                <p>Shot of the building on fire in 2003</p>
-            </div>
+            {/if}
         </div>
-        <div class="col slide-left  article-image-section w-[20%] h-[100%] flex flex-col items-center justify-center">
+    </div>
+</div>
+{#if y > 1600}
+    <div class="slide slide-right h-[50vh] mt-36 flex justify-center items-center gap-36">
+        <div class="col article-image-section w-[20%]  h-[100%] flex flex-col items-center relative justify-center">
             <div class="article-image-header">
-                <enhanced:img src="$lib/assets/PUERTO.webp" alt="Hero landing page" class="object-contain h-full w-full rounded-lg" />
+                <enhanced:img src="$lib/assets/PUERTO.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
             </div>
             <div class="article-image-caption flex flex-col items-center mt-2">
                 <p>Port facility on Water Street in 1991</p>
             </div>
         </div>
+        <div class="col article-section w-[30%]">
+            <div class="article-details mt-5 raleway-regular text-lg">
+                <p>
+                    The shipping department, managed by Robin, grandson of the founder, and representing the third generation of the company experienced rapid growth in its first four years but then suffered some severe setbacks
+                    as shipping lines left for other facilities.
+                </p>
+            </div>
+        </div>
+        
     </div>
 {/if}
+{#if y > 1150}
+    <div class="slide slide-left  mb-36 h-[50vh] flex justify-center items-center gap-36">
+        <div class="col article-section w-[30%]">
+            <div class="article-details mt-5 raleway-regular text-lg">
+                <p>
+                    In 2003, the company was razed to the ground by a fire and had to restart again. 
+                    Another store was activated to keep the business afloat and that became later known as Guyana’s #1 Events Store.
+                </p>
+            </div>
+        </div>
+        <div class="col article-image-section w-[20%]  h-[100%] flex flex-col items-center justify-center">
+            <div class="article-image-header">
+                <enhanced:img src="$lib/assets/FOTO-INCENDIO.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
+            </div>
+            <div class="article-image-caption flex flex-col items-center mt-2">
+                <p>Shot of the building on fire in 2003</p>
+            </div>
+        </div>
+    </div>
+{/if}
+<div class="introduction-section flex flex-col justify-center items-center">
+    <div class="shipping-header mb-5 justify-center relative flex h-[143px]">
+        <div class="intro-details">
+            {#if y > 2100}
+            <div class="history-text playfair-display-regular mt-8 text-center uppercase flex flex-col text-[40px] text-[#000000]">
+                <p>Oil and Gas</p>
+            </div>
+            {/if}
+        </div>
+    </div>
+</div>
 {#if y > 2100}
-    <div class="slide slide-left h-[50vh] mb-36 flex justify-center items-center gap-36">
+    <div class="slide slide-left h-[50vh] my-36 flex justify-center items-center gap-36">
         <div class="col article-section w-[30%]">
             <div class="article-details raleway-regular text-lg">
                 <p>
-                    In 2013, the company acquired a 30 acre facility on the outskirts of the capital city to accommodate its expanding shipping business. This was a monumental entrepreneurial risk, given the astronimical sum the compnay had to pay and the fact that the site was largely an abandoned timber facility, but with the discovery of oil in Guyana, ML develoepd the space to be a shore base facility.
+                    In 2013, the company acquired a 30 acre facility in Georgetown, the capital city. The initial vision was to accommodate the expanding shipping business. However, with the recent discovery of oil, Muneshwers pivoted to building the facility to accomodate Exxon as their premier Shore Base in Guyana. This was a monumental entrepreneurial risk. The company paid an astronimical sum for the 30 acres and competition was tough within and out of the country. 
+                    
                 </p>
+                <p class="mt-5">But, because of great partnerships, a bigger facility, and experience, GYSBI, a Muneshwers Joint Venture into Oil and Gas, emerged with a 20 year contract from Exxon. And now it stands as the largest local oil and gas company in Guyana.</p>
             </div>
         </div>
         <div class="col article-image-section w-[20%]  h-[100%] flex flex-col items-center justify-center">
