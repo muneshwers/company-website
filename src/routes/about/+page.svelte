@@ -44,7 +44,7 @@
     <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
         <div class="intro-details">
             {#if y > 200}
-            <div class="history-text playfair-display-regular mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
+            <div class="history-text playfair-display-regular mt-8 text-center flex flex-col text-[50px] text-[#000000]">
                 <p>Our Origin</p>
             </div>
             {/if}
@@ -79,15 +79,15 @@
     <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
         <div class="intro-details">
             {#if y > 800}
-            <div class="history-text playfair-display-regular mt-8 text-center flex flex-col text-[40px] text-[#000000]">
-                <p>60's to 90's</p>
+            <div class="history-text playfair-display-regular mt-8 text-center flex flex-col text-[50px] text-[#000000]">
+                <p>60's - 90's</p>
             </div>
             {/if}
         </div>
     </div>
 </div>
 {#if y > 950}
-    <div class="slide slide-right h-[50vh] my-36 flex justify-center items-center gap-36">
+    <div class="slide slide-right h-[50vh] mb-36 flex justify-center items-center gap-36">
         <div class="col article-image-section w-[20%]  h-[100%] flex flex-col items-center relative justify-center">
             <div class="article-image-header ">
                 <enhanced:img src="$lib/assets/admin-ajax.webp" alt="Hero landing page" class="object-cover h-[300px] w-[250px] rounded-lg absolute top-0 left-0" />
@@ -135,15 +135,15 @@
     <div class="shipping-header mb-5 justify-center relative flex h-[143px]">
         <div class="intro-details">
             {#if y > 2100}
-            <div class="history-text playfair-display-regular mt-8 text-center uppercase flex flex-col text-[40px] text-[#000000]">
-                <p>Modern Muneshwers</p>
+            <div class="history-text playfair-display-regular mt-8 text-center flex flex-col text-[50px] text-[#000000]">
+                <p>2000's - 2010's</p>
             </div>
             {/if}
         </div>
     </div>
 </div>
-{#if y > 1600}
-    <div class="slide slide-right h-[50vh] mt-36 flex justify-center items-center gap-36">
+{#if y > 2200}
+    <div class="slide slide-right h-[50vh] flex justify-center items-center gap-36">
         <div class="col article-image-section w-[20%]  h-[100%] flex flex-col items-center relative justify-center">
             <div class="article-image-header">
                 <enhanced:img src="$lib/assets/PUERTO.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
@@ -163,7 +163,7 @@
         
     </div>
 {/if}
-{#if y > 1150}
+{#if y > 2200}
     <div class="slide slide-left  mb-36 h-[50vh] flex justify-center items-center gap-36">
         <div class="col article-section w-[30%]">
             <div class="article-details mt-5 raleway-regular text-lg">
@@ -187,7 +187,7 @@
     <div class="shipping-header mb-5 justify-center relative flex h-[143px]">
         <div class="intro-details">
             {#if y > 2100}
-            <div class="history-text playfair-display-regular mt-8 text-center uppercase flex flex-col text-[40px] text-[#000000]">
+            <div class="history-text playfair-display-regular mt-8 text-center flex flex-col text-[50px] text-[#000000]">
                 <p>Oil and Gas</p>
             </div>
             {/if}
@@ -195,7 +195,7 @@
     </div>
 </div>
 {#if y > 2100}
-    <div class="slide slide-left h-[50vh] my-36 flex justify-center items-center gap-36">
+    <div class="slide slide-left h-[50vh] mb-36 flex justify-center items-center gap-36">
         <div class="col article-section w-[30%]">
             <div class="article-details raleway-regular text-lg">
                 <p>
