@@ -4,6 +4,8 @@
 
     export let jobDetails;
 
+    let job = jobDetails.form;
+
     let jobTest = {
         title: "Hauler Driver",
         company: "Muneshwers Shipping",
@@ -49,11 +51,11 @@
             </div>
             <div class="job-details flex flex-col gap-1">
                 <div class="job-title text-2xl raleway-medium">
-                    {jobDetails.title}
+                    {job.title}
                 </div>
                 <div class="job-subtitle flex flex-row gap-4 items-center">
-                    <div class="company text-sm text-[#848484] raleway-light">{jobDetails.company}</div>
-                    <div class="{jobDetails.type == "Full-time" ? "full-time-badge" : "part-time-badge"} type text-xs p-2 w-20 rounded-lg  text-center">Full-time</div>
+                    <div class="company text-sm text-[#848484] raleway-light">{job.company}</div>
+                    <div class="{job.type == "Full-Time" ? "full-time-badge" : "part-time-badge"} type text-xs p-2 w-20 rounded-lg  text-center">Full-time</div>
                 </div>
             </div>
         </div>
@@ -63,19 +65,19 @@
                 <img src={location} alt="" width="15px" height="15px">
             </div>
             <div class="location text-sm text-[#848484]">
-                {jobDetails.location}
+                {job.location}
             </div>
         </div>
     </div>
     <div class="job-details raleway-regular">
-        {jobDetails.description}
+        {job.description}
     </div>
     {#if detailsToggle}
         <div class="more-job">
             <div class="more-section flex flex-col items-center">
                 <div class="more-title text-xl mt-2 mb-1 raleway-medium w-full">Responsibilities:</div>
                 <ul class="list-disc text-base raleway-regular w-[95%]">
-                    {#each jobDetails.responsibilities as responsibility}
+                    {#each job.responsibilities as responsibility}
                         <li>{responsibility}</li>
                     {/each}
                 </ul>
@@ -83,7 +85,7 @@
             <div class="more-section flex flex-col items-center">
                 <div class="more-title text-xl mt-2 mb-1 raleway-medium w-full">Requirements:</div>
                 <ul class="list-disc text-base raleway-regular w-[95%]">
-                    {#each jobDetails.requirements as requirement}
+                    {#each job.requirements as requirement}
                         <li>{requirement}</li>
                     {/each}
                 </ul>

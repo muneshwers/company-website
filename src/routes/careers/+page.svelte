@@ -31,7 +31,11 @@
 
     $: jvToggle = false;
 
+    export let data;
+
     let y;
+
+    console.log("Jobs list on client: ", data.jobsList);
 
     let jobs = [
         {
@@ -348,7 +352,7 @@
 </div>
 <div class="jobs-section flex flex-row">
     <div class="job-listings flex flex-col justify-center items-center mt-10">
-        {#each jobs as job}
+        {#each data.jobsList as job}
             <Jobcard jobDetails={job}/>
         {/each}
     </div>
