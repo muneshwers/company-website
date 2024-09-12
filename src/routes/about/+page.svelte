@@ -117,7 +117,8 @@
         <div class="col article-section w-[30%]">
             <div class="article-details mt-5 raleway-regular text-lg">
                 <p>
-                    The new head of the company, Amarnath, son of the founder, successfully bid for a government owned property that comprised of a hardware store and a port facility and Muneshwers Limited was reborn.
+                    The new head of the company, Amarnath, son of the founder, successfully bid for a government owned property 
+                    that comprised of a hardware store and a port facility and Muneshwers Limited was reborn.
                 </p>
             </div>
         </div>
@@ -156,7 +157,8 @@
         <div class="col article-section w-[30%]">
             <div class="article-details mt-5 raleway-regular text-lg">
                 <p>
-                    The shipping department, managed by Robin, grandson of the founder, and representing the third generation of the company experienced rapid growth in its first four years but then suffered some severe setbacks
+                    The shipping department, managed by Robin, grandson of the founder, and representing the third generation of the company 
+                    experienced rapid growth in its first four years but then suffered some severe setbacks
                     as shipping lines left for other facilities.
                 </p>
             </div>
@@ -208,7 +210,11 @@
         <div class="col article-section w-[30%]">
             <div class="article-details raleway-regular text-lg">
                 <p>
-                    In 2013, the company acquired a 30 acre facility in Georgetown, the capital city. The initial vision was to accommodate the expanding shipping business. However, with the recent discovery of oil, Muneshwers pivoted to building the facility to accomodate Exxon as their premier Shore Base in Guyana. This was a monumental entrepreneurial risk. The company paid an astronimical sum for the 30 acres and competition was tough within and out of the country. 
+                    In 2013, the company acquired a 30 acre facility in Georgetown, the capital city. 
+                    The initial vision was to accommodate the expanding shipping business. However, with the recent discovery of oil, 
+                    Muneshwers pivoted to building the facility to accomodate Exxon as their premier Shore Base in Guyana. 
+                    This was a monumental entrepreneurial risk. The company paid an astronomical sum for the 30 acres 
+                    and competition was tough within and out of the country. 
                     
                 </p>
             </div>
