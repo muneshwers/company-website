@@ -23,7 +23,7 @@
 	import Footer from "./Footer.svelte";
 	import Jvslide from "./Jvslide.svelte";
     import Carousel from 'svelte-carousel';
-    import upright from "$lib/assets/square-arrow-up-right-solid.svg";
+    import upright from "$lib/assets/white.svg";
 
 
     $: jvToggle = false;
@@ -111,9 +111,9 @@
                     <a href="/shipping">
                     <div class="w-fit h-full">
                         <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" />
-                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                             <div>Shipping</div>
-                            <img src={upright} alt="" width="15px" height="15px">
+                            <img src={upright} alt="" width="25px" height="25px">
                         </div>
                     </div>
                 </a>
@@ -122,7 +122,7 @@
                     <a href="/travel">
                         <div class="w-fit h-full">
                             <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
-                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                 <div>Travel</div>
                                 <img src={upright} alt="" width="25px" height="25px">
                             </div>
@@ -135,7 +135,7 @@
                     <a href="/stores">
                         <div class="w-full h-full">
                             <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/events2.webp" />
-                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                 <div>Events</div>
                                 <img src={upright} alt="" width="25px" height="25px">
                             </div>
@@ -146,7 +146,7 @@
                     <a href="/stores">
                         <div class="w-fit h-full">
                             <enhanced:img alt="" class="w-full h-full object-contain" src="$lib/assets/homegoods2.webp" />
-                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                 <div>Home Goods</div>
                                 <img src={upright} alt="" width="25px" height="25px">
                             </div>
