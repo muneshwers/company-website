@@ -28,7 +28,7 @@
 </script>
 
 <svelte:head>
-	<title>Muneshwers Limited</title>
+	<title>Paragon Construction</title>
 	<meta name="description" content="Muneshwers Limited" />
 </svelte:head>
 <div class="landing-top relative">
