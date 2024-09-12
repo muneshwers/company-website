@@ -2,6 +2,7 @@
 // @ts-nocheck
 
     import brandLogo from "$lib/assets/brand-logo.webp";
+    import gybiImage from "$lib/assets/DJI_0353.jpg";
 	import Navigation from "../Navigation.svelte";
 	import Footer from "../Footer.svelte";
     import ship from "$lib/assets/ship-solid.svg";
@@ -54,7 +55,7 @@
  
 </div>
 {#if y > 300}
-    <div class="slide slide-left h-[50vh] mb-36 mt-10 flex justify-center items-center gap-36">
+    <div class="slide slide-left h-[50vh] mt-10 flex justify-center items-center gap-36">
         <div class="col article-section w-[30%]">
             <div class="article-details mt-5 raleway-regular text-lg">
                 <p>
@@ -78,7 +79,7 @@
 <div class="introduction-section flex flex-col justify-center items-center">
     <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
         <div class="intro-details">
-            {#if y > 800}
+            {#if y > 700}
             <div class="history-text playfair-display-regular mt-8 text-center flex flex-col text-[50px] text-[#000000]">
                 <p>60's - 90's</p>
             </div>
@@ -86,7 +87,7 @@
         </div>
     </div>
 </div>
-{#if y > 950}
+{#if y > 850}
     <div class="slide slide-right h-[50vh] mb-36 flex justify-center items-center gap-36">
         <div class="col article-image-section w-[20%]  h-[100%] flex flex-col items-center relative justify-center">
             <div class="article-image-header ">
@@ -112,7 +113,7 @@
     </div>
 {/if}
 {#if y > 1450}
-    <div class="slide slide-left h-[50vh] mb-36 flex justify-center items-center gap-36">
+    <div class="slide slide-left h-[50vh] flex justify-center items-center gap-36">
         <div class="col article-section w-[30%]">
             <div class="article-details mt-5 raleway-regular text-lg">
                 <p>
@@ -132,9 +133,9 @@
     </div>
 {/if}
 <div class="introduction-section flex flex-col justify-center items-center">
-    <div class="shipping-header mb-5 justify-center relative flex h-[143px]">
+    <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
         <div class="intro-details">
-            {#if y > 2100}
+            {#if y > 1790}
             <div class="history-text playfair-display-regular mt-8 text-center flex flex-col text-[50px] text-[#000000]">
                 <p>2000's - 2010's</p>
             </div>
@@ -142,7 +143,7 @@
         </div>
     </div>
 </div>
-{#if y > 2200}
+{#if y > 1900}
     <div class="slide slide-right h-[50vh] flex justify-center items-center gap-36">
         <div class="col article-image-section w-[20%]  h-[100%] flex flex-col items-center relative justify-center">
             <div class="article-image-header">
@@ -164,7 +165,7 @@
     </div>
 {/if}
 {#if y > 2200}
-    <div class="slide slide-left  mb-36 h-[50vh] flex justify-center items-center gap-36">
+    <div class="slide slide-left h-[50vh] flex justify-center items-center gap-36">
         <div class="col article-section w-[30%]">
             <div class="article-details mt-5 raleway-regular text-lg">
                 <p>
@@ -184,27 +185,18 @@
     </div>
 {/if}
 <div class="introduction-section flex flex-col justify-center items-center">
-    <div class="shipping-header mb-5 justify-center relative flex h-[143px]">
+    <div class="shipping-header mb-5 justify-center relative flex">
         <div class="intro-details">
-            {#if y > 2100}
-            <div class="history-text playfair-display-regular mt-8 text-center flex flex-col text-[50px] text-[#000000]">
-                <p>Oil and Gas</p>
+            {#if y > 2500}
+            <div class="history-text playfair-display-regular text-center flex flex-col text-[50px] text-[#000000]">
+                <p>2010's - Now</p>
             </div>
             {/if}
         </div>
     </div>
 </div>
-{#if y > 2100}
-    <div class="slide slide-left h-[50vh] mb-36 flex justify-center items-center gap-36">
-        <div class="col article-section w-[30%]">
-            <div class="article-details raleway-regular text-lg">
-                <p>
-                    In 2013, the company acquired a 30 acre facility in Georgetown, the capital city. The initial vision was to accommodate the expanding shipping business. However, with the recent discovery of oil, Muneshwers pivoted to building the facility to accomodate Exxon as their premier Shore Base in Guyana. This was a monumental entrepreneurial risk. The company paid an astronimical sum for the 30 acres and competition was tough within and out of the country. 
-                    
-                </p>
-                <p class="mt-5">But, because of great partnerships, a bigger facility, and experience, GYSBI, a Muneshwers Joint Venture into Oil and Gas, emerged with a 20 year contract from Exxon. And now it stands as the largest local oil and gas company in Guyana.</p>
-            </div>
-        </div>
+{#if y > 2700}
+    <div class="slide slide-right h-[50vh] flex justify-center items-center gap-36">
         <div class="col article-image-section w-[20%]  h-[100%] flex flex-col items-center justify-center">
             <div class="article-image-header">
                 <enhanced:img src="$lib/assets/Muneshwers.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
@@ -213,9 +205,52 @@
                 <p>Our present berth</p>
             </div>
         </div>
+        <div class="col article-section w-[30%]">
+            <div class="article-details raleway-regular text-lg">
+                <p>
+                    In 2013, the company acquired a 30 acre facility in Georgetown, the capital city. The initial vision was to accommodate the expanding shipping business. However, with the recent discovery of oil, Muneshwers pivoted to building the facility to accomodate Exxon as their premier Shore Base in Guyana. This was a monumental entrepreneurial risk. The company paid an astronimical sum for the 30 acres and competition was tough within and out of the country. 
+                    
+                </p>
+            </div>
+        </div>
+        
     </div>
 {/if}
-
+<div class="introduction-section flex flex-col justify-center items-center">
+    <div class="shipping-header mt-10 justify-center relative flex">
+        <div class="intro-details">
+            {#if y > 3000}
+            <div class="history-text playfair-display-regular text-center flex flex-col text-[50px] text-[#000000]">
+                <p>Oil and Gas</p>
+            </div>
+            {/if}
+        </div>
+    </div>
+</div>
+{#if y > 3200}
+    <div class="slide slide-left h-[70vh] mb-36 mt-24 flex justify-center items-center gap-16">
+        <div class="col article-section w-[30%]">
+            <div class="article-details raleway-regular text-lg">
+                <p>
+                    But, because of great partnerships, a bigger facility, and experience, GYSBI, a Muneshwers Joint Venture into Oil and Gas, 
+                    emerged with a 20 year contract from Exxon. And now it stands as the largest local oil and gas company in Guyana.
+                </p>
+                <p class="mt-5">
+                    Presently, Muneshwers Limited is #1 in Oil and Gas, Events, Travel Service and is the fastest growing company in shipping. 
+                    With our 8 joint ventures, we are leaders in heavy lift transportation, barge solutions and are currently on a new frontier into construction.
+                </p>
+            </div>
+        </div>
+        <div class="col article-image-section w-[45%] h-[100%] flex flex-col items-center justify-center">
+            <div class="article-image-header">
+                <img src={gybiImage} alt="Hero landing page" class="object-contain h-full w-full rounded-lg" />
+            </div>
+            <div class="article-image-caption flex flex-col items-center">
+                <p>GYSBI Facility, Houston</p>
+            </div>
+        </div>
+    </div>
+{/if}
 
 
 <div class="push-up h-[30vh]"></div>
