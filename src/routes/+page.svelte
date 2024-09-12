@@ -113,7 +113,7 @@
                         <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" />
                         <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff] gap-4">
                             <div>Shipping</div>
-                            <img src={upright} alt="" width="25px" height="25px">
+                            <img src={upright} alt="" width="15px" height="15px">
                         </div>
                     </div>
                 </a>
