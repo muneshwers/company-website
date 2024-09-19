@@ -132,9 +132,9 @@
             </div>
             <div class="bento-row flex gap-6 justify-center">
                 <div class="service bento-small w-[68%] h-[70vh] bg-slate-400 rounded-md hover:scale-125">
-                    <a href="/stores">
+                    <a href="/events">
                         <div class="w-full h-full">
-                            <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/events2.webp" />
+                            <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/eventsservice.webp" />
                             <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                 <div>Events</div>
                                 <img src={upright} alt="" width="25px" height="25px">
