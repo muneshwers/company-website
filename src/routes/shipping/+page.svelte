@@ -5,15 +5,15 @@
     import mllogo from "$lib/assets/logo.png";
 	import Navigation from "../Navigation.svelte";
 	import Footer from "../Footer.svelte";
-    import ship from "$lib/assets/shippingagency.jpg";
-    import anchor from "$lib/assets/vesselhandling.jpg";
-    import truck from "$lib/assets/GYS09655.jpg";
+    import ship from "$lib/assets/GYS00850.webp";
+    import anchor from "$lib/assets/vesselhandling.webp";
+    import truck from "$lib/assets/GYS09655.webp";
     import truckRamp from "$lib/assets/dangerouscargo.jpg";
-    import warehouse from "$lib/assets/warehousing.png";
+    import warehouse from "$lib/assets/warehousing.webp";
     import dolly from "$lib/assets/oilandgassupport.jpg";
-    import oil from "$lib/assets/oilandgassupport.jpg";
-    import box from "$lib/assets/customsbrokerage.jpg";
-    import boxOpen from "$lib/assets/container2.jpg";
+    import oil from "$lib/assets/GYS00964.webp";
+    import box from "$lib/assets/customsbrokerage.webp";
+    import boxOpen from "$lib/assets/container2.webp";
     // import ship from "$lib/assets/ship-solid.svg";
     // import anchor from "$lib/assets/anchor-solid.svg";
     // import truck from "$lib/assets/truck-solid.svg";
@@ -73,23 +73,61 @@
          {#if y > 300}
          <div class="grid-container mt-5 ">
             <div class="grid grid-cols-4 gap-2 h-[100%]">
-                <div class="service h-full w-full  rounded-md">
-                    <img src={ship} alt="Hero landing page" class=" w-full h-full object-cover" />
+                <div class="service shipping-service grid-box h-full w-full rounded-md hover:scale-125">
+                        <div class="w-fit h-full">
+                            <enhanced:img src="$lib/assets/GYS00850.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                                <div>Shipping Agency</div>
+                            </div>
+                        </div>
                 </div>
-                <div class="service h-full w-full rounded-md">
-                    <img src={anchor} alt="Hero landing page" class="w-full h-full object-cover" />
+                <div class="service shipping-service grid-box h-full w-full rounded-md">
+                    <div class="w-fit h-full">
+                        <enhanced:img src="$lib/assets/vesselhandling.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            <div>Vessel Handling</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service h-full w-full rounded-md row-span-2 col-span-2">
-                    <img src={truck} alt="Hero landing page" class="w-full h-full object-cover" />
+                <div class="service shipping-service grid-box h-full w-full rounded-md row-span-2 col-span-2">
+                    <div class="w-fit h-full">
+                        <enhanced:img src="$lib/assets/GYS09655.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            <div>Inland Haulage</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service h-full w-full rounded-md col-span-2">
-                    <img src={warehouse} alt="Hero landing page" class="w-full h-full object-cover" />
+                <div class="service shipping-service grid-box h-full w-full rounded-md col-span-2">
+                    <div class="w-fit h-full">
+                        <enhanced:img src="$lib/assets/warehousing.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            <div>Warehousing</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service h-full w-full rounded-md">
-                    <img src={box} alt="Hero landing page" class="w-full h-full object-cover" />
+                <div class="service shipping-service grid-box h-full w-full rounded-md">
+                    <div class="w-fit h-full">
+                        <enhanced:img src="$lib/assets/customsbrokerage.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            <div>Customs Brokerage</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service h-full w-full rounded-md  col-span-3">
-                    <img src={boxOpen} alt="Hero landing page" class="w-full h-full object-cover" />
+                <div class="service shipping-service grid-box h-full w-full rounded-md  col-span-2">
+                    <div class="w-fit h-full">
+                        <enhanced:img src="$lib/assets/GYS00964.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            <div>Oil and Gas Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service shipping-service grid-box h-full w-full rounded-md">
+                    <div class="w-fit h-full">
+                        <enhanced:img src="$lib/assets/container2.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                        <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                            <div>Container Destuffing</div>
+                        </div>
+                    </div>
                 </div>
             </div>
          </div>

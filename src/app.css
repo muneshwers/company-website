@@ -211,6 +211,27 @@
     transform: scale(1.1);
 }
 
+.shipping-service {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shipping-service {
+    transition: transform .2s;
+}
+
+.shipping-service>div {
+    transition: transform .2s;
+}
+
+.shipping-service>div:hover {
+    /* filter: brightness(50%); */
+    transition-duration: 300ms;
+    transform: scale(1.1);
+}
+
+
+
 .jv-card {
     filter: saturate(0%);
     cursor: pointer;
