@@ -49,7 +49,7 @@
 <div class="landing-top relative">
     <!-- <div class="scroll-watcher"></div> -->
     <div class="hero-home-image h-screen relative">
-        <enhanced:img src="$lib/assets/parallaxshipping.webp" alt="Hero landing page" class="object-cover h-full w-full" />
+        <enhanced:img src="$lib/assets/GYS00823.webp" alt="Hero landing page" class="object-cover h-full w-full" />
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20  left-16 w-9/12 leading-[120px] flex flex-col">
             <div class="individual-hero-text logo w-36 h-36">
@@ -87,7 +87,6 @@
         
     </div>
     <Navigation activePage="home"/>
-    
 </div>
 <div class="introduction-section flex flex-col justify-center" id="introduction">
     <div class="intro-header mt-5 justify-center relative flex h-[143px]">
