@@ -1,8 +1,6 @@
 // @ts-nocheck
 // eslint-disable-next-line no-unused-vars
 import { json } from '@sveltejs/kit';
-import { render } from 'svelte-email';
-import Hello from '$lib/emails/Hello.svelte';
 import nodemailer from 'nodemailer';
 
 // eslint-disable-next-line no-unused-vars
@@ -13,17 +11,19 @@ const transporter = nodemailer.createTransport({
 	secure: true,
 	auth: {
 		user: 'programmer3@muneshwers.store',
-		pass: 'Hi123456789*'
+		pass: 'vgobabvqrkdjlqlf'
 	}
 });
 
+export default transporter;
+
 // eslint-disable-next-line no-unused-vars
-const emailHtml = render({
-	component: Hello,
-	props: {
-		name: 'Svelte'
-	}
-});
+// const emailHtml = render({
+// 	component: Hello,
+// 	props: {
+// 		name: 'Svelte'
+// 	}
+// });
 
 // const options = {
 // 	from: 'you@example.com',
@@ -33,3 +33,4 @@ const emailHtml = render({
 // };
 
 // transporter.sendMail(options);
+
