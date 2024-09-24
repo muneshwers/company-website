@@ -7,9 +7,8 @@ import serviceAccount from "../../../serviceAccountKey.json";
 const service = serviceAccount;
 
 const firebaseApp = initializeApp({
-  credential: cert(service),
-  storageBucket: "projectservers.appspot.com",
-});
+  credential: cert(service)
+}, "work-permit");
 
 const firestore = getFirestore(firebaseApp, "work-permit");
 

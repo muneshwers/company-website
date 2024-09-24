@@ -22,7 +22,7 @@
 
     let y;
 
-    console.log("Jobs list on client: ", data.jobsList);
+    // console.log("Jobs list on client: ", data.jobsList);
 
 </script>
 
