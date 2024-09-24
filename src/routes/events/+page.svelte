@@ -20,13 +20,12 @@
     import travelService from "../../travel.jpg";
     import store1Service from "../../store1.jpg";
     import store2Service from "../../events1.jpg";
-	import Joint from "../Joint.svelte";
 	import Navigation from "../Navigation.svelte";
 
 </script>
 
 <svelte:head>
-	<title>Paragon Construction</title>
+	<title>Muneshwers #1 Events Store</title>
 	<meta name="description" content="Muneshwers Limited" />
 </svelte:head>
 <div class="landing-top relative">
