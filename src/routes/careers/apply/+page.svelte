@@ -86,7 +86,7 @@
                 <div class="email-icon">
                     <img src={email} alt="" width="10px" height="10px">
                 </div>
-                <div>hr.clerk2@muneshwers.com</div>
+                <div><a href="mailto:hr.clerk2@muneshwers.com?subject=Job%20Application">hr.clerk2@muneshwers.com</a></div>
             </div>
     </div>
 </div>
