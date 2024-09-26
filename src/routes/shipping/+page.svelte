@@ -83,7 +83,7 @@
                 </div>
                 <div class="service shipping-service grid-box h-full w-full rounded-md">
                     <div class="w-fit h-full">
-                        <enhanced:img src="$lib/assets/vesselhandling.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                        <enhanced:img src="$lib/assets/DJI_0457.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
                         <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                             <div>Vessel Handling</div>
                         </div>
