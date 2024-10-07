@@ -7,13 +7,26 @@
 	import Footer from "../Footer.svelte";
     import ship from "$lib/assets/GYS00850.webp";
     import anchor from "$lib/assets/vesselhandling.webp";
-    import truck from "$lib/assets/GYS09655.webp";
-    import truckRamp from "$lib/assets/dangerouscargo.jpg";
-    import warehouse from "$lib/assets/warehousing.webp";
-    import dolly from "$lib/assets/oilandgassupport.jpg";
-    import oil from "$lib/assets/GYS00964.webp";
-    import box from "$lib/assets/customsbrokerage.webp";
-    import boxOpen from "$lib/assets/container2.webp";
+    import location from "$lib/assets/location-dot-solid.svg";
+    import port from "$lib/assets/anchor-solid-white.svg";
+    import vessel from "$lib/assets/ship-solid-white.svg";
+    import warehouse from "$lib/assets/warehouse-solid-white.svg";
+    import heavy from "$lib/assets/weight-hanging-solid-white.svg";
+    import truck from "$lib/assets/truck-front-solid-white.svg";
+    import vehicle from "$lib/assets/car-solid-white.svg";
+    import container from "$lib/assets/icons8-container-white.png";
+    import size from "$lib/assets/up-right-and-down-left-from-center-solid.svg";
+    import mrrobin from "$lib/assets/mrrobin.png";
+    import mrc from "$lib/assets/mrc.png";
+    import rajiv from "$lib/assets/rajiv.png";
+    import chabi from "$lib/assets/chabi.png";
+    import chester from "$lib/assets/chester.png";
+    import gaj from "$lib/assets/gaj.png";
+    import romona from "$lib/assets/romona.png";
+    import shane from "$lib/assets/shane.png";
+    import houston from "$lib/assets/DJI_0179_MOD.jpg";
+    import waterstreet from "$lib/assets/DJI_0439.jpg";
+
     // import ship from "$lib/assets/ship-solid.svg";
     // import anchor from "$lib/assets/anchor-solid.svg";
     // import truck from "$lib/assets/truck-solid.svg";
@@ -133,74 +146,10 @@
          </div>
         {/if}
     </div>
-    <!-- <div class="services shipping-image w-[100%] ">
-         {#if y > 300}
-         <div class="list-row mt-5 flex flex-row justify-center gap-5">
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
-                <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
-                    <img src={ship} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
-                </div>
-                <div class="service-name text-xl sf_pro_bold">Shipping Agency</div>
-            </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
-                <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
-                    <img src={anchor} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
-                </div>
-                <div class="service-name text-xl sf_pro_bold">Vessel Handling</div>
-            </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
-                <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
-                    <img src={truck} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
-                </div>
-                <div class="service-name text-xl sf_pro_bold">Inland Haulage</div>
-            </div>
-        </div>
-        <div class="list-row mt-5 flex flex-row justify-center gap-5">
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
-                <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
-                    <img src={truckRamp} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
-                </div>
-                <div class="service-name text-xl sf_pro_bold">Dangerous Cargo Handling</div>
-            </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
-                <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
-                    <img src={warehouse} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
-                </div>
-                <div class="service-name text-xl sf_pro_bold">Warehousing for LCL Cargo</div>
-            </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
-                <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
-                    <img src={dolly} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
-                </div>
-                <div class="service-name text-xl sf_pro_bold">Husbandry</div>
-            </div>
-        </div>
-        <div class="list-row mt-5 flex flex-row justify-center gap-5">
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
-                <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
-                    <img src={oil} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
-                </div>
-                <div class="service-name text-xl w-[60%] sf_pro_bold">Oil & Gas Support Services</div>
-            </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
-                <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
-                    <img src={box} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
-                </div>
-                <div class="service-name text-xl sf_pro_bold">Customs Brokerage</div>
-            </div>
-            <div class="service w-[25%] h-[139px] bg-white rounded-[10px] shadow flex flex-row items-center gap-8">
-                <div class="icon-container ml-8 p-5 bg-[#F5F5F5] rounded-md">
-                    <img src={boxOpen} alt="Hero landing page" class="object-fill w-[50px] h-[50px]" />
-                </div>
-                <div class="service-name text-xl sf_pro_bold">Destuffing of Cargo</div>
-            </div>
-        </div>
-        {/if}
-    </div> -->
  
 </div>
 <div class="entrance h-[70vh] my-36 flex justify-center items-center gap-10">
-    {#if y > 800}
+    {#if y > 1600}
     <div class="col article w-[30%]">
         <div class="article-title text-4xl sf_pro_bold uppercase">
             Connecting Guyana to the world through Shipping
@@ -219,9 +168,158 @@
     </div>
     {/if}
 </div>
-<div class="customers mt-3 flex flex-col justify-center items-center w-[100%]">
+<div class="meet-the-team flex flex-col justify-center items-center">
+    <div class="intro-details relative">
+        {#if y > 2300}
+        <div class="intro-text mb-16 uppercase flex flex-col items-center text-[50px] text-[#4876B6]">
+            <p class="text-center w-full tracking-[3.20px] poppins-regular">Meet The Team</p>
+        </div>
+        {/if} 
+    </div>
+    {#if y > 2400}
+    <div class="level-0 grid grid-cols-3 gap-8">
+        <div class="service team-member w-[450px] h-[648px]">
+            <img class="w-[450px] h-[515px] object-cover" src={mrrobin} alt="Mr Robin Muneshwer" />
+            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Robin Muneshwer</div>
+            <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">Executive Director</div>
+        </div>
+        <div class="service team-member w-[450px] h-[648px]">
+            <img class="w-[450px] h-[515px] object-cover" src={mrc} alt="Mr Chandradatt Chintamani" />
+            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Chandradatt Chintamani</div>
+            <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">General Manager</div>
+        </div>
+        <div class="service team-member w-[450px] h-[648px] ">
+            <img class="w-[450px] h-[515px] object-cover" src={rajiv} alt="Mr Rajiv Muneshwer" />
+            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Rajiv Muneshwer</div>
+            <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">Chief Coordinator</div>
+        </div>
+    </div>
+    {/if}
+    
+    {#if y > 3000}
+    <div class="level-1 grid grid-cols-5 gap-5 my-32">
+        <div class="service team-member w-[280px] h-[430px]">
+            <img class="w-[280px] h-[307px] object-cover" src={chester} alt="Marvin Chester"/>
+            <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Marvin Chester</div>
+            <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Operations Manager</div>
+        </div>
+        <div class="service team-member w-[280px] h-[430px]">
+            <img class="w-[280px] h-[307px] object-cover" src={gaj} alt="Gajendranath Singh"/>
+            <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Gajendranath Singh</div>
+            <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Management Specialist/Equipment Manager</div>
+        </div>
+        <div class="service team-member w-[280px] h-[430px]">
+            <img class="w-[280px] h-[307px] object-cover" src={chabi} alt="Chabiraj Ramcharran"/>
+            <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Chabiraj Ramcharran</div>
+            <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Licensed Customs Brokerage Manager</div>
+        </div>
+        <div class="service team-member w-[280px] h-[430px]">
+            <img class="w-[280px] h-[307px] object-cover" src={shane} alt="Shane Rai"/>
+            <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Shane Rai</div>
+            <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Business Development Manager</div>
+        </div>
+        <div class="service team-member w-[280px] h-[430px]">
+            <img class="w-[280px] h-[307px] object-cover" src={romona} alt="Romona Arthur"/>
+            <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Romona Arthur</div>
+            <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Logistics Manager</div>
+        </div>
+    </div>
+    {/if}
+</div>
+<div class="our-facilities flex flex-col justify-center items-center">
+    <div class="intro-details relative">
+        {#if y > 2300}
+        <div class="intro-text mb-16 uppercase flex flex-col items-center text-[50px] text-[#4876B6]">
+            <p class="text-center w-full tracking-[3.20px] poppins-regular">Our Facilities</p>
+        </div>
+        {/if}
+    </div>
+    <div class="grid grid-cols-2 gap-8">
+        <div class="w-[700px] h-[730px]">
+            <div class="facility-image cursor-pointer relative">
+                <img class="w-[700px] h-[450px] object-cover" src={houston} alt="Houston Terminal at YY" />
+                <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms]">
+                    <div class="w-[179px] h-9 mb-5 text-white text-[32px] font-medium font-['Raleway']">Services</div>
+                    <div class="w-[100%] h-[3px] bg-white"></div>
+                    <div class="grid grid-cols-3 mt-5 gap-4 items-center justify-center">
+                        <div class="service-option flex flex-row items-center gap-3">
+                            <img src={container} class="w-[20px] h-[20px]" alt="size icon" />
+                            <div class=" text-white text-sm font-light font-['Poppins']">Inland container facility</div>
+                        </div>
+                        <div class="service-option flex flex-row items-center gap-3">
+                            <img src={vehicle} class="w-[20px] h-[20px]" alt="size icon" />
+                            <div class=" text-white text-sm font-light font-['Poppins']">Vehicle storage</div>
+                        </div>
+                        <div class="service-option flex flex-row items-center gap-3">
+                            <img src={warehouse} class="w-[20px] h-[20px]" alt="size icon" />
+                            <div class=" text-white text-sm font-light font-['Poppins']">Warehousing complex</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] font-normal font-['Raleway']">Houston Inland Terminal</div>
+            <div class="facility-details flex flex-row gap-10">
+                <div class="acres flex flex-row items-center gap-3">
+                    <img src={size} class="w-[15px] h-[15px]" alt="size icon" />
+                    <div class="poppins-light text-[16px] text-[#727272]">22 Acres</div>
+                </div>
+                <div class="location flex flex-row items-center gap-3">
+                    <img src={location} class="w-[15px] h-[15px]" alt="size icon" />
+                    <div class="poppins-light text-[16px] text-[#727272]">Area YY, Houston, Greater Georgetown, Guyana</div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[700px] h-[770px]">
+            <div class="facility-image cursor-pointer relative">
+                <img class="w-[700px] h-[450px] object-cover" src={waterstreet} alt="Houston Terminal at YY" />
+                <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms]">
+                    <div class="w-[179px] h-9 mb-5 text-white text-[32px] font-medium font-['Raleway']">Services</div>
+                    <div class="w-[100%] h-[3px] bg-white"></div>
+                    <div class="grid grid-cols-3 mt-5 gap-4">
+                        <div class="service-option flex flex-row items-center gap-3">
+                            <img src={port} class="w-[20px] h-[20px]" alt="size icon" />
+                            <div class=" text-white text-sm font-light font-['Poppins']">Terminal operations</div>
+                        </div>
+                        <div class="service-option flex flex-row items-center gap-3">
+                            <img src={vessel} class="w-[20px] h-[20px]" alt="size icon" />
+                            <div class=" text-white text-sm font-light font-['Poppins']">Vessel handling</div>
+                        </div>
+                        <div class="service-option flex flex-row items-center gap-3">
+                            <img src={warehouse} class="w-[20px] h-[20px]" alt="size icon" />
+                            <div class=" text-white text-sm font-light font-['Poppins']">Warehousing</div>
+                        </div>
+                        <div class="service-option flex flex-row items-center gap-3 col-span-2">
+                            <img src={heavy} class="w-[20px] h-[20px]" alt="size icon" />
+                            <div class=" text-white text-sm font-light font-['Poppins']">Heavy lifting areas and equipment</div>
+                        </div>
+                        <div class="service-option flex flex-row items-center gap-3">
+                            <img src={truck} class="w-[20px] h-[20px]" alt="size icon" />
+                            <div class=" text-white text-sm font-light font-['Poppins']">Inland transport</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] font-normal font-['Raleway']">Muneshwers Pier Water Street</div>
+            <div class="facility-details flex flex-row gap-10">
+                <div class="acres flex flex-row items-center gap-3">
+                    <img src={size} class="w-[15px] h-[15px]" alt="size icon" />
+                    <div class="poppins-light text-[16px] text-[#727272]">5 Acres</div>
+                </div>
+                <div class="location flex flex-row items-center gap-3">
+                    <a href="https://maps.app.goo.gl/kLgCz1eizWcNzCHG8" target="_blank">
+                        <img src={location} class="w-[15px] h-[15px]" alt="size icon" />
+                    </a>
+                    <a href="https://maps.app.goo.gl/kLgCz1eizWcNzCHG8" target="_blank">
+                        <div class="poppins-light text-[16px] text-[#727272] hover:text-[#3b6fbd]">45-47 Water Street, Georgetown, Guyana</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="customers flex flex-col justify-center items-center w-[100%]">
         <div class="intro-details  relative ">
-            {#if y > 1000}
+            {#if y > 3200}
             <div class="intro-text my-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
                 <p>Our Clients</p>
             </div>
