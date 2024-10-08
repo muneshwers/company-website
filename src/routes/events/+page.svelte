@@ -22,6 +22,7 @@
     import store2Service from "../../events1.jpg";
 	import Navigation from "../Navigation.svelte";
 
+    let y;
 </script>
 
 <svelte:head>
@@ -46,48 +47,15 @@
     </div>
     <Navigation activePage="services"/>
 </div>
-<div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header mt-7 justify-center relative">
-        <img src={grid} alt="mesh grid" class="h-auto w-full">
-        <div class="intro-details flex items-center absolute top-16 bottom-16 left-16 w-11/12 justify-between">
-            <div class="intro-icon-box flex justify-center items-center">
-                <div class="intro-icon"></div>
+<div class="introduction-section flex flex-col justify-center items-center">
+    <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
+        <div class="intro-details">
+            {#if y > 200}
+            <div class="intro-text-2 the-seasons-regular mt-8 text-center uppercase flex flex-col text-[50px] text-[#df839c]">
+                <p>Best quality at an even better price</p>
             </div>
-            <div class="intro-details w-3/4">
-                <div class="intro-text text-right uppercase flex flex-col text-[76px] text-[#4876B6]">
-                    <div>
-                        <p class="intro-text-indiv text-right">Discover which service is</p>
-                    </div>
-                    <div class="text-right flex flex-row-reverse">
-                        <p class="intro-text-indiv">right for you!</p>
-                    </div>
-                    
-                    
-                </div>
-                <div class="intro-subtext text-right text-[#3D3938] text-[28px] raleway-light">
-                    Choose from our shipping, transportation, travel service or explore our stores for your needs.
-                </div>
-            </div>
+            {/if}
             
-        </div>
-    </div>
-    <div class="services flex justify-center items-center mb-7 mt-10 w-full">
-        <div class="flex flex-row gap-8 relative h-[120vh] w-9/12">
-            <div class="service-container w-[250px] h-[700px] absolute">
-                <img alt="" class="w-[250px] h-[700px] rounded-2xl object-cover cursor-pointer" src={shippingService}  />
-            </div>
-            <div class="service-container-low w-[250px] h-[700px] absolute left-[26.7%] top-44">
-                <img alt="" class="w-[250px] h-[700px] rounded-2xl object-cover cursor-pointer" src={travelService} />
-            </div>
-            <div class="service-container w-[250px] h-[700px] absolute right-[26.7%] top-10">
-                <img alt="" class="w-[250px] h-[700px] rounded-2xl  object-cover cursor-pointer" src={store1Service} />
-            </div>
-            <div class="service-container-low w-[250px] h-[700px] absolute right-0 top-20">
-                <img alt="" class="w-full h-full rounded-2xl left-full  object-cover cursor-pointer" src={store2Service} />
-            </div>
-            <!-- <div class="service-container w-[250px] h-[700px]">
-                <img alt="" class="w-full h-full rounded-2xl left-5/5 " src="https://via.placeholder.com/250x700" />
-            </div> -->
         </div>
     </div>
 </div>
@@ -228,3 +196,4 @@
     <div class="footer-bottom"></div>
 </div>
 
+<svelte:window bind:scrollY={y} />
