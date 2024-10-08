@@ -41,6 +41,12 @@
     font-family: 'The Seasons';
 }
 
+.the-seasons-regular {
+    font-family: 'The Seasons';
+    font-weight: 400;
+    font-style: normal;
+}
+
 .the-seasons-italic {
     font-family: 'The Seasons Italic';
 }
@@ -464,6 +470,11 @@ div.hero-text > div:nth-child(3) > p {
 }
 
 .intro-text {
+    -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.intro-text-2 {
     -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
     animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
 }

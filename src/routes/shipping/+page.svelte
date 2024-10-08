@@ -8,6 +8,7 @@
     import ship from "$lib/assets/GYS00850.webp";
     import anchor from "$lib/assets/vesselhandling.webp";
     import location from "$lib/assets/location-dot-solid.svg";
+    import phone from "$lib/assets/phone-solid.svg";
     import port from "$lib/assets/anchor-solid-white.svg";
     import vessel from "$lib/assets/ship-solid-white.svg";
     import warehouse from "$lib/assets/warehouse-solid-white.svg";
@@ -61,11 +62,11 @@
             </div>
         </div>
         <div class="buttons flex flex-row gap-4 h-[8vh] absolute bottom-20 left-16 text-white w-[50%]">
-            <a href="/contact">
+            <!-- <a href="/contact">
                 <button class="bg-[#4876B6] border-2 border-[#4876B6] text-white w-[170px] h-[50px] uppercase hover:scale-105 py-2 text-center text-md flex items-center justify-center hover:scale hover:border-[#4876B6]  hover:duration-150 font-bold">Request a Quote</button>
-            </a>
+            </a> -->
             <a href="/contact">
-                <button class="bg-[#4876B6] border-2 border-[#4876B6] text-white w-[170px] h-[50px] uppercase hover:scale-105 py-2 text-center text-md flex items-center justify-center hover:scale hover:border-[#4876B6]  hover:duration-150 font-bold">Contact Sales</button>
+                <button class="bg-[#0000009d] border hover:border-2 rounded-md border-[#0000009d] backdrop-blur-md text-white w-[170px] h-[50px] uppercase hover:scale-105 py-2 text-center text-md flex items-center justify-center hover:scale hover:border-[#4876B6]  hover:duration-150 font-bold">Contact Sales</button>
             </a>
         </div>
     </div>
@@ -228,17 +229,18 @@
 </div>
 <div class="our-facilities flex flex-col justify-center items-center">
     <div class="intro-details relative">
-        {#if y > 2300}
+        {#if y > 3500}
         <div class="intro-text mb-16 uppercase flex flex-col items-center text-[50px] text-[#4876B6]">
             <p class="text-center w-full tracking-[3.20px] poppins-regular">Our Facilities</p>
         </div>
         {/if}
     </div>
+    {#if y > 3500}
     <div class="grid grid-cols-2 gap-8">
         <div class="w-[700px] h-[730px]">
             <div class="service facility-image cursor-pointer relative">
                 <img class="w-[700px] h-[450px] object-cover" src={houston} alt="Houston Terminal at YY" />
-                <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms]">
+                <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#000000b0] opacity-0 hover:opacity-100 hover:duration-[300ms]">
                     <div class="w-[179px] h-9 mb-5 text-white text-[32px] font-medium font-['Raleway']">Services</div>
                     <div class="w-[100%] h-[3px] bg-white"></div>
                     <div class="grid grid-cols-3 mt-5 gap-4 items-center justify-center">
@@ -258,21 +260,29 @@
                 </div>
             </div>
             <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] font-normal font-['Raleway']">Houston Inland Terminal</div>
-            <div class="facility-details flex flex-row gap-10">
+            <div class="facility-details flex flex-row gap-5">
                 <div class="acres flex flex-row items-center gap-3">
                     <img src={size} class="w-[15px] h-[15px]" alt="size icon" />
-                    <div class="poppins-light text-[16px] text-[#727272]">22 Acres</div>
+                    <div class="poppins-medium text-[14px] text-[#3f3f3f]">22 Acres</div>
                 </div>
                 <div class="location flex flex-row items-center gap-3">
                     <img src={location} class="w-[15px] h-[15px]" alt="size icon" />
-                    <div class="poppins-light text-[16px] text-[#727272]">Area YY, Houston, Greater Georgetown, Guyana</div>
+                    <div class="poppins-medium text-[14px] text-[#3f3f3f] hover:text-[#3b6fbd] underline">YY, Houston, Greater Georgetown, Guyana</div>
+                </div>
+                <div class="location flex flex-row items-center gap-2">
+                    <a href="tel:592-227-7418;ext=3270" target="_blank">
+                        <img src={phone} class="w-[15px] h-[15px]" alt="size icon" />
+                    </a>
+                    <a href="tel:592-227-7418" target="_blank">
+                        <div class="poppins-medium text-[14px] text-[#3f3f3f] hover:text-[#3b6fbd] underline">+592-227-7418/17 Ext: 3270</div>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="w-[700px] h-[770px]">
             <div class="service facility-image cursor-pointer relative">
                 <img class="w-[700px] h-[450px] object-cover" src={waterstreet} alt="Houston Terminal at YY" />
-                <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms]">
+                <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#000000b0] opacity-0 hover:opacity-100 hover:duration-[300ms]">
                     <div class="w-[179px] h-9 mb-5 text-white text-[32px] font-medium font-['Raleway']">Services</div>
                     <div class="w-[100%] h-[3px] bg-white"></div>
                     <div class="grid grid-cols-3 mt-5 gap-4">
@@ -300,22 +310,32 @@
                 </div>
             </div>
             <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] font-normal font-['Raleway']">Muneshwers Pier Water Street</div>
-            <div class="facility-details flex flex-row gap-10">
+            <div class="facility-details flex flex-row gap-8 font-semibold">
                 <div class="acres flex flex-row items-center gap-3">
                     <img src={size} class="w-[15px] h-[15px]" alt="size icon" />
-                    <div class="poppins-light text-[16px] text-[#727272]">5 Acres</div>
+                    <div class="poppins-medium text-[14px] text-[#3f3f3f]">5 Acres</div>
                 </div>
                 <div class="location flex flex-row items-center gap-3">
                     <a href="https://maps.app.goo.gl/kLgCz1eizWcNzCHG8" target="_blank">
                         <img src={location} class="w-[15px] h-[15px]" alt="size icon" />
                     </a>
                     <a href="https://maps.app.goo.gl/kLgCz1eizWcNzCHG8" target="_blank">
-                        <div class="poppins-light text-[16px] text-[#727272] hover:text-[#3b6fbd]">45-47 Water Street, Georgetown, Guyana</div>
+                        <div class="poppins-medium text-[14px] text-[#3f3f3f] hover:text-[#3b6fbd] underline">45-47 Water Street, Georgetown, Guyana</div>
+                    </a>
+                </div>
+                <div class="location flex flex-row items-center gap-2">
+                    <a href="tel:592-227-7418" target="_blank">
+                        <img src={phone} class="w-[15px] h-[15px]" alt="size icon" />
+                    </a>
+                    <a href="tel:592-227-7418" target="_blank">
+                        <div class="poppins-medium text-[14px] text-[#3f3f3f] hover:text-[#3b6fbd] underline">+592-227-7418/17</div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    {/if}
+    
 </div>
 <div class="customers flex flex-col justify-center items-center w-[100%]">
         <div class="intro-details  relative ">
@@ -416,18 +436,18 @@
         </div>
         <div class="client-list grid grid-cols-3 gap-4 items-center justify-center mb-5">
             <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/tropical.webp" alt="client-logo"/>
                 </div>
             </div>
             
             <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/maersk.webp" alt="client-logo"/>
                 </div>
             </div>
             <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/msc.webp" alt="client-logo"/>
                 </div>
             </div>
