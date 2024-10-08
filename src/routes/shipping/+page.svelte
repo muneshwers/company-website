@@ -96,7 +96,7 @@
                 </div>
                 <div class="service shipping-service grid-box h-full w-full rounded-md">
                     <div class="w-fit h-full">
-                        <enhanced:img src="$lib/assets/DJI_0457.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                        <enhanced:img src="$lib/assets/vessell.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
                         <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                             <div>Vessel Handling</div>
                         </div>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="service shipping-service grid-box h-full w-full rounded-md">
                     <div class="w-fit h-full">
-                        <enhanced:img src="$lib/assets/customsbrokerage.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
+                        <enhanced:img src="$lib/assets/GYS01288.webp" alt="Hero landing page" class=" w-full h-full object-cover" />
                         <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                             <div>Customs Brokerage</div>
                         </div>
@@ -236,7 +236,7 @@
     </div>
     <div class="grid grid-cols-2 gap-8">
         <div class="w-[700px] h-[730px]">
-            <div class="facility-image cursor-pointer relative">
+            <div class="service facility-image cursor-pointer relative">
                 <img class="w-[700px] h-[450px] object-cover" src={houston} alt="Houston Terminal at YY" />
                 <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms]">
                     <div class="w-[179px] h-9 mb-5 text-white text-[32px] font-medium font-['Raleway']">Services</div>
@@ -270,7 +270,7 @@
             </div>
         </div>
         <div class="w-[700px] h-[770px]">
-            <div class="facility-image cursor-pointer relative">
+            <div class="service facility-image cursor-pointer relative">
                 <img class="w-[700px] h-[450px] object-cover" src={waterstreet} alt="Houston Terminal at YY" />
                 <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms]">
                     <div class="w-[179px] h-9 mb-5 text-white text-[32px] font-medium font-['Raleway']">Services</div>
@@ -388,11 +388,6 @@
             </div>
             <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
                 <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
-                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/tropical.webp" alt="client-logo"/>
-                </div>
-            </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/nhl.webp" alt="client-logo"/>
                 </div>
             </div>
@@ -406,11 +401,26 @@
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/dsingh.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex col-span-5">
                 <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/saipem.webp" alt="client-logo"/>
                 </div>
             </div>
+        </div>
+        <div class="intro-details  relative ">
+            {#if y > 3200}
+            <div class="intro-text my-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
+                <p>Our Lines</p>
+            </div>
+            {/if}
+        </div>
+        <div class="client-list grid grid-cols-3 gap-4 items-center justify-center mb-5">
+            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
+                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/tropical.webp" alt="client-logo"/>
+                </div>
+            </div>
+            
             <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
                 <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/maersk.webp" alt="client-logo"/>
