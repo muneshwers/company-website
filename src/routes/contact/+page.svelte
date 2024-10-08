@@ -38,7 +38,7 @@
         </div>
         <div class="row flex flex-row gap-2 text-normal p-2">
             <div class="contact-title font-medium">Email:</div>
-            <div class="contact-details text-gray-500">info@muneshwers.com</div>
+            <div class="contact-details text-gray-500 hover:text-[#3b6fbd] underline"><a href="mailto:info@muneshwers.com?subject=Requesting%20Quote">info@muneshwers.com</a></div>
         </div>
     </div>
 </div>
