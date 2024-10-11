@@ -173,7 +173,7 @@
                 <div class=" text-white text-[40px] font-medium font-['Raleway'] leading-[60px]">SUBSCRIBE TO OUR NEWSLETTER</div>
                 <div class=" text-white text-[24px] font-light font-['Raleway'] leading-9">Stay in the loop whenever we make important announcements that you might want to know about</div>
                 <div class="subscribe-field mt-16 flex flex-row gap-5">
-                    <input type="text" class="w-[663px] h-[55px] bg-white rounded-xl  p-5 outline-[#ee4270] outline-8 placeholder:font-['Raleway']" placeholder="johndoe@example.com"/>
+                    <input type="text" class="w-[663px] h-[55px] bg-white rounded-xl  p-5 outline-[#ee4270] outline-8 placeholder:font-['Raleway'] text-[#b74363]" placeholder="johndoe@example.com"/>
                     <button type="submit" class="w-[197px] h-[55px] bg-[#b74363] rounded-xl text-center text-white text-[20px] font-bold font-['Raleway'] leading-9 uppercase">Subscribe</button>
                 </div>
             </div>
@@ -182,8 +182,6 @@
             </div>
         </div>
     </div>
-    
-
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="careers-header my-12 justify-center relative flex h-[143px]">
