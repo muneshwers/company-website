@@ -8,8 +8,8 @@ const service = serviceAccount;
 
 const firebaseApp = initializeApp({
   credential: cert(service)
-}, "work-permit");
+}, "company-website");
 
-const firestore = getFirestore(firebaseApp, "work-permit");
+const firestore = getFirestore(firebaseApp, "company-website");
 
 export {firestore}
