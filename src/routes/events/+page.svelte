@@ -17,7 +17,7 @@
     import event6 from "$lib/assets/event6.jpg";
     import event7 from "$lib/assets/event7.jpg";
     import halloweenbucket from "$lib/assets/halloweenbucket.jpg";
-    import parallaxCareer from "$lib/assets/GYS01426.jpg";
+    import parallaxCareer from "$lib/assets/DJI_0374.webp";
 	import Footer from "../Footer.svelte";
 	import Navigation from "../Navigation.svelte";
     import flatpickr from "flatpickr";
@@ -146,7 +146,7 @@
     </div>
 </div>
 <div class="parallax-container relative">
-    <div class="object-cover w-screen bg-[#FFEDF2] h-[320vh] p-14 flex flex-col items-center">
+    <div class="object-cover w-screen bg-[#FFEDF2] h-[250vh] p-14 flex flex-col items-center">
         <div class="intro-details ">
             {#if y > 1200}
             <div class="intro-text-2 text-center text-[#df839c] text-[45px] font-semibold font-['Raleway'] uppercase tracking-widest mt-10">CUSTOM FLORAL ARRANGEMENTS</div>
@@ -168,24 +168,12 @@
             <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower5.webp" alt=""/>
             <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower6.webp" alt=""/>
         </div>
-        <div class="w-[100%] h-[380px] mt-40 bg-[#df839c] rounded-xl p-10 flex flex-row items-center">
-            <div class="left-subscribe">
-                <div class=" text-white text-[40px] font-medium font-['Raleway'] leading-[60px]">SUBSCRIBE TO OUR NEWSLETTER</div>
-                <div class=" text-white text-[24px] font-light font-['Raleway'] leading-9">Stay in the loop whenever we make important announcements that you might want to know about</div>
-                <div class="subscribe-field mt-16 flex flex-row gap-5">
-                    <input type="text" class="w-[663px] h-[55px] bg-white rounded-xl  p-5 outline-[#ee4270] outline-8 placeholder:font-['Raleway'] text-[#b74363]" placeholder="johndoe@example.com"/>
-                    <button type="submit" class="w-[197px] h-[55px] bg-[#b74363] rounded-xl text-center text-white text-[20px] font-bold font-['Raleway'] leading-9 uppercase">Subscribe</button>
-                </div>
-            </div>
-            <div class="right-subscribe">
-                <img class="w-[400px] h-[300px] object-cover" src={whitelogo} alt=""/>
-            </div>
-        </div>
+        
     </div>
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="careers-header my-12 justify-center relative flex h-[143px]">
-        {#if y > 2300}
+        {#if y > 3100}
             <div class="intro-details">
                 <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#df839c]">
                     <p>Interested in a career with us?</p>
@@ -198,7 +186,7 @@
     </div>
     <div class="parallax-container relative">
         <img src={parallaxCareer} alt="" class="object-cover w-screen h-1/2 career-image">
-        <div class="services  flex flex-row h-[600px] justify-between items-center mb-10 absolute bottom-40 right-28">
+        <div class="services  flex flex-row h-[600px] justify-between items-center mb-10 absolute top-40 right-28">
             <div class="services-link relative cursor-pointer text-white">
                 <a href="/careers">
                     <div class="services-text flex flex-row items-center text-5xl gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
@@ -217,6 +205,21 @@
         </div>
     </div>
     
+</div>
+<div class="subscribe-section flex flex-col items-center my-20">
+    <div class="w-[95%] h-[380px] bg-[#df839c] rounded-xl p-10 flex flex-row items-center">
+            <div class="left-subscribe">
+                <div class=" text-white text-[40px] font-medium font-['Raleway'] leading-[60px]">SUBSCRIBE TO OUR NEWSLETTER</div>
+                <div class=" text-white text-[24px] font-light font-['Raleway'] leading-9">Stay in the loop whenever we make important announcements that you might want to know about</div>
+                <div class="subscribe-field mt-16 flex flex-row gap-5">
+                    <input type="text" class="w-[663px] h-[55px] bg-white rounded-xl  p-5 outline-[#ee4270] outline-8 placeholder:font-['Raleway'] text-[#b74363]" placeholder="johndoe@example.com"/>
+                    <button type="submit" class="w-[197px] h-[55px] bg-[#b74363] rounded-xl text-center text-white text-[20px] font-bold font-['Raleway'] leading-9 uppercase">Subscribe</button>
+                </div>
+            </div>
+            <div class="right-subscribe">
+                <img class="w-[400px] h-[300px] object-cover" src={whitelogo} alt=""/>
+            </div>
+        </div>
 </div>
 <Footer />
 
