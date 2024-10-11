@@ -8,19 +8,36 @@
     import barges from "../../barges.png";
     import harbourtugs from "../../harbourtugs.png";
     import brandLogo from "$lib/assets/events_logo.png";
-    import textLogo from "../../text-logo.png";
-    import facebookIcon from "../../icons8-facebook.svg";
-    import instagramIcon from "../../icons8-instagram.svg";
-    import linkedinIcon from "../../icons8-linkedin.svg";
-    import tiktokIcon from "../../icons8-tiktok.svg";
-    import parallaxShipping from "../../parallaxshipping.jpg";
-    import staffOne from "../../worker1.jpg";
-    import staffTwo from "../../worker2.jpg";
-    import shippingService from "../../GYS05795.jpg"
-    import travelService from "../../travel.jpg";
-    import store1Service from "../../store1.jpg";
-    import store2Service from "../../events1.jpg";
+    import whitelogo from "$lib/assets/logo.png";
+    import event1 from "$lib/assets/event1.jpg";
+    import event2 from "$lib/assets/event2.jpg";
+    import event3 from "$lib/assets/event3.jpg";
+    import event4 from "$lib/assets/event4.jpg";
+    import event5 from "$lib/assets/event5.jpg";
+    import event6 from "$lib/assets/event6.jpg";
+    import event7 from "$lib/assets/event7.jpg";
+    import halloweenbucket from "$lib/assets/halloweenbucket.jpg";
+    import parallaxCareer from "$lib/assets/GYS01426.jpg";
+	import Footer from "../Footer.svelte";
 	import Navigation from "../Navigation.svelte";
+    import flatpickr from "flatpickr";
+	import { onMount } from "svelte";
+
+    let calendar;
+
+    onMount(() => {
+        let date = (new Date()).toISOString().split('T')[0];
+        calendar = flatpickr(".datepicker-inline", {
+            enableTime: true,
+            dateFormat : 'Y-m-d',
+            altInput: true,
+            altFormat: 'F j, Y',
+            inline : true,
+            defaultDate : date,
+            enableTime : false,
+        })
+    })
+
 
     let y;
 </script>
@@ -28,7 +45,10 @@
 <svelte:head>
 	<title>Muneshwers #1 Events Store</title>
 	<meta name="description" content="Muneshwers Limited" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </svelte:head>
+
 <div class="landing-top relative">
     <div class="hero-image h-screen relative">
         <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
@@ -38,162 +58,168 @@
                 <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
             </div>
             <div>
-                <p class="individual-hero-text">Muneshwers</p>
+                <p class="individual-hero-text">Muneshwers Events Store</p>
             </div>
-            <div>
-                <p class="individual-hero-text">#1 Events Store</p>
+            <div class="mt-5">
+                <p class="individual-hero-text text-[#ffe3ea] text-2xl font-medium font-['Raleway'] uppercase">Best quality at an even better price</p>
             </div>
         </div>
     </div>
     <Navigation activePage="services"/>
 </div>
-<div class="introduction-section flex flex-col justify-center items-center">
-    <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
-        <div class="intro-details">
-            {#if y > 200}
-            <div class="intro-text-2 the-seasons-regular mt-8 text-center uppercase flex flex-col text-[50px] text-[#df839c]">
-                <p>Best quality at an even better price</p>
+<div class="introduction-section flex flex-col items-center justify-center mb-20">
+    <div class="shipping-header my-12 justify-center items-center relative flex flex-col w-[90%]">
+        <div class="event-title text-[#df839c] text-[30px] font-medium font-['Raleway'] uppercase mb-8 ml-14">Our Halloween Collection</div>
+        <div class="main-event flex flex-row gap-8">
+            <div class="datepicker-inline"></div>
+            <div class="event-image">
+                <img src={halloweenbucket} class="w-[820px] h-[51vh] object-cover" alt="main" />
             </div>
-            {/if}
-            
         </div>
+    </div>
+    <div class="event-products grid grid-cols-7 gap-4 justify-center">
+        <img class="w-40 h-40 object-cover" src={event1} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={event2} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={event3} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={event4} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={event5} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={event6} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={event7} alt="featured products"/>
+    </div>
+</div>
+<div class="collections w-full flex flex-col items-center my-12">
+    <div class="collections-header intro-details">
+        <div class="intro-text-2 text-center text-[#df839c] text-[40px] font-medium font-['Raleway'] uppercase">OUR COLLECTIONS</div>
+    </div>
+    <div class="grid grid-cols-6 gap-3 mt-8">
+        {#if y > 800}
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/kitchenware.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Kitchenware</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/costumes.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Costumes</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/gardening.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Gardening</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/stationary.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Stationary</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/floral.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Floral Arrangement</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/decorations.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Decoration</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/cleaning.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Cleaning Supplies</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/household.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Household Supplies</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/babyproducts.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Baby Products</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/bakingsupplies.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Baking Supplies</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/fabrics.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Fabrics</div>
+        </div>
+        <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/decorations.webp" alt=""/>
+            <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Hardware</div>
+        </div>
+        {/if}
+        
     </div>
 </div>
 <div class="parallax-container relative">
-    <img src={parallaxShipping} alt="" class="object-cover w-screen wharf-image">
-    <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 ">
-        BBC Echo Vessel - July 10, 2024 - Water Street, Georgetown, Guyana
-    </div>
-</div>
-<div class="joint-ventures-section h-1/2 mb-24 flex flex-col items-center">
-    <div class="heading flex flex-row items-start my-24 w-10/12 justify-center">
-        <div class="left flex flex-row items-center gap-4 w-2/5 px-8">
-            <div class="w-9 h-9 bg-[#CDC6B2] rounded-lg"></div>
-            <div class="left-text uppercase poppins-medium tracking-wide text-[#4876B6]">Joint Ventures</div>
+    <div class="object-cover w-screen bg-[#FFEDF2] h-[320vh] p-14 flex flex-col items-center">
+        <div class="intro-details ">
+            {#if y > 1200}
+            <div class="intro-text-2 text-center text-[#df839c] text-[45px] font-semibold font-['Raleway'] uppercase tracking-widest mt-10">CUSTOM FLORAL ARRANGEMENTS</div>
+            {/if}
         </div>
-        <div class="right flex flex-row justify-end w-4/6">
-            <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px]">
-                Explore our joint ventures with these amazing companies
+        <div class="intro-details">
+            {#if y > 1200}
+            <div class="intro-text-2 w-[1039px] text-center text-[#df839c] text-[24px] font-light font-['Raleway'] mt-2">We make custom floral arrangement for all your birthdays, graduations, and weddings.</div>
+            {/if}
+        </div>
+        {#if y > 1200}
+        <enhanced:img class="service w-[1300px] h-[600px] rounded-2xl mt-20 object-cover" src="$lib/assets/eventsservice.webp" alt=""/>
+        {/if}
+        <div class="grid grid-cols-3 mt-20 gap-2">
+            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower1.webp" alt=""/>
+            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower2.webp" alt=""/>
+            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower3.webp" alt=""/>
+            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower4.webp" alt=""/>
+            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower5.webp" alt=""/>
+            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower6.webp" alt=""/>
+        </div>
+        <div class="w-[100%] h-[380px] mt-40 bg-[#df839c] rounded-xl p-10 flex flex-row items-center">
+            <div class="left-subscribe">
+                <div class=" text-white text-[40px] font-medium font-['Raleway'] leading-[60px]">SUBSCRIBE TO OUR NEWSLETTER</div>
+                <div class=" text-white text-[24px] font-light font-['Raleway'] leading-9">Stay in the loop whenever we make important announcements that you might want to know about</div>
+                <div class="subscribe-field mt-16 flex flex-row gap-5">
+                    <input type="text" class="w-[663px] h-[55px] bg-white rounded-xl  p-5 outline-[#ee4270] outline-8 placeholder:font-['Raleway']" placeholder="johndoe@example.com"/>
+                    <button type="submit" class="w-[197px] h-[55px] bg-[#b74363] rounded-xl text-center text-white text-[20px] font-bold font-['Raleway'] leading-9 uppercase">Subscribe</button>
+                </div>
+            </div>
+            <div class="right-subscribe">
+                <img class="w-[400px] h-[300px] object-cover" src={whitelogo} alt=""/>
             </div>
         </div>
     </div>
-    <div class="bento-container">
-        <div class="bento-box flex flex-col items-center">
-            <div class="row flex flex-row justify-center w-10/12 gap-5">
-                <div class="jv-container paragon-container w-[932px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={paragonTrasport} alt="Paragon Transport Logo" class="h-2/2 w-4/5">
-                </div>
-                <div class="gysbi-container w-[571px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={gysbi} alt="Guyana Shore Base Inc Logo" class="h-2/2 w-4/5">
-                </div>
-            </div>
-            <div class="row flex flex-row justify-center w-10/12 gap-5 mt-5">
-                <div class="cranes-container w-[581px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={cranes} alt="Cranes Logo" class="h-2/2 w-4/5">
-                </div>
-                <div class="bsgi-container w-[600px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={barges} alt="Barge Solutions Guyana Inc Logo" class="h-2/2 w-4/5">
-                </div>
-                <div class="harbourtugs-container w-[288px] h-[369px] bg-[#EBE9E0] rounded-2xl shadow flex items-center justify-center">
-                    <img src={harbourtugs} alt="Barge Solutions Guyana Inc Logo" class="h-2/2 w-4/5">
-                </div>
-            </div>
-        </div>
-    </div>
+    
+
 </div>
 <div class="introduction-section flex flex-col justify-center">
-    <div class="intro-header mt-7 justify-center relative">
-        <img src={grid} alt="mesh grid" class="h-auto w-full">
-        <div class="intro-details flex items-center absolute top-16 bottom-16 left-16 w-11/12 justify-between">
-            <div class="intro-details w-3/4">
-                <div class="intro-text text-left uppercase flex text-[76px] text-[#4876B6]">
-                    Interested in a career with us?
+    <div class="careers-header my-12 justify-center relative flex h-[143px]">
+        {#if y > 2300}
+            <div class="intro-details">
+                <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#df839c]">
+                    <p>Interested in a career with us?</p>
                 </div>
-                <div class="intro-subtext text-left text-[#3D3938] text-[28px] raleway-light">
-                    Check out our list of job openings and see which is the right path for you.
+                <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
+                    <p>Check out our list of job openings and see which is the right path for you.</p>
                 </div>
             </div>
-            
+        {/if}
+    </div>
+    <div class="parallax-container relative">
+        <img src={parallaxCareer} alt="" class="object-cover w-screen h-1/2 career-image">
+        <div class="services  flex flex-row h-[600px] justify-between items-center mb-10 absolute bottom-40 right-28">
+            <div class="services-link relative cursor-pointer text-white">
+                <a href="/careers">
+                    <div class="services-text flex flex-row items-center text-5xl gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
+                    Explore Careers
+                    <span>
+                        <svg class="h-8 w-8" width="53" height="38" viewBox="0 0 53 38" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                            <path id="Arrow 1" d="M51.7678 20.7678C52.7441 19.7915 52.7441 18.2085 51.7678 17.2322L35.8579 1.32233C34.8816 0.34602 33.2986 0.34602 32.3223 1.32233C31.346 2.29864 31.346 3.88155 32.3223 4.85786L46.4645 19L32.3223 33.1421C31.346 34.1184 31.346 35.7014 32.3223 36.6777C33.2986 37.654 34.8816 37.654 35.8579 36.6777L51.7678 20.7678ZM0 21.5H50V16.5H0V21.5Z" fill="#ffffff"/>
+                        </svg>
+                        <!-- <img src={arrowright} alt="Arrow Right" class="h-8 w-8 "> -->
+                         <!--Signed Commit Check-->
+                    </span>
+                </div>
+                </a>
+                <div class="w-[500px] h-px left-[3px] top-[71px] absolute bg-white ml-32"></div>
+            </div>
         </div>
     </div>
-    <div class="services flex flex-row h-[683px] justify-between items-center mb-28">
-        <div class="images-card relative w-1/2 h-5/6 ml-5">
-            <div class="image-above top-0 left-20 absolute w-[357px] h-[363px] z-30">
-                <img src={staffTwo} alt="Paragon Transportation" class="rounded-sm object-cover w-full h-full">
-            </div>
-            <div class="image-below top-52 right-28 absolute w-[508px] h-[320px]">
-                <img src={staffOne} alt="Muneshwers Shipping" class="rounded-sm object-cover w-full h-full">
-            </div>
-        </div>
-        <div class="services-link w-1/2 relative cursor-pointer hover:text-[#4876B6]">
-            <div class="services-text flex flex-row items-center text-4xl gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
-                Explore Careers
-                <span>
-                    <svg class="h-8 w-8" width="53" height="38" viewBox="0 0 53 38" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Arrow 1" d="M51.7678 20.7678C52.7441 19.7915 52.7441 18.2085 51.7678 17.2322L35.8579 1.32233C34.8816 0.34602 33.2986 0.34602 32.3223 1.32233C31.346 2.29864 31.346 3.88155 32.3223 4.85786L46.4645 19L32.3223 33.1421C31.346 34.1184 31.346 35.7014 32.3223 36.6777C33.2986 37.654 34.8816 37.654 35.8579 36.6777L51.7678 20.7678ZM0 21.5H50V16.5H0V21.5Z" fill="black"/>
-                    </svg>
-                    <!-- <img src={arrowright} alt="Arrow Right" class="h-8 w-8 "> -->
-                </span>
-            </div>
-            <div class="w-[420px] h-px left-[3px] top-[71px] absolute bg-slate-500 ml-32"></div>
-        </div>
-    </div>
+    
 </div>
-<div class="footer h-[450px] bg-[#EDEBE5]">
-    <div class="footer-top flex flex-row gap-4 p-10">
-        <div class="site-info w-1/5">
-            <div class="site-name flex flex-row w-full">
-                <img src={brandLogo} alt="Muneshwers Shipping" class="object-cover w-[150px] h-[100px]">
-                <img src={textLogo} alt="Muneshwers Shipping" class="object-cover w-[200px] h-[100px]">
-            </div>
-            <div class="site-tagline playfair-display-regular text-[18px] ml-4 mt-2">
-                Offering solutions, not excuses...
-            </div>
-            <div class="social-media h-2/3 w-full flex flex-col gap-4 mt-7 raleway-light" >
-                <a href="https://www.facebook.com/profile.php?id=100087564355386" target="_blank" class="social-link flex flex-row items-center gap-2">
-                    <img src={facebookIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
-                    <div class="social-name">Muneshwers Shipping</div>
-                </a>
-                <a href="https://www.instagram.com/muneshwersshipping/" target="_blank" class="social-link flex flex-row items-center gap-2">
-                    <img src={instagramIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
-                    <div class="social-name">@muneshwersshipping</div>
-                </a>
-                <a href="https://www.tiktok.com/@muneshwersshipping/" target="_blank" class="social-link flex flex-row items-center gap-2 ">
-                    <img src={tiktokIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
-                    <div class="social-name">@muneshwersshipping</div>
-                </a>
-                <a href="https://www.linkedin.com/company/muneshwers-limited/" target="_blank" class="social-link flex flex-row items-center gap-2">
-                    <img src={linkedinIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
-                    <div class="social-name">Muneshwers Limited</div>
-                </a>
-            </div>
-        </div>
-        <div class="company-info">
-            <div class="footer-section w-2/3">
-                <div class="footer-section-title poppins-medium text-2xl">
-                    Address
-                </div>
-                <div class="footer-section-info poppins-light mt-4">
-                    45-47 Water Street, Georgetown, Guyana
-                </div>
-            </div>
-            <div class="footer-section mt-12 w-2/3">
-                <div class="footer-section-title poppins-medium text-2xl">
-                    Contact Info
-                </div>
-                <div class="footer-section-info poppins-light mt-4 flex flex-col gap-4">
-                    <div class="info-number">
-                        +592-227-7417/18
-                    </div>
-                    <div class="info-email">
-                        info@muneshwers.com
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    <div class="footer-bottom"></div>
-</div>
+<Footer />
 
 <svelte:window bind:scrollY={y} />
