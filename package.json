@@ -41,6 +41,7 @@
 		"@fortawesome/free-regular-svg-icons": "^6.6.0",
 		"@fortawesome/free-solid-svg-icons": "^6.6.0",
 		"@vercel/postgres": "^0.9.0",
+		"flatpickr": "^4.6.13",
 		"nodemailer": "^6.9.15",
 		"svelte-carousel": "github:vadimkorr/svelte-carousel#pull/142/head",
 		"svelte-email": "^0.0.4"

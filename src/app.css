@@ -583,6 +583,14 @@ div.service:nth-child(5) {
     animation-range: entry 15% cover 40%;
 }
 
+.floral-section {
+    view-timeline-name: --revealing-image;
+    view-timeline-axis: block;
+    animation: linear reveal both;
+    animation-timeline: --revealing-image;
+    animation-range: entry 12% cover 35%;
+}
+
 .wharf-text {
     font-family: 'SF Pro Display Medium';
     font-weight: 500;
@@ -943,6 +951,42 @@ div.service:nth-child(5) {
 .navigationBar {
     animation: scroll-watcher ease-in;
     animation-timeline: scroll();
+}
+
+.flatpickr-calendar.animate.inline {
+    width: 50%;
+    height: 51vh;
+}
+
+.flatpickr-calendar.animate.inline > .flatpickr-innerContainer > .flatpickr-rContainer > .flatpickr-days > .dayContainer > .flatpickr-day.today {
+    background: #df839c;
+    border: #df839c;
+}
+
+.flatpickr-innerContainer {
+    justify-content: center;
+}
+
+.flatpickr-day.today.selected {
+    background: #df839c;
+    border: #df839c;
+}
+
+.flatpickr-day.selected {
+    background: #df839c;
+    border: #df839c;
+}
+
+
+
+.flatpickr-day.selected.prevMonthDay {
+    background: #df839c;
+    border: #df839c;
+}
+
+.flatpickr-day.selected:hover {
+    background: #df839c;
+    border: #df839c;
 }
 
 @keyframes scroll-watcher {
