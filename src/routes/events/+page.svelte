@@ -1,29 +1,55 @@
 <script>
-    import mllogo from "../../logo.png";
     import heroImage from "$lib/assets/eventsheader.webp";
-    import grid from "../../grid.svg";
-    import paragonTrasport from "../../paragon-transport.png";
-    import gysbi from "../../gysbi.png";
-    import cranes from "../../cranes.png";
-    import barges from "../../barges.png";
-    import harbourtugs from "../../harbourtugs.png";
     import brandLogo from "$lib/assets/events_logo.png";
     import whitelogo from "$lib/assets/logo.png";
-    import event1 from "$lib/assets/event1.jpg";
-    import event2 from "$lib/assets/event2.jpg";
-    import event3 from "$lib/assets/event3.jpg";
-    import event4 from "$lib/assets/event4.jpg";
-    import event5 from "$lib/assets/event5.jpg";
-    import event6 from "$lib/assets/event6.jpg";
-    import event7 from "$lib/assets/event7.jpg";
-    import halloweenbucket from "$lib/assets/halloweenbucket.jpg";
     import parallaxCareer from "$lib/assets/DJI_0374.webp";
 	import Footer from "../Footer.svelte";
 	import Navigation from "../Navigation.svelte";
     import flatpickr from "flatpickr";
 	import { onMount } from "svelte";
 
+    export let data;
+
+    console.log("Data from server: ", data.eventsList);
+
     let calendar;
+
+    let selectedDate = (new Date()).toISOString().split('T')[0];
+    console.log("Selected Date at start: ", selectedDate);
+
+    $: defaultImage = "/src/lib/assets/landscape-placeholder.svg";
+
+    let eventName = "No Events Today";
+    let headerImage = data.eventsList[2].form.headerImage;
+    let image1 = defaultImage;
+    let image2 = defaultImage;
+    let image3 = defaultImage;
+    let image4 = defaultImage;
+    let image5 = defaultImage;
+    let image6 = defaultImage;
+    let image7 = defaultImage;
+
+    let selectedEvent = data.eventsList.find((holiday) => holiday.form.start == selectedDate );
+    if (!selectedEvent) {
+        console.log("Event: ", selectedEvent)
+        console.log("Date: ", selectedDate)
+        console.error("No event found");
+    } else {
+        console.log("Selected Event: ", selectedEvent);
+        eventName = "Our " + selectedEvent.form.title + " Collection";
+        headerImage = selectedEvent.form.headerImage;
+        image1 = selectedEvent.form.image1;
+        image2 = selectedEvent.form.image2;
+        image3 = selectedEvent.form.image3;
+        image4 = selectedEvent.form.image4;
+        image5 = selectedEvent.form.image5;
+        image6 = selectedEvent.form.image6;
+        image7 = selectedEvent.form.image7;
+    }
+    
+
+    //landscape-placeholder
+
 
     onMount(() => {
         let date = (new Date()).toISOString().split('T')[0];
@@ -35,8 +61,43 @@
             inline : true,
             defaultDate : date,
             enableTime : false,
+            onChange : (selectedDates, dateStr, instance) => {
+                selectedDate = dateStr;
+                selectedEvent = data.eventsList.find((holiday) => holiday.form.start == selectedDate );
+                console.log("Selected Date: ", selectedDate);
+                if (!selectedEvent) { 
+                    eventName = "No Events Today";
+                    headerImage = defaultImage;
+                    image1 = defaultImage;
+                    image2 = defaultImage;
+                    image3 = defaultImage;
+                    image4 = defaultImage;
+                    image5 = defaultImage;
+                    image6 = defaultImage;
+                    image7 = defaultImage;
+                    return console.error("No event found")
+                };
+                console.log("Selected Event: ", selectedEvent);
+                eventName = "Our " + selectedEvent.form.title + " Collection" ?? "No Events This Month";
+                headerImage = selectedEvent.form.headerImage;
+                image1 = selectedEvent.form.image1;
+                image2 = selectedEvent.form.image2;
+                image3 = selectedEvent.form.image3;
+                image4 = selectedEvent.form.image4;
+                image5 = selectedEvent.form.image5;
+                image6 = selectedEvent.form.image6;
+                image7 = selectedEvent.form.image7;
+
+            }
         })
+
+
+        
     })
+
+    
+
+    
 
 
     let y;
@@ -69,22 +130,22 @@
 </div>
 <div class="introduction-section flex flex-col items-center justify-center mb-20">
     <div class="shipping-header my-12 justify-center items-center relative flex flex-col w-[90%]">
-        <div class="event-title text-[#df839c] text-[30px] font-medium font-['Raleway'] uppercase mb-8 ml-14">Our Halloween Collection</div>
+        <div class="event-title text-[#df839c] text-[30px] font-medium font-['Raleway'] uppercase mb-8 ml-14">{eventName}</div>
         <div class="main-event flex flex-row gap-8">
             <div class="datepicker-inline"></div>
             <div class="event-image">
-                <img src={halloweenbucket} class="w-[820px] h-[51vh] object-cover" alt="main" />
+                <img src={headerImage} class="w-[820px] h-[51vh] object-cover" alt="main" />
             </div>
         </div>
     </div>
     <div class="event-products grid grid-cols-7 gap-4 justify-center">
-        <img class="w-40 h-40 object-cover" src={event1} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={event2} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={event3} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={event4} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={event5} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={event6} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={event7} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={image1} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={image2} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={image3} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={image4} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={image5} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={image6} alt="featured products"/>
+        <img class="w-40 h-40 object-cover" src={image7} alt="featured products"/>
     </div>
 </div>
 <div class="collections w-full flex flex-col items-center my-12">

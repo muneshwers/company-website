@@ -954,8 +954,8 @@ div.service:nth-child(5) {
 }
 
 .flatpickr-calendar.animate.inline {
-    width: 50%;
-    height: 51vh;
+    width: 50% !important;
+    height: 51vh !important;
 }
 
 .flatpickr-calendar.animate.inline > .flatpickr-innerContainer > .flatpickr-rContainer > .flatpickr-days > .dayContainer > .flatpickr-day.today {
@@ -967,12 +967,12 @@ div.service:nth-child(5) {
     justify-content: center;
 }
 
-.flatpickr-day.today.selected {
-    background: #df839c;
-    border: #df839c;
+.flatpickr-day.selected {
+    background: #df839c !important;
+    border: #df839c !important;
 }
 
-.flatpickr-day.selected {
+.flatpickr-day.today.selected {
     background: #df839c;
     border: #df839c;
 }
