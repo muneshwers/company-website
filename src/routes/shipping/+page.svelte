@@ -266,8 +266,13 @@
                     <div class="poppins-medium text-[14px] text-[#3f3f3f]">22 Acres</div>
                 </div>
                 <div class="location flex flex-row items-center gap-3">
-                    <img src={location} class="w-[15px] h-[15px]" alt="size icon" />
-                    <div class="poppins-medium text-[14px] text-[#3f3f3f] hover:text-[#3b6fbd] underline">YY, Houston, Greater Georgetown, Guyana</div>
+                    <a href="https://maps.app.goo.gl/HJKQHFxm8z4vVpsp6" target="_blank">
+                        <img src={location} class="w-[15px] h-[15px]" alt="size icon" />
+                    </a>
+                    <a href="https://maps.app.goo.gl/HJKQHFxm8z4vVpsp6" target="_blank">
+                        <div class="poppins-medium text-[14px] text-[#3f3f3f] hover:text-[#3b6fbd] underline">YY, Houston, Greater Georgetown, Guyana</div>
+                    </a>
+                    
                 </div>
                 <div class="location flex flex-row items-center gap-2">
                     <a href="tel:592-227-7418;ext=3270" target="_blank">

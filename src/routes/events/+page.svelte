@@ -17,10 +17,10 @@
     let selectedDate = (new Date()).toISOString().split('T')[0];
     console.log("Selected Date at start: ", selectedDate);
 
-    $: defaultImage = "/src/lib/assets/landscape-placeholder.svg";
+    let defaultImage = "/src/lib/assets/landscape-placeholder.svg";
 
     let eventName = "No Events Today";
-    let headerImage = data.eventsList[2].form.headerImage;
+    let headerImage = defaultImage;
     let image1 = defaultImage;
     let image2 = defaultImage;
     let image3 = defaultImage;
