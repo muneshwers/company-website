@@ -954,8 +954,7 @@ div.service:nth-child(5) {
 }
 
 .flatpickr-calendar.animate.inline {
-    width: 50% !important;
-    height: 51vh !important;
+    width: 100% !important;
 }
 
 .flatpickr-calendar.animate.inline > .flatpickr-innerContainer > .flatpickr-rContainer > .flatpickr-days > .dayContainer > .flatpickr-day.today {
