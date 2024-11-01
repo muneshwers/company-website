@@ -16,6 +16,8 @@
 
     let selectedDate = (new Date()).toISOString().split('T')[0];
     console.log("Selected Date at start: ", selectedDate);
+    let selectedMonth = selectedDate.substring(0, 7);
+    console.log("Selected Month: ", selectedMonth);
 
     let defaultImage = "/src/lib/assets/landscape-placeholder.svg";
 
@@ -28,12 +30,26 @@
     let image5 = defaultImage;
     let image6 = defaultImage;
     let image7 = defaultImage;
+    // let activeEvent = 
+
+    let displayEventMonth = [];
+    let monthEvents = data.eventsList.filter((holiday) => holiday.form.start.substring(0, 7) == selectedMonth );
+    if(!monthEvents) {
+        console.log("No events for this month!");
+    } else {
+        displayEventMonth = monthEvents.map((item) => ({
+            name: item.form.title,
+            date: item.form.start,
+        }))
+        console.log("Selected Month Events: ", monthEvents);
+        console.log("Displayed Month Events: ", displayEventMonth);
+    }
 
     let selectedEvent = data.eventsList.find((holiday) => holiday.form.start == selectedDate );
     if (!selectedEvent) {
         console.log("Event: ", selectedEvent)
         console.log("Date: ", selectedDate)
-        console.error("No event found");
+        console.log("No event found");
     } else {
         console.log("Selected Event: ", selectedEvent);
         eventName = "Our " + selectedEvent.form.title + " Collection";
@@ -59,13 +75,16 @@
             altInput: true,
             altFormat: 'F j, Y',
             inline : true,
-            defaultDate : date,
+            defaultDate : selectedDate,
             enableTime : false,
             onChange : (selectedDates, dateStr, instance) => {
                 selectedDate = dateStr;
-                selectedEvent = data.eventsList.find((holiday) => holiday.form.start == selectedDate );
                 console.log("Selected Date: ", selectedDate);
-                if (!selectedEvent) { 
+                selectedMonth = selectedDate.substring(0, 7);
+                console.log("Selected Month: ", selectedMonth);
+
+                monthEvents = data.eventsList.filter((holiday) => holiday.form.start.substring(0, 7) == selectedMonth );
+                if(monthEvents.length < 1) {
                     eventName = "No Events Today";
                     headerImage = defaultImage;
                     image1 = defaultImage;
@@ -75,9 +94,36 @@
                     image5 = defaultImage;
                     image6 = defaultImage;
                     image7 = defaultImage;
-                    return console.error("No event found")
-                };
+                    displayEventMonth = [{
+                        name: "No events for",
+                        date: selectedMonth
+                    }]
+                    console.log("No events for the month");
+                    return console.log("No events for this month!");
+                } else {
+                    displayEventMonth = monthEvents.map((item) => ({
+                        name: item.form.title,
+                        date: item.form.start,
+                    }))
+                    console.log("Selected Month Events: ", monthEvents);
+                    console.log("Displayed Month Events: ", displayEventMonth);
+                }
+
+                selectedEvent = data.eventsList.find((holiday) => holiday.form.start == selectedDate );
                 console.log("Selected Event: ", selectedEvent);
+                if (!selectedEvent) {
+                    eventName = "No Events Today";
+                    headerImage = defaultImage;
+                    image1 = defaultImage;
+                    image2 = defaultImage;
+                    image3 = defaultImage;
+                    image4 = defaultImage;
+                    image5 = defaultImage;
+                    image6 = defaultImage;
+                    image7 = defaultImage;
+                    return console.log("No event found");
+                };
+
                 eventName = "Our " + selectedEvent.form.title + " Collection" ?? "No Events This Month";
                 headerImage = selectedEvent.form.headerImage;
                 image1 = selectedEvent.form.image1;
@@ -87,17 +133,43 @@
                 image5 = selectedEvent.form.image5;
                 image6 = selectedEvent.form.image6;
                 image7 = selectedEvent.form.image7;
+                
 
             }
         })
 
 
         
-    })
+    });
 
-    
 
-    
+    const focusEvent = (eventDate) => {
+        selectedDate = eventDate;
+        selectedEvent = data.eventsList.find((holiday) => holiday.form.start == eventDate );
+        console.log("Selected Event: ", selectedEvent);
+        if (!selectedEvent) {
+            eventName = "No Events Today";
+            headerImage = defaultImage;
+            image1 = defaultImage;
+            image2 = defaultImage;
+            image3 = defaultImage;
+            image4 = defaultImage;
+            image5 = defaultImage;
+            image6 = defaultImage;
+            image7 = defaultImage;
+            return console.log("No event found");
+        };
+
+        eventName = "Our " + selectedEvent.form.title + " Collection" ?? "No Events This Month";
+        headerImage = selectedEvent.form.headerImage;
+        image1 = selectedEvent.form.image1;
+        image2 = selectedEvent.form.image2;
+        image3 = selectedEvent.form.image3;
+        image4 = selectedEvent.form.image4;
+        image5 = selectedEvent.form.image5;
+        image6 = selectedEvent.form.image6;
+        image7 = selectedEvent.form.image7;
+    }
 
 
     let y;
@@ -130,11 +202,18 @@
 </div>
 <div class="introduction-section flex flex-col items-center justify-center mb-20">
     <div class="shipping-header my-12 justify-center items-center relative flex flex-col w-[90%]">
-        <div class="event-title text-[#df839c] text-[30px] font-medium font-['Raleway'] uppercase mb-8 ml-14">{eventName}</div>
+        <div class="event-title text-[#df839c] text-center text-[30px] font-medium font-['Raleway'] uppercase mb-8">{eventName}</div>
         <div class="main-event flex flex-row gap-8">
-            <div class="datepicker-inline"></div>
-            <div class="event-image">
-                <img src={headerImage} class="w-[820px] h-[51vh] object-cover" alt="main" />
+            <div class="w-1/2">
+                <div class="datepicker-inline"></div>
+                <div class="upcoming ml-5 mt-5 mb-2 text-[21px] font-['Raleway'] text-[#df839c]">Upcoming Events for the Month</div>
+                {#each displayEventMonth as eventDay}
+                    <button class="test1 ml-5 p-3 text-left w-[90%] font-['Raleway'] hover:bg-[#fce0e8] cursor-pointer duration-[300ms]" on:click={()=>focusEvent(eventDay.date)}>{eventDay.name} - {eventDay.date}</button>
+                {/each}
+            </div>
+            
+            <div class="event-image h-[60vh]">
+                <img src={headerImage} class="w-[820px] h-[100%] object-cover" alt="main" />
             </div>
         </div>
     </div>
@@ -269,14 +348,14 @@
 </div>
 <div class="subscribe-section flex flex-col items-center my-20">
     <div class="w-[95%] h-[380px] bg-[#df839c] rounded-xl p-10 flex flex-row items-center">
-            <div class="left-subscribe">
+            <form method="POST" class="left-subscribe">
                 <div class=" text-white text-[40px] font-medium font-['Raleway'] leading-[60px]">SUBSCRIBE TO OUR NEWSLETTER</div>
                 <div class=" text-white text-[24px] font-light font-['Raleway'] leading-9">Stay in the loop whenever we make important announcements that you might want to know about</div>
                 <div class="subscribe-field mt-16 flex flex-row gap-5">
-                    <input type="text" class="w-[663px] h-[55px] bg-white rounded-xl  p-5 outline-[#ee4270] outline-8 placeholder:font-['Raleway'] text-[#b74363]" placeholder="johndoe@example.com"/>
+                    <input type="text" name="emailaddress" id="emailaddress" class="w-[663px] h-[55px] bg-white rounded-xl  p-5 outline-[#ee4270] outline-8 placeholder:font-['Raleway'] text-[#b74363]" placeholder="johndoe@example.com"/>
                     <button type="submit" class="w-[197px] h-[55px] bg-[#b74363] rounded-xl text-center text-white text-[20px] font-bold font-['Raleway'] leading-9 uppercase">Subscribe</button>
                 </div>
-            </div>
+            </form>
             <div class="right-subscribe">
                 <img class="w-[400px] h-[300px] object-cover" src={whitelogo} alt=""/>
             </div>
