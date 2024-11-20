@@ -21,8 +21,8 @@ export const actions = {
         `
 
         const options = {
-            from: 'programmer3@muneshwers.store',
-            to: 'developers@muneshwers.store',
+            from: 'developers@muneshwers.store',
+            to: 'subscriptions@muneshwers.store',
             subject: 'New Message from Website Visitor',
             html: emailHtml
         };
