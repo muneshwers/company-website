@@ -45,7 +45,9 @@
         console.log("Displayed Month Events: ", displayEventMonth);
     }
 
-    let selectedEvent = data.eventsList.find((holiday) => holiday.form.start == selectedDate );
+    console.log("Day Only: ", selectedDate.substring(5, 7));
+
+    let selectedEvent = data.eventsList.find((holiday) => holiday.form.start.substring(5, 7) <= selectedDate.substring(5, 7));
     if (!selectedEvent) {
         console.log("Event: ", selectedEvent)
         console.log("Date: ", selectedDate)
