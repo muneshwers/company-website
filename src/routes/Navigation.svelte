@@ -77,7 +77,7 @@
         </a>
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
+        <!-- <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
             <div class="{activityCheck.jointVentures ? "item-active": "item"}">
                 Joint Ventures 
             </div>
@@ -85,7 +85,7 @@
                 <Joint />
             {/if}
             
-        </div>
+        </div> -->
         <a href="/about">
             <div class="{activityCheck.about ? "item-active": "item"}">
                 About

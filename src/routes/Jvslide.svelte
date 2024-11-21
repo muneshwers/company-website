@@ -11,8 +11,8 @@
 
 </script>
 
-<div class="w-full h-[300px] bg-white flex justify-center">
-    <a href="/transport" class="jv-card w-[14.2%] h-[300px] bg-white  flex justify-center items-center">
+<div class="w-full h-[300px] bg-white flex justify-center" id={slideId}> 
+    <!-- <a href="/transport" class="jv-card w-[14.2%] h-[300px] bg-white  flex justify-center items-center">
         <div >
             <img class="w-[150px] h-[150px]" src={paragonTrasport} alt="jv logos" />
         </div>
@@ -46,6 +46,26 @@
         <div>
             <img class="w-[150px] h-[150px]" src={constructionLogo} alt="jv logos" />
         </div>
-    </a>
-    
+    </a> -->
+    <div class="jv-card w-[14.2%] h-[300px] bg-white  flex justify-center items-center">
+        <img class="w-[150px] h-[150px]" src={paragonTrasport} alt="jv logos" />
+    </div>
+    <div class="jv-card w-[14.2%] h-[300px] bg-white flex justify-center items-center">
+        <img class="w-[150px] h-[40px]" src={cranes} alt="jv logos" />
+    </div>
+    <div class="jv-card w-[14.2%] h-[300px] bg-white flex justify-center items-center">
+        <img class="w-[150px] h-[150px]" src={barges} alt="jv logos" />
+    </div>
+    <div class="jv-card w-[14.2%] h-[300px] bg-white flex justify-center items-center">
+        <img class="w-[150px] h-[150px]" src={brandLogo} alt="jv logos" />
+    </div>
+    <div class="jv-card w-[14.2%] h-[300px] bg-white flex justify-center items-center">
+        <img class="w-[150px] h-[150px]" src={gysbi} alt="jv logos" />
+    </div>
+    <div class="jv-card w-[14.2%] h-[300px] bg-white  flex justify-center items-center">
+        <img class="w-[150px] h-[150px]" src={harbourtugs} alt="jv logos" />
+    </div>
+    <div class="jv-card w-[14.2%] h-[300px] bg-white flex justify-center items-center">
+        <img class="w-[150px] h-[150px]" src={constructionLogo} alt="jv logos" />
+    </div>
 </div>
