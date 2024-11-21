@@ -47,7 +47,7 @@
 
     console.log("Day Only: ", selectedDate.substring(5, 7));
 
-    let selectedEvent = data.eventsList.find((holiday) => holiday.form.start.substring(5, 7) <= selectedDate.substring(5, 7));
+    let selectedEvent = data.eventsList.find((holiday) => holiday.form.start.substring(5, 7) >= selectedDate.substring(5, 7));
     if (!selectedEvent) {
         console.log("Event: ", selectedEvent)
         console.log("Date: ", selectedDate)
@@ -348,7 +348,7 @@
     </div>
     
 </div>
-<div class="subscribe-section flex flex-col items-center my-20">
+<div class="subscribe-section flex flex-col items-center mt-20 mb-10">
     <div class="w-[95%] h-[380px] bg-[#df839c] rounded-xl p-10 flex flex-row items-center">
             <form method="POST" class="left-subscribe">
                 <div class=" text-white text-[40px] font-medium font-['Raleway'] leading-[60px]">SUBSCRIBE TO OUR NEWSLETTER</div>
@@ -362,6 +362,25 @@
                 <img class="w-[400px] h-[300px] object-cover" src={whitelogo} alt=""/>
             </div>
         </div>
+</div>
+<div class="contact-section flex flex-col justify-center items-center h-[30vh] mb-10">
+    {#if y > 1250}
+        <div class="contact-header my-7 p-10 bg-gray-200 w-[80%] rounded-md">
+            <div class="row flex flex-row gap-2 text-normal p-2">
+                <div class="contact-title font-medium">Telephone:</div>
+                <div class="contact-details text-gray-500">+592-632-0736</div>
+            </div>
+            <div class="row flex flex-row gap-2 text-normal p-2">
+                <div class="contact-title font-medium">Email:</div>
+                <div class="contact-details text-gray-500">travel@muneshwers.com</div>
+            </div>
+            <div class="row flex flex-row gap-2 text-normal p-2">
+                <div class="contact-title font-medium">Address:</div>
+                <div class="contact-details text-gray-500">19-20 Water St, Georgetown</div>
+            </div>
+        </div>
+    {/if}
+    
 </div>
 <Footer />
 
