@@ -372,12 +372,12 @@
             </div>
             <div class="row flex flex-row gap-2 text-normal p-2">
                 <div class="contact-title font-medium">Email:</div>
-                <div class="contact-details text-gray-500">travel@muneshwers.com</div>
+                <div class="contact-details text-gray-500">info@muneshwers.store</div>
             </div>
             <div class="row flex flex-row gap-2 text-normal p-2">
                 <div class="contact-title font-medium">Address:</div>
                 <a href="https://maps.app.goo.gl/7z3UmUJdoz8pFR2HA" target="_blank">
-                    <div class="contact-details text-gray-500 underline">19-20 Water St, Georgetown</div>
+                    <div class="contact-details text-gray-500 underline">19-20 Water St, Georgetown, Guyana</div>
                 </a>
                 
             </div>
