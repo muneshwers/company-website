@@ -346,7 +346,7 @@
         <div class="intro-details  relative ">
             {#if y > 3200}
             <div class="intro-text my-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
-                <p>Our Clients</p>
+                <p>Our Local Clients</p>
             </div>
             {/if}
         </div>
@@ -432,10 +432,10 @@
                 </div>
             </div>
         </div>
-        <div class="intro-details  relative ">
+        <div class="intro-details  relative">
             {#if y > 3200}
             <div class="intro-text my-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
-                <p>Our Lines</p>
+                <p>Our Shipping Clients</p>
             </div>
             {/if}
         </div>
