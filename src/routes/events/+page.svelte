@@ -2,7 +2,7 @@
     import heroImage from "$lib/assets/eventsheader.webp";
     import brandLogo from "$lib/assets/events_logo.png";
     import whitelogo from "$lib/assets/logo.png";
-    import parallaxCareer from "$lib/assets/DJI_0374.webp";
+    import parallaxCareer from "$lib/assets/IMG_4064.png";
 	import Footer from "../Footer.svelte";
 	import Navigation from "../Navigation.svelte";
     import flatpickr from "flatpickr";
@@ -18,6 +18,10 @@
     console.log("Selected Date at start: ", selectedDate);
     let selectedMonth = selectedDate.substring(0, 7);
     console.log("Selected Month: ", selectedMonth);
+
+    let allHolidaysDates = data.eventsList.map((holiday) => ({
+        holiDate: holiday.form.start
+    }))
 
     let defaultImage = "/src/lib/assets/landscape-placeholder.svg";
 
@@ -79,6 +83,15 @@
             inline : true,
             defaultDate : selectedDate,
             enableTime : false,
+            disable: [
+                function (date) {
+                    const datesList = allHolidaysDates;
+                    const formattedDate = (date).toISOString().split('T')[0];
+                    const findMatch = datesList.find((holiday) => holiday.holiDate == formattedDate);
+                    if(!findMatch) return true;
+                    return false;
+                }
+            ], 
             onChange : (selectedDates, dateStr, instance) => {
                 selectedDate = dateStr;
                 console.log("Selected Date: ", selectedDate);
@@ -161,7 +174,6 @@
             image7 = defaultImage;
             return console.log("No event found");
         };
-
         eventName = "Our " + selectedEvent.form.title + " Collection" ?? "No Events This Month";
         headerImage = selectedEvent.form.headerImage;
         image1 = selectedEvent.form.image1;
@@ -171,6 +183,7 @@
         image5 = selectedEvent.form.image5;
         image6 = selectedEvent.form.image6;
         image7 = selectedEvent.form.image7;
+        calendar.setDate(selectedDate);
     }
 
 
