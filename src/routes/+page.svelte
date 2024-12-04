@@ -88,7 +88,7 @@
     </div>
     <Navigation activePage="home"/>
 </div>
-<div class="introduction-section flex flex-col justify-center" id="introduction">
+<div class="introduction-section flex flex-col justify-center bg-[#CEE9FD] bg-gradient-to-br from-[#CEE9FD] to-white via-[#CEE9FD]/10" id="introduction">
     <div class="intro-header mt-5 justify-center relative flex h-[143px]">
         {#if y > 200}
             <div class="intro-details">
