@@ -439,7 +439,7 @@
             </div>
             {/if}
         </div>
-        <div class="client-list grid grid-cols-3 gap-4 items-center justify-center mb-5">
+        <div class="client-list grid grid-cols-3 gap-4 items-center justify-center mb-16">
             <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
                 <div class="w-[220px] h-[220px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/tropical.webp" alt="client-logo"/>
