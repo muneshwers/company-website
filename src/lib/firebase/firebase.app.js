@@ -8,7 +8,7 @@ const service = serviceAccount;
 
 const firebaseApp = initializeApp({
   credential: cert(service)
-});
+}, 'company-website');
 
 const firestore = getFirestore(firebaseApp, "company-website");
 
