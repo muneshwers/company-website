@@ -25,6 +25,7 @@
 
     let defaultImage = "/src/lib/assets/landscape-placeholder.svg";
 
+    let weekTitle = "Upcoming Events for the Months"
     let eventName = "No Events Today";
     let headerImage = defaultImage;
     let image1 = defaultImage;
@@ -91,13 +92,10 @@
                     if(!findMatch) return true;
                     return false;
                 }
-            ], 
-            onChange : (selectedDates, dateStr, instance) => {
-                selectedDate = dateStr;
-                console.log("Selected Date: ", selectedDate);
-                selectedMonth = selectedDate.substring(0, 7);
-                console.log("Selected Month: ", selectedMonth);
-
+            ],
+            onMonthChange: (selectedDates, dateStr, instance) => {
+                console.log("Check information: ", selectedDates, " : ", dateStr, " : ", instance);
+                let selectedMonth = (instance.currentMonth+1) <= 9 ? instance.currentYear+"-"+"0"+(instance.currentMonth+1) : instance.currentYear+"-"+(instance.currentMonth+1);
                 monthEvents = data.eventsList.filter((holiday) => holiday.form.start.substring(0, 7) == selectedMonth );
                 if(monthEvents.length < 1) {
                     eventName = "No Events Today";
@@ -119,10 +117,15 @@
                     displayEventMonth = monthEvents.map((item) => ({
                         name: item.form.title,
                         date: item.form.start,
-                    }))
+                    }));
+                    weekTitle = "Events for the Selected Month";
                     console.log("Selected Month Events: ", monthEvents);
                     console.log("Displayed Month Events: ", displayEventMonth);
                 }
+            },
+            onChange : (selectedDates, dateStr, instance) => {
+                selectedDate = dateStr;
+                console.log("Selected Date: ", selectedDate);
 
                 selectedEvent = data.eventsList.find((holiday) => holiday.form.start == selectedDate );
                 console.log("Selected Event: ", selectedEvent);
@@ -221,7 +224,7 @@
         <div class="main-event flex flex-row gap-8">
             <div class="w-1/2">
                 <div class="datepicker-inline"></div>
-                <div class="upcoming ml-5 mt-5 mb-2 text-[21px] font-['Raleway'] text-[#df839c]">Upcoming Events for the Month</div>
+                <div class="upcoming ml-5 mt-5 mb-2 text-[21px] font-['Raleway'] text-[#df839c]">{weekTitle}</div>
                 {#each displayEventMonth as eventDay}
                     <button class="test1 ml-5 p-3 text-left w-[90%] font-['Raleway'] hover:bg-[#fce0e8] cursor-pointer duration-[300ms]" on:click={()=>focusEvent(eventDay.date)}>{eventDay.name} - {eventDay.date}</button>
                 {/each}
