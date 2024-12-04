@@ -304,7 +304,7 @@
     </div>
 </div>
 <div class="parallax-container relative">
-    <div class="object-cover w-screen bg-[#FFEDF2] h-[250vh] p-14 flex flex-col items-center">
+    <div class="object-cover w-screen bg-[#FFEDF2] h-[270vh] p-14 flex flex-col items-center">
         <div class="intro-details ">
             {#if y > 1200}
             <div class="intro-text-2 text-center text-[#df839c] text-[45px] font-semibold font-['Raleway'] uppercase tracking-widest mt-10">CUSTOM FLORAL ARRANGEMENTS</div>
@@ -318,13 +318,13 @@
         {#if y > 1200}
         <enhanced:img class="service w-[1300px] h-[600px] rounded-2xl mt-20 object-cover" src="$lib/assets/eventsservice.webp" alt=""/>
         {/if}
-        <div class="grid grid-cols-3 mt-20 gap-2">
-            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower1.webp" alt=""/>
-            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower2.webp" alt=""/>
-            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower3.webp" alt=""/>
-            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower4.webp" alt=""/>
-            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower5.webp" alt=""/>
-            <enhanced:img class="w-[430px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flower6.webp" alt=""/>
+        <div class="grid grid-cols-3 mt-16 gap-10">
+            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay1.webp" alt=""/>
+            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay2.webp" alt=""/>
+            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay3.webp" alt=""/>
+            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay4.webp" alt=""/>
+            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay5.webp" alt=""/>
+            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay6.webp" alt=""/>
         </div>
         
     </div>
