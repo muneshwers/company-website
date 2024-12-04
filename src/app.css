@@ -957,10 +957,7 @@ div.service:nth-child(5) {
     width: 100% !important;
 }
 
-.flatpickr-calendar.animate.inline > .flatpickr-innerContainer > .flatpickr-rContainer > .flatpickr-days > .dayContainer > .flatpickr-day.today {
-    background: #df839c;
-    border: #df839c;
-}
+
 
 .flatpickr-innerContainer {
     justify-content: center;
@@ -971,10 +968,7 @@ div.service:nth-child(5) {
     border: #df839c !important;
 }
 
-.flatpickr-day.today.selected {
-    background: #df839c;
-    border: #df839c;
-}
+
 
 
 .flatpickr-day.selected.prevMonthDay {
