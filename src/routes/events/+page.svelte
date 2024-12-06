@@ -296,7 +296,7 @@
             <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Fabrics</div>
         </div>
         <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/decorations.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/hardware.webp" alt=""/>
             <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Hardware</div>
         </div>
         {/if}
