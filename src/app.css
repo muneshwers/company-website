@@ -511,6 +511,10 @@ div.hero-text > div:nth-child(3) > p {
     animation: slide-up-text 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
 }
 
+/* .bento-container {
+    animation-timeline: scroll(block self);
+} */
+
 div.service {
     -webkit-animation-delay: 0;
     animation-delay: 0;
