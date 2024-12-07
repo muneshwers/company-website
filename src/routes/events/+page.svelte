@@ -46,19 +46,19 @@
             name: item.form.title,
             date: item.form.start,
         }))
-        console.log("Selected Month Events: ", monthEvents);
-        console.log("Displayed Month Events: ", displayEventMonth);
+        // console.log("Selected Month Events: ", monthEvents);
+        // console.log("Displayed Month Events: ", displayEventMonth);
     }
 
     console.log("Day Only: ", selectedDate.substring(5, 7));
 
     let selectedEvent = data.eventsList.find((holiday) => holiday.form.start.substring(5, 7) >= selectedDate.substring(5, 7));
     if (!selectedEvent) {
-        console.log("Event: ", selectedEvent)
-        console.log("Date: ", selectedDate)
+        // console.log("Event: ", selectedEvent)
+        // console.log("Date: ", selectedDate)
         console.log("No event found");
     } else {
-        console.log("Selected Event: ", selectedEvent);
+        // console.log("Selected Event: ", selectedEvent);
         eventName = "Our " + selectedEvent.form.title + " Collection";
         headerImage = selectedEvent.form.headerImage;
         image1 = selectedEvent.form.image1;
@@ -94,7 +94,7 @@
                 }
             ],
             onMonthChange: (selectedDates, dateStr, instance) => {
-                console.log("Check information: ", selectedDates, " : ", dateStr, " : ", instance);
+                // console.log("Check information: ", selectedDates, " : ", dateStr, " : ", instance);
                 let selectedMonth = (instance.currentMonth+1) <= 9 ? instance.currentYear+"-"+"0"+(instance.currentMonth+1) : instance.currentYear+"-"+(instance.currentMonth+1);
                 monthEvents = data.eventsList.filter((holiday) => holiday.form.start.substring(0, 7) == selectedMonth );
                 if(monthEvents.length < 1) {
@@ -111,7 +111,7 @@
                         name: "No events for",
                         date: selectedMonth
                     }]
-                    console.log("No events for the month");
+                    // console.log("No events for the month");
                     return console.log("No events for this month!");
                 } else {
                     displayEventMonth = monthEvents.map((item) => ({
@@ -119,16 +119,16 @@
                         date: item.form.start,
                     }));
                     weekTitle = "Events for the Selected Month";
-                    console.log("Selected Month Events: ", monthEvents);
-                    console.log("Displayed Month Events: ", displayEventMonth);
+                    // console.log("Selected Month Events: ", monthEvents);
+                    // console.log("Displayed Month Events: ", displayEventMonth);
                 }
             },
             onChange : (selectedDates, dateStr, instance) => {
                 selectedDate = dateStr;
-                console.log("Selected Date: ", selectedDate);
+                // console.log("Selected Date: ", selectedDate);
 
                 selectedEvent = data.eventsList.find((holiday) => holiday.form.start == selectedDate );
-                console.log("Selected Event: ", selectedEvent);
+                // console.log("Selected Event: ", selectedEvent);
                 if (!selectedEvent) {
                     eventName = "No Events Today";
                     headerImage = defaultImage;
@@ -164,7 +164,7 @@
     const focusEvent = (eventDate) => {
         selectedDate = eventDate;
         selectedEvent = data.eventsList.find((holiday) => holiday.form.start == eventDate );
-        console.log("Selected Event: ", selectedEvent);
+        // console.log("Selected Event: ", selectedEvent);
         if (!selectedEvent) {
             eventName = "No Events Today";
             headerImage = defaultImage;

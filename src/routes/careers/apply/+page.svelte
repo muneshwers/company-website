@@ -1,26 +1,8 @@
 <script>
 // @ts-nocheck
 
-    import mllogo from "../../../logo.png";
-    import heroImage from "../../../careers.jpg";
-    import grid from "../../../grid.svg";
-    import paragonTrasport from "../../../paragon-transport.png";
-    import gysbi from "../../../gysbi.png";
-    import cranes from "../../../cranes.png";
-    import barges from "../../../barges.png";
-    import harbourtugs from "../../../harbourtugs.png";
-    import brandLogo from "../../../brand-logo.png";
-    import textLogo from "../../../text-logo.png";
-    import briefcase from "../../../briefcase-solid.svg";
-    import linkedinIcon from "../../../icons8-linkedin.svg";
-    import tiktokIcon from "../../../icons8-tiktok.svg";
-    import parallaxShipping from "../../../parallaxshipping.jpg";
-    import staffOne from "../../../worker1.jpg";
-    import staffTwo from "../../../worker2.jpg";
-    import shippingService from "../../../GYS05795.jpg"
-    import travelService from "../../../travel.jpg";
-    import store1Service from "../../../store1.jpg";
-    import store2Service from "../../../events1.jpg";
+    import heroImage from "$lib/assets/careers.webp";
+    import brandLogo from "$lib/assets/brand-logo.webp";
     import location from "$lib/assets/location-dot-solid.svg";
     import email from "$lib/assets/envelope-solid.svg";
     import phone from "$lib/assets/phone-solid.svg";

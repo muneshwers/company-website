@@ -1,6 +1,7 @@
 <script>
 
     import heroImage from "$lib/assets/GYS06897_1.webp";
+    import grid from "$lib/assets/grid.svg";
     import brandLogo from "$lib/assets/cranes.webp";
 	import Navigation from "../Navigation.svelte";
 	import Footer from "../Footer.svelte";
@@ -32,7 +33,19 @@
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="intro-header mt-7 justify-center relative">
-        Introduction
+        <img src={grid} alt="mesh grid" class="h-auto w-full">
+        <div class="intro-details flex items-center absolute top-16 bottom-16 left-16 w-11/12 justify-between">
+            <div class="construction-icon-box flex justify-center items-center">
+                <div class="construction-icon"></div>
+            </div>
+            <div class="intro-details w-3/4">
+                <div class="intro-text text-right uppercase flex flex-col text-[76px] text-[#4876B6]">
+                    <div class="text-right flex flex-row-reverse">
+                        <p class="intro-text-indiv text-right">Under Construction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <Footer />

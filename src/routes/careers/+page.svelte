@@ -1,16 +1,8 @@
 <script>
 // @ts-nocheck
 
-    import mllogo from "../../logo.png";
-    import heroImage from "../../careers.jpg";
-    import paragonTrasport from "../../paragon-transport.png";
-    import gysbi from "../../gysbi.png";
-    import cranes from "../../cranes.png";
-    import barges from "../../barges.png";
-    import harbourtugs from "../../harbourtugs.png";
-    import brandLogo from "../../brand-logo.png";
-    import textLogo from "../../text-logo.png";
-    import parallaxShipping from "../../parallaxshipping.jpg";
+    import heroImage from "$lib/assets/careers.webp";
+    import brandLogo from "$lib/assets/brand-logo.webp";
 	import Joint from "../Joint.svelte";
 	import Navigation from "../Navigation.svelte";
 	import Footer from "../Footer.svelte";

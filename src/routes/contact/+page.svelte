@@ -1,5 +1,5 @@
 <script>
-    import brandLogo from "../../brand-logo.png";
+    import brandLogo from "$lib/assets/brand-logo.webp";
 	import Navigation from "../Navigation.svelte";
 	import Footer from "../Footer.svelte";
 
