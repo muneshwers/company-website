@@ -35,9 +35,6 @@
     $: jvToggle = false;
     $: serviceToggle = false;
     
-    let y = 0;
-    let pageHeight = 0;
-    let percentageScroll = 0;
     let element;
     let intersecting;
     
@@ -49,17 +46,6 @@
     let careersHeader;
 
     let slideCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-    let heroImages = [
-        {
-            slideId: 1,
-            imageName: "$lib/assets/GYS00823.webp"
-        },
-        {
-            slideId: 2,
-            imageName: "$lib/assets/IMG_4167_MOD.webp"
-        }
-    ]
 
     let carouselPhotos = [shippingStaff, storeStaff]
 
@@ -82,15 +68,6 @@
     });
 
     $: src = carouselPhotos[i];
-
-    // const checkScrollPercentage = () => {
-    //     if (intersecting) {
-    //         console.log("Element is in view")
-    //         return
-    //     }
-    //     console.log("Element is not in view");
-    // }
-
     
 
 </script>
@@ -102,19 +79,6 @@
 <div class="landing-top relative max-w-[100%]">
     <!-- <div class="scroll-watcher"></div> -->
     <div class="hero-home-image h-screen relative max-w-[100%]">
-        <!-- <Carousel
-            autoplayDuration={5000}
-            autoplay
-            infinite={true}
-            timingFunction="linear"
-            dots={false}
-            arrows={false}
-            swiping={false}
-        >
-        {#each heroImages as slide}
-            <Herocard slideImage={slide} />
-        {/each}
-        </Carousel> -->
 
         {#key src}
             <img id="heroImage" class="fade-in object-cover w-full h-screen" {src} alt="Hero of staff" />
@@ -257,14 +221,6 @@
         Guyana #1 Events Store - July 26, 2024 - Water Street, Georgetown, Guyana
     </div>
 </div>
-<!-- <div class="next-info-section mt-16 w-full flex items-center justify-center" bind:this={infoText}>
-    {#if y > 2600}
-        <div class="title-text raleway-regular text-[30px] text-[#4876B6] uppercase">
-            100% Guyanese owned business with years of experience in the shipping industry.
-        </div>
-    {/if}
-    
-</div> -->
 <IntersectionObserver element={infoText2} let:intersecting>
 <div class="next-info-section mt-16 w-full flex items-center justify-center" bind:this={infoText2}>
     {#if intersecting}
@@ -350,5 +306,3 @@
     
 </div>
 <Footer />
-
-<svelte:window bind:scrollY={y} bind:outerHeight={pageHeight}/>
