@@ -1,4 +1,5 @@
 <script>
+    import IntersectionObserver from "svelte-intersection-observer";
     import heroImage from "$lib/assets/eventsheader.webp";
     import brandLogo from "$lib/assets/events_logo.png";
     import whitelogo from "$lib/assets/logo.png";
@@ -10,21 +11,28 @@
 
     export let data;
 
-    console.log("Data from server: ", data.eventsList);
-
     let calendar;
 
+    //Current Date and Month
     let selectedDate = (new Date()).toISOString().split('T')[0];
-    console.log("Selected Date at start: ", selectedDate);
     let selectedMonth = selectedDate.substring(0, 7);
-    console.log("Selected Month: ", selectedMonth);
 
+    //List all holidays
     let allHolidaysDates = data.eventsList.map((holiday) => ({
         holiDate: holiday.form.start
     }))
 
     let defaultImage = "/src/lib/assets/landscape-placeholder.svg";
 
+    //Intersection Observer
+    let collectionsBody;
+    let floralHeader;
+    let floralSubheader;
+    let floralImage;
+    let floralCard;
+    let careerHeader;
+
+    //Calendar Variables
     let weekTitle = "Upcoming Events for the Months"
     let eventName = "No Events Today";
     let headerImage = defaultImage;
@@ -35,7 +43,6 @@
     let image5 = defaultImage;
     let image6 = defaultImage;
     let image7 = defaultImage;
-    // let activeEvent = 
 
     let displayEventMonth = [];
     let monthEvents = data.eventsList.filter((holiday) => holiday.form.start.substring(0, 7) == selectedMonth );
@@ -46,16 +53,12 @@
             name: item.form.title,
             date: item.form.start,
         }))
-        // console.log("Selected Month Events: ", monthEvents);
-        // console.log("Displayed Month Events: ", displayEventMonth);
     }
 
     console.log("Day Only: ", selectedDate.substring(5, 7));
 
     let selectedEvent = data.eventsList.find((holiday) => holiday.form.start.substring(5, 7) >= selectedDate.substring(5, 7));
     if (!selectedEvent) {
-        // console.log("Event: ", selectedEvent)
-        // console.log("Date: ", selectedDate)
         console.log("No event found");
     } else {
         // console.log("Selected Event: ", selectedEvent);
@@ -249,8 +252,9 @@
     <div class="collections-header intro-details">
         <div class="intro-text-2 text-center text-[#df839c] text-[40px] font-medium font-['Raleway'] uppercase">OUR COLLECTIONS</div>
     </div>
-    <div class="grid grid-cols-6 gap-3 mt-8">
-        {#if y > 800}
+    <IntersectionObserver element={collectionsBody} let:intersecting>
+    <div class="grid grid-cols-6 gap-3 mt-8 h-[160px]" bind:this={collectionsBody}>
+        {#if intersecting}
         <div class="service w-[235px] h-[77px] bg-white rounded-xl shadow-lg flex flex-row items-center p-5 gap-5">
             <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/kitchenware.webp" alt=""/>
             <div class=" text-black text-[15px] font-normal font-['Raleway'] uppercase tracking-wide">Kitchenware</div>
@@ -302,45 +306,66 @@
         {/if}
         
     </div>
+    </IntersectionObserver>
+    
 </div>
 <div class="parallax-container relative">
     <div class="object-cover w-screen bg-[#FFEDF2] h-[270vh] p-14 flex flex-col items-center">
-        <div class="intro-details ">
-            {#if y > 1200}
-            <div class="intro-text-2 text-center text-[#df839c] text-[45px] font-semibold font-['Raleway'] uppercase tracking-widest mt-10">CUSTOM FLORAL ARRANGEMENTS</div>
+        
+        <div class="intro-details mt-10 h-[55px]" bind:this={floralHeader}>
+        <IntersectionObserver element={floralHeader} let:intersecting>
+            {#if intersecting}
+            <div class="intro-text-2 text-center text-[#df839c] text-[45px] font-semibold font-['Raleway'] uppercase tracking-widest">CUSTOM FLORAL ARRANGEMENTS</div>
             {/if}
+        </IntersectionObserver>
         </div>
-        <div class="intro-details">
-            {#if y > 1200}
-            <div class="intro-text-2 w-[1039px] text-center text-[#df839c] text-[24px] font-light font-['Raleway'] mt-2">We make custom floral arrangement for all your birthdays, graduations, and weddings.</div>
+        <div class="intro-details h-[35px] mt-2" bind:this={floralSubheader}>
+            <IntersectionObserver element={floralSubheader} let:intersecting>
+            {#if intersecting}
+            <div class="intro-text-2 w-[1039px] text-center text-[#df839c] text-[24px] font-light font-['Raleway']">We make custom floral arrangement for all your birthdays, graduations, and weddings.</div>
             {/if}
+            </IntersectionObserver>
+
         </div>
-        {#if y > 1200}
-        <enhanced:img class="service w-[1300px] h-[600px] rounded-2xl mt-20 object-cover" src="$lib/assets/eventsservice.webp" alt=""/>
-        {/if}
-        <div class="grid grid-cols-3 mt-16 gap-10">
-            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay1.webp" alt=""/>
-            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay2.webp" alt=""/>
-            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay3.webp" alt=""/>
-            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay4.webp" alt=""/>
-            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay5.webp" alt=""/>
-            <enhanced:img class="w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay6.webp" alt=""/>
+        <div class="h-[600px] mt-20" bind:this={floralImage}>
+            <IntersectionObserver element={floralImage} let:intersecting>
+            {#if intersecting}
+            <enhanced:img class="service w-[1300px] h-[600px] rounded-2xl object-cover" src="$lib/assets/eventsservice.webp" alt=""/>
+            {/if}
+            </IntersectionObserver>
+        </div>
+        
+        <div class="grid grid-cols-3 mt-16 gap-10" bind:this={floralCard}>
+            <IntersectionObserver element={floralCard} let:intersecting>
+                {#if intersecting}
+                <enhanced:img class="service w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay1.webp" alt=""/>
+                <enhanced:img class="service w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay2.webp" alt=""/>
+                <enhanced:img class="service w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay3.webp" alt=""/>
+                <enhanced:img class="service w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay4.webp" alt=""/>
+                <enhanced:img class="service w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay5.webp" alt=""/>
+                <enhanced:img class="service w-[400px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay6.webp" alt=""/>
+                {/if}
+            </IntersectionObserver>
+            
         </div>
         
     </div>
 </div>
 <div class="introduction-section flex flex-col justify-center">
-    <div class="careers-header my-12 justify-center relative flex h-[143px]">
-        {#if y > 3100}
-            <div class="intro-details">
-                <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#df839c]">
-                    <p>Interested in a career with us?</p>
+    <div class="careers-header my-12 justify-center relative flex h-[143px]" bind:this={careerHeader}>
+        <IntersectionObserver element={careerHeader} let:intersecting>
+            {#if intersecting}
+                <div class="intro-details">
+                    <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#df839c]">
+                        <p>Interested in a career with us?</p>
+                    </div>
+                    <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
+                        <p>Check out our list of job openings and see which is the right path for you.</p>
+                    </div>
                 </div>
-                <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
-                    <p>Check out our list of job openings and see which is the right path for you.</p>
-                </div>
-            </div>
-        {/if}
+            {/if}
+        </IntersectionObserver>
+        
     </div>
     <div class="parallax-container relative">
         <img src={parallaxCareer} alt="" class="object-cover w-screen h-1/2 career-image">
