@@ -325,6 +325,39 @@
     color: rgb(0, 0, 0);
     background: #4876b6a7;
 }
+.fade-in {
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fade-out {
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
 .intro-text {
     font-family: 'SF Pro Display Medium';
@@ -576,6 +609,8 @@ div.service:nth-child(5) {
     animation: linear disappear both;
     animation-timeline: --disappearing-image;
     animation-range: entry 100% cover 99%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 

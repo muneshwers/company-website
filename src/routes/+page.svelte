@@ -20,12 +20,16 @@
     import store2Service from "$lib/assets/event_decoration.webp";
     import truckingService from "$lib/assets/GYS05822.webp";
 	import Navigation from "./Navigation.svelte";
-    import { onMount } from "svelte";
+    import { onDestroy, onMount } from "svelte";
+    import { crossfade, fade } from "svelte/transition";
+    import { quintIn, quintInOut, quintOut } from "svelte/easing";
 	import Footer from "./Footer.svelte";
 	import Jvslide from "./Jvslide.svelte";
     import Herocard from "./Herocard.svelte";
     import Carousel from 'svelte-carousel';
     import upright from "$lib/assets/white.svg";
+    import shippingStaff from "$lib/assets/GYS00823.webp";
+    import storeStaff from "$lib/assets/IMG_4167_MOD.webp";
 
 
     $: jvToggle = false;
@@ -57,6 +61,28 @@
         }
     ]
 
+    let carouselPhotos = [shippingStaff, storeStaff]
+
+    let i = 0;
+
+    function next() {
+        let heroImage = document.getElementById("heroImage")
+        heroImage.classList.add("fade-out")
+        setTimeout(() => {
+            i = (i+1) % carouselPhotos.length;
+        }, 500)
+    }
+
+    let timer;
+    onMount(() => {
+        timer = setInterval(next, 5000);
+    });
+    onDestroy(() => {
+        clearInterval(timer);
+    });
+
+    $: src = carouselPhotos[i];
+
     // const checkScrollPercentage = () => {
     //     if (intersecting) {
     //         console.log("Element is in view")
@@ -76,7 +102,7 @@
 <div class="landing-top relative max-w-[100%]">
     <!-- <div class="scroll-watcher"></div> -->
     <div class="hero-home-image h-screen relative max-w-[100%]">
-        <Carousel
+        <!-- <Carousel
             autoplayDuration={5000}
             autoplay
             infinite={true}
@@ -88,7 +114,11 @@
         {#each heroImages as slide}
             <Herocard slideImage={slide} />
         {/each}
-        </Carousel>
+        </Carousel> -->
+
+        {#key src}
+            <img id="heroImage" class="fade-in object-cover w-full h-screen" {src} alt="Hero of staff" />
+        {/key}
         <!-- <enhanced:img src="$lib/assets/GYS00823.webp" alt="Hero landing page" class="object-cover h-full w-full" /> -->
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
         <div class="hero-text uppercase text-white text-[70px] absolute bottom-20 left-16 w-9/12 leading-[120px] flex flex-col">
