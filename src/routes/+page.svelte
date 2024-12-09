@@ -57,13 +57,13 @@
         }
     ]
 
-    const checkScrollPercentage = () => {
-        if (intersecting) {
-            console.log("Element is in view")
-            return
-        }
-        console.log("Element is not in view");
-    }
+    // const checkScrollPercentage = () => {
+    //     if (intersecting) {
+    //         console.log("Element is in view")
+    //         return
+    //     }
+    //     console.log("Element is not in view");
+    // }
 
     
 
@@ -321,4 +321,4 @@
 </div>
 <Footer />
 
-<svelte:window bind:scrollY={y} bind:outerHeight={pageHeight} on:scroll={()=>checkScrollPercentage()}/>
+<svelte:window bind:scrollY={y} bind:outerHeight={pageHeight}/>
