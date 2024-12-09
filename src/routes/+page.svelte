@@ -25,7 +25,6 @@
     import { quintIn, quintInOut, quintOut } from "svelte/easing";
 	import Footer from "./Footer.svelte";
 	import Jvslide from "./Jvslide.svelte";
-    import Herocard from "./Herocard.svelte";
     import Carousel from 'svelte-carousel';
     import upright from "$lib/assets/white.svg";
     import shippingStaff from "$lib/assets/GYS00823.webp";
