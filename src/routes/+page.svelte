@@ -139,14 +139,14 @@
     </IntersectionObserver>
     
 
-    <div class="services mt-5 w-full h-[140vh] flex flex-col items-center">
+    <div class="services mt-5 w-full h-[140lvh] flex flex-col items-center">
         
          <IntersectionObserver element={bentoContainer} let:intersecting>
             
             <div class="bento-container h-full w-[90vw] flex flex-col gap-6" bind:this={bentoContainer}>
                 {#if intersecting}
                 <div class="bento-row flex gap-6 justify-center">
-                    <div class="service bento-large h-[65vh] bg-slate-400 rounded-md hover:scale-125">
+                    <div class="service bento-large h-[65lvh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/shipping">
                         <div class="w-fit h-full">
                             <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" />
@@ -157,7 +157,7 @@
                         </div>
                     </a>
                     </div>
-                    <div class="service bento-small w-fit h-[65vh] bg-slate-400 rounded-md hover:scale-125">
+                    <div class="service bento-small w-fit h-[65lvh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/travel">
                             <div class="w-fit h-full">
                                 <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
@@ -170,7 +170,7 @@
                     </div>
                 </div>
                 <div class="bento-row flex gap-6 justify-center">
-                    <div class="service bento-small w-[68%] h-[70vh] bg-slate-400 rounded-md hover:scale-125">
+                    <div class="service bento-small w-[68%] h-[70lvh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/events">
                             <div class="w-full h-full">
                                 <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/eventsservice.webp" />
@@ -181,7 +181,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="service bento-large-home w-fit h-[70vh] bg-slate-400 rounded-md hover:scale-125">
+                    <div class="service bento-large-home w-fit h-[70lvh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/stores">
                             <div class="w-fit h-full">
                                 <enhanced:img alt="" class="w-full h-full object-contain" src="$lib/assets/homegoods2.webp" />
