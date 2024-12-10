@@ -3,6 +3,8 @@
 	import Navigation from "../Navigation.svelte";
 	import Footer from "../Footer.svelte";
 
+    let innerWidth;
+
 </script>
 
 <svelte:head>
@@ -24,7 +26,7 @@
             </div>
         </div>
     </div>
-    <Navigation activePage="contact"/>
+    <Navigation activePage="contact" {innerWidth} />
 </div>
 <div class="contact-section flex flex-col justify-center items-center">
     <div class="contact-header my-7 p-10 bg-gray-200 w-[80%] rounded-md">
@@ -78,3 +80,6 @@
   </div>
 </div>
 <Footer />
+
+
+<svelte:window bind:innerWidth />

@@ -5,6 +5,8 @@
     import Footer from "../Footer.svelte";
  
     $: jvToggle = false;
+
+    let innerWidth;
 </script>
 
 <svelte:head>
@@ -25,7 +27,7 @@
             </div>
         </div>
     </div>
-    <Navigation activePage="stores"/>
+    <Navigation activePage="stores" {innerWidth} />
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="intro-header mt-7 justify-center relative">
@@ -45,3 +47,5 @@
     </div>
 </div>
 <Footer />
+
+<svelte:window bind:innerWidth />

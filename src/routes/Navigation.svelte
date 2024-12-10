@@ -4,9 +4,14 @@
     import mllogo from "$lib/assets/logo.png";
 
     export let activePage;
+    export let innerWidth;
 
     $: jvToggle = false;
     $: serviceToggle = false;
+
+    
+
+    console.log(innerWidth);
 
     let activityCheck = {
         home: false,
@@ -41,7 +46,9 @@
     }
 
 </script>
-<div class="navigationBar z-[999] w-[100%] p-5 fixed top-0 left-0 right-0 flex flex-row items-center justify-between">
+
+
+<div class="navigationBar z-[999] w-[100vw] p-5 fixed top-0 left-0 right-0 flex flex-row items-center justify-between">
     <a href="/">
         <div class="company-info flex flex-row items-center gap-2">
             <div class="logo w-16 h-16">
@@ -52,50 +59,55 @@
             </div>
         </div>
     </a>
-    
-    <div class="menu-items flex flex-row text-white gap-6 text-[20px] mr-5">
-        <a href="/">
-            <div class="{activityCheck.home ? "item-active": "item"}">
-                Home
+    {#if innerWidth < 720}
+        <div>Menu</div>
+    {/if}
+    {#if innerWidth >= 720}
+        <div class="menu-items flex flex-row text-white gap-6 text-[20px] mr-5">
+            <a href="/">
+                <div class="{activityCheck.home ? "item-active": "item"}">
+                    Home
+                </div>
+            </a>
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <div class="dropdown relative" on:mouseenter={() => {serviceToggle = true}} on:mouseleave={() => {serviceToggle = false}} on:click={() => serviceToggle=true}>
+                <div class="{activityCheck.services ? "item-active": "item"}">
+                    Services
+                </div>
+                {#if serviceToggle}
+                    <Services />
+                {/if}
+                
             </div>
-        </a>
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div class="dropdown relative" on:mouseenter={() => {serviceToggle = true}} on:mouseleave={() => {serviceToggle = false}} on:click={() => serviceToggle=true}>
-            <div class="{activityCheck.services ? "item-active": "item"}">
-                Services
-            </div>
-            {#if serviceToggle}
-                <Services />
-            {/if}
+            <a href="/careers">
+                <div class="{activityCheck.careers ? "item-active": "item"}">
+                    Careers
+                </div>
+            </a>
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
+                <div class="{activityCheck.jointVentures ? "item-active": "item"}">
+                    Joint Ventures 
+                </div>
+                {#if jvToggle}
+                    <Joint />
+                {/if}
+                
+            </div> -->
+            <a href="/about">
+                <div class="{activityCheck.about ? "item-active": "item"}">
+                    About
+                </div>
+            </a>
             
+            <a href="/contact">
+                <div class="{activityCheck.contact ? "item-active": "item"}">
+                    Contact
+                </div>
+            </a>
         </div>
-        <a href="/careers">
-            <div class="{activityCheck.careers ? "item-active": "item"}">
-                Careers
-            </div>
-        </a>
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
-            <div class="{activityCheck.jointVentures ? "item-active": "item"}">
-                Joint Ventures 
-            </div>
-            {#if jvToggle}
-                <Joint />
-            {/if}
-            
-        </div> -->
-        <a href="/about">
-            <div class="{activityCheck.about ? "item-active": "item"}">
-                About
-            </div>
-        </a>
-        
-        <a href="/contact">
-            <div class="{activityCheck.contact ? "item-active": "item"}">
-                Contact
-            </div>
-        </a>
-    </div>
+    {/if}
+    
 </div>

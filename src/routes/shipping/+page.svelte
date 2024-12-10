@@ -40,6 +40,8 @@
 
     let y;
 
+    let innerWidth;
+
     let introHeader;
     let bentoContainer;
     let aboutShipping;
@@ -79,7 +81,7 @@
             </a>
         </div>
     </div>
-    <Navigation activePage="services"/>
+    <Navigation activePage="services" {innerWidth} />
 </div>
 <div class="introduction-section flex flex-col justify-center items-center">
     <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
@@ -500,4 +502,4 @@
     </div>
 <Footer />
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} bind:innerWidth />

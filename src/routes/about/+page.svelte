@@ -16,6 +16,7 @@
     import boxOpen from "$lib/assets/box-open-solid.svg";
 
     let y;
+    let innerWidth;
 </script>
 
 <svelte:head>
@@ -39,7 +40,7 @@
             </div>
         </div>
     </div>
-    <Navigation activePage="about"/>
+    <Navigation activePage="about" {innerWidth} />
 </div>
 <div class="introduction-section flex flex-col justify-center items-center">
     <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
@@ -262,4 +263,4 @@
 <div class="push-up h-[30vh]"></div>
 <Footer />
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} bind:innerWidth />

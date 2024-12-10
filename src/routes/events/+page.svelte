@@ -12,6 +12,7 @@
     export let data;
 
     let calendar;
+    let innerWidth;
 
     //Current Date and Month
     let selectedDate = (new Date()).toISOString().split('T')[0];
@@ -219,7 +220,7 @@
             </div>
         </div>
     </div>
-    <Navigation activePage="services"/>
+    <Navigation activePage="services" {innerWidth} />
 </div>
 <div class="introduction-section flex flex-col items-center justify-center mb-20">
     <div class="shipping-header my-12 justify-center items-center relative flex flex-col w-[90%]">
@@ -428,4 +429,4 @@
 </div>
 <Footer />
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} bind:innerWidth />

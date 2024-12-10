@@ -13,6 +13,7 @@
     export let data;
 
     let y;
+    let innerWidth;
 
     // console.log("Jobs list on client: ", data.jobsList);
 
@@ -36,7 +37,7 @@
             </div>
         </div>
     </div>
-    <Navigation activePage="careers"/>
+    <Navigation activePage="careers" {innerWidth} />
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="career-header my-10 justify-center relative flex h-[150px]">
@@ -76,5 +77,6 @@
 
 <Footer />
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} bind:innerWidth />
+
 

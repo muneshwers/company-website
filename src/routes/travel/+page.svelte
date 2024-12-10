@@ -18,6 +18,7 @@
 	import Footer from "../Footer.svelte";
 
     let y;
+    let innerWidth;
 
 </script>
 
@@ -42,7 +43,7 @@
             </div>
         </div>
     </div>
-    <Navigation activePage="services"/>
+    <Navigation activePage="services" {innerWidth} />
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="shipping-header mt-5 justify-center relative flex h-[143px]">
@@ -129,4 +130,4 @@
 </div>
 <Footer />
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} bind:innerWidth />
