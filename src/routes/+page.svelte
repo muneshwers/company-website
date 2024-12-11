@@ -29,7 +29,9 @@
     import Carousel from 'svelte-carousel';
     import upright from "$lib/assets/white.svg";
     import shippingStaff from "$lib/assets/GYS00823.webp";
+    import shippingStaffMobile from "$lib/assets/GYS00823_MOD.webp";
     import storeStaff from "$lib/assets/IMG_4167_MOD.webp";
+	import Heroslider from "./Heroslider.svelte";
 
 
     $: jvToggle = false;
@@ -38,7 +40,9 @@
     
     let element;
     let intersecting;
-    
+    let threshold;
+
+    let heroHomeImage;
     let introHeader;
     let bentoContainer;
     let infoText;
@@ -46,29 +50,15 @@
     let jvHeader;
     let careersHeader;
 
+    
+
+    // if(innerWidth <= 1415) {
+    //     shippingStaff = shippingStaffMobile
+    // }
+
     let slideCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    let carouselPhotos = [shippingStaff, storeStaff]
 
-    let i = 0;
-
-    function next() {
-        let heroImage = document.getElementById("heroImage")
-        heroImage.classList.add("fade-out")
-        setTimeout(() => {
-            i = (i+1) % carouselPhotos.length;
-        }, 500)
-    }
-
-    let timer;
-    onMount(() => {
-        timer = setInterval(next, 5000);
-    });
-    onDestroy(() => {
-        clearInterval(timer);
-    });
-
-    $: src = carouselPhotos[i];
     
 
 </script>
@@ -79,70 +69,73 @@
 </svelte:head>
 <div class="landing-top relative max-w-[100%]">
     <!-- <div class="scroll-watcher"></div> -->
-    <div class="hero-home-image h-screen relative max-w-[100%]">
-
-        {#key src}
-            <img id="heroImage" class="fade-in object-cover w-full h-screen" {src} alt="Hero of staff" />
-        {/key}
-        <!-- <enhanced:img src="$lib/assets/GYS00823.webp" alt="Hero landing page" class="object-cover h-full w-full" /> -->
-        <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
-        <div class="hero-text uppercase text-white text-[70px] max-[1415px]:text-[40px] absolute bottom-20 max-[1415px]:bottom-28 left-16 max-[1415px]:left-5 w-9/12 leading-[120px] flex flex-col">
-            <div class="individual-hero-text logo w-36 h-36">
-                <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
+     <IntersectionObserver element={introHeader} let:intersecting>
+        <div class="hero-home-image h-screen relative max-w-[100%]" bind:this={heroHomeImage}>
+            <Heroslider {innerWidth} />
+            <!-- {#key src}
+                <img id="heroImage" class="fade-in object-cover w-full h-screen" {src} alt="Hero of staff" />
+            {/key} -->
+            <!-- <enhanced:img src="$lib/assets/GYS00823.webp" alt="Hero landing page" class="object-cover h-full w-full" /> -->
+            <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
+            <div class="hero-text uppercase text-white text-[70px] max-[1415px]:text-[50px] max-[600px]:text-[40px] absolute bottom-20 max-[1415px]:bottom-28 left-16 max-[1415px]:left-5 w-9/12 leading-[120px] flex flex-col">
+                <div class="individual-hero-text logo w-36 h-36">
+                    <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
+                </div>
+                {#if innerWidth <= 600}
+                    <div>
+                        <p class="individual-hero-text">Solutions</p>
+                    </div>
+                    <div>
+                        <p class="individual-hero-text">streamlined to</p>
+                    </div>
+                    <div>
+                        <p class="individual-hero-text">fit your </p>
+                    </div>
+                    <div>
+                        <p class="individual-hero-text">business and</p>
+                    </div>
+                    <div>
+                        <p class="individual-hero-text">personal</p>
+                    </div>
+                    <div>
+                        <p class="individual-hero-text">needs</p>
+                    </div>
+                {/if}
+                {#if innerWidth > 600}
+                    <div>
+                        <p class="individual-hero-text">Solutions streamlined to fit</p>
+                    </div>
+                    <div>
+                        <p class="individual-hero-text">your business and personal</p>
+                    </div>
+                    <div>
+                        <p class="individual-hero-text">needs</p>
+                    </div>
+                {/if}
             </div>
-            {#if innerWidth <= 1415}
-                <div>
-                    <p class="individual-hero-text">Solutions</p>
+            <a href="#scroll-down">
+                <div class="scroll-down flex flex-col absolute bottom-10 right-14 max-[1415px]:right-10 animate-bounce" id="scroll-down">
+                    <div class="w-[58px] h-[58px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="w-[58px] h-[58px] mt-[-30px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="w-[58px] h-[58px]  mt-[-30px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
+                        </svg>
+                    </div>
                 </div>
-                <div>
-                    <p class="individual-hero-text">streamlined to</p>
-                </div>
-                <div>
-                    <p class="individual-hero-text">fit your </p>
-                </div>
-                <div>
-                    <p class="individual-hero-text">business and</p>
-                </div>
-                <div>
-                    <p class="individual-hero-text">personal</p>
-                </div>
-                <div>
-                    <p class="individual-hero-text">needs</p>
-                </div>
-            {/if}
-            {#if innerWidth > 1415}
-                <div>
-                    <p class="individual-hero-text">Solutions streamlined to fit</p>
-                </div>
-                <div>
-                    <p class="individual-hero-text">your business and personal</p>
-                </div>
-                <div>
-                    <p class="individual-hero-text">needs</p>
-                </div>
-            {/if}
+            </a>
+            
         </div>
-        <a href="#scroll-down">
-            <div class="scroll-down flex flex-col absolute bottom-10 right-14 max-[1415px]:right-10 animate-bounce" id="scroll-down">
-                <div class="w-[58px] h-[58px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
-                    </svg>
-                </div>
-                <div class="w-[58px] h-[58px] mt-[-30px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
-                    </svg>
-                </div>
-                <div class="w-[58px] h-[58px]  mt-[-30px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
-                    </svg>
-                </div>
-            </div>
-        </a>
-        
-    </div>
+    </IntersectionObserver>
+    
     <Navigation activePage="home" {innerWidth}/>
 </div>
 <div class="introduction-section flex flex-col justify-center bg-[#CEE9FD] bg-gradient-to-b from-white via-[#CEE9FD]/10 to-white" id="introduction">
@@ -150,12 +143,17 @@
         <div class="intro-header mt-5 justify-center relative flex h-[143px]" bind:this={introHeader}>
             {#if intersecting}
                 <div class="intro-details">
-                    {#if innerWidth <= 1415}
+                    {#if innerWidth <= 600}
                         <div class="intro-text mt-8 text-center uppercase flex flex-col max-[1415px]:text-[25px] text-[#4876B6]">
                             <p>Discover which service is</p>
                         </div>
                         <div class="intro-text mt-2 text-center uppercase flex flex-col max-[1415px]:text-[25px] text-[#4876B6]">
                             <p>right for you</p>
+                        </div>
+                    {/if}
+                    {#if innerWidth > 600 && innerWidth <= 1415}
+                        <div class="intro-text mt-8 text-center uppercase flex flex-col text-[40px] text-[#4876B6]">
+                            <p>Discover which service is right for you</p>
                         </div>
                     {/if}
                     {#if innerWidth > 1415}
@@ -309,7 +307,7 @@
 
 <div class="joint-ventures-section h-1/2 flex flex-col items-center">
     <IntersectionObserver element={jvHeader} let:intersecting>
-    <div class="jv-heading flex flex-row items-left my-24 w-10/12">
+    <div class="jv-heading flex flex-row items-left my-24 max-[1415px]:mt-10 max-[1415px]:mb-5 w-10/12">
         <div class="jv-right flex flex-row" bind:this={jvHeader}>
             {#if intersecting}
                 <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px] max-[1415px]:text-[24px]">
@@ -339,12 +337,12 @@
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <IntersectionObserver element={careersHeader} let:intersecting>
-    <div class="careers-header my-5 justify-center relative flex h-[200px] max-[1415px]:h-[100px]" bind:this={careersHeader}>
+    <div class="careers-header my-5 max-[1415px]:my-2 justify-center relative flex h-[200px] max-[1415px]:h-[100px]" bind:this={careersHeader}>
         {#if intersecting}
             <div class="intro-details">
                 {#if innerWidth <= 1415}
-                    <div class="intro-text mt-2 text-center uppercase flex flex-col text-[22px] text-[#4876B6]">
-                        <p>Interested in a career with us?</p>
+                    <div class="intro-text mt-2 text-center uppercase flex flex-col text-[28px] text-[#4876B6] items-center">
+                        <p>Interested in a career?</p>
                     </div>
                     <div class="intro-subtext text-center text-[#3D3938] text-[16px] raleway-light flex flex-col items-center">
                         <p>Check out our list of job openings and see which</p>

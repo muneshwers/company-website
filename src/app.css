@@ -326,6 +326,11 @@
     background: #4876b6a7;
 }
 .fade-in {
+    -webkit-animation-name: fadeInOpacity;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 0.5;
+    -webkit-animation-fill-mode: forwards;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
@@ -334,6 +339,11 @@
 }
 
 .fade-out {
+    -webkit-animation-name: fadeOutOpacity;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 0.5;
+    -webkit-animation-fill-mode: forwards;
 	animation-name: fadeOutOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
@@ -350,6 +360,16 @@
 	}
 }
 
+@-webkit-keyframes fadeInOpacity {
+     0% {
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }
+
 @keyframes fadeOutOpacity {
 	0% {
 		opacity: 1;
@@ -358,6 +378,16 @@
 		opacity: 0;
 	}
 }
+
+@-webkit-keyframes fadeOutOpacity {
+     0% {
+         opacity: 1;
+     }
+
+     100% {
+         opacity: 0;
+     }
+ }
 
 .intro-text {
     font-family: 'SF Pro Display Medium';
@@ -602,8 +632,12 @@ div.service:nth-child(5) {
     -webkit-animation: slide-up-text 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
     animation: slide-up-text 0.75s cubic-bezier(0.65, .01, 0.35, 1) both;
 }
-
+/* 
 .hero-home-image {
+    opacity: 1;
+    -webkit-animation: linear disappear both;
+    -webkit-animation-timeline: --disappearing-image;
+    -webkit-animation-range: entry 100% cover 99%;
     view-timeline-name: --disappearing-image;
     view-timeline-axis: block;
     animation: linear disappear both;
@@ -611,7 +645,7 @@ div.service:nth-child(5) {
     animation-range: entry 100% cover 99%;
     overflow: hidden;
     white-space: nowrap;
-}
+} */
 
 
 .wharf-image {
@@ -919,6 +953,24 @@ div.service:nth-child(5) {
     }
 }
 
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes disappear {
     0% {
         opacity: 1;
@@ -988,7 +1040,9 @@ div.service:nth-child(5) {
 }
 
 .navigationBar {
+    -webkit-animation: scroll-watcher ease-in;
     animation: scroll-watcher ease-in;
+    -webkit-animation-timeline: scroll();
     animation-timeline: scroll();
 }
 
@@ -1025,6 +1079,20 @@ div.service:nth-child(5) {
     2% { background-color: rgba(61, 57, 56, 0.98); }
     100% { background-color: rgba(61, 57, 56, 0.98); }
 }
+
+@-webkit-keyframes scroll-watcher {
+     0% {
+         background-color: rgba(0, 10, 145, 0);
+     }
+
+     2% {
+         background-color: rgba(61, 57, 56, 0.98);
+     }
+
+     100% {
+         background-color: rgba(61, 57, 56, 0.98);
+     }
+ }
 
 .shipping-cursor {
     cursor: url("./Shipping.png"), auto;

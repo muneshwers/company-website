@@ -2,12 +2,16 @@
 	import Joint from "./Joint.svelte";
     import Services from "./Services.svelte";
     import mllogo from "$lib/assets/logo.png";
+    import burgerMenu from "$lib/assets/burger-menu.svg";
+    import {fade, slide} from "svelte/transition";
 
     export let activePage;
     export let innerWidth;
 
     $: jvToggle = false;
     $: serviceToggle = false;
+
+    $: sideBarToggle = false;
 
     
 
@@ -45,13 +49,21 @@
         activityCheck.contact = true;
     }
 
+    const toggle = () => {
+        if (!sideBarToggle) {
+            sideBarToggle = true;
+            return
+        }
+        sideBarToggle = false;
+    }
+
 </script>
 
 
-<div class="navigationBar z-[999] w-[100vw] p-5 fixed top-0 left-0 right-0 flex flex-row items-center justify-between">
+<div class="navigationBar z-[90] w-[100vw] p-5 fixed top-0 left-0 right-0 flex flex-row items-center justify-between">
     <a href="/">
         <div class="company-info flex flex-row items-center gap-2">
-            <div class="logo w-16 h-16">
+            <div class="logo w-10 h-10">
                 <img src={mllogo} alt="Muneshwers Limited Logo" class="h-full w-full">
             </div>
             <div class="company-name the-seasons-light text-white text-[24px]">
@@ -60,7 +72,84 @@
         </div>
     </a>
     {#if innerWidth < 720}
-        <div>Menu</div>
+        <a href="#" on:click={() => toggle()}>
+            <img src={burgerMenu} alt="menu icon" class="h-6 w-6">
+        </a>
+        {#if sideBarToggle}
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+             <!-- svelte-ignore a11y-no-static-element-interactions -->
+            <div class="sideBarBackground fixed right-0 top-0 bg-transparent w-full h-[100svh]" on:click={() => sideBarToggle=false}></div>
+            <div class="sideBarMenu fixed p-10 rounded-md right-1 top-2 bg-[#3d3938fa] w-72 h-[100svh] z-[91]" transition:slide={{duration: 500, axis: 'x'}} >
+                <div class="menu-items flex flex-col text-white gap-6 text-[20px] mr-5" transition:fade={{duration: 300}}>
+                    <a href="/">
+                        <div class="{activityCheck.home ? "item-active": "item"}">
+                            Home
+                        </div>
+                    </a>
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <div class="dropdown relative" on:mouseenter={() => {serviceToggle = true}} on:mouseleave={() => {serviceToggle = false}} on:click={() => serviceToggle=true}>
+                        <div class="{activityCheck.services ? "item-active": "item"}">
+                            Services
+                        </div>
+                        {#if serviceToggle}
+                            <div class="js-list p-5 opacity-75 mr-10 w-[190px] rounded-lg text-white text-sm poppins-regular flex flex-col">
+                                <!--right-[380px]-->
+                                <a href="/shipping">
+                                    <div class="item-option p-1 cursor-pointer mt-1">
+                                        Shipping
+                                    </div>
+                                </a>
+                                <a href="/travel">
+                                    <div class="item-option p-1 cursor-pointer mt-3 ">
+                                        Travel
+                                    </div>
+                                </a>
+                                <a href="/events">
+                                    <div class="item-option p-1 cursor-pointer mt-3 ">
+                                        Events Store
+                                    </div>
+                                </a>
+                                <a href="/stores">
+                                    <div class="item-option p-1 cursor-pointer mt-3 ">
+                                        Home Goods Store
+                                    </div>
+                                </a>
+                            </div>
+                        {/if}
+                        
+                    </div>
+                    <a href="/careers">
+                        <div class="{activityCheck.careers ? "item-active": "item"}">
+                            Careers
+                        </div>
+                    </a>
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <!-- <div class="dropdown relative" on:mouseenter={() => {jvToggle = true}} on:mouseleave={() => {jvToggle = false}} on:click={() => jvToggle=true}>
+                        <div class="{activityCheck.jointVentures ? "item-active": "item"}">
+                            Joint Ventures 
+                        </div>
+                        {#if jvToggle}
+                            <Joint />
+                        {/if}
+                        
+                    </div> -->
+                    <a href="/about">
+                        <div class="{activityCheck.about ? "item-active": "item"}">
+                            About
+                        </div>
+                    </a>
+                    
+                    <a href="/contact">
+                        <div class="{activityCheck.contact ? "item-active": "item"}">
+                            Contact
+                        </div>
+                    </a>
+        </div>
+            </div>
+        {/if}
+        
     {/if}
     {#if innerWidth >= 720}
         <div class="menu-items flex flex-row text-white gap-6 text-[20px] mr-5">
