@@ -61,18 +61,18 @@
     <div class="hero-image h-[100vh] relative">
         <enhanced:img src="$lib/assets/shipping2.webp" alt="Hero landing page" class="object-cover h-full w-full" />
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
-        <div class="hero-text uppercase text-white absolute bottom-48  left-16 w-9/12 leading-[120px] flex flex-col">
+        <div class="hero-text uppercase text-white absolute bottom-48 text-[60px] max-[1415px]:text-[50px] max-[600px]:text-[40px] left-16 max-[1415px]:left-5 w-9/12 leading-[120px] flex flex-col">
             <div class="individual-hero-text logo w-36 h-36">
                 <img src={mllogo} alt="Muneshwers Limited Logo" class="h-full w-full">
             </div>
             <div>
-                <p class="individual-hero-text text-[60px]">Muneshwers</p>
+                <p class="individual-hero-text">Muneshwers</p>
             </div>
             <div>
-                <p class="individual-hero-text text-[60px]">Shipping Service</p>
+                <p class="individual-hero-text">Shipping Service</p>
             </div>
         </div>
-        <div class="buttons flex flex-row gap-4 h-[8vh] absolute bottom-20 left-16 text-white w-[50%]">
+        <div class="buttons flex flex-row gap-4 h-[8vh] absolute bottom-20 left-16 max-[600px]:left-5 text-white w-[50%]">
             <!-- <a href="/contact">
                 <button class="bg-[#4876B6] border-2 border-[#4876B6] text-white w-[170px] h-[50px] uppercase hover:scale-105 py-2 text-center text-md flex items-center justify-center hover:scale hover:border-[#4876B6]  hover:duration-150 font-bold">Request a Quote</button>
             </a> -->
@@ -167,14 +167,14 @@
     
  
 </div>
-<div class="entrance h-[70vh] my-36 flex justify-center items-center gap-10" bind:this={aboutShipping}>
+<div class="entrance h-[70vh] my-36 flex flex-row max-[600px]:flex-col justify-center items-center gap-10" bind:this={aboutShipping}>
 <IntersectionObserver element={aboutShipping} let:intersecting>
     {#if intersecting}
-    <div class="col article w-[30%]">
-        <div class="article-title text-4xl sf_pro_bold uppercase">
+    <div class="col article w-[30%] max-[600px]:w-[90%]">
+        <div class="article-title text-4xl max-[600px]:text-2xl sf_pro_bold uppercase">
             Connecting Guyana to the world through Shipping
         </div>
-        <div class="article-details mt-5 raleway-regular text-lg">
+        <div class="article-details mt-5 raleway-regular text-lg max-[600px]:text-normal">
             <p>
                 Muneshwers Limited is one of the largest ports in Guyana with over 40% market share in container traffic. First concrete pier in Guyana.
             </p>
@@ -183,7 +183,7 @@
             </p>
         </div>
     </div>
-    <div class="col article-image w-[45%]">
+    <div class="col article-image w-[45%] max-[600px]:w-[90%]">
         <enhanced:img src="$lib/assets/DJI_0398.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
     </div>
     {/if}
@@ -195,28 +195,27 @@
     <div class="intro-details relative mb-16 h-[50px]" bind:this={meetHeader}>
         <IntersectionObserver element={meetHeader} let:intersecting>
         {#if intersecting}
-        <div class="intro-text uppercase flex flex-col items-center text-[50px] text-[#4876B6]">
+        <div class="intro-text uppercase flex flex-col items-center text-[50px] max-[600px]:text-[35px] text-[#4876B6]">
             <p class="text-center w-full tracking-[3.20px] poppins-regular">Meet The Team</p>
         </div>
         {/if} 
         </IntersectionObserver>
-        
     </div>
     
-    <div class="level-0 grid grid-cols-3 gap-8 h-[648px]" bind:this={meetSeniors}>
+    <div class="level-0 grid grid-cols-3 max-[600px]:grid-cols-1 gap-8 max-[600px]:gap-0 h-[648px] max-[600px]:h-[1944px] max-[600px]:ml-4" bind:this={meetSeniors}>
         <IntersectionObserver element={meetSeniors} let:intersecting>
         {#if intersecting}
-        <div class="service team-member w-[450px] h-[648px]">
+        <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px]">
             <img class="w-[450px] h-[515px] object-cover" src={mrrobin} alt="Mr Robin Muneshwer" />
             <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Robin Muneshwer</div>
             <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">Executive Director</div>
         </div>
-        <div class="service team-member w-[450px] h-[648px]">
+        <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px]">
             <img class="w-[450px] h-[515px] object-cover" src={mrc} alt="Mr Chandradatt Chintamani" />
             <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Chandradatt Chintamani</div>
             <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">General Manager</div>
         </div>
-        <div class="service team-member w-[450px] h-[648px] ">
+        <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px] ">
             <img class="w-[450px] h-[515px] object-cover" src={rajiv} alt="Mr Rajiv Muneshwer" />
             <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Rajiv Muneshwer</div>
             <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">Chief Coordinator</div>
@@ -226,33 +225,33 @@
         
     </div>
     
-    <div class="level-1 grid grid-cols-5 gap-5 my-32 h-[430px]" bind:this={meetJuniors}>
+    <div class="level-1 grid grid-cols-5 max-[600px]:grid-cols-2 gap-2 max-[600px]:gap-1 my-32 h-[430px] max-[600px]:h-[990px] max-[600px]:w-[95%] max-[600px]:ml-[0px]" bind:this={meetJuniors}>
         <IntersectionObserver element={meetJuniors} let:intersecting>
             {#if intersecting}
-            <div class="service team-member w-[280px] h-[430px]">
-                <img class="w-[280px] h-[307px] object-cover" src={chester} alt="Marvin Chester"/>
-                <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Marvin Chester</div>
-                <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Operations Manager</div>
+            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+                <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={chester} alt="Marvin Chester"/>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Marvin Chester</div>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Operations Manager</div>
             </div>
-            <div class="service team-member w-[280px] h-[430px]">
-                <img class="w-[280px] h-[307px] object-cover" src={gaj} alt="Gajendranath Singh"/>
-                <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Gajendranath Singh</div>
-                <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Management Specialist/Equipment Manager</div>
+            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+                <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={gaj} alt="Gajendranath Singh"/>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Gajendranath Singh</div>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Management Specialist/Equipment Manager</div>
             </div>
-            <div class="service team-member w-[280px] h-[430px]">
-                <img class="w-[280px] h-[307px] object-cover" src={chabi} alt="Chabiraj Ramcharran"/>
-                <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Chabiraj Ramcharran</div>
-                <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Licensed Customs Brokerage Manager</div>
+            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+                <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={chabi} alt="Chabiraj Ramcharran"/>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Chabiraj Ramcharran</div>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Licensed Customs Brokerage Manager</div>
             </div>
-            <div class="service team-member w-[280px] h-[430px]">
-                <img class="w-[280px] h-[307px] object-cover" src={shane} alt="Shane Rai"/>
-                <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Shane Rai</div>
-                <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Business Development Manager</div>
+            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+                <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={shane} alt="Shane Rai"/>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Shane Rai</div>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Business Development Manager</div>
             </div>
-            <div class="service team-member w-[280px] h-[430px]">
-                <img class="w-[280px] h-[307px] object-cover" src={romona} alt="Romona Arthur"/>
-                <div class="w-[280px] h-[54px] mt-6 text-black text-[27px] font-normal font-['Raleway']">Romona Arthur</div>
-                <div class="w-[280px] h-[33px] text-[#717171] text-normal font-light font-['Raleway']">Logistics Manager</div>
+            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+                <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={romona} alt="Romona Arthur"/>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[40px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Romona Arthur</div>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Logistics Manager</div>
             </div>
             {/if}
         </IntersectionObserver>
@@ -264,7 +263,7 @@
         
         <IntersectionObserver element={facilitiesHeader} let:intersecting>
             {#if intersecting}
-            <div class="intro-text uppercase flex flex-col items-center text-[50px] text-[#4876B6]">
+            <div class="intro-text uppercase flex flex-col items-center text-[50px] max-[600px]:text-[35px] text-[#4876B6]">
                 <p class="text-center w-full tracking-[3.20px] poppins-regular">Our Facilities</p>
             </div>
             {/if}
@@ -272,10 +271,10 @@
         
     </div>
     
-    <div class="grid grid-cols-2 gap-8 h-[770px]" bind:this={facilitiesContainer}>
+    <div class="grid grid-cols-2 max-[600px]:grid-cols-1 gap-8 h-[770px] max-[600px]:h-[1400px]" bind:this={facilitiesContainer}>
         <IntersectionObserver element={facilitiesContainer} let:intersecting>
             {#if intersecting}
-            <div class="w-[700px] h-[770px]">
+            <div class="w-[700px] max-[600px]:w-[370px] h-[770px] max-[600px]:h-[370px]">
                 <div class="service facility-image cursor-pointer relative">
                     <img class="w-[700px] h-[450px] object-cover" src={houston} alt="Houston Terminal at YY" />
                     <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#000000b0] opacity-0 hover:opacity-100 hover:duration-[300ms]">
@@ -297,8 +296,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] font-normal font-['Raleway']">Houston Inland Terminal</div>
-                <div class="facility-details flex flex-row gap-5">
+                <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] max-[600px]:text-[30px] font-normal font-['Raleway']">Houston Inland Terminal</div>
+                <div class="facility-details flex flex-row max-[600px]:flex-col gap-5 max-[600px]:gap-3">
                     <div class="acres flex flex-row items-center gap-3">
                         <img src={size} class="w-[15px] h-[15px]" alt="size icon" />
                         <div class="poppins-medium text-[14px] text-[#3f3f3f]">22 Acres</div>
@@ -322,7 +321,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[700px] h-[770px]">
+            <div class="w-[700px] max-[600px]:w-[370px] h-[770px] max-[600px]:h-[370px]">
                 <div class="service facility-image cursor-pointer relative">
                     <img class="w-[700px] h-[450px] object-cover" src={waterstreet} alt="Houston Terminal at YY" />
                     <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#000000b0] opacity-0 hover:opacity-100 hover:duration-[300ms]">
@@ -352,8 +351,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] font-normal font-['Raleway']">Muneshwers Pier Water Street</div>
-                <div class="facility-details flex flex-row gap-8 font-semibold">
+                <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] max-[600px]:text-[25px] font-normal font-['Raleway']">Muneshwers Pier Water Street</div>
+                <div class="facility-details flex flex-row max-[600px]:flex-col gap-8 max-[600px]:gap-3 font-semibold">
                     <div class="acres flex flex-row items-center gap-3">
                         <img src={size} class="w-[15px] h-[15px]" alt="size icon" />
                         <div class="poppins-medium text-[14px] text-[#3f3f3f]">5 Acres</div>
@@ -386,115 +385,115 @@
 <div class="customers flex flex-col justify-center items-center w-[100%]">
         <div class="intro-details  relative ">
             {#if y > 3200}
-            <div class="intro-text my-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
+            <div class="intro-text my-8 text-center uppercase flex flex-col text-[50px] max-[600px]:text-[35px] text-[#4876B6]">
                 <p>Our Local Clients</p>
             </div>
             {/if}
         </div>
-        <div class="customer-list grid grid-cols-5 gap-4 items-center justify-center mb-5">
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+        <div class="customer-list grid grid-cols-5 max-[600px]:grid-cols-3 gap-4 max-[600px]:gap-3 items-center justify-center mb-5">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/ramps.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/gafoors.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/banks.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/pascargo.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/massy.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/unicomer.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/suri.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/ansa.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/laparkan.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/torginol.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/toucan.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/dsl.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/nhl.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/desinco.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
                     <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/dsingh.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex col-span-5">
-                <div class="w-[220px] h-[220px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
-                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/saipem.webp" alt="client-logo"/>
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[10px] shadow justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] max-[600px]:w-[80px] h-[120px] max-[600px]:h-[80px] object-contain" src="$lib/assets/saipem.webp" alt="client-logo"/>
                 </div>
             </div>
         </div>
         <div class="intro-details  relative">
             {#if y > 3200}
-            <div class="intro-text my-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
+            <div class="intro-text my-8 text-center uppercase flex flex-col text-[50px] max-[600px]:text-[30px] text-[#4876B6]">
                 <p>Our Shipping Clients</p>
             </div>
             {/if}
         </div>
         <div class="client-list grid grid-cols-3 gap-4 items-center justify-center mb-16">
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
-                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/tropical.webp" alt="client-logo"/>
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] max-[600px]:w-[80px] h-[120px] max-[600px]:h-[80px] object-contain" src="$lib/assets/tropical.webp" alt="client-logo"/>
                 </div>
             </div>
             
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
-                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/maersk.webp" alt="client-logo"/>
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] max-[600px]:w-[80px] h-[120px] max-[600px]:h-[80px] object-contain" src="$lib/assets/maersk.webp" alt="client-logo"/>
                 </div>
             </div>
-            <div class="w-[220px] h-[220px] justify-center items-center inline-flex">
-                <div class="w-[220px] h-[220px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
-                    <enhanced:img class="w-[120px] h-[120px] object-contain" src="$lib/assets/msc.webp" alt="client-logo"/>
+            <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] justify-center items-center inline-flex">
+                <div class="w-[220px] max-[600px]:w-[100px] h-[220px] max-[600px]:h-[100px] bg-white rounded-[200px] shadow-xl justify-center items-center inline-flex">
+                    <enhanced:img class="w-[120px] max-[600px]:w-[80px] h-[120px] max-[600px]:h-[80px] object-contain" src="$lib/assets/msc.webp" alt="client-logo"/>
                 </div>
             </div>
         </div>

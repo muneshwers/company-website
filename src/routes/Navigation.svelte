@@ -57,6 +57,14 @@
         sideBarToggle = false;
     }
 
+    const serviceToggleFunc = () => {
+        if (!serviceToggle) {
+            serviceToggle = true;
+            return
+        }
+        serviceToggle = false;
+    }
+
 </script>
 
 
@@ -82,14 +90,14 @@
             <div class="sideBarMenu fixed p-10 rounded-md right-1 top-2 bg-[#3d3938fa] w-72 h-[100svh] z-[91]" transition:slide={{duration: 500, axis: 'x'}} >
                 <div class="menu-items flex flex-col text-white gap-6 text-[20px] mr-5" transition:fade={{duration: 300}}>
                     <a href="/">
-                        <div class="{activityCheck.home ? "item-active": "item"}">
+                        <div class="{activityCheck.home ? "item-active": "item-mobile"}">
                             Home
                         </div>
                     </a>
                     <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <div class="dropdown relative" on:mouseenter={() => {serviceToggle = true}} on:mouseleave={() => {serviceToggle = false}} on:click={() => serviceToggle=true}>
-                        <div class="{activityCheck.services ? "item-active": "item"}">
+                    <div class="dropdown relative" on:mouseenter={() => {serviceToggle = true}} on:mouseleave={() => {serviceToggle = false}} on:click={() => serviceToggleFunc()}>
+                        <div class="{activityCheck.services ? "item-active": "item-mobile"}">
                             Services
                         </div>
                         {#if serviceToggle}
@@ -120,7 +128,7 @@
                         
                     </div>
                     <a href="/careers">
-                        <div class="{activityCheck.careers ? "item-active": "item"}">
+                        <div class="{activityCheck.careers ? "item-active": "item-mobile"}">
                             Careers
                         </div>
                     </a>
@@ -136,13 +144,13 @@
                         
                     </div> -->
                     <a href="/about">
-                        <div class="{activityCheck.about ? "item-active": "item"}">
+                        <div class="{activityCheck.about ? "item-active": "item-mobile"}">
                             About
                         </div>
                     </a>
                     
                     <a href="/contact">
-                        <div class="{activityCheck.contact ? "item-active": "item"}">
+                        <div class="{activityCheck.contact ? "item-active": "item-mobile"}">
                             Contact
                         </div>
                     </a>
