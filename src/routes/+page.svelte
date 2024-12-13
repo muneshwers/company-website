@@ -37,6 +37,9 @@
     $: jvToggle = false;
     $: serviceToggle = false;
     let innerWidth;
+    let innerHeight;
+    let y;
+    let opacity;
     
     let element;
     let intersecting;
@@ -56,7 +59,33 @@
     //     shippingStaff = shippingStaffMobile
     // }
 
+    let heroHomeImageCont;
+    let elementDistance;
+
     let slideCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    
+    onMount(() => {
+        heroHomeImageCont = document.getElementById("heroHomeImage");
+        elementDistance = Math.round((y/innerHeight)*100)/100;
+        opacity = 1 - elementDistance;
+        console.log("Element Distance: ", elementDistance);
+        console.log("Threshold: ", threshold)
+    })
+
+    const windowHeightCheck = () => {
+        elementDistance = Math.round((y/innerHeight)*100)/100;
+        if(elementDistance < 0.5) {
+            heroHomeImageCont.style.opacity = 1;
+            return;
+        }
+        opacity = 1 - (elementDistance + 0.05);
+        heroHomeImageCont.style.opacity = opacity;
+        console.log("Actual Opacity: ", opacity);
+        console.log("Threshold: ", threshold);
+    }
+
+    
 
 
     
@@ -70,12 +99,9 @@
 <div class="landing-top relative max-w-[100%]">
     <!-- <div class="scroll-watcher"></div> -->
      <IntersectionObserver element={introHeader} let:intersecting>
-        <div class="hero-home-image h-screen relative max-w-[100%]" bind:this={heroHomeImage}>
+        <div id="heroHomeImage" class="hero-home-image h-screen relative max-w-[100%] opacity-[{opacity}]" bind:this={heroHomeImage}>
+ 
             <Heroslider {innerWidth} />
-            <!-- {#key src}
-                <img id="heroImage" class="fade-in object-cover w-full h-screen" {src} alt="Hero of staff" />
-            {/key} -->
-            <!-- <enhanced:img src="$lib/assets/GYS00823.webp" alt="Hero landing page" class="object-cover h-full w-full" /> -->
             <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
             <div class="hero-text uppercase text-white text-[70px] max-[1415px]:text-[50px] max-[600px]:text-[40px] absolute bottom-20 max-[1415px]:bottom-28 left-16 max-[1415px]:left-5 w-9/12 leading-[120px] flex flex-col">
                 <div class="individual-hero-text logo w-36 h-36">
@@ -173,7 +199,7 @@
 
     <div class="services mt-5 w-full h-[140lvh] max-[1415px]:h-[100vh] flex flex-col items-center">
         
-         <IntersectionObserver element={bentoContainer} let:intersecting>
+         <IntersectionObserver element={bentoContainer} let:intersecting threshold={threshold}>
             
             <div class="bento-container h-full w-[90vw] max-[1415px]:w-[95vw] flex flex-col gap-6 max-[1415px]:gap-3" bind:this={bentoContainer}>
                 {#if intersecting}
@@ -395,4 +421,4 @@
 </div>
 <Footer />
 
-<svelte:window bind:innerWidth />
+<svelte:window bind:innerWidth bind:innerHeight bind:scrollY={y} on:scroll={() => windowHeightCheck()}/>

@@ -174,7 +174,7 @@
         <div class="article-title text-4xl max-[600px]:text-2xl sf_pro_bold uppercase">
             Connecting Guyana to the world through Shipping
         </div>
-        <div class="article-details mt-5 raleway-regular text-lg max-[600px]:text-normal">
+        <div class="article-details mt-5 raleway-regular text-lg max-[600px]:text-base">
             <p>
                 Muneshwers Limited is one of the largest ports in Guyana with over 40% market share in container traffic. First concrete pier in Guyana.
             </p>
