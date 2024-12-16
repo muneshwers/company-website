@@ -49,7 +49,9 @@
     let introHeader;
     let bentoContainer;
     let infoText;
+    let infoImage;
     let infoText2;
+    let infoImage2;
     let jvHeader;
     let careersHeader;
 
@@ -61,6 +63,8 @@
 
     let heroHomeImageCont;
     let elementDistance;
+    let trackY = [0,0];
+    let elementVisibility = 0;
 
     let slideCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -70,19 +74,36 @@
         elementDistance = Math.round((y/innerHeight)*100)/100;
         opacity = 1 - elementDistance;
         console.log("Element Distance: ", elementDistance);
-        console.log("Threshold: ", threshold)
+        trackY[0] = y;
     })
 
     const windowHeightCheck = () => {
         elementDistance = Math.round((y/innerHeight)*100)/100;
-        if(elementDistance < 0.5) {
+        if(elementDistance > 0.5) {
+            opacity = 1 - (elementDistance + 0.05);
+            heroHomeImageCont.style.opacity = opacity;
+            // console.log("Actual Opacity: ", opacity);
+        } else {
             heroHomeImageCont.style.opacity = 1;
-            return;
         }
-        opacity = 1 - (elementDistance + 0.05);
-        heroHomeImageCont.style.opacity = opacity;
-        console.log("Actual Opacity: ", opacity);
-        console.log("Threshold: ", threshold);
+        
+        // trackY[1] = y;
+        // if (intersecting) {
+        //      if (trackY[1] > trackY[0]) {
+        //         elementVisibility = elementVisibility + (trackY[1] - trackY[0]);
+        //         console.log("Going down");
+        //         console.log("Current Position: ",elementVisibility, ". Screen Height: ", innerHeight);
+        //     } else {
+        //         elementVisibility = elementVisibility - (trackY[0] - trackY[1]);
+        //         console.log("Going up");
+        //         console.log("Current Position: ",elementVisibility, ". Screen Height: ", innerHeight);
+        //     }
+        // }
+       
+        // console.log("Y was: ", trackY[0], " and is now: ", trackY[1]);
+       
+        trackY[0] = y;
+        
     }
 
     
@@ -199,7 +220,7 @@
 
     <div class="services mt-5 w-full h-[140lvh] max-[1415px]:h-[100vh] flex flex-col items-center">
         
-         <IntersectionObserver element={bentoContainer} let:intersecting threshold={threshold}>
+         <IntersectionObserver element={bentoContainer} let:intersecting>
             
             <div class="bento-container h-full w-[90vw] max-[1415px]:w-[95vw] flex flex-col gap-6 max-[1415px]:gap-3" bind:this={bentoContainer}>
                 {#if intersecting}
@@ -262,7 +283,7 @@
     </div>
     
 </div>
-<IntersectionObserver element={infoText} let:intersecting>
+<IntersectionObserver element={infoText} bind:intersecting>
 <div class="next-info-section mt-16 w-full flex items-center justify-center" bind:this={infoText}>
     {#if intersecting}
         {#if innerWidth <= 1415}
@@ -284,7 +305,9 @@
 <div class="parallax-container relative">
     
     {#if innerWidth <= 1415}
-        <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen h-screen wharf-image" />
+        <IntersectionObserver element={infoImage} bind:intersecting>
+            <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen h-screen wharf-image" />
+        </IntersectionObserver>
         <div class="wharf-text uppercase text-white text-[28px] absolute bottom-32 left-16 max-[1415px]:left-10">
             Guyana #1 Events Store - July 26, 2024 - Water Street, Georgetown, Guyana
         </div>

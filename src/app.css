@@ -1037,8 +1037,8 @@ div.service:nth-child(5) {
 }
 
 .construction-icon-box {
-    width: 125px;
-    height: 125px;
+    /* width: 125px;
+    height: 125px; */
     flex-shrink: 0;
     border-radius: var(--radius-sm, 4px);
     background: var(--surface-surface-brand-secondary, #EDEBE5);
