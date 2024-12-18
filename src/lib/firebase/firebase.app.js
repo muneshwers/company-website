@@ -38,13 +38,13 @@ const serviceCheck = {
 
 let firebaseApp;
 
-console.log("Apps: ", getApps())
+// console.log("Apps: ", getApps())
 
-if (!getApps().length) {
+// if (!getApps().length) {
   firebaseApp = initializeApp({
     credential: cert(serviceCheck)
-  }, "company-app");
-}
+  }, "company-app-5");
+// }
 
 
 const firestore = getFirestore(firebaseApp, "company-website");

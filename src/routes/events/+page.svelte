@@ -257,18 +257,18 @@
             </div>
             
             <div class="event-image h-[60vh]">
-                <img src={headerImage} class="w-[820px] max-[600px]:w-[100%] h-[100%] object-cover max-[600px]:object-contain" alt="main" />
+                <img src={headerImage} class="w-[820px] max-[600px]:w-[100%] h-[100%] object-cover max-[600px]:object-cover rounded-lg" alt="main" />
             </div>
         </div>
     </div>
     <div class="event-products grid grid-cols-7 max-[600px]:grid-cols-2 gap-4 justify-center">
-        <img class="w-40 h-40 object-cover" src={image1} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={image2} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={image3} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={image4} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={image5} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={image6} alt="featured products"/>
-        <img class="w-40 h-40 object-cover" src={image7} alt="featured products"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image1} alt="featured products"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image2} alt="featured products"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image3} alt="featured products"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image4} alt="featured products"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image5} alt="featured products"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image6} alt="featured products"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image7} alt="featured products"/>
     </div>
 </div>
 <div class="collections w-full flex flex-col items-center my-12">
@@ -367,7 +367,7 @@
         <div class="h-[600px] mt-20 max-[600px]:w-[98vw]" bind:this={floralImage}>
             <IntersectionObserver element={floralImage} let:intersecting>
             {#if intersecting}
-            <enhanced:img class="service w-[1300px] max-[600px]:w-[98%] h-[600px] rounded-2xl object-cover" src="$lib/assets/eventsservice.webp" alt=""/>
+            <enhanced:img class="service w-[1300px] max-[600px]:w-[98%] h-[600px] max-[600px]:ml-auto max-[600px]:mr-auto rounded-2xl object-cover" src="$lib/assets/eventsservice.webp" alt=""/>
             {/if}
             </IntersectionObserver>
         </div>
