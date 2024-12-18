@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { initializeApp, cert } from "firebase-admin/app";
+import { initializeApp, cert, getApps } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 import {
 	FIREBASE_TYPE, 
@@ -33,9 +33,16 @@ const serviceCheck = {
   universe_domain: UNIVERSAL_DOMAIN
 }
 
-const firebaseApp = initializeApp({
-  credential: cert(serviceCheck)
-}, 'company-website-3');
+let firebaseApp;
+
+console.log("Apps: ", getApps())
+
+if (!getApps().length) {
+  firebaseApp = initializeApp({
+    credential: cert(serviceCheck)
+  }, "company-app");
+}
+
 
 const firestore = getFirestore(firebaseApp, "company-website");
 
