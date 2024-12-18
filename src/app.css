@@ -15,13 +15,13 @@
 @font-face {
     font-family: 'The Seasons';
     font-style: normal;
-    src: url('/fonts/The\ Seasons\ Regular.ttf');
+    src: url('/fonts/TheSeasonsRegular.ttf');
 }
 
 @font-face {
     font-family: 'The Seasons Italic';
     font-style: normal;
-    src: url('/fonts/The\ Seasons\ Italic.ttf');
+    src: url('/fonts/TheSeasonsItalic.ttf');
 }
 
 @font-face {
