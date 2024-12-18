@@ -80,7 +80,10 @@
         </div>
     </a>
     {#if innerWidth < 720}
-        <a href="#" on:click={() => toggle()}>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <a on:click={() => toggle()}>
             <img src={burgerMenu} alt="menu icon" class="h-6 w-6">
         </a>
         {#if sideBarToggle}
