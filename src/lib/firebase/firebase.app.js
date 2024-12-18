@@ -1,4 +1,7 @@
+/* eslint-disable no-unused-vars */
 // @ts-nocheck
+import dotenv from 'dotenv';
+dotenv.config();
 import { initializeApp, cert, getApps } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 import {
@@ -20,17 +23,17 @@ import {
 // const service = serviceAccount;
 
 const serviceCheck = {
-  type: FIREBASE_TYPE,
-  project_id: PROJECT_ID,
-  private_key_id: PRIVATE_KEY_ID,
-  private_key: PRIVATE_KEY.replace(/\\n/gm, "\n"),
-  client_email: CLIENT_EMAIL,
-  client_id: CLIENT_ID,
-  auth_uri: AUTH_URI,
-  token_uri: TOKEN_URI,
-  auth_provider_x509_cert_url: AUTH_PROVIDER_CERT_URL,
-  client_x509_cert_url: CLIENT_CERT_URL,
-  universe_domain: UNIVERSAL_DOMAIN
+  type: process.env.FIREBASE_TYPE,
+  project_id: process.env.PROJECT_ID,
+  private_key_id: process.env.PRIVATE_KEY_ID,
+  private_key: process.env.PRIVATE_KEY.replace(/\\n/gm, "\n"),
+  client_email: process.env.CLIENT_EMAIL,
+  client_id: process.env.CLIENT_ID,
+  auth_uri: process.env.AUTH_URI,
+  token_uri: process.env.TOKEN_URI,
+  auth_provider_x509_cert_url: process.env.AUTH_PROVIDER_CERT_URL,
+  client_x509_cert_url: process.env.CLIENT_CERT_URL,
+  universe_domain: process.env.UNIVERSAL_DOMAIN
 }
 
 let firebaseApp;
