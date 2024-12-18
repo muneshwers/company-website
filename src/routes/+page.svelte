@@ -161,7 +161,7 @@
                 {/if}
             </div>
             <a href="#scroll-down">
-                <div class="scroll-down flex flex-col absolute bottom-10 right-14 max-[1415px]:right-10 animate-bounce" id="scroll-down">
+                <div class="scroll-down flex flex-col absolute bottom-10 right-14 max-[600px]:right-10 animate-bounce" id="scroll-down">
                     <div class="w-[58px] h-[58px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 16.9167L29 31.4167L43.5 16.9167L48.3334 21.75L29 41.0833L9.66669 21.75L14.5 16.9167Z" fill="white"/>
@@ -191,15 +191,15 @@
             {#if intersecting}
                 <div class="intro-details">
                     {#if innerWidth <= 600}
-                        <div class="intro-text mt-8 text-center uppercase flex flex-col max-[1415px]:text-[25px] text-[#4876B6]">
+                        <div class="intro-text mt-8 text-center uppercase flex flex-col max-[600px]:text-[25px] text-[#4876B6]">
                             <p>Discover which service is</p>
                         </div>
-                        <div class="intro-text mt-2 text-center uppercase flex flex-col max-[1415px]:text-[25px] text-[#4876B6]">
+                        <div class="intro-text mt-2 text-center uppercase flex flex-col max-[600px]:text-[25px] text-[#4876B6]">
                             <p>right for you</p>
                         </div>
                     {/if}
                     {#if innerWidth > 600 && innerWidth <= 1415}
-                        <div class="intro-text mt-8 text-center uppercase flex flex-col text-[40px] text-[#4876B6]">
+                        <div class="intro-text mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
                             <p>Discover which service is right for you</p>
                         </div>
                     {/if}
@@ -218,14 +218,14 @@
     </IntersectionObserver>
     
 
-    <div class="services mt-5 w-full h-[140lvh] max-[1415px]:h-[100vh] flex flex-col items-center">
+    <div class="services mt-5 w-full h-[140lvh] max-[600px]:h-[100vh] flex flex-col items-center">
         
          <IntersectionObserver element={bentoContainer} let:intersecting>
             
-            <div class="bento-container h-full w-[90vw] max-[1415px]:w-[95vw] flex flex-col gap-6 max-[1415px]:gap-3" bind:this={bentoContainer}>
+            <div class="bento-container h-full w-[90vw] max-[600px]:w-[95vw] flex flex-col gap-6 max-[600px]:gap-3" bind:this={bentoContainer}>
                 {#if intersecting}
-                <div class="bento-row flex gap-6 max-[1415px]:gap-3 justify-center">
-                    <div class="service bento-large h-[65lvh] max-[1415px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
+                <div class="bento-row flex gap-6 max-[600px]:gap-3 justify-center">
+                    <div class="service bento-large h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/shipping">
                         <div class="w-fit h-full">
                             <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" />
@@ -236,7 +236,7 @@
                         </div>
                     </a>
                     </div>
-                    <div class="service bento-small w-fit h-[65lvh] max-[1415px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
+                    <div class="service bento-small w-fit h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/travel">
                             <div class="w-fit h-full">
                                 <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
@@ -248,8 +248,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="bento-row flex gap-6 max-[1415px]:gap-3 justify-center">
-                    <div class="service bento-small w-[68%] h-[70lvh] max-[1415px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
+                <div class="bento-row flex gap-6 max-[600px]:gap-3 justify-center">
+                    <div class="service bento-small w-[68%] h-[70lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/events">
                             <div class="w-full h-full">
                                 <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/eventsservice.webp" />
@@ -260,10 +260,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="service bento-large-home w-fit h-[70lvh] max-[1415px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
+                    <div class="service bento-large-home w-fit h-[70lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/stores">
                             <div class="w-fit h-full">
-                                <enhanced:img alt="" class="w-full h-full object-contain max-[1415px]:object-cover" src="$lib/assets/homegoods2.webp" />
+                                <enhanced:img alt="" class="w-full h-full object-contain max-[600px]:object-cover" src="$lib/assets/homegoods2.webp" />
                                 <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                     <div>Home Goods</div>
                                     <img src={upright} alt="" width="25px" height="25px">
@@ -356,10 +356,10 @@
 
 <div class="joint-ventures-section h-1/2 flex flex-col items-center">
     <IntersectionObserver element={jvHeader} let:intersecting>
-    <div class="jv-heading flex flex-row items-left my-24 max-[1415px]:mt-10 max-[1415px]:mb-5 w-10/12">
+    <div class="jv-heading flex flex-row items-left my-24 max-[600px]:mt-10 max-[600px]:mb-5 w-10/12">
         <div class="jv-right flex flex-row" bind:this={jvHeader}>
             {#if intersecting}
-                <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px] max-[1415px]:text-[24px]">
+                <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px] max-[600px]:text-[24px]">
                     <p>Explore our joint ventures</p>
                 </div>
             {/if}
@@ -386,10 +386,10 @@
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <IntersectionObserver element={careersHeader} let:intersecting>
-    <div class="careers-header my-5 max-[1415px]:my-2 justify-center relative flex h-[200px] max-[1415px]:h-[100px]" bind:this={careersHeader}>
+    <div class="careers-header my-5 max-[600px]:my-2 justify-center relative flex h-[200px] max-[600px]:h-[100px]" bind:this={careersHeader}>
         {#if intersecting}
             <div class="intro-details">
-                {#if innerWidth <= 1415}
+                {#if innerWidth <= 600}
                     <div class="intro-text mt-2 text-center uppercase flex flex-col text-[28px] text-[#4876B6] items-center">
                         <p>Interested in a career?</p>
                     </div>
@@ -400,11 +400,11 @@
                         <p> is the right path for you.</p>
                     </div>
                 {/if}
-                {#if innerWidth > 1415}
-                    <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] md:max-[1415px]:text-[24px] text-[#4876B6]">
+                {#if innerWidth > 600}
+                    <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] md:max-[600px]:text-[24px] text-[#4876B6]">
                         <p>Interested in a career with us?</p>
                     </div>
-                    <div class="intro-subtext text-center text-[#3D3938] text-[28px] max-[1415px]:text-[16px] raleway-light flex flex-col items-center">
+                    <div class="intro-subtext text-center text-[#3D3938] text-[28px] max-[600px]:text-[16px] raleway-light flex flex-col items-center">
                         <p>Check out our list of job openings and see which is the right path for you.</p>
                     </div>
                 {/if}
@@ -415,17 +415,17 @@
     </IntersectionObserver>
     
     <div class="parallax-container relative">
-        {#if innerWidth <= 1415}
+        {#if innerWidth <= 600}
             <img src={parallaxCareerMobile} alt="" class="object-cover w-screen h-[70vh] career-image">
         {/if}
-        {#if innerWidth > 1415}
+        {#if innerWidth > 600}
             <img src={parallaxCareer} alt="" class="object-cover w-screen career-image">
         {/if}
         
-        <div class="services flex flex-row justify-between items-center mb-10 absolute bottom-96 max-[1415px]:bottom-32 right-28">
+        <div class="services flex flex-row justify-between items-center mb-10 absolute bottom-96 max-[600px]:bottom-32 right-28">
             <div class="services-link relative cursor-pointer text-white">
                 <a href="/careers">
-                    <div class="services-text flex flex-row items-center text-5xl max-[1415px]:text-[30px] gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
+                    <div class="services-text flex flex-row items-center text-5xl max-[600px]:text-[30px] gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
                     Explore Careers
                     <span>
                         <svg class="h-8 w-8" width="53" height="38" viewBox="0 0 53 38" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
@@ -436,7 +436,7 @@
                     </span>
                 </div>
                 </a>
-                <div class="w-[500px] max-[1415px]:w-[230px] h-px left-[3px] top-[71px] absolute bg-white ml-32"></div>
+                <div class="w-[500px] max-[600px]:w-[230px] h-px left-[3px] top-[71px] absolute bg-white ml-32"></div>
             </div>
         </div>
     </div>

@@ -33,12 +33,12 @@
     $: mobileSrc = carouselPhotosMobile[i];
 </script>
 <div>
-    {#if innerWidth <= 1415}
+    {#if innerWidth <= 600}
         {#key mobileSrc}
             <img id="heroImage" class="fade-in opacity-100 object-cover w-full h-screen" src={mobileSrc} alt="Hero of staff" />
         {/key}
     {/if}
-    {#if innerWidth > 1415}
+    {#if innerWidth > 600}
         {#key src}
             <img id="heroImage" class="fade-in object-cover w-full h-screen" {src} alt="Hero of staff" />
         {/key}
