@@ -1029,13 +1029,6 @@ div.service:nth-child(5) {
     box-shadow: 0px 4px 4px 0px rgba(115, 115, 115, 0.25);
 }
 
-.intro-icon {
-    width: 84px;
-    height: 84px;
-    flex-shrink: 0;
-    background: url("./world.png") rgba(255, 255, 255, 0) 0% / cover no-repeat;
-}
-
 .construction-icon-box {
     /* width: 125px;
     height: 125px; */
@@ -1124,10 +1117,6 @@ div.service:nth-child(5) {
          background-color: rgba(61, 57, 56, 0.98);
      }
  }
-
-.shipping-cursor {
-    cursor: url("./Shipping.png"), auto;
-}
 
 /* .jv-container {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><rect x="0" y="0" width="30" height="30" fill="red" /></svg>'), auto;
