@@ -35,7 +35,7 @@ const serviceCheck = {
 
 const firebaseApp = initializeApp({
   credential: cert(serviceCheck)
-}, "company-website-2");
+});
 
 const firestore = getFirestore(firebaseApp, "company-website");
 
