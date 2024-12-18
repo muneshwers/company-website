@@ -118,7 +118,7 @@
     <IntersectionObserver element={firstStore} let:intersecting>
         {#if intersecting}
             <div class="slide slide-right h-[50vh] max-[600px]:h-[65vh] mb-36 max-[600px]:mb-5 flex max-[600px]:flex-col justify-center items-center gap-36 max-[600px]:gap-9">
-                <div class="col article-image-section w-[20%] max-[600px]:w-[90%] h-[100%] max-[600px]:h-[60px] flex flex-col items-center relative justify-center">
+                <div class="col article-image-section w-[20%] max-[600px]:w-[90%] h-[100%] max-[600px]:h-[60vh] flex flex-col items-center relative justify-center">
                     <div class="article-image-header ">
                         <enhanced:img src="$lib/assets/admin-ajax.webp" alt="building 1" class="object-cover h-[300px] max-[600px]:h-[200px] w-[250px] rounded-lg absolute top-0 left-0" />
                     </div>
@@ -130,8 +130,8 @@
                         <p>store on Water Street</p>
                     </div>
                 </div>
-                <div class="col article-section w-[30%] max-[600px]:w-[80%]">
-                    <div class="article-details mt-5 max-[1415px]:m-24 max-[600px]:mt-1 raleway-regular text-lg max-[600px]:text-sm">
+                <div class="col article-section w-[30%] max-[1415px]:w-[80%]">
+                    <div class="article-details mt-5 max-[1415px]:mt-24 max-[600px]:mt-1 raleway-regular text-lg max-[600px]:text-sm">
                         <p>
                             In the 1950s and 60s, ML established itself as one of the leading importers, wholesalers and retailers of builders’ hardware in the country. 
                             But during the 70s, the country took a downward turn and the company suspended trading activities in 1978; only returning to Guyana when the economy opened up once more in the 1990s.
