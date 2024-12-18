@@ -1,5 +1,8 @@
+/* eslint-disable no-unused-vars */
 // @ts-nocheck
 // eslint-disable-next-line no-unused-vars
+import { EMAIL_USER, EMAIL_PASS } from '$env/static/private';
+// import { EMAIL_USER } from '$env/static/public';
 import { json } from '@sveltejs/kit';
 import nodemailer from 'nodemailer';
 
@@ -10,8 +13,8 @@ const transporter = nodemailer.createTransport({
 	port: 465,
 	secure: true,
 	auth: {
-		user: 'programmer3@muneshwers.store',
-		pass: 'vgobabvqrkdjlqlf'
+		user: EMAIL_USER,
+		pass: EMAIL_PASS
 	}
 });
 
