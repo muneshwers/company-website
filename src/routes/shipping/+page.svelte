@@ -236,7 +236,7 @@
             <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={gaj} alt="Gajendranath Singh"/>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Gajendranath Singh</div>
-                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Management Specialist/Equipment Manager</div>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Facilities Manager</div>
             </div>
             <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={chabi} alt="Chabiraj Ramcharran"/>
@@ -280,7 +280,7 @@
                     <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#000000b0] opacity-0 hover:opacity-100 hover:duration-[300ms]">
                         <div class="w-[179px] h-9 mb-5 text-white text-[32px] font-medium font-['Raleway']">Services</div>
                         <div class="w-[100%] h-[3px] bg-white"></div>
-                        <div class="grid grid-cols-3 mt-5 gap-4 items-center justify-center">
+                        <div class="grid grid-cols-3 max-[600px]:grid-cols-2 mt-5 gap-4 items-center justify-center">
                             <div class="service-option flex flex-row items-center gap-3">
                                 <img src={container} class="w-[20px] h-[20px]" alt="size icon" />
                                 <div class=" text-white text-sm font-light font-['Poppins']">Inland container facility</div>
@@ -327,7 +327,7 @@
                     <div class="cover w-full h-full z-30 absolute p-10 top-0 right-0 bg-[#000000b0] opacity-0 hover:opacity-100 hover:duration-[300ms]">
                         <div class="w-[179px] h-9 mb-5 text-white text-[32px] font-medium font-['Raleway']">Services</div>
                         <div class="w-[100%] h-[3px] bg-white"></div>
-                        <div class="grid grid-cols-3 mt-5 gap-4">
+                        <div class="grid grid-cols-3 max-[600px]:grid-cols-2 mt-5 gap-4">
                             <div class="service-option flex flex-row items-center gap-3">
                                 <img src={port} class="w-[20px] h-[20px]" alt="size icon" />
                                 <div class=" text-white text-sm font-light font-['Poppins']">Terminal operations</div>

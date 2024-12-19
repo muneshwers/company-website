@@ -86,21 +86,6 @@
         } else {
             heroHomeImageCont.style.opacity = 1;
         }
-        
-        // trackY[1] = y;
-        // if (intersecting) {
-        //      if (trackY[1] > trackY[0]) {
-        //         elementVisibility = elementVisibility + (trackY[1] - trackY[0]);
-        //         console.log("Going down");
-        //         console.log("Current Position: ",elementVisibility, ". Screen Height: ", innerHeight);
-        //     } else {
-        //         elementVisibility = elementVisibility - (trackY[0] - trackY[1]);
-        //         console.log("Going up");
-        //         console.log("Current Position: ",elementVisibility, ". Screen Height: ", innerHeight);
-        //     }
-        // }
-       
-        // console.log("Y was: ", trackY[0], " and is now: ", trackY[1]);
        
         trackY[0] = y;
         
@@ -128,36 +113,43 @@
                 <div class="individual-hero-text logo w-36 h-36">
                     <img src={brandLogo} alt="Muneshwers Limited Logo" class="h-full w-full">
                 </div>
-                {#if innerWidth <= 600}
+                {#if innerWidth <= 1415}
                     <div>
-                        <p class="individual-hero-text">Solutions</p>
+                        <p class="individual-hero-text">Rooted in</p>
                     </div>
                     <div>
-                        <p class="individual-hero-text">streamlined to</p>
+                        <p class="individual-hero-text">Family</p>
                     </div>
                     <div>
-                        <p class="individual-hero-text">fit your </p>
+                        <p class="individual-hero-text">Grown with</p>
                     </div>
                     <div>
-                        <p class="individual-hero-text">business and</p>
+                        <p class="individual-hero-text">Excellence</p>
+                    </div>
+                    <div class="mt-5">
+                        <p class="individual-hero-text text-[20px]">Generations of quality,</p>
                     </div>
                     <div>
-                        <p class="individual-hero-text">personal</p>
+                        <p class="individual-hero-text text-[20px]">crafted for</p>
                     </div>
                     <div>
-                        <p class="individual-hero-text">needs</p>
+                        <p class="individual-hero-text text-[20px]">Guyana’s future</p>
                     </div>
                 {/if}
-                {#if innerWidth > 600}
+                {#if innerWidth > 1415}
                     <div>
-                        <p class="individual-hero-text">Solutions streamlined to fit</p>
+                        <p class="individual-hero-text">Rooted in </p>
                     </div>
                     <div>
-                        <p class="individual-hero-text">your business and personal</p>
+                        <p class="individual-hero-text">Family, Grown with </p>
                     </div>
                     <div>
-                        <p class="individual-hero-text">needs</p>
+                        <p class="individual-hero-text">Excellence</p>
                     </div>
+                    <div class=" mt-5">
+                        <p class="individual-hero-text text-[30px]">Generations of quality, crafted for Guyana’s future</p>
+                    </div>
+                    
                 {/if}
             </div>
             <a href="#scroll-down">
@@ -192,20 +184,17 @@
                 <div class="intro-details">
                     {#if innerWidth <= 600}
                         <div class="intro-text mt-8 text-center uppercase flex flex-col max-[600px]:text-[25px] text-[#4876B6]">
-                            <p>Discover which service is</p>
-                        </div>
-                        <div class="intro-text mt-2 text-center uppercase flex flex-col max-[600px]:text-[25px] text-[#4876B6]">
-                            <p>right for you</p>
+                            <p>Explore Our Services</p>
                         </div>
                     {/if}
                     {#if innerWidth > 600 && innerWidth <= 1415}
                         <div class="intro-text mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
-                            <p>Discover which service is right for you</p>
+                            <p>Explore Our Services</p>
                         </div>
                     {/if}
                     {#if innerWidth > 1415}
-                        <div class="intro-text mt-8 text-center uppercase flex flex-col text-[60px] text-[#4876B6]">
-                            <p>Discover which service is right for you</p>
+                        <div class="intro-text mt-8 text-center uppercase flex flex-col text-[70px] text-[#4876B6]">
+                            <p>Explore Our Services</p>
                         </div>
                     {/if}
                     
@@ -239,7 +228,7 @@
                     <div class="service bento-small w-fit h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/travel">
                             <div class="w-fit h-full">
-                                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelimage.webp" />
+                                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelserviceNew.webp" />
                                 <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                     <div>Travel</div>
                                     <img src={upright} alt="" width="25px" height="25px">
@@ -284,16 +273,22 @@
     
 </div>
 <IntersectionObserver element={infoText} bind:intersecting>
-<div class="next-info-section mt-16 w-full flex items-center justify-center" bind:this={infoText}>
+<div class="next-info-section mt-16 ml-60 max-[600px]:ml-3 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText}>
     {#if intersecting}
         {#if innerWidth <= 1415}
-            <div class="title-text raleway-regular text-[24px] text-[#4876B6] uppercase p-5">
-                Our Events and Home Goods stores has everything you need.
+            <div class="title-text raleway-bold text-[75px] text-[#4876B6] tracking-wide uppercase">
+                Leaders
+            </div>
+            <div class="title-text raleway-medium text-[20px] text-[#4876B6] uppercase">
+                in retail
             </div>
         {/if}
         {#if innerWidth > 1415}
-            <div class="title-text raleway-regular text-[37px] text-[#4876B6] uppercase">
-                Our Events and Home Goods stores has everything you need.
+            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase">
+                Leaders
+            </div>
+            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase">
+                in retail
             </div>
         {/if}
         
@@ -320,19 +315,25 @@
     {/if}
 </div>
 <IntersectionObserver element={infoText2} let:intersecting>
-<div class="next-info-section mt-16 w-full flex items-center justify-center" bind:this={infoText2}>
+<div class="next-info-section mt-16 ml-60 max-[600px]:ml-3 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText2}>
     {#if intersecting}
         <!-- <div class="title-text raleway-regular text-[30px] text-[#4876B6] uppercase">
             100% Guyanese owned business with years of experience in the shipping industry.
         </div> -->
         {#if innerWidth <= 1415}
-            <div class="title-text raleway-regular text-[24px] text-[#4876B6] uppercase p-5">
-                100% Guyanese owned business with years of experience in the shipping industry.
+            <div class="title-text raleway-bold text-[70px] text-[#4876B6] tracking-wide uppercase">
+                Decades
+            </div>
+            <div class="title-text raleway-medium text-[20px] text-[#4876B6] uppercase">
+                in shipping
             </div>
         {/if}
         {#if innerWidth > 1415}
-            <div class="title-text raleway-regular text-[30px] text-[#4876B6] uppercase">
-                100% Guyanese owned business with years of experience in the shipping industry.
+            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase">
+                Decades
+            </div>
+            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase">
+                in shipping
             </div>
         {/if}
     {/if}

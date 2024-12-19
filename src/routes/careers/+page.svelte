@@ -27,7 +27,7 @@
     <div class="hero-image h-[50vh] relative">
         <img src={heroImage} alt="Hero landing page" class="object-cover h-full w-full">
         <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
-        <div class="hero-text uppercase text-white text-[70px] max-[600px]:text-[50px] max-[600px]:text-[40px] absolute bottom-20 left-16 max-[600px]:left-5 w-9/12 leading-[120px] flex flex-col">
+        <div class="hero-text uppercase text-white text-[70px] max-[1415px]:text-[50px] max-[600px]:text-[40px] absolute bottom-20 left-16 max-[600px]:left-5 w-9/12 leading-[120px] flex flex-col">
             
             <div class="flex flex-row items-center gap-6">
                 <div class="individual-hero-text logo w-36 max-[600px]:w-24 h-36 max-[600px]:h-24">

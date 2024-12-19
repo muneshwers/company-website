@@ -307,7 +307,7 @@
                 <div class="article-details raleway-regular text-lg max-[600px]:text-sm">
                     <p>
                         But, because of great partnerships, a bigger facility, and experience, GYSBI, a Muneshwers Joint Venture into Oil and Gas, 
-                        emerged with a 20 year contract from Exxon. And now it stands as the largest local oil and gas company in Guyana.
+                        emerged with a 11 year contract from Exxon. And now it stands as the largest local oil and gas company in Guyana.
                     </p>
                     <p class="mt-5">
                         Presently, Muneshwers Limited is #1 in Oil and Gas, Events, Travel Service and is the fastest growing company in shipping. 
