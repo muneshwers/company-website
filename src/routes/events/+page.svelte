@@ -333,7 +333,7 @@
     
 </div>
 <div class="parallax-container relative">
-    <div class="object-cover w-screen bg-[#FFEDF2] h-[270vh] p-14 flex flex-col items-center">
+    <div class="object-cover w-screen bg-[#FFEDF2] h-[200vh] p-14 flex flex-col items-center">
         
         <div class="intro-details mt-10 max-[600px]:mt-5 h-[65px]" bind:this={floralHeader}>
         <IntersectionObserver element={floralHeader} let:intersecting>
