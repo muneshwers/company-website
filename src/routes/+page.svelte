@@ -228,7 +228,7 @@
                     <div class="service bento-small w-fit h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/travel">
                             <div class="w-fit h-full">
-                                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/travelserviceNew.webp" />
+                                <enhanced:img alt="" class="w-full h-full object-cover scale-100" src="$lib/assets/travelserviceNew.webp" />
                                 <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                     <div>Travel</div>
                                     <img src={upright} alt="" width="25px" height="25px">
