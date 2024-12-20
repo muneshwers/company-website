@@ -273,21 +273,21 @@
     
 </div>
 <IntersectionObserver element={infoText} bind:intersecting>
-<div class="next-info-section mt-16 ml-60 max-[600px]:ml-3 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText}>
+<div class="next-info-section mt-16 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText}>
     {#if intersecting}
         {#if innerWidth <= 1415}
-            <div class="title-text raleway-bold text-[75px] text-[#4876B6] tracking-wide uppercase">
+            <div class="title-text raleway-bold text-[75px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
                 Leaders
             </div>
-            <div class="title-text raleway-medium text-[20px] text-[#4876B6] uppercase">
+            <div class="title-text raleway-medium text-[20px] text-[#4876B6] uppercase ml-60 max-[600px]:ml-3">
                 in retail
             </div>
         {/if}
         {#if innerWidth > 1415}
-            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase">
+            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
                 Leaders
             </div>
-            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase">
+            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-60 max-[600px]:ml-3">
                 in retail
             </div>
         {/if}
@@ -315,24 +315,21 @@
     {/if}
 </div>
 <IntersectionObserver element={infoText2} let:intersecting>
-<div class="next-info-section mt-16 ml-60 max-[600px]:ml-3 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText2}>
+<div class="next-info-section mt-16 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText2}>
     {#if intersecting}
-        <!-- <div class="title-text raleway-regular text-[30px] text-[#4876B6] uppercase">
-            100% Guyanese owned business with years of experience in the shipping industry.
-        </div> -->
         {#if innerWidth <= 1415}
-            <div class="title-text raleway-bold text-[70px] text-[#4876B6] tracking-wide uppercase">
+            <div class="title-text raleway-bold text-[70px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
                 Decades
             </div>
-            <div class="title-text raleway-medium text-[20px] text-[#4876B6] uppercase">
+            <div class="title-text raleway-medium text-[20px] text-[#4876B6] uppercase ml-60 max-[600px]:ml-3">
                 in shipping
             </div>
         {/if}
         {#if innerWidth > 1415}
-            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase">
+            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
                 Decades
             </div>
-            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase">
+            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-60 max-[600px]:ml-3">
                 in shipping
             </div>
         {/if}
