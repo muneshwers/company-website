@@ -15,7 +15,7 @@
     import parallaxCareerMobile from "$lib/assets/GYS05909_MOD.webp";
     import staffOne from "$lib/assets/worker1.webp";
     import staffTwo from "$lib/assets/worker2.webp";
-    import shippingService from "$lib/assets/shippingimage.webp"
+    import shippingService from "$lib/assets/shippingimage.webp";
     import travelService from "$lib/assets/travelimage.webp";
     import store1Service from "$lib/assets/homegoods2.webp";
     import store2Service from "$lib/assets/event_decoration.webp";
@@ -46,6 +46,7 @@
     let elementDistance;
     let trackY = [0,0]; //Only for home
     let firstPageLoad = true;
+    let firstScrollCounter = 0;
     
     let element;
     let intersecting;
@@ -76,28 +77,41 @@
         heroHomeImageCont = document.getElementById("heroHomeImage");
         navigationBar = document.getElementById("navigationBar");
         elementDistance = 0;
+        firstPageLoad = true;
         opacity = 1;
         trackY[0] = y;
         windowHeightCheck();
     })
 
+    //Checks window height and changes opacity of header and hero image on scroll
     const windowHeightCheck = () => {
         elementDistance = Math.round((y/innerHeight)*100)/100;
-        console.log("Element distance at scroll: ", elementDistance);
-        if(elementDistance > 0.005 && firstPageLoad) {
-            // firstPageLoad = false;
+
+        if ((firstPageLoad && elementDistance > 0.005) || firstScrollCounter < 2) {
+            firstPageLoad = false;
+            firstScrollCounter++;
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0)";
+            heroHomeImageCont.style.opacity = 1;
+            return;
+        }
+
+        if(elementDistance > 0.005) {
+            firstScrollCounter++;
             navVisibility = 1 - (elementDistance + 0.5);
             navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0.98)";
-        } else {
+        } else if(elementDistance < 0.005) {
+            firstScrollCounter++;
             navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0)";
         }
 
-        if(elementDistance > 0.5 && firstPageLoad) {
+        if(elementDistance > 0.5) {
             firstPageLoad = false;
+            firstScrollCounter++;
             opacity = 1 - (elementDistance + 0.05);
             heroHomeImageCont.style.opacity = opacity;
             // console.log("Actual Opacity: ", opacity);
         } else {
+            firstScrollCounter++;
             heroHomeImageCont.style.opacity = 1;
         }
        
