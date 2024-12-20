@@ -167,7 +167,7 @@
     
  
 </div>
-<div class="entrance h-[70vh] my-36 flex flex-row max-[600px]:flex-col justify-center items-center gap-10" bind:this={aboutShipping}>
+<div class="entrance h-[70vh] max-[600px]:w-[100vw] my-36 flex flex-row max-[600px]:flex-col justify-center items-center gap-10" bind:this={aboutShipping}>
 <IntersectionObserver element={aboutShipping} let:intersecting>
     {#if intersecting}
     <div class="col article w-[30%] max-[600px]:w-[90%]">
@@ -228,27 +228,27 @@
     <div class="level-1 grid grid-cols-5 max-[600px]:grid-cols-2 gap-2 max-[600px]:gap-1 my-32 h-[430px] max-[600px]:h-[990px] max-[600px]:w-[95%] max-[600px]:ml-[0px]" bind:this={meetJuniors}>
         <IntersectionObserver element={meetJuniors} let:intersecting>
             {#if intersecting}
-            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+            <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={chester} alt="Marvin Chester"/>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Marvin Chester</div>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Operations Manager</div>
             </div>
-            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+            <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={gaj} alt="Gajendranath Singh"/>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Gajendranath Singh</div>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Facilities Manager</div>
             </div>
-            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+            <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={chabi} alt="Chabiraj Ramcharran"/>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Chabiraj Ramcharran</div>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Licensed Customs Brokerage Manager</div>
             </div>
-            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+            <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={shane} alt="Shane Rai"/>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Shane Rai</div>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Business Development Manager</div>
             </div>
-            <div class="service team-member w-[280px] h-[430px] max-[600px]:h-[380px]">
+            <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={romona} alt="Romona Arthur"/>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[40px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Romona Arthur</div>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Logistics Manager</div>
@@ -296,7 +296,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] max-[600px]:text-[30px] font-normal font-['Raleway']">Houston Inland Terminal</div>
+                <div class="w-[583px] max-[600px]:w-[95%] h-[70px] mt-5 text-black text-[40px] max-[600px]:text-[30px] font-normal font-['Raleway']">Houston Inland Terminal</div>
                 <div class="facility-details flex flex-row max-[600px]:flex-col gap-5 max-[600px]:gap-3">
                     <div class="acres flex flex-row items-center gap-3">
                         <img src={size} class="w-[15px] h-[15px]" alt="size icon" />
@@ -351,7 +351,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] max-[600px]:text-[25px] font-normal font-['Raleway']">Muneshwers Pier Water Street</div>
+                <div class="w-[583px] max-[600px]:w-[95%] h-[70px] mt-5 text-black text-[40px] max-[600px]:text-[25px] font-normal font-['Raleway']">Muneshwers Pier Water Street</div>
                 <div class="facility-details flex flex-row max-[600px]:flex-col gap-8 max-[600px]:gap-3 font-semibold">
                     <div class="acres flex flex-row items-center gap-3">
                         <img src={size} class="w-[15px] h-[15px]" alt="size icon" />
