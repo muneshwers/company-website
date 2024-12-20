@@ -99,7 +99,7 @@
                     </a>
                     <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <div class="dropdown relative" on:mouseenter={() => {serviceToggle = true}} on:mouseleave={() => {serviceToggle = false}} on:click={() => serviceToggleFunc()}>
+                    <div class="dropdown relative" on:click={() => serviceToggleFunc()}>
                         <div class="{activityCheck.services ? "item-active": "item-mobile"}">
                             Services
                         </div>
