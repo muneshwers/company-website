@@ -87,7 +87,7 @@
     const windowHeightCheck = () => {
         elementDistance = Math.round((y/innerHeight)*100)/100;
 
-        if ((firstPageLoad && elementDistance > 0.005) || firstScrollCounter < 2) {
+        if ((firstPageLoad && elementDistance > 0.005) || firstScrollCounter <= 3) {
             firstPageLoad = false;
             firstScrollCounter++;
             navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0)";
@@ -217,10 +217,10 @@
             </div>
         {/if}
         {#if innerWidth > 1415}
-            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
+            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
                 Leaders
             </div>
-            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-60 max-[600px]:ml-3">
+            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-32 max-[600px]:ml-3">
                 in retail
             </div>
         {/if}
@@ -259,10 +259,10 @@
             </div>
         {/if}
         {#if innerWidth > 1415}
-            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
+            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
                 Decades
             </div>
-            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-60 max-[600px]:ml-3">
+            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-32 max-[600px]:ml-3">
                 in shipping
             </div>
         {/if}
