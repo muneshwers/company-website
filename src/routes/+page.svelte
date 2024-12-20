@@ -45,6 +45,7 @@
     let navigationBar;
     let elementDistance;
     let trackY = [0,0]; //Only for home
+    let firstPageLoad = true;
     
     let element;
     let intersecting;
@@ -74,21 +75,25 @@
     onMount(() => {
         heroHomeImageCont = document.getElementById("heroHomeImage");
         navigationBar = document.getElementById("navigationBar");
-        elementDistance = Math.round((y/innerHeight)*100)/100;
+        elementDistance = 0;
         opacity = 1;
         trackY[0] = y;
+        windowHeightCheck();
     })
 
     const windowHeightCheck = () => {
         elementDistance = Math.round((y/innerHeight)*100)/100;
-        if(elementDistance > 0.005) {
+        console.log("Element distance at scroll: ", elementDistance);
+        if(elementDistance > 0.005 && firstPageLoad) {
+            // firstPageLoad = false;
             navVisibility = 1 - (elementDistance + 0.5);
             navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0.98)";
         } else {
             navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0)";
         }
 
-        if(elementDistance > 0.5) {
+        if(elementDistance > 0.5 && firstPageLoad) {
+            firstPageLoad = false;
             opacity = 1 - (elementDistance + 0.05);
             heroHomeImageCont.style.opacity = opacity;
             // console.log("Actual Opacity: ", opacity);
@@ -186,101 +191,6 @@
     
     <Navigation activePage="home" {innerWidth}/>
 </div>
-<div class="introduction-section flex flex-col justify-center bg-[#CEE9FD] bg-gradient-to-b from-white via-[#CEE9FD]/10 to-white" id="introduction">
-    <IntersectionObserver element={introHeader} let:intersecting>
-        <div class="intro-header mt-5 justify-center relative flex h-[143px]" bind:this={introHeader}>
-            {#if intersecting}
-                <div class="intro-details">
-                    {#if innerWidth <= 600}
-                        <div class="intro-text mt-8 text-center uppercase flex flex-col max-[600px]:text-[25px] text-[#4876B6]">
-                            <p>Explore Our Services</p>
-                        </div>
-                    {/if}
-                    {#if innerWidth > 600 && innerWidth <= 1415}
-                        <div class="intro-text mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
-                            <p>Explore Our Services</p>
-                        </div>
-                    {/if}
-                    {#if innerWidth > 1415}
-                        <div class="intro-text mt-8 text-center uppercase flex flex-col text-[70px] text-[#4876B6]">
-                            <p>Explore Our Services</p>
-                        </div>
-                    {/if}
-                    
-                    <!-- <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
-                        <p>Choose from our shipping, transportation, travel service or explore our stores for your needs.</p>
-                    </div> -->
-                </div>
-            {/if}
-        </div>
-    </IntersectionObserver>
-    
-
-    <div class="services mt-5 w-full h-[140lvh] max-[600px]:h-[100vh] flex flex-col items-center">
-        
-         <IntersectionObserver element={bentoContainer} let:intersecting>
-            
-            <div class="bento-container h-full w-[90vw] max-[600px]:w-[95vw] flex flex-col gap-6 max-[600px]:gap-3" bind:this={bentoContainer}>
-                {#if intersecting}
-                <div class="bento-row flex gap-6 max-[600px]:gap-3 justify-center">
-                    <div class="service bento-large h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
-                        <a href="/shipping">
-                        <div class="w-fit h-full">
-                            <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" />
-                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                                <div>Shipping</div>
-                                <img src={upright} alt="" width="25px" height="25px">
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="service bento-small w-fit h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
-                        <a href="/travel">
-                            <div class="w-fit h-full">
-                                <enhanced:img alt="" class="w-full h-full object-cover scale-100" src="$lib/assets/travelserviceNew.webp" />
-                                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                                    <div>Travel</div>
-                                    <img src={upright} alt="" width="25px" height="25px">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="bento-row flex gap-6 max-[600px]:gap-3 justify-center">
-                    <div class="service bento-small w-[68%] h-[70lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
-                        <a href="/events">
-                            <div class="w-full h-full">
-                                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/eventsservice.webp" />
-                                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                                    <div>Events</div>
-                                    <img src={upright} alt="" width="25px" height="25px">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="service bento-large-home w-fit h-[70lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
-                        <a href="/stores">
-                            <div class="w-fit h-full">
-                                <enhanced:img alt="" class="w-full h-full object-contain max-[600px]:object-cover" src="$lib/assets/homegoods2.webp" />
-                                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                                    <div>Home Goods</div>
-                                    <img src={upright} alt="" width="25px" height="25px">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                </div>
-                {/if}
-            </div>
-            
-         </IntersectionObserver>
-        
-        
-        
-    </div>
-    
-</div>
 <IntersectionObserver element={infoText} bind:intersecting>
 <div class="next-info-section mt-16 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText}>
     {#if intersecting}
@@ -360,6 +270,103 @@
         </div>
     {/if}
 </div>
+<div class="introduction-section flex flex-col justify-center bg-[#CEE9FD] bg-gradient-to-b from-white via-[#CEE9FD]/10 to-white" id="introduction">
+    <IntersectionObserver element={introHeader} let:intersecting>
+        <div class="intro-header mt-5 justify-center relative flex h-[143px]" bind:this={introHeader}>
+            {#if intersecting}
+                <div class="intro-details">
+                    {#if innerWidth <= 600}
+                        <div class="intro-text mt-8 text-center uppercase flex flex-col max-[600px]:text-[25px] text-[#4876B6]">
+                            <p>Explore Our Services</p>
+                        </div>
+                    {/if}
+                    {#if innerWidth > 600 && innerWidth <= 1415}
+                        <div class="intro-text mt-8 text-center uppercase flex flex-col text-[50px] text-[#4876B6]">
+                            <p>Explore Our Services</p>
+                        </div>
+                    {/if}
+                    {#if innerWidth > 1415}
+                        <div class="intro-text mt-8 text-center uppercase flex flex-col text-[70px] text-[#4876B6]">
+                            <p>Explore Our Services</p>
+                        </div>
+                    {/if}
+                    
+                    <!-- <div class="intro-subtext text-center text-[#3D3938] text-[28px] raleway-light flex flex-col items-center">
+                        <p>Choose from our shipping, transportation, travel service or explore our stores for your needs.</p>
+                    </div> -->
+                </div>
+            {/if}
+        </div>
+    </IntersectionObserver>
+    
+
+
+    <div class="services mt-5 w-full h-[140lvh] max-[600px]:h-[100vh] flex flex-col items-center">
+        
+         <IntersectionObserver element={bentoContainer} let:intersecting>
+            
+            <div class="bento-container h-full w-[90vw] max-[600px]:w-[95vw] flex flex-col gap-6 max-[600px]:gap-3" bind:this={bentoContainer}>
+                {#if intersecting}
+                <div class="bento-row flex gap-6 max-[600px]:gap-3 justify-center">
+                    <div class="service bento-large h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
+                        <a href="/shipping">
+                        <div class="w-fit h-full">
+                            <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" />
+                            <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                                <div>Shipping</div>
+                                <img src={upright} alt="" width="25px" height="25px">
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="service bento-small w-fit h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
+                        <a href="/travel">
+                            <div class="w-fit h-full">
+                                <enhanced:img alt="" class="w-full h-full object-cover scale-100" src="$lib/assets/travelserviceHeader.webp" />
+                                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                                    <div>Travel</div>
+                                    <img src={upright} alt="" width="25px" height="25px">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="bento-row flex gap-6 max-[600px]:gap-3 justify-center">
+                    <div class="service bento-small w-[68%] h-[70lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
+                        <a href="/events">
+                            <div class="w-full h-full">
+                                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/eventsservice.webp" />
+                                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                                    <div>Events</div>
+                                    <img src={upright} alt="" width="25px" height="25px">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="service bento-large-home w-fit h-[70lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
+                        <a href="/stores">
+                            <div class="w-fit h-full">
+                                <enhanced:img alt="" class="w-full h-full object-contain max-[600px]:object-cover" src="$lib/assets/homegoods2.webp" />
+                                <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
+                                    <div>Home Goods</div>
+                                    <img src={upright} alt="" width="25px" height="25px">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+                {/if}
+            </div>
+            
+         </IntersectionObserver>
+        
+        
+        
+    </div>
+    
+</div>
+
 
 <div class="joint-ventures-section h-1/2 flex flex-col items-center">
     <IntersectionObserver element={jvHeader} let:intersecting>
