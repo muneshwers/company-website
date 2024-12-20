@@ -27,6 +27,7 @@
     import shane from "$lib/assets/shane.png";
     import houston from "$lib/assets/DJI_0179_MOD.jpg";
     import waterstreet from "$lib/assets/DJI_0439.jpg";
+    import { onMount } from "svelte";
 
     // import ship from "$lib/assets/ship-solid.svg";
     // import anchor from "$lib/assets/anchor-solid.svg";
@@ -39,8 +40,11 @@
     // import boxOpen from "$lib/assets/box-open-solid.svg";
 
     let y;
-
     let innerWidth;
+    let innerHeight;
+    let navVisibility;
+    let navigationBar;
+    let elementDistance;
 
     let introHeader;
     let bentoContainer;
@@ -50,6 +54,21 @@
     let meetJuniors;
     let facilitiesHeader;
     let facilitiesContainer;
+
+    onMount(() => {
+        navigationBar = document.getElementById("navigationBar");
+        elementDistance = Math.round((y/innerHeight)*100)/100;
+    })
+
+    const windowHeightCheck = () => {
+        elementDistance = Math.round((y/innerHeight)*100)/100;
+        if(elementDistance > 0.005) {
+            navVisibility = 1 - (elementDistance + 0.5);
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0.98)";
+        } else {
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0)";
+        }        
+    }
 </script>
 
 <svelte:head>
@@ -501,4 +520,4 @@
     </div>
 <Footer />
 
-<svelte:window bind:scrollY={y} bind:innerWidth />
+<svelte:window bind:scrollY={y} bind:innerWidth bind:innerHeight on:scroll={() => windowHeightCheck()} />

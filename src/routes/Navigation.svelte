@@ -68,7 +68,7 @@
 </script>
 
 
-<div class="navigationBar z-[90] w-[100vw] p-5 fixed top-0 left-0 right-0 flex flex-row items-center justify-between">
+<div class="navigationBar z-[90] w-[100vw] p-5 fixed top-0 left-0 right-0 flex flex-row items-center justify-between" id="navigationBar">
     <a href="/">
         <div class="company-info flex flex-row items-center gap-2">
             <div class="logo w-10 h-10">

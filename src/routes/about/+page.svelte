@@ -14,9 +14,14 @@
     import oil from "$lib/assets/oil-well-solid.svg";
     import box from "$lib/assets/box-solid.svg";
     import boxOpen from "$lib/assets/box-open-solid.svg";
+    import { onMount } from "svelte";
 
     let y;
     let innerWidth;
+    let innerHeight;
+    let navVisibility;
+    let navigationBar;
+    let elementDistance;
 
     let ourOriginHeader;
     let ourOrigin;
@@ -30,6 +35,21 @@
     let ourPresentBerth;
     let oilAndGasHeader;
     let gysbiFacility;
+
+    onMount(() => {
+        navigationBar = document.getElementById("navigationBar");
+        elementDistance = Math.round((y/innerHeight)*100)/100;
+    })
+
+    const windowHeightCheck = () => {
+        elementDistance = Math.round((y/innerHeight)*100)/100;
+        if(elementDistance > 0.005) {
+            navVisibility = 1 - (elementDistance + 0.5);
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0.98)";
+        } else {
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0)";
+        }        
+    }
 
 </script>
 
@@ -336,4 +356,4 @@
 
 <Footer />
 
-<svelte:window bind:scrollY={y} bind:innerWidth />
+<svelte:window bind:scrollY={y} bind:innerWidth bind:innerHeight  on:scroll={() => windowHeightCheck()} />

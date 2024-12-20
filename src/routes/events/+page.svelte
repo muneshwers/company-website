@@ -12,7 +12,12 @@
     export let data;
 
     let calendar;
+    let y;
     let innerWidth;
+    let innerHeight;
+    let navVisibility;
+    let navigationBar;
+    let elementDistance;
 
     //Current Date and Month
     let selectedDate = (new Date()).toISOString().split('T')[0];
@@ -77,8 +82,12 @@
 
     //landscape-placeholder
 
+    
+
 
     onMount(() => {
+        navigationBar = document.getElementById("navigationBar");
+        elementDistance = Math.round((y/innerHeight)*100)/100;
         let date = (new Date()).toISOString().split('T')[0];
         calendar = flatpickr(".datepicker-inline", {
             enableTime: true,
@@ -193,8 +202,16 @@
         calendar.setDate(selectedDate);
     }
 
+    const windowHeightCheck = () => {
+        elementDistance = Math.round((y/innerHeight)*100)/100;
+        if(elementDistance > 0.005) {
+            navVisibility = 1 - (elementDistance + 0.5);
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0.98)";
+        } else {
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0)";
+        }        
+    }
 
-    let y;
 </script>
 
 <svelte:head>
@@ -504,4 +521,4 @@
 </div>
 <Footer />
 
-<svelte:window bind:scrollY={y} bind:innerWidth />
+<svelte:window bind:scrollY={y} bind:innerWidth bind:innerHeight on:scroll={() => windowHeightCheck()} />

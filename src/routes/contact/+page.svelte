@@ -2,8 +2,29 @@
     import brandLogo from "$lib/assets/brand-logo.webp";
 	import Navigation from "../Navigation.svelte";
 	import Footer from "../Footer.svelte";
+    import { onMount } from "svelte";
 
+    let y;
     let innerWidth;
+    let innerHeight;
+    let navVisibility;
+    let navigationBar;
+    let elementDistance;
+
+    onMount(() => {
+        navigationBar = document.getElementById("navigationBar");
+        elementDistance = Math.round((y/innerHeight)*100)/100;
+    })
+
+    const windowHeightCheck = () => {
+        elementDistance = Math.round((y/innerHeight)*100)/100;
+        if(elementDistance > 0.005) {
+            navVisibility = 1 - (elementDistance + 0.5);
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0.98)";
+        } else {
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0)";
+        }        
+    }
 
 </script>
 
@@ -82,4 +103,4 @@
 <Footer />
 
 
-<svelte:window bind:innerWidth />
+<svelte:window bind:scrollY={y} bind:innerWidth bind:innerHeight  on:scroll={() => windowHeightCheck()} />

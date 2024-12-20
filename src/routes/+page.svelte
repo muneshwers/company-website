@@ -39,7 +39,12 @@
     let innerWidth;
     let innerHeight;
     let y;
-    let opacity;
+    let opacity; //Only for home
+    let navVisibility;
+    let heroHomeImageCont; //Only for home
+    let navigationBar;
+    let elementDistance;
+    let trackY = [0,0]; //Only for home
     
     let element;
     let intersecting;
@@ -61,24 +66,28 @@
     //     shippingStaff = shippingStaffMobile
     // }
 
-    let heroHomeImageCont;
-    let elementDistance;
-    let trackY = [0,0];
-    let elementVisibility = 0;
+    
 
     let slideCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     
     onMount(() => {
         heroHomeImageCont = document.getElementById("heroHomeImage");
+        navigationBar = document.getElementById("navigationBar");
         elementDistance = Math.round((y/innerHeight)*100)/100;
-        opacity = 1 - elementDistance;
-        console.log("Element Distance: ", elementDistance);
+        opacity = 1;
         trackY[0] = y;
     })
 
     const windowHeightCheck = () => {
         elementDistance = Math.round((y/innerHeight)*100)/100;
+        if(elementDistance > 0.005) {
+            navVisibility = 1 - (elementDistance + 0.5);
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0.98)";
+        } else {
+            navigationBar.style.backgroundColor = "rgba(61, 57, 56, 0)";
+        }
+
         if(elementDistance > 0.5) {
             opacity = 1 - (elementDistance + 0.05);
             heroHomeImageCont.style.opacity = opacity;
