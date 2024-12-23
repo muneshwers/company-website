@@ -40,11 +40,13 @@ let firebaseApp;
 
 // console.log("Apps: ", getApps())
 
-// if (!getApps().length) {
+if (!getApps().length) {
   firebaseApp = initializeApp({
     credential: cert(serviceCheck)
   }, "company-app-5");
-// }
+} else {
+  firebaseApp = getApps()[0];
+}
 
 
 const firestore = getFirestore(firebaseApp, "company-website");
