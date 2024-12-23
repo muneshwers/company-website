@@ -58,6 +58,7 @@
     let infoText;
     let infoImage;
     let infoText2;
+    let infoText3;
     let infoImage2;
     let jvHeader;
     let careersHeader;
@@ -166,16 +167,13 @@
                 {/if}
                 {#if innerWidth > 1415}
                     <div>
-                        <p class="individual-hero-text">Rooted in </p>
+                        <p class="individual-hero-text">Rooted in Family,</p>
                     </div>
                     <div>
-                        <p class="individual-hero-text">Family, Grown with </p>
+                        <p class="individual-hero-text">Grown with </p>
                     </div>
                     <div>
                         <p class="individual-hero-text">Excellence</p>
-                    </div>
-                    <div class=" mt-5">
-                        <p class="individual-hero-text text-[30px]">Generations of quality, crafted for Guyana’s future</p>
                     </div>
                     
                 {/if}
@@ -284,6 +282,43 @@
         </div>
     {/if}
 </div>
+<IntersectionObserver element={infoText3} let:intersecting>
+<div class="next-info-section mt-16 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText3}>
+    {#if intersecting}
+        {#if innerWidth <= 1415}
+            <div class="title-text raleway-bold text-[70px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
+                Diversity
+            </div>
+            <div class="title-text raleway-medium text-[20px] text-[#4876B6] uppercase ml-60 max-[600px]:ml-3">
+                in numbers
+            </div>
+        {/if}
+        {#if innerWidth > 1415}
+            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
+                Diversity
+            </div>
+            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-32 max-[600px]:ml-3">
+                in numbers
+            </div>
+        {/if}
+    {/if}
+    
+</div>
+</IntersectionObserver>
+<div class="parallax-container relative">
+    {#if innerWidth <= 1415}
+        <enhanced:img src="$lib/assets/diversity.webp" alt="" class="object-cover w-screen h-screen wharf-image" />
+        <div class="wharf-text uppercase text-white text-[28px] absolute bottom-24 left-16 max-[1415px]:left-10">
+            Muneshwers Events Store - November 24, 2024 - Water Street, Georgetown, Guyana
+        </div>
+    {/if}
+    {#if innerWidth > 1415}
+        <enhanced:img src="$lib/assets/diversity.webp" alt="" class="object-cover w-screen max-[1415px]:h-screen wharf-image" />
+        <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 max-[1415px]:left-10">
+            Muneshwers Events Store - November 24, 2024 - Water Street, Georgetown, Guyana
+        </div>
+    {/if}
+</div>
 <div class="introduction-section flex flex-col justify-center bg-[#CEE9FD] bg-gradient-to-b from-white via-[#CEE9FD]/10 to-white" id="introduction">
     <IntersectionObserver element={introHeader} let:intersecting>
         <div class="intro-header mt-5 justify-center relative flex h-[143px]" bind:this={introHeader}>
@@ -338,7 +373,7 @@
                             <div class="w-fit h-full">
                                 <enhanced:img alt="" class="w-full h-full object-cover scale-100" src="$lib/assets/travelserviceHeader.webp" />
                                 <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
-                                    <div>Travel</div>
+                                    <div>Travel Service</div>
                                     <img src={upright} alt="" width="25px" height="25px">
                                 </div>
                             </div>

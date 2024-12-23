@@ -429,7 +429,6 @@
                             <p>Check out our list of job openings and see which is the right path for you.</p>
                         </div>
                     {/if}
-                    
                 </div>
                 <!-- <div class="intro-details">
                     <div class="intro-text mt-8 text-center uppercase flex flex-col text-[67px] text-[#df839c]">
@@ -445,19 +444,19 @@
     </div>
     <div class="parallax-container relative">
         <img src={parallaxCareer} alt="" class="object-cover w-screen h-1/2 career-image">
-        <div class="services  flex flex-row justify-between items-center mb-10 absolute top-40 max-[600px]:top-32 right-28">
+        <div class="services flex flex-row justify-between items-center mb-10 absolute top-96 max-[600px]:top-32 right-28">
             <div class="services-link relative cursor-pointer text-white">
                 <a href="/careers">
                     <div class="services-text flex flex-row items-center text-5xl max-[600px]:text-[30px] gap-8 uppercase ml-32 hover:tracking-widest hover:duration-150 duration-150" >
-                    Explore Careers
-                    <span>
-                        <svg class="h-8 w-8" width="53" height="38" viewBox="0 0 53 38" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
-                            <path id="Arrow 1" d="M51.7678 20.7678C52.7441 19.7915 52.7441 18.2085 51.7678 17.2322L35.8579 1.32233C34.8816 0.34602 33.2986 0.34602 32.3223 1.32233C31.346 2.29864 31.346 3.88155 32.3223 4.85786L46.4645 19L32.3223 33.1421C31.346 34.1184 31.346 35.7014 32.3223 36.6777C33.2986 37.654 34.8816 37.654 35.8579 36.6777L51.7678 20.7678ZM0 21.5H50V16.5H0V21.5Z" fill="#ffffff"/>
-                        </svg>
-                        <!-- <img src={arrowright} alt="Arrow Right" class="h-8 w-8 "> -->
-                         <!--Signed Commit Check-->
-                    </span>
-                </div>
+                        Explore Careers
+                        <span>
+                            <svg class="h-8 w-8" width="53" height="38" viewBox="0 0 53 38" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                                <path id="Arrow 1" d="M51.7678 20.7678C52.7441 19.7915 52.7441 18.2085 51.7678 17.2322L35.8579 1.32233C34.8816 0.34602 33.2986 0.34602 32.3223 1.32233C31.346 2.29864 31.346 3.88155 32.3223 4.85786L46.4645 19L32.3223 33.1421C31.346 34.1184 31.346 35.7014 32.3223 36.6777C33.2986 37.654 34.8816 37.654 35.8579 36.6777L51.7678 20.7678ZM0 21.5H50V16.5H0V21.5Z" fill="#ffffff"/>
+                            </svg>
+                            <!-- <img src={arrowright} alt="Arrow Right" class="h-8 w-8 "> -->
+                            <!--Signed Commit Check-->
+                        </span>
+                    </div>
                 </a>
                 <div class="w-[500px] max-[600px]:w-[230px] h-px left-[3px] top-[71px] absolute bg-white ml-32"></div>
             </div>
