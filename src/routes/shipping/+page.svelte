@@ -195,10 +195,10 @@
         </div>
         <div class="article-details mt-5 raleway-regular text-lg max-[600px]:text-base">
             <p>
-                Muneshwers Limited is one of the largest ports in Guyana with over 40% market share in container traffic. First concrete pier in Guyana.
+                Muneshwers Limited stands as one of the largest ports in Guyana, with just over 40% market share of the container cargo business. 
             </p>
             <p class="mt-3">
-                We are the shipping agent and terminal operator for Maersk, Tropical Shipping and Mediterranean Shipping Company. Maersk and Mediterranean Shipping Company (MSC) are two of the largest shipping lines in the world and market leaders in Guyana.
+                We serve as the terminal operators for the first and second largest container lines in the world, MSC and Maersk respectively. As well as the the largest regional line, Tropical Shippjng.
             </p>
         </div>
     </div>
@@ -253,14 +253,14 @@
                 <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Operations Manager</div>
             </div>
             <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
-                <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={gaj} alt="Gajendranath Singh"/>
-                <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Gajendranath Singh</div>
-                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Facilities Manager</div>
-            </div>
-            <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={chabi} alt="Chabiraj Ramcharran"/>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Chabiraj Ramcharran</div>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Licensed Customs Brokerage Manager</div>
+            </div>
+            <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
+                <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={gaj} alt="Gajendranath Singh"/>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Gajendranath Singh</div>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Facilities Manager</div>
             </div>
             <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={shane} alt="Shane Rai"/>
