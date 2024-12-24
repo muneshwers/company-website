@@ -2,14 +2,16 @@
     import shippingStaff from "$lib/assets/GYS00823.webp";
     import shippingStaffMobile from "$lib/assets/GYS00823_MOD.webp";
     import storeStaff from "$lib/assets/IMG_4167_MOD.webp";
+    import officeStaff from "$lib/assets/officeStaff_MOD.webp";
+    import officeStaffMobile from "$lib/assets/GYS06434_MOD_MOB.webp";
     import { onMount, onDestroy } from "svelte";
 
     export let innerWidth;
 
     console.log("Inner Width: ", innerWidth);
 
-    let carouselPhotos = [shippingStaff, storeStaff];
-    let carouselPhotosMobile = [shippingStaffMobile, storeStaff];
+    let carouselPhotos = [storeStaff, shippingStaff, officeStaff];
+    let carouselPhotosMobile = [storeStaff, shippingStaffMobile, officeStaffMobile];
 
     let i = 0;
 
