@@ -30,6 +30,7 @@
     import upright from "$lib/assets/white.svg";
     import shippingStaff from "$lib/assets/GYS00823.webp";
     import shippingStaffMobile from "$lib/assets/GYS00823_MOD.webp";
+    import elements from "$lib/assets/elements.gif";
     import storeStaff from "$lib/assets/IMG_4167_MOD.webp";
 	import Heroslider from "./Heroslider.svelte";
 
@@ -215,12 +216,18 @@
             </div>
         {/if}
         {#if innerWidth > 1415}
-            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
-                Leaders
+            <div class="relative">
+                <span class="absolute bottom-0 opacity-65">
+                    <img src={elements} alt="floating triangles" class="h-[40vh] w-[20vw]">
+                </span>
+                <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
+                    Leaders
+                </div>
+                <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-32 max-[600px]:ml-3">
+                    in retail
+                </div>
             </div>
-            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-32 max-[600px]:ml-3">
-                in retail
-            </div>
+            
         {/if}
         
     {/if}
@@ -257,12 +264,18 @@
             </div>
         {/if}
         {#if innerWidth > 1415}
+        <div class="relative">
+            <span class="absolute bottom-0 opacity-65">
+                <img src={elements} alt="floating triangles" class="h-[40vh] w-[20vw]">
+            </span>
             <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
                 Decades
             </div>
             <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-32 max-[600px]:ml-3">
                 in shipping
             </div>
+        </div>
+            
         {/if}
     {/if}
     
@@ -286,19 +299,27 @@
 <div class="next-info-section mt-16 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText3}>
     {#if intersecting}
         {#if innerWidth <= 1415}
-            <div class="title-text raleway-bold text-[70px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
-                Diversity
+            <div>
+                <div class="title-text raleway-bold text-[70px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
+                    Diversity
+                </div>
+                <div class="title-text raleway-medium text-[20px] text-[#4876B6] uppercase ml-60 max-[600px]:ml-3">
+                    in numbers
+                </div>
             </div>
-            <div class="title-text raleway-medium text-[20px] text-[#4876B6] uppercase ml-60 max-[600px]:ml-3">
-                in numbers
-            </div>
+            
         {/if}
         {#if innerWidth > 1415}
-            <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
-                Diversity
-            </div>
-            <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-32 max-[600px]:ml-3">
-                in numbers
+            <div class="relative">
+                <span class="absolute bottom-0 opacity-65">
+                    <img src={elements} alt="floating triangles" class="h-[40vh] w-[20vw]">
+                </span>
+                <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
+                    Diversity
+                </div>
+                <div class="title-text raleway-medium text-[30px] text-[#4876B6] uppercase ml-32 max-[600px]:ml-3">
+                    in numbers
+                </div>
             </div>
         {/if}
     {/if}
