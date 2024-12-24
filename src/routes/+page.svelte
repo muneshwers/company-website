@@ -134,7 +134,7 @@
 <div class="landing-top relative max-w-[100%]">
     <!-- <div class="scroll-watcher"></div> -->
      <IntersectionObserver element={introHeader} let:intersecting>
-        <div id="heroHomeImage" class="hero-home-image h-screen relative max-w-[100%] opacity-[{opacity}]" bind:this={heroHomeImage}>
+        <div id="heroHomeImage" class="hero-home-image h-screen relative max-w-[100%]" bind:this={heroHomeImage}>
  
             <Heroslider {innerWidth} />
             <div class="image-cover h-full w-full opacity-30 bg-[#3A3A3A] absolute top-0"></div>
@@ -395,7 +395,7 @@
                     <div class="service bento-large-home w-fit h-[70lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/stores">
                             <div class="w-fit h-full">
-                                <enhanced:img alt="" class="w-full h-full object-contain max-[600px]:object-cover" src="$lib/assets/homegoods2.webp" />
+                                <enhanced:img alt="" class="w-full h-full object-cover max-[600px]:object-cover" src="$lib/assets/GYS06308.webp" />
                                 <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                     <div>Home Goods</div>
                                     <img src={upright} alt="" width="25px" height="25px">
