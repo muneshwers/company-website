@@ -336,13 +336,13 @@
     {#if innerWidth <= 1415}
         <enhanced:img src="$lib/assets/IMG_4675.webp" alt="" class="object-cover w-screen h-screen wharf-image" />
         <div class="wharf-text uppercase text-white text-[28px] absolute bottom-24 left-16 max-[1415px]:left-10">
-            Muneshwers Events Store - November 24, 2024 - Water Street, Georgetown, Guyana
+            Muneshwers Shipping LCL Office - January 6, 2025 - Water Street, Georgetown, Guyana
         </div>
     {/if}
     {#if innerWidth > 1415}
         <enhanced:img src="$lib/assets/IMG_4675.webp" alt="" class="object-cover w-screen max-[1415px]:h-screen wharf-image" />
         <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 max-[1415px]:left-10">
-            Muneshwers Events Store - November 24, 2024 - Water Street, Georgetown, Guyana
+            Muneshwers Shipping LCL Office - January 6, 2025 - Water Street, Georgetown, Guyana
         </div>
     {/if}
 </div>
