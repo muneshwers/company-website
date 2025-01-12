@@ -269,7 +269,7 @@
         {#if innerWidth > 1415}
             <div class="relative">
                 <span class="absolute bottom-0 opacity-65">
-                    <img src={elements} alt="floating triangles" class="h-[40vh] w-[20vw]">
+                    <img src={elements} alt="floating triangles" class="triangles h-[40vh] w-[20vw]">
                 </span>
                 <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
                     Decades
@@ -304,7 +304,7 @@
         {#if innerWidth <= 1415}
             <div class="relative">
                 <span class="absolute bottom-[-30%] opacity-65">
-                    <img src={elements} alt="floating triangles" class="h-[30vh] w-[55vw]">
+                    <img src={elements} alt="floating triangles" class="triangles h-[30vh] w-[55vw]">
                 </span>
                 <div class="title-text raleway-bold text-[70px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
                     Diversity
@@ -318,7 +318,7 @@
         {#if innerWidth > 1415}
             <div class="relative">
                 <span class="absolute bottom-0 opacity-65">
-                    <img src={elements} alt="floating triangles" class="h-[40vh] w-[20vw]">
+                    <img src={elements} alt="floating triangles" class="triangles h-[40vh] w-[20vw]">
                 </span>
                 <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
                     Diversity
@@ -536,43 +536,21 @@
     <div class="locationsHeader text-4xl raleway-medium">
         Our Locations
     </div>
-    <div class="locationsDetails mt-10 grid grid-cols-4 gap-2">
+    <div class="locationsDetails mt-10 grid grid-cols-5 gap-2">
         <div class="locationHead w-fit">
             <div class="locationCompany text-2xl raleway-regular">
                 Muneshwers Shipping
             </div>
             <div class="locationAddress mt-4 raleway-light">
                 45-47 Water Street, Georgetown, Guyana
-            </div>
-            <div class="locationOpening mt-4">
-                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
-                    Opening Hours
-                </div>
-                <div class="locationOpeningHours raleway-light">
-                    Mon-Fri: 8am - 4pm
-                </div>
-            </div>
-            <div class="locationTelephone mt-5 raleway-light">
-                TEL:+592-227-7417/18
             </div>
         </div>
         <div class="locationHead w-fit">
             <div class="locationCompany text-2xl raleway-regular">
-                Muneshwers Shipping
+                Muneshwers Houston Terminal
             </div>
             <div class="locationAddress mt-4 raleway-light">
-                45-47 Water Street, Georgetown, Guyana
-            </div>
-            <div class="locationOpening mt-4">
-                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
-                    Opening Hours
-                </div>
-                <div class="locationOpeningHours raleway-light">
-                    Mon-Fri: 8am - 4pm
-                </div>
-            </div>
-            <div class="locationTelephone mt-5 raleway-light">
-                TEL:+592-227-7417/18
+                YY Houston, Greater Georgetown, Guyana
             </div>
         </div>
         <div class="location w-fit">
@@ -582,17 +560,13 @@
             <div class="locationAddress mt-4 raleway-light">
                 19-20 Water and Commerce Street, Georgetown, Guyana
             </div>
-            <div class="locationOpening mt-4">
-                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
-                    Opening Hours
-                </div>
-                <div class="locationOpeningHours raleway-light">
-                    Mon-Fri: 8am - 4pm
-                    Sat: 8am - 2pm
-                </div>
+        </div>
+        <div class="location w-fit">
+            <div class="locationCompany text-2xl raleway-regular">
+                Muneshwers Hardware Store
             </div>
-            <div class="locationTelephone mt-5 raleway-light">
-                TEL:+592-227-7417/18
+            <div class="locationAddress mt-4 raleway-light">
+                45-47 Water Street, Georgetown, Guyana
             </div>
         </div>
         <div class="location w-fit">
@@ -602,6 +576,21 @@
             <div class="locationAddress mt-4 raleway-light">
                 45-47 Water Street, Georgetown, Guyana
             </div>
+        </div>
+        <div class="location w-fit">
+            <div class="locationOpening mt-4">
+                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+                    Opening Hours
+                </div>
+                <div class="locationOpeningHours raleway-light">
+                    Mon-Fri: 8am - 3pm
+                </div>
+            </div>
+            <div class="locationTelephone mt-5 raleway-light">
+                TEL:+592-227-7417/18
+            </div>
+        </div>
+        <div class="location w-fit">
             <div class="locationOpening mt-4">
                 <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
                     Opening Hours
@@ -615,22 +604,44 @@
             </div>
         </div>
         <div class="location w-fit">
-            <div class="locationCompany text-2xl raleway-regular">
-                Muneshwers Houston Terminal
-            </div>
-            <div class="locationAddress mt-4 raleway-light">
-                YY Houston, Greater Georgetown, Guyana
-            </div>
             <div class="locationOpening mt-4">
                 <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
                     Opening Hours
                 </div>
                 <div class="locationOpeningHours raleway-light">
-                    Mon-Fri: 8am - 4pm
+                    Mon-Fri: 8am - 4:30pm
                 </div>
             </div>
             <div class="locationTelephone mt-5 raleway-light">
-                TEL:+592-227-7417/18
+                TEL:+592-632-0736
+            </div>
+        </div>
+        <div class="location w-fit">
+            <div class="locationOpening mt-4">
+                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+                    Opening Hours
+                </div>
+                <div class="locationOpeningHours raleway-light">
+                    Mon-Fri: 8am - 4:30pm<br />
+                    Mon-Fri: 8am - 2pm
+                </div>
+            </div>
+            <div class="locationTelephone mt-5 raleway-light">
+                TEL:+592-227-4407
+            </div>
+        </div>
+        <div class="location w-fit">
+            <div class="locationOpening mt-4">
+                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+                    Opening Hours
+                </div>
+                <div class="locationOpeningHours raleway-light">
+                    Mon-Fri: 8am - 5pm <br />
+                    Mon-Fri: 8am - 2pm
+                </div>
+            </div>
+            <div class="locationTelephone mt-5 raleway-light">
+                TEL:+592-226-1487 / +592-227-3666
             </div>
         </div>
     </div>
