@@ -623,7 +623,7 @@
                 </div>
                 <div class="locationOpeningHours raleway-light">
                     Mon-Fri: 8am - 4:30pm<br />
-                    Mon-Fri: 8am - 2pm
+                    Sat: 8am - 2pm
                 </div>
             </div>
             <div class="locationTelephone mt-5 raleway-light">
@@ -637,7 +637,7 @@
                 </div>
                 <div class="locationOpeningHours raleway-light">
                     Mon-Fri: 8am - 5pm <br />
-                    Mon-Fri: 8am - 2pm
+                    Sat: 8am - 2pm
                 </div>
             </div>
             <div class="locationTelephone mt-5 raleway-light">
