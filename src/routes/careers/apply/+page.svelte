@@ -6,6 +6,7 @@
     import location from "$lib/assets/location-dot-solid.svg";
     import email from "$lib/assets/envelope-solid.svg";
     import phone from "$lib/assets/phone-solid.svg";
+    import whatsapp from "$lib/assets/whatsapp-brands-solid.svg";
 	import Joint from "../../Joint.svelte";
 	import Navigation from "../../Navigation.svelte";
 	import Footer from "../../Footer.svelte";
@@ -85,6 +86,24 @@
                     <img src={phone} alt="" width="10px" height="10px">
                 </div>
                 <div>+592-227-7417</div>
+            </div>
+            <div class="application-phone flex flex-row items-center gap-3">
+                <div class="phone-icon">
+                    <img src={whatsapp} alt="" width="10px" height="10px">
+                </div>
+                <div>+592-636-3209</div>
+            </div>
+            <div class="application-phone flex flex-row items-center gap-3">
+                <div class="phone-icon">
+                    <img src={whatsapp} alt="" width="10px" height="10px">
+                </div>
+                <div>+592-608-2662</div>
+            </div>
+            <div class="application-phone flex flex-row items-center gap-3">
+                <div class="phone-icon">
+                    <img src={whatsapp} alt="" width="10px" height="10px">
+                </div>
+                <div>+592-703-8393</div>
             </div>
             <div class="application-phone flex flex-row items-center gap-3">
                 <div class="email-icon">
