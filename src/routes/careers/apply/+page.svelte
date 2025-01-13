@@ -72,7 +72,7 @@
     </div>
     <div class="benefits text-justify text-[18px] max-[600px]:text-[18px] raleway-light flex flex-col items-center mb-48">
         <p class="w-[80%] text-center">
-            Address applications to: The Human Resources Manager (ag), Muneshwers Limited
+            Address applications to: The Human Resources Manager, Muneshwers Limited
         </p>
         <div class="application-location flex flex-row items-center gap-3 mt-5">
                 <div class="location-icon">
