@@ -491,7 +491,7 @@
     </div>
     <div class="locationsDetails mt-10 grid grid-cols-5 max-[600px]:grid-cols-2 gap-2">
         <div class="company-section">
-            <div class="locationHead w-fit h-[20vh]">
+            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
                 <div class="locationCompany text-2xl raleway-regular">
                     Muneshwers Shipping
                 </div>
@@ -515,7 +515,7 @@
         </div>
 
         <div class="company-section">
-            <div class="locationHead w-fit h-[20vh]">
+            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
                 <div class="locationCompany text-2xl raleway-regular">
                     Muneshwers Houston Terminal
                 </div>
@@ -538,7 +538,7 @@
             </div>
         </div>
         <div class="company-section">
-            <div class="locationHead w-fit h-[20vh]">
+            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
                 <div class="locationCompany text-2xl raleway-regular">
                     Muneshwers Guyana's #1 Events Store
                 </div>
@@ -561,7 +561,7 @@
             </div>
         </div>
         <div class="company-section">
-            <div class="locationHead w-fit h-[20vh]">
+            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
                 <div class="locationCompany text-2xl raleway-regular">
                     Muneshwers Hardware Store
                 </div>
@@ -585,7 +585,7 @@
             </div>
         </div>
         <div class="company-section">
-            <div class="locationHead w-fit h-[20vh]">
+            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
                 <div class="locationCompany text-2xl raleway-regular">
                     Muneshwers Travel Service
                 </div>
