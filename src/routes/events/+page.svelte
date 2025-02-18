@@ -350,23 +350,6 @@
     </IntersectionObserver>
     
 </div>
-
-<div class="parallax-container relative">
-    
-    {#if innerWidth <= 1415}
-        <enhanced:img src="$lib/assets/IMG_4127.webp" alt="" class="object-cover w-screen h-screen wharf-image" />
-        <div class="wharf-text uppercase text-white text-[28px] absolute bottom-32 left-16 max-[1415px]:left-10">
-            The Best in Customer Service
-        </div>
-    {/if}
-    {#if innerWidth > 1415}
-        <enhanced:img src="$lib/assets/IMG_4127.webp" alt="" class="object-cover w-screen max-[1415px]:h-screen wharf-image" />
-        <div class="wharf-text uppercase text-[#df839c] text-[48px] absolute bottom-96 left-16 max-[1415px]:left-10">
-            The Best in Customer Service
-        </div>
-        
-    {/if}
-</div>
 <div class="parallax-container relative">
     <div class="object-cover w-screen bg-[#FFEDF2] h-[200vh] p-14 flex flex-col items-center">
         
