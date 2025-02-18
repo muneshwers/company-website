@@ -490,111 +490,122 @@
         Our Locations
     </div>
     <div class="locationsDetails mt-10 grid grid-cols-5 max-[600px]:grid-cols-2 gap-2">
-        <div class="locationHead w-fit">
-            <div class="locationCompany text-2xl raleway-regular">
-                Muneshwers Shipping
+        <div class="company-section">
+            <div class="locationHead w-fit h-[20vh]">
+                <div class="locationCompany text-2xl raleway-regular">
+                    Muneshwers Shipping
+                </div>
+                <div class="locationAddress mt-4 raleway-light">
+                    45-47 Water Street, Georgetown, Guyana
+                </div>
             </div>
-            <div class="locationAddress mt-4 raleway-light">
-                45-47 Water Street, Georgetown, Guyana
+            <div class="location w-fit">
+                <div class="locationOpening mt-4">
+                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+                        Opening Hours
+                    </div>
+                    <div class="locationOpeningHours raleway-light">
+                        Mon-Fri: 8am - 3pm
+                    </div>
+                </div>
+                <div class="locationTelephone mt-5 raleway-light">
+                    TEL:+592-227-7417/18
+                </div>
             </div>
         </div>
-        <div class="locationHead w-fit">
-            <div class="locationCompany text-2xl raleway-regular">
-                Muneshwers Houston Terminal
+
+        <div class="company-section">
+            <div class="locationHead w-fit h-[20vh]">
+                <div class="locationCompany text-2xl raleway-regular">
+                    Muneshwers Houston Terminal
+                </div>
+                <div class="locationAddress mt-4 raleway-light">
+                    YY Houston, Greater Georgetown, Guyana
+                </div>
             </div>
-            <div class="locationAddress mt-4 raleway-light">
-                YY Houston, Greater Georgetown, Guyana
+            <div class="location w-fit">
+                <div class="locationOpening mt-4">
+                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+                        Opening Hours
+                    </div>
+                    <div class="locationOpeningHours raleway-light">
+                        Mon-Fri: 8am - 4pm
+                    </div>
+                </div>
+                <div class="locationTelephone mt-5 raleway-light">
+                    TEL:+592-227-7417/18
+                </div>
             </div>
         </div>
-        <div class="location w-fit">
-            <div class="locationCompany text-2xl raleway-regular">
-                Muneshwers Guyana's #1 Events Store
+        <div class="company-section">
+            <div class="locationHead w-fit h-[20vh]">
+                <div class="locationCompany text-2xl raleway-regular">
+                    Muneshwers Guyana's #1 Events Store
+                </div>
+                <div class="locationAddress mt-4 raleway-light">
+                    19-20 Water and Commerce Street, Georgetown, Guyana
+                </div>
             </div>
-            <div class="locationAddress mt-4 raleway-light">
-                19-20 Water and Commerce Street, Georgetown, Guyana
+            <div class="location w-fit">
+                <div class="locationOpening mt-4">
+                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+                        Opening Hours
+                    </div>
+                    <div class="locationOpeningHours raleway-light">
+                        Mon-Fri: 8am - 4:30pm
+                    </div>
+                </div>
+                <div class="locationTelephone mt-5 raleway-light">
+                    TEL:+592-632-0736
+                </div>
             </div>
         </div>
-        <div class="location w-fit">
-            <div class="locationCompany text-2xl raleway-regular">
-                Muneshwers Hardware Store
+        <div class="company-section">
+            <div class="locationHead w-fit h-[20vh]">
+                <div class="locationCompany text-2xl raleway-regular">
+                    Muneshwers Hardware Store
+                </div>
+                <div class="locationAddress mt-4 raleway-light">
+                    45-47 Water Street, Georgetown, Guyana
+                </div>
             </div>
-            <div class="locationAddress mt-4 raleway-light">
-                45-47 Water Street, Georgetown, Guyana
+            <div class="location w-fit">
+                <div class="locationOpening mt-4">
+                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+                        Opening Hours
+                    </div>
+                    <div class="locationOpeningHours raleway-light flex flex-col">
+                        <span>Mon-Fri: 8am - 4:30pm</span>
+                        <span>Sat: 8am - 2pm</span>
+                    </div>
+                </div>
+                <div class="locationTelephone mt-5 raleway-light">
+                    TEL:+592-227-4407
+                </div>
             </div>
         </div>
-        <div class="location w-fit">
-            <div class="locationCompany text-2xl raleway-regular">
-                Muneshwers Travel Service
-            </div>
-            <div class="locationAddress mt-4 raleway-light">
-                45-47 Water Street, Georgetown, Guyana
-            </div>
-        </div>
-        <div class="location w-fit">
-            <div class="locationOpening mt-4">
-                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
-                    Opening Hours
+        <div class="company-section">
+            <div class="locationHead w-fit h-[20vh]">
+                <div class="locationCompany text-2xl raleway-regular">
+                    Muneshwers Travel Service
                 </div>
-                <div class="locationOpeningHours raleway-light">
-                    Mon-Fri: 8am - 3pm
+                <div class="locationAddress mt-4 raleway-light">
+                    45-47 Water Street, Georgetown, Guyana
                 </div>
             </div>
-            <div class="locationTelephone mt-5 raleway-light">
-                TEL:+592-227-7417/18
-            </div>
-        </div>
-        <div class="location w-fit">
-            <div class="locationOpening mt-4">
-                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
-                    Opening Hours
+            <div class="location w-fit">
+                <div class="locationOpening mt-4">
+                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+                        Opening Hours
+                    </div>
+                    <div class="locationOpeningHours raleway-light flex flex-col">
+                        <span>Mon-Fri: 8am - 5pm</span>
+                        <span>Sat: 8am - 2pm</span>
+                    </div>
                 </div>
-                <div class="locationOpeningHours raleway-light">
-                    Mon-Fri: 8am - 4pm
+                <div class="locationTelephone mt-5 raleway-light">
+                    TEL:+592-226-1487 / +592-227-3666
                 </div>
-            </div>
-            <div class="locationTelephone mt-5 raleway-light">
-                TEL:+592-227-7417/18
-            </div>
-        </div>
-        <div class="location w-fit">
-            <div class="locationOpening mt-4">
-                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
-                    Opening Hours
-                </div>
-                <div class="locationOpeningHours raleway-light">
-                    Mon-Fri: 8am - 4:30pm
-                </div>
-            </div>
-            <div class="locationTelephone mt-5 raleway-light">
-                TEL:+592-632-0736
-            </div>
-        </div>
-        <div class="location w-fit">
-            <div class="locationOpening mt-4">
-                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
-                    Opening Hours
-                </div>
-                <div class="locationOpeningHours raleway-light">
-                    Mon-Fri: 8am - 4:30pm<br />
-                    Sat: 8am - 2pm
-                </div>
-            </div>
-            <div class="locationTelephone mt-5 raleway-light">
-                TEL:+592-227-4407
-            </div>
-        </div>
-        <div class="location w-fit">
-            <div class="locationOpening mt-4">
-                <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
-                    Opening Hours
-                </div>
-                <div class="locationOpeningHours raleway-light">
-                    Mon-Fri: 8am - 5pm <br />
-                    Sat: 8am - 2pm
-                </div>
-            </div>
-            <div class="locationTelephone mt-5 raleway-light">
-                TEL:+592-226-1487 / +592-227-3666
             </div>
         </div>
     </div>
