@@ -499,7 +499,7 @@
                     45-47 Water Street, Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit">
+            <div class="location w-fit h-[25vh]">
                 <div class="locationOpening mt-4">
                     <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
                         Opening Hours
@@ -523,7 +523,7 @@
                     YY Houston, Greater Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit">
+            <div class="location w-fit h-[25vh]">
                 <div class="locationOpening mt-4">
                     <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
                         Opening Hours
@@ -546,7 +546,7 @@
                     19-20 Water and Commerce Street, Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit">
+            <div class="location w-fit h-[25vh]">
                 <div class="locationOpening mt-4">
                     <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
                         Opening Hours
@@ -569,7 +569,7 @@
                     45-47 Water Street, Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit">
+            <div class="location w-fit h-[25vh]">
                 <div class="locationOpening mt-4">
                     <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
                         Opening Hours
@@ -593,7 +593,7 @@
                     45-47 Water Street, Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit">
+            <div class="location w-fit h-[25vh]">
                 <div class="locationOpening mt-4">
                     <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
                         Opening Hours
