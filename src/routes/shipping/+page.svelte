@@ -370,7 +370,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-[583px] h-[70px] mt-5 text-black text-[40px] max-[600px]:text-[25px] font-normal font-['Raleway']">Muneshwers Pier Water Street</div>
+                <div class="w-[583px] max-[600px]:w-[95%] h-[70px] mt-5 text-black text-[40px] max-[600px]:text-[25px] font-normal font-['Raleway']">Muneshwers Pier Water Street</div>
                 <div class="facility-details flex flex-row max-[600px]:flex-col gap-8 max-[600px]:gap-3 font-semibold">
                     <div class="acres flex flex-row items-center gap-3">
                         <img src={size} class="w-[15px] h-[15px]" alt="size icon" />
