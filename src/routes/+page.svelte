@@ -403,7 +403,7 @@
         <div class="jv-right flex flex-row" bind:this={jvHeader}>
             {#if intersecting}
                 <div class="right-text justify-items-end poppins-light text-[#4876B6] text-[50px] max-[600px]:text-[24px]">
-                    <p>Explore our joint ventures</p>
+                    <p>Explore our Subsidiaries</p>
                 </div>
             {/if}
         </div>
