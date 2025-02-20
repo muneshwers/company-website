@@ -231,7 +231,7 @@
         </div>
         <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px]">
             <img class="w-[450px] h-[515px] object-cover" src={mrc} alt="Mr Chandradatt Chintamani" />
-            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Chandradatt Chintamani</div>
+            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Chandradat Chintamani</div>
             <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">General Manager</div>
         </div>
         <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px] ">
