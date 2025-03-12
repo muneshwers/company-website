@@ -22,7 +22,7 @@ export const actions = {
 
         const options = {
             from: 'developers@muneshwers.store',
-            to: 'subscriptions@muneshwers.store',
+            to: 'info@muneshwers.org',
             subject: 'New Message from Website Visitor',
             html: emailHtml
         };
