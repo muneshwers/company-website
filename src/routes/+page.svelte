@@ -505,7 +505,7 @@
                         Opening Hours
                     </div>
                     <div class="locationOpeningHours raleway-light">
-                        Mon-Fri: 8am - 3pm
+                        Mon-Fri: 8am - 4pm
                     </div>
                 </div>
                 <div class="locationTelephone mt-5 raleway-light">
