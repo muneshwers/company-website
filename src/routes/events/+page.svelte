@@ -502,7 +502,7 @@
         <div class="contact-header my-7 p-10 bg-gray-200 w-[80%] max-[600px]:w-[90%] rounded-md">
             <div class="row flex flex-row gap-2 text-normal p-2">
                 <div class="contact-title font-medium">Telephone:</div>
-                <div class="contact-details text-gray-500">+592-632-0736</div>
+                <div class="contact-details text-gray-500">+592-608-2521</div>
             </div>
             <div class="row flex flex-row gap-2 text-normal p-2">
                 <div class="contact-title font-medium">Email:</div>

@@ -556,7 +556,7 @@
                     </div>
                 </div>
                 <div class="locationTelephone mt-5 raleway-light">
-                    TEL:+592-632-0736
+                    TEL:+592-608-2521
                 </div>
             </div>
         </div>
