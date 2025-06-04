@@ -5,7 +5,7 @@
     export let jobDetails;
     export let innerWidth;
 
-    let job = jobDetails.form;
+    let job = jobDetails;
 
     let jobTest = {
         title: "Hauler Driver",
@@ -24,12 +24,12 @@
             if (!this.toggleCheck) {
                 this.toggleCheck = true;
                 this.buttonName = "See Less";
-                console.log("Toggle is false, now true!");
+                // console.log("Toggle is false, now true!");
                 return
             }
             this.toggleCheck = false;
             this.buttonName = "See More";
-            console.log("Toggle is true, now false!");
+            // console.log("Toggle is true, now false!");
             return
         }
     }

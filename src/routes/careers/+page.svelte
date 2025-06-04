@@ -106,7 +106,7 @@
 </div>
 <div class="jobs-section flex flex-row">
     <div class="job-listings flex flex-col justify-center items-center mt-10">
-        {#each data.jobsList as job}
+        {#each data.newJobs as job}
             <Jobcard jobDetails={job} {innerWidth}/>
         {/each}
     </div>

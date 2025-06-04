@@ -1,4 +1,5 @@
 <script>
+    // @ts-ignore
     import IntersectionObserver from "svelte-intersection-observer";
     import heroImage from "$lib/assets/eventsheader.webp";
     import brandLogo from "$lib/assets/events_logo.png";
