@@ -109,7 +109,7 @@
                 <div class="email-icon">
                     <img src={email} alt="" width="10px" height="10px">
                 </div>
-                <div class="hover:text-[#3b6fbd] underline"><a href="mailto:hr.clerk2@muneshwers.com?subject=Job%20Application">hr.clerk2@muneshwers.com</a></div>
+                <div class="hover:text-[#3b6fbd] underline"><a href="mailto:vacancy@muneshwers.com?subject=Job%20Application">vacancy@muneshwers.com</a></div>
             </div>
     </div>
 </div>
