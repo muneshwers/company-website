@@ -1,7 +1,9 @@
 // @ts-nocheck
 import { supabase } from "$lib/supabaseClient";
 
-export async function load() {
+export async function load({ setHeaders }) {
+    setHeaders({ 'cache-control': 'max-age=300' }); // cache for 5 minutes
+
     const { data, error } = await supabase
     .from('jobs')
     .select('*')

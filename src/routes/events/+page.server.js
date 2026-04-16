@@ -2,7 +2,9 @@
 // @ts-nocheck
 import { firestore } from "$lib/firebase/firebase.app";
 
-export async function load() {
+export async function load({ setHeaders }) {
+    setHeaders({ 'cache-control': 'max-age=60' }); // cache for 1 minute
+
     const events = await firestore.collection('Events').doc('Management').collection('allEvents').get();
 
     const eventsList = [];
