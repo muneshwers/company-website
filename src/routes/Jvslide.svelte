@@ -47,9 +47,9 @@
             <img class="w-[150px] h-[150px]" src={constructionLogo} alt="jv logos" />
         </div>
     </a> -->
-    <div class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white  flex justify-center items-center">
+    <a href="https://paragon-transportation.com" target="_blank" class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white  flex justify-center items-center">
         <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={paragonTrasport} alt="jv logos" loading="lazy" />
-    </div>
+    </a>
     <div class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white flex justify-center items-center">
         <img class="w-[150px] max-[600px]:w-[100px] h-[40px] max-[600px]:h-[20px]" src={cranes} alt="jv logos" loading="lazy" />
     </div>
