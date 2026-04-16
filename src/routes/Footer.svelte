@@ -12,8 +12,8 @@
     <div class="footer-top flex flex-row max-[1415px]:flex-col gap-4 p-10">
         <div class="site-info w-1/4 max-[1415px]:w-full">
             <div class="site-name flex flex-row w-full">
-                <img src={brandLogo} alt="Muneshwers Shipping" class="object-cover w-[150px] h-[100px]">
-                <img src={textLogo} alt="Muneshwers Shipping" class="object-cover w-[200px] h-[100px]">
+                <img src={brandLogo} alt="Muneshwers Shipping" class="object-cover w-[150px] h-[100px]" loading="lazy">
+                <img src={textLogo} alt="Muneshwers Shipping" class="object-cover w-[200px] h-[100px]" loading="lazy">
             </div>
             <div class="site-tagline playfair-display-regular text-[18px] ml-4 mt-2">
                 Offering solutions, not excuses...
@@ -22,19 +22,19 @@
         </div>
         <div class="social-media h-2/3 w-1/4 max-[1415px]:w-full flex flex-col gap-4 raleway-light" >
                 <a href="https://www.facebook.com/profile.php?id=100087564355386" target="_blank" class="social-link flex flex-row items-center gap-2">
-                    <img src={facebookIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
+                    <img src={facebookIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]" loading="lazy">
                     <div class="social-name">Muneshwers Shipping</div>
                 </a>
                 <a href="https://www.instagram.com/muneshwersshipping/" target="_blank" class="social-link flex flex-row items-center gap-2">
-                    <img src={instagramIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
+                    <img src={instagramIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]" loading="lazy">
                     <div class="social-name">@muneshwersshipping</div>
                 </a>
                 <a href="https://www.tiktok.com/@muneshwersshipping/" target="_blank" class="social-link flex flex-row items-center gap-2 ">
-                    <img src={tiktokIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
+                    <img src={tiktokIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]" loading="lazy">
                     <div class="social-name">@muneshwersshipping</div>
                 </a>
                 <a href="https://www.linkedin.com/company/muneshwers-limited/" target="_blank" class="social-link flex flex-row items-center gap-2">
-                    <img src={linkedinIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]">
+                    <img src={linkedinIcon} alt="Muneshwers Shipping" class="object-cover w-[30px] h-[30px]" loading="lazy">
                     <div class="social-name">Muneshwers Limited</div>
                 </a>
             </div>

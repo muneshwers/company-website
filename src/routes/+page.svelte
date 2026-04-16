@@ -196,12 +196,12 @@
     <Navigation activePage="home" {innerWidth}/>
 </div>
 <IntersectionObserver element={infoText} bind:intersecting>
-<div class="next-info-section mt-16 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText}>
+<div class="next-info-section mt-16 w-full flex flex-col items-start justify-center h-[40vh] overflow-hidden" bind:this={infoText}>
     {#if intersecting}
         {#if innerWidth <= 1415}
             <div class="relative">
                 <span class="absolute bottom-[-30%] opacity-65">
-                    <img src={elements} alt="floating triangles" class="h-[30vh] w-[55vw]">
+                    <img src={elements} alt="floating triangles" class="w-[55vw] h-auto" loading="lazy">
                 </span>
                 <div class="title-text raleway-bold text-[75px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
                     Leaders
@@ -215,7 +215,7 @@
         {#if innerWidth > 1415}
             <div class="relative">
                 <span class="absolute bottom-0 opacity-65">
-                    <img src={elements} alt="floating triangles" class="h-[40vh] w-[20vw]">
+                    <img src={elements} alt="floating triangles" class="w-[20vw] h-auto" loading="lazy">
                 </span>
                 <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
                     Leaders
@@ -236,26 +236,26 @@
     
     {#if innerWidth <= 1415}
         <IntersectionObserver element={infoImage} bind:intersecting>
-            <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen h-screen wharf-image" />
+            <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen h-screen wharf-image" loading="lazy" />
         </IntersectionObserver>
         <div class="wharf-text uppercase text-white text-[28px] absolute bottom-32 left-16 max-[1415px]:left-10">
             Guyana #1 Events Store - July 26, 2024 - Water Street, Georgetown, Guyana
         </div>
     {/if}
     {#if innerWidth > 1415}
-        <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen max-[1415px]:h-screen wharf-image" />
+        <enhanced:img src="$lib/assets/DJI_0374.webp" alt="" class="object-cover w-screen max-[1415px]:h-screen wharf-image" loading="lazy" />
         <div class="wharf-text uppercase text-white text-[28px] absolute bottom-96 left-16 max-[1415px]:left-10">
             Guyana #1 Events Store - July 26, 2024 - Water Street, Georgetown, Guyana
         </div>
     {/if}
 </div>
 <IntersectionObserver element={infoText2} let:intersecting>
-<div class="next-info-section mt-16 w-full flex flex-col items-start justify-center h-[40vh]" bind:this={infoText2}>
+<div class="next-info-section mt-16 w-full flex flex-col items-start justify-center h-[40vh] overflow-hidden" bind:this={infoText2}>
     {#if intersecting}
         {#if innerWidth <= 1415}
             <div class="relative">
                 <span class="absolute bottom-[-30%] opacity-65">
-                    <img src={elements} alt="floating triangles" class="h-[30vh] w-[55vw]">
+                    <img src={elements} alt="floating triangles" class="w-[55vw] h-auto" loading="lazy">
                 </span>
                 <div class="title-text raleway-bold text-[70px] text-[#4876B6] tracking-wide uppercase ml-60 max-[600px]:ml-3">
                     Decades
@@ -269,7 +269,7 @@
         {#if innerWidth > 1415}
             <div class="relative">
                 <span class="absolute bottom-0 opacity-65">
-                    <img src={elements} alt="floating triangles" class="triangles h-[40vh] w-[20vw]">
+                    <img src={elements} alt="floating triangles" class="triangles w-[20vw] h-auto" loading="lazy">
                 </span>
                 <div class="title-text raleway-bold text-[120px] text-[#4876B6] tracking-wide uppercase ml-32 max-[600px]:ml-3">
                     Decades
@@ -286,13 +286,13 @@
 </IntersectionObserver>
 <div class="parallax-container relative">
     {#if innerWidth <= 1415}
-        <enhanced:img src="$lib/assets/GYS05767.webp" alt="" class="object-cover w-screen h-screen wharf-image" />
+        <enhanced:img src="$lib/assets/GYS05767.webp" alt="" class="object-cover w-screen h-screen wharf-image" loading="lazy" />
         <div class="wharf-text uppercase text-white text-[28px] absolute bottom-24 left-16 max-[1415px]:left-10">
             BBC Echo Vessel - July 10, 2024 - Water Street, Georgetown, Guyana
         </div>
     {/if}
     {#if innerWidth > 1415}
-        <enhanced:img src="$lib/assets/GYS05767.webp" alt="" class="object-cover w-screen max-[1415px]:h-screen wharf-image" />
+        <enhanced:img src="$lib/assets/GYS05767.webp" alt="" class="object-cover w-screen max-[1415px]:h-screen wharf-image" loading="lazy" />
         <div class="wharf-text uppercase text-white text-[28px] absolute bottom-52 left-16 max-[1415px]:left-10">
             BBC Echo Vessel - July 10, 2024 - Water Street, Georgetown, Guyana
         </div>
@@ -340,10 +340,10 @@
                     <div class="service bento-large h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/shipping">
                         <div class="w-fit h-full">
-                            <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" />
+                            <enhanced:img alt="" class="w-full h-full object-cover service-image" src="$lib/assets/shipping2.webp" loading="lazy" />
                             <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                 <div>Shipping</div>
-                                <img src={upright} alt="" width="25px" height="25px">
+                                <img src={upright} alt="" width="25px" height="25px" loading="lazy">
                             </div>
                         </div>
                     </a>
@@ -351,10 +351,10 @@
                     <div class="service bento-small w-fit h-[65lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/travel">
                             <div class="w-fit h-full">
-                                <enhanced:img alt="" class="w-full h-full object-cover scale-100" src="$lib/assets/travelserviceHeader.webp" />
+                                <enhanced:img alt="" class="w-full h-full object-cover scale-100" src="$lib/assets/travelserviceHeader.webp" loading="lazy" />
                                 <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                     <div>Travel Service</div>
-                                    <img src={upright} alt="" width="25px" height="25px">
+                                    <img src={upright} alt="" width="25px" height="25px" loading="lazy">
                                 </div>
                             </div>
                         </a>
@@ -364,10 +364,10 @@
                     <div class="service bento-small w-[68%] h-[70lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/events">
                             <div class="w-full h-full">
-                                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/eventsservice.webp" />
+                                <enhanced:img alt="" class="w-full h-full object-cover" src="$lib/assets/eventsservice.webp" loading="lazy" />
                                 <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                     <div>Events</div>
-                                    <img src={upright} alt="" width="25px" height="25px">
+                                    <img src={upright} alt="" width="25px" height="25px" loading="lazy">
                                 </div>
                             </div>
                         </a>
@@ -375,10 +375,10 @@
                     <div class="service bento-large-home w-fit h-[70lvh] max-[600px]:h-[50vh] bg-slate-400 rounded-md hover:scale-125">
                         <a href="/stores">
                             <div class="w-fit h-full">
-                                <enhanced:img alt="" class="w-full h-full object-cover max-[600px]:object-cover" src="$lib/assets/GYS06308.webp" />
+                                <enhanced:img alt="" class="w-full h-full object-cover max-[600px]:object-cover" src="$lib/assets/GYS06308.webp" loading="lazy" />
                                 <div class="w-full h-full absolute top-0 right-0 bg-[#00000086] opacity-0 hover:opacity-100 hover:duration-[300ms] flex items-center justify-center text-[24px] text-[#ffffff]">
                                     <div>Home Goods</div>
-                                    <img src={upright} alt="" width="25px" height="25px">
+                                    <img src={upright} alt="" width="25px" height="25px" loading="lazy">
                                 </div>
                             </div>
                         </a>
@@ -459,10 +459,10 @@
     
     <div class="parallax-container relative">
         {#if innerWidth <= 600}
-            <img src={parallaxCareerMobile} alt="" class="object-cover w-screen h-[70vh] career-image">
+            <img src={parallaxCareerMobile} alt="" class="object-cover w-screen h-[70vh] career-image" loading="lazy">
         {/if}
         {#if innerWidth > 600}
-            <img src={parallaxCareer} alt="" class="object-cover w-screen career-image">
+            <img src={parallaxCareer} alt="" class="object-cover w-screen career-image" loading="lazy">
         {/if}
         
         <div class="services flex flex-row justify-between items-center mb-10 absolute bottom-96 max-[600px]:bottom-32 right-28">

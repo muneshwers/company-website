@@ -107,7 +107,7 @@
                 </div>
                 <div class="col article-image-section w-[20%] max-[600px]:w-[80%] h-[100%] flex flex-col items-center justify-center">
                     <div class="article-image-header">
-                        <enhanced:img src="$lib/assets/FOTO-ANTIGUA-2.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
+                        <enhanced:img src="$lib/assets/FOTO-ANTIGUA-2.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" loading="lazy" />
                     </div>
                     <div class="article-image-caption flex flex-col items-center mt-2">
                         <p>Founder of Muneshwers Ltd</p>
@@ -140,10 +140,10 @@
             <div class="slide slide-right h-[50vh] max-[600px]:h-[65vh] mb-36 max-[600px]:mb-5 flex max-[600px]:flex-col justify-center items-center gap-36 max-[600px]:gap-9">
                 <div class="col article-image-section w-[20%] max-[600px]:w-[90%] h-[100%] max-[600px]:h-[60vh] flex flex-col items-center relative justify-center">
                     <div class="article-image-header ">
-                        <enhanced:img src="$lib/assets/admin-ajax.webp" alt="building 1" class="object-cover h-[300px] max-[600px]:h-[200px] w-[250px] rounded-lg absolute top-0 left-0" />
+                        <enhanced:img src="$lib/assets/admin-ajax.webp" alt="building 1" class="object-cover h-[300px] max-[600px]:h-[200px] w-[250px] rounded-lg absolute top-0 left-0" loading="lazy" />
                     </div>
                     <div class="article-image-header">
-                        <enhanced:img src="$lib/assets/FOTOS-ANTIGUAS-4.webp" alt="building 2" class="object-cover h-[300px] max-[600px]:h-[200px] w-[250px] rounded-lg absolute top-10 max-[600px]:top-24 max-[600px]:right-0" />
+                        <enhanced:img src="$lib/assets/FOTOS-ANTIGUAS-4.webp" alt="building 2" class="object-cover h-[300px] max-[600px]:h-[200px] w-[250px] rounded-lg absolute top-10 max-[600px]:top-24 max-[600px]:right-0" loading="lazy" />
                     </div>
                     <div class="article-image-caption flex flex-col items-center mt-5 max-[1415px]:mt-10 max-[600px]:mt-1 absolute bottom-[-40px] max-[1415px]:bottom-[-100px] max-[600px]:bottom-1 max-[390px]:bottom-[-10%] left-[45px] max-[600px]:left-8 w-[300px]">
                         <p>First store in Georgetown, and Second</p>
@@ -179,7 +179,7 @@
                 </div>
                 <div class="col article-image-section w-[20%] max-[600px]:w-[80%] h-[100%] max-[600px]:h-[50%] flex flex-col items-center justify-center">
                     <div class="article-image-header">
-                        <enhanced:img src="$lib/assets/DOS-REUNION.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
+                        <enhanced:img src="$lib/assets/DOS-REUNION.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" loading="lazy" />
                     </div>
                     <div class="article-image-caption flex flex-col items-center mt-2 max-[600px]:text-sm">
                         <p>Somwaru Muneshwer and his only son,</p>
@@ -212,7 +212,7 @@
             <div class="slide slide-right h-[50vh] max-[600px]:h-[60vh] flex max-[600px]:flex-col justify-center items-center gap-36 max-[600px]:gap-10">
                 <div class="col article-image-section w-[20%] max-[600px]:w-[80%] h-[100%] flex flex-col items-center relative justify-center">
                     <div class="article-image-header">
-                        <enhanced:img src="$lib/assets/PUERTO.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
+                        <enhanced:img src="$lib/assets/PUERTO.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" loading="lazy" />
                     </div>
                     <div class="article-image-caption flex flex-col items-center mt-2">
                         <p>Port facility on Water Street in 1991</p>
@@ -248,7 +248,7 @@
                 </div>
                 <div class="col article-image-section w-[20%] max-[600px]:w-[80%] h-[100%] max-[600px]:h-[20vh] flex flex-col items-center justify-center">
                     <div class="article-image-header">
-                        <enhanced:img src="$lib/assets/FOTO-INCENDIO.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
+                        <enhanced:img src="$lib/assets/FOTO-INCENDIO.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" loading="lazy" />
                     </div>
                     <div class="article-image-caption flex flex-col items-center mt-2">
                         <p>Shot of the building on fire in 2003</p>
@@ -280,7 +280,7 @@
             <div class="slide slide-right h-[50vh] max-[600px]:h-[100vh] flex max-[600px]:flex-col justify-center items-center gap-36">
                 <div class="col article-image-section w-[20%] max-[600px]:w-[80%] h-[100%] max-[600px]:h-[30vh] flex flex-col items-center justify-center">
                     <div class="article-image-header">
-                        <enhanced:img src="$lib/assets/Muneshwers.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" />
+                        <enhanced:img src="$lib/assets/Muneshwers.webp" alt="Hero landing page" class="object-cover h-full w-full rounded-lg" loading="lazy" />
                     </div>
                     <div class="article-image-caption flex flex-col items-center">
                         <p>Our present berth</p>
@@ -337,7 +337,7 @@
             </div>
             <div class="col article-image-section w-[45%] max-[600px]:w-[80%] h-[100%] flex flex-col items-center justify-center">
                 <div class="article-image-header">
-                    <img src={gybiImage} alt="Hero landing page" class="object-contain h-full w-full rounded-lg" />
+                    <img src={gybiImage} alt="Hero landing page" class="object-contain h-full w-full rounded-lg" loading="lazy" />
                 </div>
                 <div class="article-image-caption flex flex-col items-center">
                     <p>GYSBI Facility, Houston</p>

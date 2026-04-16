@@ -34,7 +34,7 @@
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="intro-header mt-7 justify-center relative">
-        <img src={grid} alt="mesh grid" class="h-auto w-full">
+        <img src={grid} alt="mesh grid" class="h-auto w-full" loading="lazy">
         <div class="intro-details flex items-center absolute top-16 bottom-16 left-16 w-11/12 justify-between">
             <div class="construction-icon-box flex justify-center items-center">
                 <div class="construction-icon"></div>

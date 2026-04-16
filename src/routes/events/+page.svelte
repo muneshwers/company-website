@@ -276,18 +276,18 @@
             </div>
             
             <div class="event-image h-[60vh]">
-                <img src={headerImage} class="w-[820px] max-[600px]:w-[100%] h-[100%] object-cover max-[600px]:object-cover rounded-lg" alt="main" />
+                <img src={headerImage} class="w-[820px] max-[600px]:w-[100%] h-[100%] object-cover max-[600px]:object-cover rounded-lg" alt="main" loading="lazy" />
             </div>
         </div>
     </div>
     <div class="event-products grid grid-cols-7 max-[600px]:grid-cols-2 gap-4 justify-center">
-        <img class="w-40 h-40 object-cover rounded-md" src={image1} alt="featured products"/>
-        <img class="w-40 h-40 object-cover rounded-md" src={image2} alt="featured products"/>
-        <img class="w-40 h-40 object-cover rounded-md" src={image3} alt="featured products"/>
-        <img class="w-40 h-40 object-cover rounded-md" src={image4} alt="featured products"/>
-        <img class="w-40 h-40 object-cover rounded-md" src={image5} alt="featured products"/>
-        <img class="w-40 h-40 object-cover rounded-md" src={image6} alt="featured products"/>
-        <img class="w-40 h-40 object-cover rounded-md" src={image7} alt="featured products"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image1} alt="featured products" loading="lazy"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image2} alt="featured products" loading="lazy"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image3} alt="featured products" loading="lazy"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image4} alt="featured products" loading="lazy"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image5} alt="featured products" loading="lazy"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image6} alt="featured products" loading="lazy"/>
+        <img class="w-40 h-40 object-cover rounded-md" src={image7} alt="featured products" loading="lazy"/>
     </div>
 </div>
 <div class="collections w-full flex flex-col items-center my-12">
@@ -298,51 +298,51 @@
     <div class="grid grid-cols-6  max-[600px]:grid-cols-3 gap-3 mt-8 h-[160px] max-[600px]:h-[490px]" bind:this={collectionsBody}>
         {#if intersecting}
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/kitchenware.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/kitchenware.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Kitchenware</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/costumes.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/costumes.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Costumes</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/gardening.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/gardening.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Gardening</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/stationary.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/stationary.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Stationary</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/floral.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/floral.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Floral Arrangement</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/decorations.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/decorations.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Decoration</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/cleaning.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/cleaning.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Cleaning Supplies</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/household.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/household.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Household Supplies</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/babyproducts.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/babyproducts.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Baby Products</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/bakingsupplies.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/bakingsupplies.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Baking Supplies</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/fabrics.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/fabrics.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Fabrics</div>
         </div>
         <div class="service w-[235px]  max-[600px]:w-[120px] h-[77px]  max-[600px]:h-[120px] bg-white rounded-xl shadow-lg flex flex-row  max-[600px]:flex-col items-center p-5 gap-5  max-[600px]:gap-3">
-            <enhanced:img class="w-12 h-12 rounded-lg" src="$lib/assets/hardware.webp" alt=""/>
+            <enhanced:img class="w-12 h-12 rounded-lg" loading="lazy" src="$lib/assets/hardware.webp" alt=""/>
             <div class=" text-black text-[15px]  max-[600px]:text-[12px] font-normal font-['Raleway'] uppercase tracking-wide">Hardware</div>
         </div>
         {/if}
@@ -386,7 +386,7 @@
         <div class="h-[600px] mt-20 max-[600px]:w-[98vw]" bind:this={floralImage}>
             <IntersectionObserver element={floralImage} let:intersecting>
             {#if intersecting}
-            <enhanced:img class="service w-[1300px] max-[600px]:w-[98%] h-[600px] max-[600px]:ml-auto max-[600px]:mr-auto rounded-2xl object-cover" src="$lib/assets/eventsservice.webp" alt=""/>
+            <enhanced:img class="service w-[1300px] max-[600px]:w-[98%] h-[600px] max-[600px]:ml-auto max-[600px]:mr-auto rounded-2xl object-cover" src="$lib/assets/eventsservice.webp" alt="" loading="lazy"/>
             {/if}
             </IntersectionObserver>
         </div>
@@ -394,12 +394,12 @@
         <div class="grid grid-cols-3 max-[600px]:grid-cols-2 mt-16 gap-10 max-[600px]:gap-3 max-[600px]:w-[95vw]" bind:this={floralCard}>
             <IntersectionObserver element={floralCard} let:intersecting>
                 {#if intersecting}
-                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay1.webp" alt=""/>
-                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay2.webp" alt=""/>
-                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay3.webp" alt=""/>
-                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay4.webp" alt=""/>
-                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay5.webp" alt=""/>
-                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" src="$lib/assets/flowerDisplay6.webp" alt=""/>
+                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" loading="lazy" src="$lib/assets/flowerDisplay1.webp" alt=""/>
+                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" loading="lazy" src="$lib/assets/flowerDisplay2.webp" alt=""/>
+                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" loading="lazy" src="$lib/assets/flowerDisplay3.webp" alt=""/>
+                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" loading="lazy" src="$lib/assets/flowerDisplay4.webp" alt=""/>
+                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" loading="lazy" src="$lib/assets/flowerDisplay5.webp" alt=""/>
+                <enhanced:img class="service w-[400px] max-[600px]:w-[600px] h-[360px] rounded-2xl object-cover" loading="lazy" src="$lib/assets/flowerDisplay6.webp" alt=""/>
                 {/if}
             </IntersectionObserver>
             
@@ -445,7 +445,7 @@
         
     </div>
     <div class="parallax-container relative">
-        <img src={parallaxCareer} alt="" class="object-cover w-screen h-1/2 career-image">
+        <img src={parallaxCareer} alt="" class="object-cover w-screen h-1/2 career-image" loading="lazy">
         <div class="services flex flex-row justify-between items-center mb-10 absolute top-96 max-[600px]:top-32 right-28">
             <div class="services-link relative cursor-pointer text-white">
                 <a href="/careers">
@@ -470,7 +470,7 @@
     <div class="w-[95%] h-[380px] max-[600px]:h-[580px] bg-[#df839c] rounded-xl p-10 flex flex-row max-[600px]:flex-col items-center">
         {#if innerWidth <= 600}
             <div class="right-subscribe">
-                <img class="w-[100px] h-[90px] object-cover" src={whitelogo} alt=""/>
+                <img class="w-[100px] h-[90px] object-cover" src={whitelogo} alt="" loading="lazy"/>
             </div>
             <form method="POST" class="left-subscribe">
                 <div class=" text-white text-[28px] font-medium font-['Raleway'] leading-[60px] text-center">SUBSCRIBE TO OUR NEWSLETTER</div>
@@ -492,7 +492,7 @@
                 </div>
             </form>
             <div class="right-subscribe">
-                <img class="w-[400px] h-[300px] object-cover" src={whitelogo} alt=""/>
+                <img class="w-[400px] h-[300px] object-cover" src={whitelogo} alt="" loading="lazy"/>
             </div>
         {/if}
             

@@ -48,24 +48,24 @@
         </div>
     </a> -->
     <div class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white  flex justify-center items-center">
-        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={paragonTrasport} alt="jv logos" />
+        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={paragonTrasport} alt="jv logos" loading="lazy" />
     </div>
     <div class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white flex justify-center items-center">
-        <img class="w-[150px] max-[600px]:w-[100px] h-[40px] max-[600px]:h-[20px]" src={cranes} alt="jv logos" />
+        <img class="w-[150px] max-[600px]:w-[100px] h-[40px] max-[600px]:h-[20px]" src={cranes} alt="jv logos" loading="lazy" />
     </div>
     <div class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white flex justify-center items-center">
-        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={barges} alt="jv logos" />
+        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={barges} alt="jv logos" loading="lazy" />
     </div>
     <div class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white flex justify-center items-center">
-        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={brandLogo} alt="jv logos" />
+        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={brandLogo} alt="jv logos" loading="lazy" />
     </div>
     <div class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white flex justify-center items-center">
-        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={gysbi} alt="jv logos" />
+        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={gysbi} alt="jv logos" loading="lazy" />
     </div>
     <div class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white  flex justify-center items-center">
-        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={harbourtugs} alt="jv logos" />
+        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={harbourtugs} alt="jv logos" loading="lazy" />
     </div>
     <div class="jv-card w-[14.2%] max-[600px]:w-[100px] h-[300px] max-[600px]:h-[70px] bg-white flex justify-center items-center">
-        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={constructionLogo} alt="jv logos" />
+        <img class="w-[150px] max-[600px]:w-[100px] h-[150px] max-[600px]:h-[70px]" src={constructionLogo} alt="jv logos" loading="lazy" />
     </div>
 </div>

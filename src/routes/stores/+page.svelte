@@ -53,10 +53,10 @@
 </div>
 <div class="introduction-section flex flex-col justify-center">
     <div class="intro-header mt-7 max-[600px]:mt-1 max-[600px]:mb-7 justify-center relative">
-        <img src={grid} alt="mesh grid" class="h-auto max-[600px]:h-full w-full">
+        <img src={grid} alt="mesh grid" class="h-auto max-[600px]:h-full w-full" loading="lazy">
         <div class="intro-details flex items-center absolute top-16 max-[600px]:top-5 bottom-16 left-16 max-[600px]:left-8 w-11/12 justify-between">
             <div class="construction-icon-box flex justify-center items-center w-12 h-12">
-                <img src={construction} alt="Hero landing page" class="object-cover h-5 w-5">
+                <img src={construction} alt="Hero landing page" class="object-cover h-5 w-5" loading="lazy">
                 <!-- <div class="construction-icon"></div> -->
             </div>
             <div class="intro-details w-3/4">
