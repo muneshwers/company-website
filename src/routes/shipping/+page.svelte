@@ -20,6 +20,7 @@
     import mrrobin from "$lib/assets/mrrobin.png";
     import mrc from "$lib/assets/mrc.png";
     import rajiv from "$lib/assets/rajiv.png";
+    import kevin from "$lib/assets/kevin.png";
     import chabi from "$lib/assets/chabi.png";
     import chester from "$lib/assets/chester.png";
     import gaj from "$lib/assets/gaj.png";
@@ -221,7 +222,7 @@
         </IntersectionObserver>
     </div>
     
-    <div class="level-0 grid grid-cols-3 max-[600px]:grid-cols-1 gap-8 max-[600px]:gap-0 h-[648px] max-[600px]:h-[1944px] max-[600px]:ml-4" bind:this={meetSeniors}>
+    <div class="level-0 grid grid-cols-4 max-[600px]:grid-cols-1 gap-8 max-[600px]:gap-0 h-[648px] max-[600px]:h-[2592px] max-[600px]:ml-4" bind:this={meetSeniors}>
         <IntersectionObserver element={meetSeniors} let:intersecting>
         {#if intersecting}
         <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px]">
@@ -233,6 +234,11 @@
             <img class="w-[450px] h-[515px] object-cover" src={mrc} alt="Mr Chandradatt Chintamani" loading="lazy" />
             <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Chandradat Chintamani</div>
             <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">General Manager</div>
+        </div>
+        <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px]">
+            <img class="w-[450px] h-[515px] object-cover" src={kevin} alt="Mr Kevin Black" loading="lazy" />
+            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Kevin Black</div>
+            <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">Chief Operations Officer</div>
         </div>
         <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px] ">
             <img class="w-[450px] h-[515px] object-cover" src={rajiv} alt="Mr Rajiv Muneshwer" loading="lazy" />
