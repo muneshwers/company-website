@@ -222,28 +222,28 @@
         </IntersectionObserver>
     </div>
     
-    <div class="level-0 grid grid-cols-4 max-[600px]:grid-cols-1 gap-8 max-[600px]:gap-0 h-[648px] max-[600px]:h-[2592px] max-[600px]:ml-4" bind:this={meetSeniors}>
+    <div class="level-0 grid grid-cols-1 md:grid-cols-2 min-[1400px]:grid-cols-4 gap-x-8 gap-y-12 w-full max-w-[1896px] px-4 sm:px-8 min-h-[648px] justify-items-center" bind:this={meetSeniors}>
         <IntersectionObserver element={meetSeniors} let:intersecting>
         {#if intersecting}
-        <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px]">
-            <img class="w-[450px] h-[515px] object-cover" src={mrrobin} alt="Mr Robin Muneshwer" loading="lazy" />
-            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Robin Muneshwer</div>
-            <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">Executive Director</div>
+        <div class="service team-member w-full max-w-[450px]">
+            <img class="w-full aspect-[450/515] object-cover" src={mrrobin} alt="Mr Robin Muneshwer" loading="lazy" />
+            <div class="w-full mt-5 sm:mt-7 text-black text-[24px] sm:text-[30px] font-normal font-['Raleway']">Mr. Robin Muneshwer</div>
+            <div class="w-full mt-1 text-[#717171] text-[18px] sm:text-[20px] font-light font-['Raleway']">Chief Executive Officer</div>
         </div>
-        <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px]">
-            <img class="w-[450px] h-[515px] object-cover" src={mrc} alt="Mr Chandradatt Chintamani" loading="lazy" />
-            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Chandradat Chintamani</div>
-            <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">General Manager</div>
+        <div class="service team-member w-full max-w-[450px]">
+            <img class="w-full aspect-[450/515] object-cover" src={mrc} alt="Mr Chandradatt Chintamani" loading="lazy" />
+            <div class="w-full mt-5 sm:mt-7 text-black text-[24px] sm:text-[30px] font-normal font-['Raleway']">Mr. Chandradat Chintamani</div>
+            <div class="w-full mt-1 text-[#717171] text-[18px] sm:text-[20px] font-light font-['Raleway']">General Manager</div>
         </div>
-        <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px]">
-            <img class="w-[450px] h-[515px] object-cover" src={kevin} alt="Mr Kevin Black" loading="lazy" />
-            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Kevin Black</div>
-            <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">Chief Operations Officer</div>
+        <div class="service team-member w-full max-w-[450px]">
+            <img class="w-full aspect-[450/515] object-cover" src={kevin} alt="Mr Kevin Black" loading="lazy" />
+            <div class="w-full mt-5 sm:mt-7 text-black text-[24px] sm:text-[30px] font-normal font-['Raleway']">Mr. Kevin Black</div>
+            <div class="w-full mt-1 text-[#717171] text-[18px] sm:text-[20px] font-light font-['Raleway']">Chief Operations Officer</div>
         </div>
-        <div class="service team-member w-[450px] max-[600px]:w-[95%] h-[648px] ">
-            <img class="w-[450px] h-[515px] object-cover" src={rajiv} alt="Mr Rajiv Muneshwer" loading="lazy" />
-            <div class="w-96 h-[54px] mt-7 text-black text-[30px] font-normal font-['Raleway']">Mr. Rajiv Muneshwer</div>
-            <div class="w-96 h-[54px] text-[#717171] text-[20px] font-light font-['Raleway']">Chief Coordinator</div>
+        <div class="service team-member w-full max-w-[450px]">
+            <img class="w-full aspect-[450/515] object-cover" src={rajiv} alt="Mr Rajiv Muneshwer" loading="lazy" />
+            <div class="w-full mt-5 sm:mt-7 text-black text-[24px] sm:text-[30px] font-normal font-['Raleway']">Mr. Rajiv Muneshwer</div>
+            <div class="w-full mt-1 text-[#717171] text-[18px] sm:text-[20px] font-light font-['Raleway']">Deputy Chief Executive Officer</div>
         </div>
         {/if}
         </IntersectionObserver>
@@ -266,12 +266,12 @@
             <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={gaj} alt="Gajendranath Singh" loading="lazy"/>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Gajendranath Singh</div>
-                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Facilities Manager</div>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Deputy Chief Operations Officer</div>
             </div>
             <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={shane} alt="Shane Rai" loading="lazy"/>
                 <div class="w-[280px] max-[600px]:w-[180px] h-[54px] max-[600px]:h-[60px] mt-6 text-black text-[27px] max-[600px]:text-[20px] font-normal font-['Raleway']">Shane Rai</div>
-                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Business Development Manager</div>
+                <div class="w-[280px] max-[600px]:w-[180px] h-[33px] text-[#717171] text-normal max-[600px]:text-[14px] font-light font-['Raleway']">Deputy General Manager</div>
             </div>
             <div class="service team-member w-[280px] max-[600px]:w-[180px] h-[430px] max-[600px]:h-[380px]">
                 <img class="w-[280px] max-[600px]:w-[180px] h-[307px] max-[600px]:h-[207px] object-cover" src={romona} alt="Romona Arthur" loading="lazy"/>

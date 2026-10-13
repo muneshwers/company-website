@@ -489,19 +489,19 @@
     <div class="locationsHeader text-4xl raleway-medium">
         Our Locations
     </div>
-    <div class="locationsDetails mt-10 grid grid-cols-5 max-[600px]:grid-cols-2 gap-2">
-        <div class="company-section">
-            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
-                <div class="locationCompany text-2xl raleway-regular">
+    <div class="locationsDetails mt-10 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-x-6 gap-y-12">
+        <div class="company-section grid grid-rows-subgrid row-span-5 gap-y-0">
+            <div class="locationHead contents">
+                <div class="locationCompany text-xl sm:text-2xl raleway-regular">
                     Muneshwers Shipping
                 </div>
                 <div class="locationAddress mt-4 raleway-light">
                     45-47 Water Street, Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit h-[30vh]">
-                <div class="locationOpening mt-4">
-                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+            <div class="location contents">
+                <div class="locationOpening contents">
+                    <div class="locationOpeningTitle mt-8 mb-4 text-xl sm:text-2xl raleway-regular">
                         Opening Hours
                     </div>
                     <div class="locationOpeningHours raleway-light">
@@ -514,18 +514,18 @@
             </div>
         </div>
 
-        <div class="company-section">
-            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
-                <div class="locationCompany text-2xl raleway-regular">
+        <div class="company-section grid grid-rows-subgrid row-span-5 gap-y-0">
+            <div class="locationHead contents">
+                <div class="locationCompany text-xl sm:text-2xl raleway-regular">
                     Muneshwers Houston Terminal
                 </div>
                 <div class="locationAddress mt-4 raleway-light">
                     YY Houston, Greater Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit h-[30vh]">
-                <div class="locationOpening mt-4">
-                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+            <div class="location contents">
+                <div class="locationOpening contents">
+                    <div class="locationOpeningTitle mt-8 mb-4 text-xl sm:text-2xl raleway-regular">
                         Opening Hours
                     </div>
                     <div class="locationOpeningHours raleway-light">
@@ -537,18 +537,18 @@
                 </div>
             </div>
         </div>
-        <div class="company-section">
-            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
-                <div class="locationCompany text-2xl raleway-regular">
+        <div class="company-section grid grid-rows-subgrid row-span-5 gap-y-0">
+            <div class="locationHead contents">
+                <div class="locationCompany text-xl sm:text-2xl raleway-regular">
                     Muneshwers Guyana's #1 Events Store
                 </div>
                 <div class="locationAddress mt-4 raleway-light">
                     19-20 Water and Commerce Street, Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit h-[30vh]">
-                <div class="locationOpening mt-4">
-                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+            <div class="location contents">
+                <div class="locationOpening contents">
+                    <div class="locationOpeningTitle mt-8 mb-4 text-xl sm:text-2xl raleway-regular">
                         Opening Hours
                     </div>
                     <div class="locationOpeningHours raleway-light">
@@ -560,18 +560,18 @@
                 </div>
             </div>
         </div>
-        <div class="company-section">
-            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
-                <div class="locationCompany text-2xl raleway-regular">
+        <div class="company-section grid grid-rows-subgrid row-span-5 gap-y-0">
+            <div class="locationHead contents">
+                <div class="locationCompany text-xl sm:text-2xl raleway-regular">
                     Muneshwers Hardware Store
                 </div>
                 <div class="locationAddress mt-4 raleway-light">
                     45-47 Water Street, Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit h-[30vh]">
-                <div class="locationOpening mt-4">
-                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+            <div class="location contents">
+                <div class="locationOpening contents">
+                    <div class="locationOpeningTitle mt-8 mb-4 text-xl sm:text-2xl raleway-regular">
                         Opening Hours
                     </div>
                     <div class="locationOpeningHours raleway-light flex flex-col">
@@ -584,18 +584,18 @@
                 </div>
             </div>
         </div>
-        <div class="company-section">
-            <div class="locationHead w-fit h-[20vh] max-[600px]:h-[25vh]">
-                <div class="locationCompany text-2xl raleway-regular">
+        <div class="company-section grid grid-rows-subgrid row-span-5 gap-y-0">
+            <div class="locationHead contents">
+                <div class="locationCompany text-xl sm:text-2xl raleway-regular">
                     Muneshwers Travel Service
                 </div>
                 <div class="locationAddress mt-4 raleway-light">
                     45-47 Water Street, Georgetown, Guyana
                 </div>
             </div>
-            <div class="location w-fit h-[30vh]">
-                <div class="locationOpening mt-4">
-                    <div class="locationOpeningTitle mb-4 text-2xl raleway-regular">
+            <div class="location contents">
+                <div class="locationOpening contents">
+                    <div class="locationOpeningTitle mt-8 mb-4 text-xl sm:text-2xl raleway-regular">
                         Opening Hours
                     </div>
                     <div class="locationOpeningHours raleway-light flex flex-col">
